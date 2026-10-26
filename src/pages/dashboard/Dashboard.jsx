@@ -29,43 +29,57 @@ const Dashboard = () => {
 
         {/* Pre-Test and Post-Test */}
         <div className="grid grid-cols-2 gap-6">
-          <div className="relative bg-gradient-to-br from-[#B8E0FF] to-[#7FCBFF] rounded-[28px] p-6 overflow-hidden h-[190px]">
+          <div className="relative bg-gradient-to-br from-[#B8E0FF] to-[#7FCBFF] rounded-[28px] p-6 overflow-visible min-h-[190px]">
             <div className="relative z-10">
               <div className="flex items-start justify-between mb-2">
                 <h2 className="font-poppins font-bold text-[36px] text-[#2A42A1]">Pre-Test</h2>
-                <img src="/assets/images/test-icon.png" alt="" className="w-[72px] h-[72px]" />
+                <img src="/assets/images/object.png" alt="" className="w-[72px] h-[72px]" />
               </div>
               <p className="font-poppins font-semibold text-[14px] text-[#2A42A1] mb-1">Cek Kemampuan Awal</p>
               <p className="font-poppins text-[12px] text-[#2A42A1] mb-4 max-w-[255px]">
                 Pemetaan awal untuk mengetahui penguasaan materi dan learning gap-mu
               </p>
-              <div className="inline-flex items-center gap-2 bg-white rounded-[24px] px-4 py-2 border border-black">
-                <div className="w-[10px] h-[10px] bg-[#8D7DCB] rounded-full"></div>
-                <span className="font-poppins font-extrabold text-[10px] text-[#8D7DCB]">Belum Dikerjakan</span>
+              <div className="flex items-center gap-3 flex-wrap">
+                <div className="inline-flex items-center gap-2 bg-white rounded-[24px] px-4 py-2 border border-black">
+                  <div className="w-[10px] h-[10px] bg-[#8D7DCB] rounded-full"></div>
+                  <span className="font-poppins font-extrabold text-[10px] text-[#8D7DCB] whitespace-nowrap">Belum Dikerjakan</span>
+                </div>
+                <button className="bg-[#3A81DA] text-white rounded-[24px] px-6 py-2.5 font-poppins font-semibold text-[13px] hover:bg-[#2A42A1] flex items-center gap-2 whitespace-nowrap">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="4" width="12" height="11" rx="2" stroke="white" strokeWidth="1.5"/>
+                    <path d="M6 4V3C6 2.44772 6.44772 2 7 2H11C11.5523 2 12 2.44772 12 3V4" stroke="white" strokeWidth="1.5"/>
+                    <path d="M7 9L8.5 10.5L11 8" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  Mulai Pre-Test
+                </button>
               </div>
-              <button className="ml-4 bg-[#3A81DA] text-white rounded-[24px] px-6 py-2 font-poppins font-medium text-[13px] hover:bg-[#2A42A1]">
-                Mulai Pre-Test →
-              </button>
             </div>
           </div>
 
-          <div className="relative bg-gradient-to-br from-[#E8F4FF] to-[#D0E8FF] rounded-[28px] p-6 overflow-hidden h-[190px]">
+          <div className="relative bg-gradient-to-br from-[#E8F4FF] to-[#D0E8FF] rounded-[28px] p-6 overflow-visible min-h-[190px]">
             <div className="relative z-10">
               <div className="flex items-start justify-between mb-2">
                 <h2 className="font-poppins font-bold text-[36px] text-[#2A42A1]">Post-Test</h2>
-                <img src="/assets/images/test-icon.png" alt="" className="w-[72px] h-[72px]" />
+                <img src="/assets/images/object.png" alt="" className="w-[72px] h-[72px]" />
               </div>
               <p className="font-poppins font-semibold text-[14px] text-[#2A42A1] mb-1">Uji Penguasaan Materi</p>
               <p className="font-poppins text-[12px] text-[#2A42A1] mb-4 max-w-[223px]">
                 Lihat seberapa jauh pemahamanmu setelah belajar.
               </p>
-              <div className="inline-flex items-center gap-2 bg-white rounded-[24px] px-4 py-2 border border-black">
-                <div className="w-[10px] h-[10px] bg-[#42C6B0] rounded-full"></div>
-                <span className="font-poppins font-extrabold text-[10px] text-[#42C6B0]">Siap dikerjakan</span>
+              <div className="flex items-center gap-3 flex-wrap">
+                <div className="inline-flex items-center gap-2 bg-white rounded-[24px] px-4 py-2 border border-black">
+                  <div className="w-[10px] h-[10px] bg-[#42C6B0] rounded-full"></div>
+                  <span className="font-poppins font-extrabold text-[10px] text-[#42C6B0] whitespace-nowrap">Siap dikerjakan</span>
+                </div>
+                <button className="bg-[#3A81DA] text-white rounded-[24px] px-6 py-2.5 font-poppins font-semibold text-[13px] hover:bg-[#2A42A1] flex items-center gap-2 whitespace-nowrap">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="4" width="12" height="11" rx="2" stroke="white" strokeWidth="1.5"/>
+                    <path d="M6 4V3C6 2.44772 6.44772 2 7 2H11C11.5523 2 12 2.44772 12 3V4" stroke="white" strokeWidth="1.5"/>
+                    <path d="M7 9L8.5 10.5L11 8" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  Mulai Post-Test
+                </button>
               </div>
-              <button className="ml-4 bg-[#3A81DA] text-white rounded-[24px] px-6 py-2 font-poppins font-medium text-[13px] hover:bg-[#2A42A1]">
-                Mulai Post-Test →
-              </button>
             </div>
           </div>
         </div>
@@ -79,7 +93,7 @@ const Dashboard = () => {
                 <h2 className="font-poppins font-bold text-[24px] text-[#2A42A1]">Pengingat Belajar</h2>
               </div>
               <button className="bg-[#3A81DA] text-white rounded-[24px] px-6 py-2 font-poppins font-extrabold text-[15px] flex items-center gap-2">
-                Lihat Semua →
+                Lihat Semua
               </button>
             </div>
             <p className="font-poppins text-[15px] text-[#2A42A1] mb-4 ml-[90px]">
