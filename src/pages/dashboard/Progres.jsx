@@ -1,23 +1,13 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import DashboardLayout from '../../components/layout/DashboardLayout';
-import progressMascot from '../../assets/images/mascots copy/cheer.png';
+import progressMascot from '../../assets/images/mascots/cheer.png';
 import { quizTopics } from './quizData';
+import { readQuizResults } from '../../utils/storage';
 
-const STORAGE_KEY = 'edubridge-quiz-attempts';
 const CORE_MODES = ['pretest', 'posttest'];
 const CORE_QUIZ_COUNT = quizTopics.length * CORE_MODES.length;
 const EMPTY_ATTEMPTS = {};
-
-function readAttempts() {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    return saved ? JSON.parse(saved) : { attempts: {} };
-  } catch (error) {
-    console.error('Gagal membaca hasil kuis untuk halaman progres:', error);
-    return { attempts: {} };
-  }
-}
 
 function formatDuration(seconds) {
   const hours = Math.floor(seconds / 3600);
@@ -116,7 +106,7 @@ function StatCard({ title, value, caption, color, icon, progress }) {
 }
 
 export default function Progres() {
-  const [results] = useState(readAttempts);
+  const [results] = useState(readQuizResults);
   const attempts = results.attempts ?? EMPTY_ATTEMPTS;
   const topicProgress = useMemo(() => quizTopics.map((topic) => {
     const topicAttempts = attempts[topic.id] ?? {};

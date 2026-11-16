@@ -1,12 +1,11 @@
 import { useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import DashboardLayout from '../../components/layout/DashboardLayout';
-import laptopMascot from '../../assets/images/mascots copy/laptop.png';
-import waveMascot from '../../assets/images/mascots copy/wave.png';
+import laptopMascot from '../../assets/images/mascots/laptop.png';
+import waveMascot from '../../assets/images/mascots/wave.png';
 import { quizTopics } from './quizData';
+import { NOTIFICATIONS_KEY, PROFILE_KEY, QUIZ_ATTEMPTS_KEY, readStorage, writeStorage } from '../../utils/storage';
 
-const ATTEMPTS_KEY = 'edubridge-quiz-attempts';
-const PROFILE_KEY = 'edubridge-profile';
 const EMPTY_ATTEMPTS = {};
 const DEFAULT_PROFILE = {
   fullName: 'Nadia Putri',
@@ -21,14 +20,12 @@ const TABS = [
   { id: 'settings', label: 'Pengaturan', icon: '⚙' },
 ];
 
-function readStorage(key, fallback, label) {
-  try {
-    const saved = localStorage.getItem(key);
-    return saved ? JSON.parse(saved) : fallback;
-  } catch (error) {
-    console.error(`Gagal membaca ${label}:`, error);
-    return fallback;
-  }
+function formatDate(timestamp) {
+  return new Date(timestamp).toLocaleDateString('id-ID');
+}
+
+function findAttempt(attempts, predicate) {
+  return Object.values(attempts).find(predicate);
 }
 
 function AccountRow({ icon, label, value }) {
@@ -60,11 +57,11 @@ export default function Profil() {
     ...DEFAULT_PROFILE,
     ...readStorage(PROFILE_KEY, {}, 'profil'),
   }));
-  const [attemptData] = useState(() => readStorage(ATTEMPTS_KEY, { attempts: {} }, 'hasil kuis'));
+  const [attemptData] = useState(() => readStorage(QUIZ_ATTEMPTS_KEY, { attempts: {} }, 'hasil kuis'));
   const [activeTab, setActiveTab] = useState('account');
   const [savedMessage, setSavedMessage] = useState('');
   const [notificationsEnabled, setNotificationsEnabled] = useState(() => (
-    localStorage.getItem('edubridge-notifications') !== 'false'
+    localStorage.getItem(NOTIFICATIONS_KEY) !== 'false'
   ));
   const attempts = attemptData.attempts ?? EMPTY_ATTEMPTS;
   const records = useMemo(() => quizTopics.flatMap((topic) => (
@@ -74,7 +71,13 @@ export default function Profil() {
       score: attempt.score,
       attemptedAt: attempt.attemptedAt ?? 0,
     }))
-  )).filter((record) => Number.isFinite(record.score)), [attempts]);
+  )).filter((record) => Number.isFinite(record.score))
+    .sort((left, right) => left.attemptedAt - right.attemptedAt), [attempts]);
+
+  const latestRecord = records[records.length - 1];
+  const perfectRecord = records.find((record) => record.score === 100);
+  const aljabarMastery = findAttempt(attempts.aljabar ?? {}, (attempt) => attempt.score >= 80);
+  const geometriMastery = findAttempt(attempts.geometri ?? {}, (attempt) => attempt.score >= 80);
 
   const totalXp = records.length * 100;
   const xpPerLevel = 750;
@@ -87,37 +90,31 @@ export default function Profil() {
       description: 'Selesaikan kuis pada 3 hari yang berbeda.',
       color: '#FFD65A',
       earned: new Set(records.map((record) => new Date(record.attemptedAt).toDateString())).size >= 3,
-      date: records.length ? new Date(records[records.length - 1].attemptedAt).toLocaleDateString('id-ID') : '',
+      date: latestRecord ? formatDate(latestRecord.attemptedAt) : '',
     },
     {
       icon: '🥈',
       title: 'Juara Kuis',
       description: 'Raih nilai sempurna dalam salah satu kuis.',
       color: '#A8B4C4',
-      earned: records.some((record) => record.score === 100),
-      date: records.find((record) => record.score === 100)
-        ? new Date(records.find((record) => record.score === 100).attemptedAt).toLocaleDateString('id-ID')
-        : '',
+      earned: Boolean(perfectRecord),
+      date: perfectRecord ? formatDate(perfectRecord.attemptedAt) : '',
     },
     {
       icon: '🏆',
       title: 'Master Aljabar',
       description: 'Raih nilai minimal 80 pada kuis Aljabar.',
       color: '#F59A70',
-      earned: Object.values(attempts.aljabar ?? {}).some((attempt) => attempt.score >= 80),
-      date: Object.values(attempts.aljabar ?? {}).find((attempt) => attempt.score >= 80)
-        ? new Date(Object.values(attempts.aljabar).find((attempt) => attempt.score >= 80).attemptedAt).toLocaleDateString('id-ID')
-        : '',
+      earned: Boolean(aljabarMastery),
+      date: aljabarMastery ? formatDate(aljabarMastery.attemptedAt) : '',
     },
     {
       icon: '🌿',
       title: 'Jago Geometri',
       description: 'Raih nilai minimal 80 pada kuis Geometri.',
       color: '#73B885',
-      earned: Object.values(attempts.geometri ?? {}).some((attempt) => attempt.score >= 80),
-      date: Object.values(attempts.geometri ?? {}).find((attempt) => attempt.score >= 80)
-        ? new Date(Object.values(attempts.geometri).find((attempt) => attempt.score >= 80).attemptedAt).toLocaleDateString('id-ID')
-        : '',
+      earned: Boolean(geometriMastery),
+      date: geometriMastery ? formatDate(geometriMastery.attemptedAt) : '',
     },
   ];
 
@@ -128,14 +125,14 @@ export default function Profil() {
 
   function saveProfile(event) {
     event.preventDefault();
-    localStorage.setItem(PROFILE_KEY, JSON.stringify(profile));
+    writeStorage(PROFILE_KEY, profile);
     setSavedMessage('Informasi akun berhasil disimpan di perangkat ini.');
   }
 
   function toggleNotifications(event) {
     const enabled = event.target.checked;
     setNotificationsEnabled(enabled);
-    localStorage.setItem('edubridge-notifications', String(enabled));
+    localStorage.setItem(NOTIFICATIONS_KEY, String(enabled));
   }
 
   const inputClass = 'mt-1 w-full rounded-xl border border-[#CFDCEC] bg-white px-3 py-2.5 text-sm text-[#2A42A1] outline-none transition focus:border-[#3A81DA] focus:ring-2 focus:ring-blue-100';

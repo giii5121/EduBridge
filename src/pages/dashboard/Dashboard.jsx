@@ -1,11 +1,11 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import DashboardLayout from '../../components/layout/DashboardLayout';
-import heroMascot from '../../assets/images/mascots copy/mascot-2-1-2.png';
-import progressMascot from '../../assets/images/mascots copy/cheer.png';
+import heroMascot from '../../assets/images/mascots/mascot-2-1-2.png';
+import progressMascot from '../../assets/images/mascots/cheer.png';
 import { quizTopics } from './quizData';
+import { readQuizResults } from '../../utils/storage';
 
-const STORAGE_KEY = 'edubridge-quiz-attempts';
 const defaultMastery = {
   aljabar: 92,
   geometri: 78,
@@ -21,17 +21,6 @@ const reminders = [
   { title: 'Geometri', topicId: 'geometri', time: '2 jam lagi', color: '#F56F9B', icon: '△' },
 ];
 
-function readQuizAttempts() {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    const results = saved ? JSON.parse(saved) : {};
-    return { ...results, attempts: results.attempts ?? {} };
-  } catch (error) {
-    console.error('Gagal membaca hasil kuis untuk dashboard:', error);
-    return { attempts: {} };
-  }
-}
-
 function getMastery(topic, attempts) {
   return attempts[topic.id]?.posttest?.score
     ?? attempts[topic.id]?.pretest?.score
@@ -46,7 +35,7 @@ function getMasteryLabel(score) {
 }
 
 const Dashboard = () => {
-  const [results] = useState(readQuizAttempts);
+  const [results] = useState(readQuizResults);
   const [todayTimestamp] = useState(() => Date.now());
   const attempts = results.attempts;
   const mastery = useMemo(() => quizTopics.map((topic) => ({

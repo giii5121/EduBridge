@@ -2,24 +2,14 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import DashboardLayout from '../../components/layout/DashboardLayout';
 import { quizTopics } from './quizData';
+import { readQuizResults, saveQuizResults } from '../../utils/storage';
 
-const STORAGE_KEY = 'edubridge-quiz-attempts';
 const QUIZ_DURATION_SECONDS = 15 * 60;
 const modeLabels = {
   pretest: 'Pre-Test',
   posttest: 'Post-Test',
   remedial: 'Remedial',
 };
-
-function readAttempts() {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    return saved ? JSON.parse(saved) : { attempts: {}, lastTopic: 'aljabar', lastMode: 'pretest' };
-  } catch (error) {
-    console.error('Gagal membaca hasil kuis tersimpan:', error);
-    return { attempts: {}, lastTopic: 'aljabar', lastMode: 'pretest' };
-  }
-}
 
 function createQuiz(topic, mode, incorrectIds = []) {
   const questions = mode === 'remedial' && incorrectIds.length
@@ -66,13 +56,13 @@ export default function Kuis() {
   const initialMode = ['pretest', 'posttest', 'remedial'].includes(searchParams.get('mode'))
     ? searchParams.get('mode')
     : 'pretest';
-  const [savedResults, setSavedResults] = useState(readAttempts);
+  const [savedResults, setSavedResults] = useState(readQuizResults);
   const [selectedTopicId, setSelectedTopicId] = useState(initialTopicId);
   const [selectedMode, setSelectedMode] = useState(initialMode);
   const [timeRemaining, setTimeRemaining] = useState(QUIZ_DURATION_SECONDS);
   const [quiz, setQuiz] = useState(() => {
     const topic = quizTopics.find((item) => item.id === initialTopicId);
-    const previous = readAttempts();
+    const previous = readQuizResults();
     const previousAttempt = getLatestTopicAttempt(previous.attempts, initialTopicId, previous.lastMode)?.[1];
     const incorrectIds = previousAttempt?.incorrectIds ?? [];
     return createQuiz(topic, initialMode, incorrectIds);
@@ -80,7 +70,9 @@ export default function Kuis() {
   const topic = quizTopics.find((item) => item.id === selectedTopicId) ?? quizTopics[0];
   const currentQuestion = quiz.questions[quiz.questionIndex];
   const selectedAnswer = quiz.answers[quiz.questionIndex];
+  const totalQuestions = quiz.questions.length;
   const correctCount = quiz.answers.filter((answer, index) => answer === quiz.questions[index]?.answer).length;
+  const scorePercentage = totalQuestions ? Math.round((correctCount / totalQuestions) * 100) : 0;
   const [latestAttemptMode, latestAttempt] = getLatestTopicAttempt(savedResults.attempts, selectedTopicId, savedResults.lastMode) ?? [];
   const pretestScore = savedResults.attempts[selectedTopicId]?.pretest?.score;
   const posttestScore = savedResults.attempts[selectedTopicId]?.posttest?.score;
@@ -129,7 +121,7 @@ export default function Kuis() {
   }
 
   const finishQuiz = useCallback(() => {
-    const score = Math.round((correctCount / quiz.questions.length) * 100);
+    const score = scorePercentage;
     const incorrectIds = quiz.questions
       .filter((question, index) => quiz.answers[index] !== question.answer)
       .map((question) => question.id);
@@ -155,9 +147,9 @@ export default function Kuis() {
     };
 
     setSavedResults(nextResults);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(nextResults));
+    saveQuizResults(nextResults);
     setQuiz((current) => ({ ...current, completed: true }));
-  }, [correctCount, quiz.answers, quiz.questions, quiz.startedAt, savedResults, selectedMode, selectedTopicId]);
+  }, [scorePercentage, quiz.answers, quiz.questions, quiz.startedAt, savedResults, selectedMode, selectedTopicId]);
 
   useEffect(() => {
     if (timeRemaining !== 0 || !quiz.started || quiz.completed) return undefined;
@@ -232,8 +224,8 @@ export default function Kuis() {
                 <div className="rounded-2xl bg-white p-5 sm:p-7">
                   <div className="text-center">
                     <p className="text-sm font-bold text-[#5577B7]">Hasil {modeLabels[quiz.mode]} · {topic.name}</p>
-                    <p className="mt-2 text-5xl font-extrabold text-[#3A81DA]">{Math.round((correctCount / quiz.questions.length) * 100)}<span className="text-2xl">%</span></p>
-                    <p className="mt-2 text-sm">{correctCount} benar dari {quiz.questions.length} soal</p>
+                    <p className="mt-2 text-5xl font-extrabold text-[#3A81DA]">{scorePercentage}<span className="text-2xl">%</span></p>
+                    <p className="mt-2 text-sm">{correctCount} benar dari {totalQuestions} soal</p>
                     <p className="mt-3 inline-flex rounded-full bg-[#E4F7F1] px-4 py-2 text-sm font-bold text-[#279A84]">
                       {correctCount === quiz.questions.length ? 'Hebat, semua jawaban benar!' : 'Yuk pelajari pembahasan untuk meningkatkan pemahamanmu.'}
                     </p>
@@ -292,7 +284,7 @@ export default function Kuis() {
                       <div className="min-w-[110px] rounded-xl bg-white px-3 py-2 text-xs font-bold text-[#6081C3]">
                         <p>Progres kuis</p>
                         <div className="mt-2 h-2 overflow-hidden rounded-full bg-gray-200">
-                          <div className="h-full rounded-full bg-[#4D80E8] transition-all" style={{ width: `${((quiz.questionIndex + (selectedAnswer !== undefined ? 1 : 0)) / quiz.questions.length) * 100}%` }} />
+                          <div className="h-full rounded-full bg-[#4D80E8] transition-all" style={{ width: `${((quiz.questionIndex + (selectedAnswer !== undefined ? 1 : 0)) / (totalQuestions || 1)) * 100}%` }} />
                         </div>
                       </div>
                     </div>
