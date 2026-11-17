@@ -2,6 +2,120 @@
 
 Platform deteksi dan pengurangan learning gap **Matematika kelas XI SMA**, melalui CDA sebelum/sesudah pembelajaran dan inferensi CDM **P-DINA**. Alur: **pretest → diagnosis awal → pembelajaran di kelas → penguatan konsep → posttest → perbandingan dalam siklus yang sama**. Peran: siswa, guru, admin.
 
+## Preview desktop dan mobile
+
+Screenshot diambil langsung dari build aplikasi menggunakan data demo. **Desktop di kiri** (viewport 1600 × 1000), **mobile di kanan** (390 × 844). Klik gambar untuk membuka versi resolusi penuh.
+
+### Homepage
+
+Pengenalan EduBridge, fitur, dan alur CDA–PDINA.
+
+<p>
+  <a href="snapshots/readme/01-homepage-desktop.png"><img src="snapshots/readme/01-homepage-desktop.png" width="76%" alt="Homepage EduBridge versi desktop" /></a>
+  <a href="snapshots/readme/01-homepage-mobile.png"><img src="snapshots/readme/01-homepage-mobile.png" width="22%" alt="Homepage EduBridge versi mobile" /></a>
+</p>
+
+### Jalur belajar siswa
+
+Langkah belajar, maskot, XP, dan kelanjutan pembelajaran.
+
+<p>
+  <a href="snapshots/readme/02-belajar-desktop.png"><img src="snapshots/readme/02-belajar-desktop.png" width="76%" alt="Jalur belajar siswa EduBridge versi desktop" /></a>
+  <a href="snapshots/readme/02-belajar-mobile.png"><img src="snapshots/readme/02-belajar-mobile.png" width="22%" alt="Jalur belajar siswa EduBridge versi mobile" /></a>
+</p>
+
+### Mode gelap
+
+Preferensi tema pada tampilan desktop dan mobile.
+
+<p>
+  <a href="snapshots/readme/03-mode-gelap-desktop.png"><img src="snapshots/readme/03-mode-gelap-desktop.png" width="76%" alt="Mode gelap EduBridge versi desktop" /></a>
+  <a href="snapshots/readme/03-mode-gelap-mobile.png"><img src="snapshots/readme/03-mode-gelap-mobile.png" width="22%" alt="Mode gelap EduBridge versi mobile" /></a>
+</p>
+
+### Katalog materi
+
+Topik matematika kelas XI dengan ilustrasi dan status belajar.
+
+<p>
+  <a href="snapshots/readme/04-katalog-desktop.png"><img src="snapshots/readme/04-katalog-desktop.png" width="76%" alt="Katalog materi EduBridge versi desktop" /></a>
+  <a href="snapshots/readme/04-katalog-mobile.png"><img src="snapshots/readme/04-katalog-mobile.png" width="22%" alt="Katalog materi EduBridge versi mobile" /></a>
+</p>
+
+### Asesmen CDA
+
+Soal diagnostik, notasi KaTeX, maskot, dan navigasi soal.
+
+<p>
+  <a href="snapshots/readme/07-kuis-desktop.png"><img src="snapshots/readme/07-kuis-desktop.png" width="76%" alt="Asesmen CDA EduBridge versi desktop" /></a>
+  <a href="snapshots/readme/07-kuis-mobile.png"><img src="snapshots/readme/07-kuis-mobile.png" width="22%" alt="Asesmen CDA EduBridge versi mobile" /></a>
+</p>
+
+### Penguatan konsep
+
+Penjelasan bertahap, contoh, dan penguatan setelah pretest.
+
+<p>
+  <a href="snapshots/readme/05-penguatan-desktop.png"><img src="snapshots/readme/05-penguatan-desktop.png" width="76%" alt="Penguatan konsep EduBridge versi desktop" /></a>
+  <a href="snapshots/readme/05-penguatan-mobile.png"><img src="snapshots/readme/05-penguatan-mobile.png" width="22%" alt="Penguatan konsep EduBridge versi mobile" /></a>
+</p>
+
+### Progres dan learning gap
+
+Ringkasan penguasaan serta perbandingan sebelum dan sesudah pembelajaran.
+
+<p>
+  <a href="snapshots/readme/06-progres-desktop.png"><img src="snapshots/readme/06-progres-desktop.png" width="76%" alt="Progres dan learning gap EduBridge versi desktop" /></a>
+  <a href="snapshots/readme/06-progres-mobile.png"><img src="snapshots/readme/06-progres-mobile.png" width="22%" alt="Progres dan learning gap EduBridge versi mobile" /></a>
+</p>
+
+### Ruang guru
+
+Pengaturan fase kelas dan pemantauan penguasaan konsep siswa.
+
+<p>
+  <a href="snapshots/readme/08-guru-desktop.png"><img src="snapshots/readme/08-guru-desktop.png" width="76%" alt="Ruang guru EduBridge versi desktop" /></a>
+  <a href="snapshots/readme/08-guru-mobile.png"><img src="snapshots/readme/08-guru-mobile.png" width="22%" alt="Ruang guru EduBridge versi mobile" /></a>
+</p>
+
+### Pengelolaan materi
+
+Materi kelas, draf, publikasi, dan akses edit/hapus untuk pengelola.
+
+<p>
+  <a href="snapshots/readme/09-kelola-materi-desktop.png"><img src="snapshots/readme/09-kelola-materi-desktop.png" width="76%" alt="Pengelolaan materi EduBridge versi desktop" /></a>
+  <a href="snapshots/readme/09-kelola-materi-mobile.png"><img src="snapshots/readme/09-kelola-materi-mobile.png" width="22%" alt="Pengelolaan materi EduBridge versi mobile" /></a>
+</p>
+
+### Generator materi AI
+
+Arahan guru dan pengisian draf materi melalui AI.
+
+<p>
+  <a href="snapshots/readme/10-editor-ai-desktop.png"><img src="snapshots/readme/10-editor-ai-desktop.png" width="76%" alt="Generator materi AI EduBridge versi desktop" /></a>
+  <a href="snapshots/readme/10-editor-ai-mobile.png"><img src="snapshots/readme/10-editor-ai-mobile.png" width="22%" alt="Generator materi AI EduBridge versi mobile" /></a>
+</p>
+
+### Pratinjau sebelum validasi
+
+Materi dan rumus dapat diperiksa seperti tampilan siswa sebelum disetujui.
+
+<p>
+  <a href="snapshots/readme/11-pratinjau-desktop.png"><img src="snapshots/readme/11-pratinjau-desktop.png" width="76%" alt="Pratinjau sebelum validasi EduBridge versi desktop" /></a>
+  <a href="snapshots/readme/11-pratinjau-mobile.png"><img src="snapshots/readme/11-pratinjau-mobile.png" width="22%" alt="Pratinjau sebelum validasi EduBridge versi mobile" /></a>
+</p>
+
+### Panel admin
+
+Pengelolaan pengguna, kelas, materi, dan layanan aplikasi.
+
+<p>
+  <a href="snapshots/readme/12-admin-desktop.png"><img src="snapshots/readme/12-admin-desktop.png" width="76%" alt="Panel admin EduBridge versi desktop" /></a>
+  <a href="snapshots/readme/12-admin-mobile.png"><img src="snapshots/readme/12-admin-mobile.png" width="22%" alt="Panel admin EduBridge versi mobile" /></a>
+</p>
+
+Screenshot dapat diperbarui dengan `npm run build` lalu `node scripts/capture-readme.mjs` saat layanan FastAPI lokal berjalan. Skrip memakai database demo dalam memori, memeriksa gambar/error/overflow dan kredensial yang terlihat, serta menyimpan catatan pengambilan di [manifest preview](snapshots/readme/manifest.json).
+
 ## Dokumentasi dan bukti
 
 Homepage publik tersedia di `/`: alur CDA–PDINA, fitur siswa/guru/admin, enam topik matematika XI, gamifikasi, dan FAQ. Pengunjung dapat masuk atau mendaftar; pengguna yang sudah masuk dapat kembali ke ruang aplikasinya. Homepage mendukung mode terang/gelap dan navigasi ponsel, serta tetap terbaca saat API aplikasi tidak tersedia.
