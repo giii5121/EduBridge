@@ -115,6 +115,13 @@ export function openDatabase(
     CREATE TABLE IF NOT EXISTS audit_log (
       id TEXT PRIMARY KEY, actor_id TEXT, action TEXT NOT NULL, target_id TEXT, created_at TEXT NOT NULL
     );
+    CREATE TABLE IF NOT EXISTS materials (
+      id TEXT PRIMARY KEY, owner_id TEXT NOT NULL REFERENCES users(id),
+      class_id TEXT REFERENCES classes(id), topic_id TEXT NOT NULL REFERENCES topics(id),
+      data TEXT NOT NULL, revision INTEGER NOT NULL DEFAULT 1,
+      created_at TEXT NOT NULL, updated_at TEXT NOT NULL, deleted_at TEXT
+    );
+    CREATE INDEX IF NOT EXISTS materials_scope ON materials(class_id,deleted_at);
   `);
   return db;
 }

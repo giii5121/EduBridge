@@ -1,15 +1,38 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Search, Clock3, ArrowRight, BookOpen, Check, SlidersHorizontal } from 'lucide-react';
 import { useApp } from '../../lib/AppContext';
-import { Badge, ButtonLink, Empty, PageHead, Symbol } from '../../components/ui/Kit';
-import { statusMeta, topicLink } from '../../lib/api';
+import {
+  Badge,
+  Button,
+  ButtonLink,
+  Empty,
+  ErrorNotice,
+  Loading,
+  PageHead,
+  SectionHead,
+  Symbol,
+} from '../../components/ui/Kit';
+import { api, statusMeta, topicLink } from '../../lib/api';
+import MaterialCards from '../../components/learning/MaterialCards';
 import book from '../../assets/images/mascots copy/book.png';
 export default function KatalogMateri() {
   const { data, user } = useApp();
   const [params, setParams] = useSearchParams();
   const [category, setCategory] = useState('Semua materi');
   const [filter, setFilter] = useState('all');
+  const [materials, setMaterials] = useState(null);
+  const [error, setError] = useState('');
+  const [retry, setRetry] = useState(0);
+  useEffect(() => {
+    const controller = new AbortController();
+    api('/materials', { signal: controller.signal })
+      .then((r) => setMaterials(r.materials.filter((m) => m.published)))
+      .catch((e) => {
+        if (e.name !== 'AbortError') setError(e.message);
+      });
+    return () => controller.abort();
+  }, [retry]);
   const query = params.get('q') ?? '';
   const categories = ['Semua materi', ...new Set(data.topics.map((t) => t.category))];
   const filtered = data.topics.filter(
@@ -20,9 +43,23 @@ export default function KatalogMateri() {
         (filter === 'progress' && t.state.pre && !t.state.post) ||
         (filter === 'done' && t.state.post)),
   );
+  const supplemental = materials?.filter(
+    (m) =>
+      `${m.title} ${m.summary} ${m.topicTitle} ${m.className}`
+        .toLowerCase()
+        .includes(query.toLowerCase()) &&
+      (category === 'Semua materi' ||
+        data.topics.find((t) => t.id === m.topicId)?.category === category),
+  );
   return (
     <>
-      <PageHead eyebrow="TEMUKAN LANGKAH BERIKUTNYA" title="Ruang untuk makin paham.">
+      <PageHead
+        eyebrow="TEMUKAN LANGKAH BERIKUTNYA"
+        title="Ruang untuk makin paham."
+        action={
+          user.role !== 'student' && <ButtonLink to="/kelola-materi">Kelola materi</ButtonLink>
+        }
+      >
         Materi matematika XI dengan penguatan sesuai kebutuhan belajarmu.
       </PageHead>
       <section className="catalog-banner">
@@ -150,6 +187,15 @@ export default function KatalogMateri() {
                   >
                     {user.role === 'student' ? meta.label : 'Pratinjau materi'}
                   </ButtonLink>
+                  {user.role !== 'student' && topic.published && (
+                    <ButtonLink
+                      to={`/kelola-materi?topik=${topic.id}`}
+                      variant="ghost"
+                      className="full"
+                    >
+                      Sesuaikan untuk kelas
+                    </ButtonLink>
+                  )}
                 </div>
               </div>
             </article>
@@ -175,6 +221,39 @@ export default function KatalogMateri() {
           Coba kata kunci lain atau tampilkan semua kategori.
         </Empty>
       )}
+      <section className="material-catalog-section">
+        <SectionHead
+          eyebrow="DARI RUANG KELAS"
+          title={
+            user.role === 'student' ? 'Penguatan untuk kelasmu.' : 'Materi penguatan tambahan.'
+          }
+        >
+          Penjelasan dan latihan tambahan dari guru untuk memperkuat konsep. Materi ini dapat dibaca
+          kapan saja; asesmen tetap mengikuti fase kelas.
+        </SectionHead>
+        <ErrorNotice>{error}</ErrorNotice>
+        {error ? (
+          <Button
+            variant="secondary"
+            onClick={() => {
+              setError('');
+              setRetry((n) => n + 1);
+            }}
+          >
+            Coba muat kembali
+          </Button>
+        ) : materials === null ? (
+          <Loading label="Memuat materi penguatan…" />
+        ) : supplemental.length ? (
+          <MaterialCards materials={supplemental} />
+        ) : (
+          <Empty title={query ? 'Penguatannya belum ditemukan' : 'Nantikan materi dari gurumu'}>
+            {query
+              ? 'Coba kata kunci atau kategori lain.'
+              : 'Materi tambahan yang diterbitkan guru atau admin akan muncul di sini.'}
+          </Empty>
+        )}
+      </section>
     </>
   );
 }

@@ -119,7 +119,7 @@ export function Meter({ value = 0, tone = 'blue', label }) {
 export function Symbol({ topic, small = false }) {
   return (
     <span className={`topic-symbol ${topic.color} ${small ? 'small' : ''}`} aria-hidden="true">
-      <TopicIllustration id={topic.id} />
+      <TopicIllustration id={topic.icon ?? topic.id} />
     </span>
   );
 }
@@ -133,8 +133,12 @@ export function Modal({ title, children, onClose, wide = false }) {
   return (
     <dialog
       ref={ref}
+      aria-label={title}
       className={`modal ${wide ? 'wide' : ''}`}
-      onCancel={onClose}
+      onCancel={(event) => {
+        event.preventDefault();
+        onClose();
+      }}
       onClick={(event) => {
         if (event.target === ref.current) onClose();
       }}

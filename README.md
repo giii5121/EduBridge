@@ -13,7 +13,26 @@ Homepage publik tersedia di `/`: alur CDA–PDINA, fitur siswa/guru/admin, enam 
 
 ## Arsitektur
 
+Guru dan admin dapat membuka **Kelola materi** (`/kelola-materi`) untuk membuat, mengedit, menerbitkan, atau menghapus materi penguatan. Guru mengelola materi kelasnya; admin juga dapat membuat materi umum untuk semua kelas. Draf hanya terlihat oleh pengelola. Ikon ilustrasi dipilih otomatis dan konsisten berdasarkan judul/topik, menggunakan enam gaya ikon katalog yang sama.
+
+Materi mendukung beberapa bagian, rumus LaTeX, penjelasan bertahap, contoh berlangkah, miskonsepsi, dan latihan mandiri. Tombol **Sesuaikan untuk kelas** di katalog menyalin materi topik menjadi materi penguatan yang dapat diedit. Materi terbit tampil di katalog siswa dan halaman topik terkait. Penguatan dipetakan ke enam topik asesmen yang sudah dikalibrasi; pembuatan atau penghapusan materi tidak mengubah bank soal, parameter P-DINA, XP, atau hasil pre/posttest. Materi tambahan boleh dibaca kapan saja, sedangkan asesmen tetap mengikuti fase kelas.
+
+API autentikasi: `GET/POST /api/materials`, `GET/PATCH/DELETE /api/materials/:id`. Pembaruan dan penghapusan membutuhkan `version` terbaru untuk mencegah perubahan saling menimpa. Mutasi menggunakan CSRF, validasi, transaksi, audit, dan penghapusan logis. Tabel `materials` dibuat otomatis saat backend membuka database, termasuk pada database yang sudah ada. Tes fitur tersedia di `server/test/materials.test.js` dan `tests/materials.spec.js`.
+
+**Draf materi dengan AI:** di editor, pilih topik dan kelas, isi arahan opsional, lalu gunakan **Isi semua bagian dengan AI** (1–6 bagian) atau tombol AI pada masing-masing bagian. Penggantian isi yang sudah ada meminta konfirmasi. Hasil mengisi penjelasan, contoh, penjelasan bertahap, miskonsepsi, dan latihan; tetap berupa draf yang bisa diedit. Kegagalan AI atau pembatalan tidak menimpa tulisan manual.
+
+Guru/pengelola wajib memeriksa rumus, konsep, contoh, dan jawaban latihan, lalu mencentang **Saya sudah meninjau dan memvalidasi kebenaran seluruh materi** sebelum menerbitkan. Backend menolak publikasi tanpa validasi (`422`), menyimpan peninjau/waktu/hash isi, dan membatalkan validasi ketika isi atau cakupan kelas/topik berubah. Ini adalah konfirmasi peninjauan manusia, bukan klaim bahwa LLM membuktikan kebenaran matematika. Materi manual baru juga memakai konfirmasi ini sebelum terbit; materi lama tidak diubah otomatis.
+
+Gunakan **Pratinjau bagian seperti tampilan siswa** untuk membaca hasil lengkap dengan rumus KaTeX dan mencoba pembahasan latihan sebelum memvalidasi. Pratinjau memakai renderer yang sama dengan halaman siswa.
+
+Generator memakai Gemini dari `GEMINI_API_KEY` dan `GEMINI_MODEL` yang sudah dikonfigurasi. Opsional: `GEMINI_MATERIAL_MODEL` untuk model materi yang berbeda dan `GEMINI_MATERIAL_TIMEOUT_SECONDS` (default 70). Tidak membutuhkan retraining PDINA. Endpoint aplikasi: `POST /api/materials/generate` dengan `topicId`, `classId`, `title`, `sectionTitle`, `instructions`, dan `blockCount`. Endpoint FastAPI: `POST /v1/materials/generate`; payload, respons, contoh, batas field, dan error tersedia di Swagger `/docs`. Endpoint FastAPI memakai service key; hanya guru/admin dengan sesi dan CSRF dapat mengakses generator melalui aplikasi. Tidak ada data siswa atau bank soal asesmen yang dikirim ke generator.
+
+Uji live terisolasi: `node scripts/check-material-generation.mjs --confirm` membuat satu panggilan Gemini nyata dan memeriksa simpan draf serta gerbang publikasi memakai database dalam memori. Hasil ringkas dan contoh draf disimpan di `artifacts/material-generation-live.json` dan `artifacts/generated-material-preview.json` (lokal, diabaikan Git). Tanpa `--confirm`, tidak ada panggilan provider. Tes otomatis tanpa biaya memakai mock provider, termasuk keluaran tidak valid, gangguan provider, pembatalan, dan validasi ulang.
+
+Tambahkan `--blocks=3` untuk menguji satu materi lengkap dengan tiga bagian (rentang 1–6 bagian, tetap satu panggilan provider per eksekusi).
+
 - `client/`: React/Vite, jalur belajar, maskot, gamifikasi, materi, asesmen, progres, profil, tema terang/gelap tersimpan dalam cookie.
+- `shared/`: aturan pemilihan ikon materi yang dipakai bersama frontend dan backend; disertakan dalam image Docker.
 - `server/src/`: API aplikasi Node.js 24 + SQLite, autentikasi, otorisasi, sesi, kelas, asesmen, audit administrasi.
 - `server/ml/web/`: FastAPI untuk PDINA, perbandingan pre/post, ringkasan siswa/kelas dan pendamping Gemini. Swagger/OpenAPI tersedia.
 - `server/ml/cdacdm/`: implementasi P-DINA, CDA, Q-matrix, evaluasi dan narasi dari proyek AI asli.

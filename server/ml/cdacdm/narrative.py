@@ -731,6 +731,9 @@ class GeminiTransport:
         system, contents = to_gemini_request(payload["messages"])
         gen = {"system_instruction": system, "temperature": payload.get("temperature"), "top_p": payload.get("top_p"),
                "max_output_tokens": payload.get("max_tokens")}
+        for key in ('response_mime_type', 'response_json_schema'):
+            if payload.get(key) is not None:
+                gen[key] = payload[key]
         if payload.get("thinking_level"):
             gen["thinking_config"] = types.ThinkingConfig(thinking_level=payload["thinking_level"].upper())
         config = types.GenerateContentConfig(**{k: v for k, v in gen.items() if v is not None})

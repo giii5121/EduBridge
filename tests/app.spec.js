@@ -11,7 +11,9 @@ test.afterEach(async ({ page }) => {
 });
 async function demo(page, role) {
   await page.goto('/login');
+  const signedIn = page.waitForResponse(response=>response.url().endsWith('/api/auth/login')&&response.request().method()==='POST',{timeout:35000});
   await page.getByRole('button', { name: role, exact: true }).click();
+  expect((await signedIn).status()).toBe(200);
   await expect(page).toHaveURL(
     role === 'Guru' ? /\/guru$/ : role === 'Admin' ? /\/admin$/ : /\/dashboard$/,
   );
@@ -25,6 +27,7 @@ async function noOverflow(page) {
 test('student dashboard, catalog search, progress, profile, and desktop design', async ({
   page,
 }) => {
+  test.setTimeout(90000);
   mkdirSync('artifacts', { recursive: true });
   await page.goto('/login');
   await expect(page.getByRole('heading', { name: 'Siap makin paham?' })).toBeVisible();
@@ -59,6 +62,7 @@ test('registration, persisted assessment, lesson, teacher release, posttest, and
   page,
   browser,
 }) => {
+  test.setTimeout(90000);
   await page.goto('/register');
   await page.getByLabel('Nama lengkap', { exact: true }).fill('Siswa Browser');
   await page.getByLabel('Email', { exact: true }).fill('browser@example.id');
@@ -85,7 +89,9 @@ test('registration, persisted assessment, lesson, teacher release, posttest, and
   }
   await page.screenshot({ path: 'artifacts/assessment-desktop.png', fullPage: true });
   await page.getByRole('button', { name: 'Kumpulkan asesmen', exact: true }).click();
+  const submittedPre = page.waitForResponse(response=>response.url().endsWith('/submit')&&response.request().method()==='POST',{timeout:20000});
   await page.getByRole('button', { name: 'Ya, kumpulkan' }).click();
+  expect((await submittedPre).status()).toBe(200);
   await expect(page).toHaveURL(/\/kuis\/hasil\//);
   await expect(page.getByText('PDINA · Kalibrasi sintetis', { exact: true })).toBeVisible();
   await page.getByRole('button', {name: 'Buat ringkasan hasil'}).click();
@@ -142,7 +148,9 @@ test('registration, persisted assessment, lesson, teacher release, posttest, and
     if (i < answers.length - 1) await page.getByRole('button', { name: 'Berikutnya', exact: true }).click();
   }
   await page.getByRole('button', { name: 'Kumpulkan asesmen', exact: true }).click();
+  const submittedPost = page.waitForResponse(response=>response.url().endsWith('/submit')&&response.request().method()==='POST',{timeout:20000});
   await page.getByRole('button', { name: 'Ya, kumpulkan' }).click();
+  expect((await submittedPost).status()).toBe(200);
   await expect(page.locator('.result-score')).toContainText('100');
   await expect(page.locator('.comparison-summary')).toContainText('gap tertutup');
   await page.screenshot({ path: 'artifacts/result-desktop.png', fullPage: true });

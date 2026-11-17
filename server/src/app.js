@@ -7,6 +7,7 @@ import { hashPassword, hashPasswordAsync, verifyPasswordAsync } from './database
 import { compareDiagnoses } from './diagnosis.js';
 import { createModelClient } from './modelClient.js';
 import { validLesson, normalizeLesson } from './lessonSchema.js';
+import { registerMaterialRoutes } from './materials.js';
 import {
   publicUser,
   catalog,
@@ -840,6 +841,7 @@ export function createApp(
     return { topic: next };
   });
 
+  registerMaterialRoutes({ db, route, readBody, fail, audit, modelClient, aiLimit });
   const server = createServer(async (req, res) => {
     const requestId = randomUUID();
     res.setHeader('X-Request-ID', requestId);

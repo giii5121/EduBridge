@@ -5,6 +5,7 @@ COPY client/package.json client/package.json
 COPY server/package.json server/package.json
 RUN npm ci
 COPY client client
+COPY shared shared
 RUN npm run build
 
 FROM node:24-bookworm-slim
@@ -12,6 +13,7 @@ ENV NODE_ENV=production HOST=0.0.0.0 PORT=4000 DATABASE_PATH=/data/edubridge.sql
 WORKDIR /app/server
 COPY --chown=node:node server/package.json ./package.json
 COPY --chown=node:node server/src ./src
+COPY --chown=node:node shared /app/shared
 COPY --from=client-build --chown=node:node /app/client/dist /app/client/dist
 RUN mkdir -p /data && chown node:node /data
 USER node
