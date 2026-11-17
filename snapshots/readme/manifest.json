@@ -1,0 +1,248 @@
+{
+  "capturedAt": "2026-11-17T09:23:59.507Z",
+  "syntheticDemoData": true,
+  "localDatabaseModified": false,
+  "newGeminiCalls": 0,
+  "captures": [
+    {
+      "file": "01-homepage-desktop.png",
+      "title": "Homepage publik",
+      "device": "desktop",
+      "route": "/",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "file": "02-belajar-desktop.png",
+      "title": "Jalur belajar siswa",
+      "device": "desktop",
+      "route": "/dashboard",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "file": "03-mode-gelap-desktop.png",
+      "title": "Jalur belajar dalam mode gelap",
+      "device": "desktop",
+      "route": "/dashboard",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "file": "04-katalog-desktop.png",
+      "title": "Katalog matematika kelas XI",
+      "device": "desktop",
+      "route": "/katalog",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "file": "05-penguatan-desktop.png",
+      "title": "Penguatan konsep dan rumus matematika",
+      "device": "desktop",
+      "route": "/materi/geometri",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "file": "06-progres-desktop.png",
+      "title": "Progres serta perbandingan pre/post",
+      "device": "desktop",
+      "route": "/progres",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "file": "07-kuis-desktop.png",
+      "title": "Asesmen CDA dengan rumus KaTeX",
+      "device": "desktop",
+      "route": "/kuis/kerjakan/:id",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "file": "08-guru-desktop.png",
+      "title": "Ruang guru: fase kelas dan peta penguasaan",
+      "device": "desktop",
+      "route": "/guru",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "file": "09-kelola-materi-desktop.png",
+      "title": "Pengelolaan materi guru dan admin",
+      "device": "desktop",
+      "route": "/kelola-materi",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "file": "10-editor-ai-desktop.png",
+      "title": "Editor materi dengan generator AI dan validasi guru",
+      "device": "desktop",
+      "route": "/kelola-materi",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "file": "11-pratinjau-desktop.png",
+      "title": "Pratinjau hasil materi sebelum divalidasi",
+      "device": "desktop",
+      "route": "/kelola-materi",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "file": "12-admin-desktop.png",
+      "title": "Panel admin untuk pengguna dan kelas",
+      "device": "desktop",
+      "route": "/admin",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "file": "01-homepage-mobile.png",
+      "title": "Homepage publik",
+      "device": "mobile",
+      "route": "/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "02-belajar-mobile.png",
+      "title": "Jalur belajar siswa",
+      "device": "mobile",
+      "route": "/dashboard",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "03-mode-gelap-mobile.png",
+      "title": "Jalur belajar dalam mode gelap",
+      "device": "mobile",
+      "route": "/dashboard",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "04-katalog-mobile.png",
+      "title": "Katalog matematika kelas XI",
+      "device": "mobile",
+      "route": "/katalog",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "05-penguatan-mobile.png",
+      "title": "Penguatan konsep dan rumus matematika",
+      "device": "mobile",
+      "route": "/materi/geometri",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "06-progres-mobile.png",
+      "title": "Progres serta perbandingan pre/post",
+      "device": "mobile",
+      "route": "/progres",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "07-kuis-mobile.png",
+      "title": "Asesmen CDA dengan rumus KaTeX",
+      "device": "mobile",
+      "route": "/kuis/kerjakan/:id",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "08-guru-mobile.png",
+      "title": "Ruang guru: fase kelas dan peta penguasaan",
+      "device": "mobile",
+      "route": "/guru",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "09-kelola-materi-mobile.png",
+      "title": "Pengelolaan materi guru dan admin",
+      "device": "mobile",
+      "route": "/kelola-materi",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "10-editor-ai-mobile.png",
+      "title": "Editor materi dengan generator AI dan validasi guru",
+      "device": "mobile",
+      "route": "/kelola-materi",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "11-pratinjau-mobile.png",
+      "title": "Pratinjau hasil materi sebelum divalidasi",
+      "device": "mobile",
+      "route": "/kelola-materi",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "12-admin-mobile.png",
+      "title": "Panel admin untuk pengguna dan kelas",
+      "device": "mobile",
+      "route": "/admin",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    }
+  ]
+}

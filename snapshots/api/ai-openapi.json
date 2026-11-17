@@ -1,0 +1,1732 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "EduBridge CDA · CDM · P-DINA API",
+    "description": "Inferensi checkpoint beku, pemetaan learning gap, perbandingan pre/post, dan narasi Gemini. Parameter tidak dilatih ulang saat request. Kalibrasi sintetis dibedakan dari validasi lapangan.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ready": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "summary": "Ready",
+        "operationId": "ready_ready_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/models": {
+      "get": {
+        "tags": [
+          "Models"
+        ],
+        "summary": "Models",
+        "operationId": "models_v1_models_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/ModelStatus"
+                  },
+                  "type": "array",
+                  "title": "Response Models V1 Models Get"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
+      }
+    },
+    "/v1/diagnose": {
+      "post": {
+        "tags": [
+          "CDA / CDM"
+        ],
+        "summary": "Diagnose",
+        "operationId": "diagnose_v1_diagnose_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DiagnoseRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/Diagnosis"
+                    },
+                    {
+                      "$ref": "#/components/schemas/OriginalReport"
+                    }
+                  ],
+                  "title": "Response Diagnose V1 Diagnose Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unknown items, invalid responses, or mismatched instrument."
+          },
+          "503": {
+            "description": "Inference temporarily unavailable."
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
+      }
+    },
+    "/v1/compare": {
+      "post": {
+        "tags": [
+          "CDA / CDM"
+        ],
+        "summary": "Compare",
+        "operationId": "compare_v1_compare_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompareRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Compare V1 Compare Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
+      }
+    },
+    "/v1/narrative": {
+      "post": {
+        "tags": [
+          "Gemini"
+        ],
+        "summary": "Narrative",
+        "operationId": "narrative_v1_narrative_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NarrativeRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NarrativeResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
+      }
+    },
+    "/v1/tutor": {
+      "post": {
+        "tags": [
+          "Gemini"
+        ],
+        "summary": "Tutor",
+        "operationId": "tutor_v1_tutor_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TutorRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TutorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
+      }
+    },
+    "/v1/materials/generate": {
+      "post": {
+        "tags": [
+          "Gemini"
+        ],
+        "summary": "Generate a lesson draft requiring human review",
+        "operationId": "generate_material_v1_materials_generate_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MaterialGenerateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MaterialGenerateResponse"
+                },
+                "example": {
+                  "draft": {
+                    "title": "Penguatan Konsep Komposisi dan Invers Fungsi",
+                    "summary": "Materi ini bertujuan untuk memperkuat pemahaman mengenai operasi fungsi komposisi dan penentuan fungsi invers. Melalui pendekatan bertahap, kita akan mengulas pentingnya urutan operasi dalam komposisi serta logika dasar pembalikan relasi dalam fungsi invers.",
+                    "minutes": 45,
+                    "blocks": [
+                      {
+                        "title": "Mulai dari Nilai Fungsi",
+                        "body": "Nilai fungsi adalah hasil akhir yang kita peroleh setelah memasukkan nilai variabel tertentu ke dalam aturan fungsi. Bayangkan fungsi sebagai sebuah kotak hitam: kita memasukkan bahan (input x), mesin memprosesnya sesuai instruksi (aturan fungsi), dan mengeluarkan produk (output y). Penting untuk diingat bahwa setiap input yang valid harus menghasilkan tepat satu output yang unik.\n\nMemahami evaluasi fungsi adalah fondasi utama. Jika kita tidak terbiasa menghitung $f(a)$, kita akan kesulitan saat harus melakukan komposisi fungsi, di mana output dari satu fungsi menjadi input bagi fungsi lainnya. Konsistensi dalam substitusi variabel adalah kunci untuk menghindari kesalahan perhitungan dasar.",
+                        "example": "Diberikan fungsi $f(x) = 2x + 3$. Jika kita ingin mencari nilai fungsi untuk $x = 4$, maka: $f(4) = 2(4) + 3 = 8 + 3 = 11$.",
+                        "sections": [
+                          {
+                            "title": "Pentingnya Substitusi yang Teliti",
+                            "body": "Selalu ganti seluruh variabel $x$ di ruas kanan dengan nilai input yang diberikan. Jangan melewatkan tanda kurung, terutama jika fungsi mengandung eksponen atau koefisien negatif, karena ini sering menjadi sumber kesalahan dalam perhitungan matematika."
+                          },
+                          {
+                            "title": "Domain sebagai Syarat",
+                            "body": "Ingatlah bahwa input harus berada dalam domain fungsi. Misalnya, pada fungsi $f(x) = 1/x$, nilai $x=0$ tidak diperbolehkan. Sebelum menghitung, pastikan nilai $x$ yang diberikan tidak melanggar aturan ini."
+                          }
+                        ],
+                        "worked": {
+                          "prompt": "Hitunglah nilai dari $g(x) = x^2 - 5x + 2$ untuk $x = -3$.",
+                          "steps": [
+                            "Tuliskan fungsi: $g(x) = x^2 - 5x + 2$.",
+                            "Substitusikan nilai $-3$ ke setiap posisi $x$: $g(-3) = (-3)^2 - 5(-3) + 2$.",
+                            "Hitung kuadrat: $(-3)^2 = 9$.",
+                            "Hitung perkalian: $-5 \\times -3 = 15$.",
+                            "Jumlahkan hasilnya: $9 + 15 + 2 = 26$."
+                          ],
+                          "conclusion": "Jadi, nilai dari $g(-3)$ adalah $26$."
+                        },
+                        "misconception": {
+                          "mistake": "Sering terjadi kesalahan pada perhitungan $(-3)^2$. Banyak siswa menulisnya $-3^2 = -9$.",
+                          "correction": "Ingat bahwa $(-3)^2$ berarti $(-3) \\times (-3) = 9$. Selalu gunakan tanda kurung saat mensubstitusikan bilangan negatif."
+                        },
+                        "practice": [
+                          {
+                            "id": "ba988933-abd1-4e53-8b60-c95627bca832",
+                            "question": "Jika $h(x) = 4 - x^2$, tentukan nilai $h(-2)$.",
+                            "answer": "0",
+                            "explanation": "Substitusikan $x = -2$: $h(-2) = 4 - (-2)^2 = 4 - 4 = 0$."
+                          }
+                        ]
+                      },
+                      {
+                        "title": "Komposisi: Urutan Itu Penting",
+                        "body": "Komposisi fungsi $(f \\circ g)(x)$ berarti kita mengerjakan fungsi $g(x)$ terlebih dahulu, lalu hasilnya dimasukkan ke dalam fungsi $f$. Ibaratkan proses memasak: $g(x)$ adalah memotong sayuran, dan $f(x)$ adalah memasak sayuran tersebut. Anda tidak bisa memasak sayuran yang belum dipotong.\n\nKarena urutan ini, maka secara umum $(f \\circ g)(x)$ tidak sama dengan $(g \\circ f)(x)$. Kesalahan umum adalah menganggap komposisi bersifat komutatif seperti perkalian biasa. Selalu fokus pada fungsi yang berada paling dekat dengan variabel $x$ (fungsi bagian dalam) terlebih dahulu, baru kemudian terapkan aturan fungsi di luar.",
+                        "example": "Misalkan $f(x) = 3x$ dan $g(x) = x + 2$. Maka $(f \\circ g)(x) = f(g(x)) = f(x+2) = 3(x+2) = 3x + 6$.",
+                        "sections": [
+                          {
+                            "title": "Identifikasi Fungsi Dalam",
+                            "body": "Dalam notasi $(f \\circ g)(x)$, fungsi $g$ adalah fungsi yang bekerja pertama kali. Fokuslah menyederhanakan $g(x)$ terlebih dahulu sebelum memproses $f$."
+                          },
+                          {
+                            "title": "Metode Substitusi Total",
+                            "body": "Ganti setiap variabel $x$ pada fungsi $f$ dengan seluruh ekspresi fungsi $g(x)$. Jangan hanya mengganti satu suku, melainkan seluruh bentuk aljabarnya."
+                          }
+                        ],
+                        "worked": {
+                          "prompt": "Tentukan $(g \\circ f)(x)$ jika $f(x) = x - 1$ dan $g(x) = x^2$.",
+                          "steps": [
+                            "Tulis definisi komposisi: $(g \\circ f)(x) = g(f(x))$.",
+                            "Masukkan fungsi dalam: $f(x) = x - 1$, sehingga menjadi $g(x - 1)$.",
+                            "Terapkan aturan fungsi $g$ ke input $(x-1)$: $(x - 1)^2$.",
+                            "Jabarkan hasilnya: $(x-1)(x-1) = x^2 - 2x + 1$."
+                          ],
+                          "conclusion": "Hasil dari $(g \\circ f)(x)$ adalah $x^2 - 2x + 1$."
+                        },
+                        "misconception": {
+                          "mistake": "Menganggap $(f \\circ g)(x) = f(x) \\cdot g(x)$ (perkalian fungsi).",
+                          "correction": "Komposisi fungsi adalah tentang 'memasukkan' fungsi ke dalam fungsi lain, bukan mengalikannya. Notasi $\\circ$ berarti 'komposisi', bukan perkalian."
+                        },
+                        "practice": [
+                          {
+                            "id": "24a203f3-df02-453a-9aa2-c63e903c304c",
+                            "question": "Jika $f(x) = 2x$ dan $g(x) = x + 3$, tentukan $(f \\circ g)(x)$.",
+                            "answer": "2x + 6",
+                            "explanation": "$(f \\circ g)(x) = f(g(x)) = f(x+3) = 2(x+3) = 2x + 6$."
+                          }
+                        ]
+                      },
+                      {
+                        "title": "Invers Membalik Pemetaan",
+                        "body": "Fungsi invers bertugas membatalkan apa yang dilakukan oleh fungsi asli. Jika fungsi $f$ memetakan $A$ ke $B$, maka $f^{-1}$ memetakan $B$ kembali ke $A$. Langkah praktis untuk mencari invers adalah dengan menulis fungsi dalam bentuk $y = f(x)$, lalu menukar posisi $x$ dan $y$, kemudian menyelesaikannya untuk $y$ yang baru.\n\nIngat, tidak semua fungsi memiliki invers. Agar memiliki invers, fungsi harus bersifat 'bijektif' (satu-satu). Dalam tingkat SMA, kita fokus pada fungsi linear atau fungsi sederhana lainnya yang membolehkan invers. Selalu periksa kembali dengan mencoba memasukkan sebuah nilai ke fungsi asli, lalu masukkan hasilnya ke invers; Anda harus kembali ke angka semula.",
+                        "example": "Untuk $f(x) = 2x - 4$, kita tulis $y = 2x - 4$. Tukar variabel: $x = 2y - 4$. Selesaikan: $x + 4 = 2y$, maka $y = (x + 4)/2$. Jadi $f^{-1}(x) = (x + 4)/2$.",
+                        "sections": [
+                          {
+                            "title": "Langkah Tukar Variabel",
+                            "body": "Langkah ini adalah kunci. Dengan menulis $x$ sebagai fungsi dari $y$, kita sebenarnya sedang membalik alur kerja fungsi tersebut."
+                          },
+                          {
+                            "title": "Pengecekan Jawaban",
+                            "body": "Jika $f(3) = 2$, maka $f^{-1}(2)$ haruslah $3$. Gunakan cara ini untuk memastikan invers yang Anda temukan sudah tepat."
+                          }
+                        ],
+                        "worked": {
+                          "prompt": "Tentukan invers dari $f(x) = 3x + 1$.",
+                          "steps": [
+                            "Tuliskan dalam bentuk $y$: $y = 3x + 1$.",
+                            "Tukar $x$ dan $y$: $x = 3y + 1$.",
+                            "Isolasi variabel $y$: $x - 1 = 3y$.",
+                            "Bagi dengan 3: $y = (x - 1) / 3$."
+                          ],
+                          "conclusion": "Jadi, invers fungsinya adalah $f^{-1}(x) = \\frac{x-1}{3}$."
+                        },
+                        "misconception": {
+                          "mistake": "Menulis $f^{-1}(x)$ sebagai $1/f(x)$.",
+                          "correction": "Simbol $f^{-1}(x)$ merujuk pada fungsi invers, bukan kebalikan (resiprokal) dari nilai fungsi. $1/f(x)$ adalah kebalikan nilai, sedangkan $f^{-1}(x)$ adalah kebalikan operasi."
+                        },
+                        "practice": [
+                          {
+                            "id": "88fe4e46-a4a3-429e-b5c7-90d2f830c113",
+                            "question": "Tentukan invers dari $f(x) = 5x - 2$.",
+                            "answer": "f⁻¹(x) = (x + 2) / 5",
+                            "explanation": "$y = 5x - 2 \\rightarrow x = 5y - 2 \\rightarrow x + 2 = 5y \\rightarrow y = (x + 2)/5$."
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "provider": "gemini",
+                  "model": "gemini-3.1-flash-lite",
+                  "status": "draft",
+                  "requiresReview": true
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Invalid topic or request."
+          },
+          "502": {
+            "description": "Provider unavailable or invalid/incomplete output."
+          },
+          "503": {
+            "description": "Generator unconfigured or capacity reached."
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
+      }
+    },
+    "/v1/class-narrative": {
+      "post": {
+        "tags": [
+          "Gemini"
+        ],
+        "summary": "Class Narrative",
+        "operationId": "class_narrative_v1_class_narrative_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClassNarrativeRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NarrativeResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Attribute": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "conceptId": {
+            "type": "integer",
+            "title": "Conceptid"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "mastery": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Mastery"
+          },
+          "probability": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Probability"
+          },
+          "evidence": {
+            "type": "integer",
+            "title": "Evidence"
+          },
+          "correct": {
+            "type": "integer",
+            "title": "Correct"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "mastered",
+              "developing",
+              "gap",
+              "unknown"
+            ],
+            "title": "Status"
+          },
+          "label": {
+            "type": "string",
+            "enum": [
+              "mastered",
+              "not_mastered",
+              "uncertain",
+              "insufficient_evidence"
+            ],
+            "title": "Label"
+          },
+          "posteriorSd": {
+            "type": "number",
+            "title": "Posteriorsd"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "conceptId",
+          "name",
+          "mastery",
+          "probability",
+          "evidence",
+          "correct",
+          "status",
+          "label",
+          "posteriorSd"
+        ],
+        "title": "Attribute"
+      },
+      "ClassNarrativeRequest": {
+        "properties": {
+          "topic_id": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Topic Id"
+          },
+          "students": {
+            "items": {
+              "$ref": "#/components/schemas/StudentResponses"
+            },
+            "type": "array",
+            "maxItems": 60,
+            "minItems": 1,
+            "title": "Students"
+          },
+          "expected_model_version": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 100
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expected Model Version"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "topic_id",
+          "students"
+        ],
+        "title": "ClassNarrativeRequest"
+      },
+      "CompareRequest": {
+        "properties": {
+          "pre": {
+            "$ref": "#/components/schemas/DiagnoseRequest"
+          },
+          "post": {
+            "$ref": "#/components/schemas/DiagnoseRequest"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "pre",
+          "post"
+        ],
+        "title": "CompareRequest"
+      },
+      "DiagnoseRequest": {
+        "properties": {
+          "student_id": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Student Id",
+            "description": "Pseudonymous ID; do not send student names or email addresses.",
+            "default": "anonymous"
+          },
+          "responses": {
+            "items": {
+              "$ref": "#/components/schemas/ResponseItem"
+            },
+            "type": "array",
+            "maxItems": 250,
+            "minItems": 1,
+            "title": "Responses"
+          },
+          "model_id": {
+            "type": "string",
+            "enum": [
+              "edubridge",
+              "eedi",
+              "calculus"
+            ],
+            "title": "Model Id",
+            "default": "edubridge"
+          },
+          "topic_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 80
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Topic Id"
+          },
+          "expected_model_version": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 100
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expected Model Version",
+            "description": "Optional immutable model fingerprint; mismatches are rejected rather than reinterpreting a historical diagnosis."
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "responses"
+        ],
+        "title": "DiagnoseRequest"
+      },
+      "Diagnosis": {
+        "properties": {
+          "provider": {
+            "type": "string",
+            "title": "Provider",
+            "default": "pdina"
+          },
+          "simulated": {
+            "type": "boolean",
+            "title": "Simulated",
+            "default": false
+          },
+          "calibrationSynthetic": {
+            "type": "boolean",
+            "title": "Calibrationsynthetic"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version"
+          },
+          "instrumentVersion": {
+            "type": "string",
+            "title": "Instrumentversion"
+          },
+          "score": {
+            "type": "integer",
+            "title": "Score"
+          },
+          "correctCount": {
+            "type": "integer",
+            "title": "Correctcount"
+          },
+          "total": {
+            "type": "integer",
+            "title": "Total"
+          },
+          "observedCount": {
+            "type": "integer",
+            "title": "Observedcount"
+          },
+          "attributes": {
+            "items": {
+              "$ref": "#/components/schemas/Attribute"
+            },
+            "type": "array",
+            "title": "Attributes"
+          },
+          "gapCount": {
+            "type": "integer",
+            "title": "Gapcount"
+          },
+          "uncertainCount": {
+            "type": "integer",
+            "title": "Uncertaincount"
+          },
+          "insufficientCount": {
+            "type": "integer",
+            "title": "Insufficientcount"
+          },
+          "recommendations": {
+            "items": {
+              "$ref": "#/components/schemas/Recommendation"
+            },
+            "type": "array",
+            "title": "Recommendations"
+          },
+          "policy": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Policy"
+          },
+          "unsupportedItemIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Unsupporteditemids"
+          },
+          "limitations": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Limitations"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "calibrationSynthetic",
+          "version",
+          "instrumentVersion",
+          "score",
+          "correctCount",
+          "total",
+          "observedCount",
+          "attributes",
+          "gapCount",
+          "uncertainCount",
+          "insufficientCount",
+          "recommendations",
+          "policy",
+          "unsupportedItemIds",
+          "limitations"
+        ],
+        "title": "Diagnosis"
+      },
+      "DraftBlock": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 3,
+            "title": "Title"
+          },
+          "body": {
+            "type": "string",
+            "maxLength": 3000,
+            "minLength": 10,
+            "title": "Body"
+          },
+          "example": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 5,
+            "title": "Example"
+          },
+          "sections": {
+            "items": {
+              "$ref": "#/components/schemas/Explanation"
+            },
+            "type": "array",
+            "maxItems": 4,
+            "minItems": 1,
+            "title": "Sections"
+          },
+          "worked": {
+            "$ref": "#/components/schemas/WorkedExample"
+          },
+          "misconception": {
+            "$ref": "#/components/schemas/Misconception"
+          },
+          "practice": {
+            "items": {
+              "$ref": "#/components/schemas/GeneratedPractice"
+            },
+            "type": "array",
+            "title": "Practice"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "title",
+          "body",
+          "example",
+          "sections",
+          "worked",
+          "misconception",
+          "practice"
+        ],
+        "title": "DraftBlock"
+      },
+      "DraftContent": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "summary": {
+            "type": "string",
+            "title": "Summary"
+          },
+          "minutes": {
+            "type": "integer",
+            "title": "Minutes"
+          },
+          "blocks": {
+            "items": {
+              "$ref": "#/components/schemas/DraftBlock"
+            },
+            "type": "array",
+            "title": "Blocks"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "title",
+          "summary",
+          "minutes",
+          "blocks"
+        ],
+        "title": "DraftContent"
+      },
+      "Explanation": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 3,
+            "title": "Title"
+          },
+          "body": {
+            "type": "string",
+            "maxLength": 3000,
+            "minLength": 5,
+            "title": "Body"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "title",
+          "body"
+        ],
+        "title": "Explanation"
+      },
+      "GeneratedPractice": {
+        "properties": {
+          "question": {
+            "type": "string",
+            "maxLength": 1500,
+            "minLength": 5,
+            "title": "Question"
+          },
+          "answer": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 1,
+            "title": "Answer"
+          },
+          "explanation": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 5,
+            "title": "Explanation"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "question",
+          "answer",
+          "explanation",
+          "id"
+        ],
+        "title": "GeneratedPractice"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "LessonBlock": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Title"
+          },
+          "body": {
+            "type": "string",
+            "maxLength": 5000,
+            "minLength": 1,
+            "title": "Body"
+          },
+          "example": {
+            "type": "string",
+            "maxLength": 3000,
+            "minLength": 1,
+            "title": "Example"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "title",
+          "body",
+          "example"
+        ],
+        "title": "LessonBlock"
+      },
+      "LessonContext": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Title"
+          },
+          "blocks": {
+            "items": {
+              "$ref": "#/components/schemas/LessonBlock"
+            },
+            "type": "array",
+            "maxItems": 3,
+            "minItems": 3,
+            "title": "Blocks"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "title",
+          "blocks"
+        ],
+        "title": "LessonContext"
+      },
+      "MaterialContext": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 3,
+            "title": "Title"
+          },
+          "attributes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 10,
+            "minItems": 1,
+            "title": "Attributes"
+          },
+          "blocks": {
+            "items": {
+              "$ref": "#/components/schemas/LessonBlock"
+            },
+            "type": "array",
+            "maxItems": 12,
+            "minItems": 1,
+            "title": "Blocks"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "title",
+          "attributes",
+          "blocks"
+        ],
+        "title": "MaterialContext"
+      },
+      "MaterialGenerateRequest": {
+        "properties": {
+          "topic_id": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Topic Id"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 100,
+            "title": "Title",
+            "default": ""
+          },
+          "section_title": {
+            "type": "string",
+            "maxLength": 100,
+            "title": "Section Title",
+            "default": ""
+          },
+          "instructions": {
+            "type": "string",
+            "maxLength": 1000,
+            "title": "Instructions",
+            "default": ""
+          },
+          "block_count": {
+            "type": "integer",
+            "maximum": 6,
+            "minimum": 1,
+            "title": "Block Count",
+            "default": 3
+          },
+          "context": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/MaterialContext"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Current curated lesson from the backend. Never include assessment questions, keys, or student records."
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "topic_id"
+        ],
+        "title": "MaterialGenerateRequest"
+      },
+      "MaterialGenerateResponse": {
+        "properties": {
+          "draft": {
+            "$ref": "#/components/schemas/DraftContent"
+          },
+          "provider": {
+            "type": "string",
+            "const": "gemini",
+            "title": "Provider",
+            "default": "gemini"
+          },
+          "model": {
+            "type": "string",
+            "title": "Model"
+          },
+          "status": {
+            "type": "string",
+            "const": "draft",
+            "title": "Status",
+            "default": "draft"
+          },
+          "requiresReview": {
+            "type": "boolean",
+            "const": true,
+            "title": "Requiresreview",
+            "default": true
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "draft",
+          "model"
+        ],
+        "title": "MaterialGenerateResponse"
+      },
+      "Misconception": {
+        "properties": {
+          "mistake": {
+            "type": "string",
+            "maxLength": 1500,
+            "minLength": 5,
+            "title": "Mistake"
+          },
+          "correction": {
+            "type": "string",
+            "maxLength": 1500,
+            "minLength": 5,
+            "title": "Correction"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "mistake",
+          "correction"
+        ],
+        "title": "Misconception"
+      },
+      "ModelStatus": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "provider": {
+            "type": "string",
+            "title": "Provider"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version"
+          },
+          "concepts": {
+            "type": "integer",
+            "title": "Concepts"
+          },
+          "items": {
+            "type": "integer",
+            "title": "Items"
+          },
+          "calibrationSynthetic": {
+            "type": "boolean",
+            "title": "Calibrationsynthetic"
+          },
+          "policy": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Policy"
+          },
+          "limitations": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Limitations"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "provider",
+          "version",
+          "concepts",
+          "items",
+          "calibrationSynthetic",
+          "policy",
+          "limitations"
+        ],
+        "title": "ModelStatus"
+      },
+      "NarrativeRequest": {
+        "properties": {
+          "student_id": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Student Id",
+            "description": "Pseudonymous ID; do not send student names or email addresses.",
+            "default": "anonymous"
+          },
+          "responses": {
+            "items": {
+              "$ref": "#/components/schemas/ResponseItem"
+            },
+            "type": "array",
+            "maxItems": 250,
+            "minItems": 1,
+            "title": "Responses"
+          },
+          "model_id": {
+            "type": "string",
+            "enum": [
+              "edubridge",
+              "eedi",
+              "calculus"
+            ],
+            "title": "Model Id",
+            "default": "edubridge"
+          },
+          "topic_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 80
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Topic Id"
+          },
+          "expected_model_version": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 100
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expected Model Version",
+            "description": "Optional immutable model fingerprint; mismatches are rejected rather than reinterpreting a historical diagnosis."
+          },
+          "audience": {
+            "type": "string",
+            "enum": [
+              "student",
+              "teacher"
+            ],
+            "title": "Audience",
+            "default": "student"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "responses"
+        ],
+        "title": "NarrativeRequest"
+      },
+      "NarrativeResponse": {
+        "properties": {
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "meta": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Meta"
+          },
+          "validation": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Validation"
+          },
+          "fallback": {
+            "type": "boolean",
+            "title": "Fallback"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "text",
+          "meta",
+          "validation",
+          "fallback"
+        ],
+        "title": "NarrativeResponse"
+      },
+      "OriginalReport": {
+        "properties": {
+          "generated_by": {
+            "type": "string",
+            "title": "Generated By"
+          },
+          "model": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Model"
+          },
+          "artifact_source": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Artifact Source"
+          },
+          "policy": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Policy"
+          },
+          "input_info": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Input Info"
+          },
+          "mastery_profiles_target": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Mastery Profiles Target"
+          },
+          "learning_gaps": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Learning Gaps"
+          },
+          "intervention_recommendations": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Intervention Recommendations"
+          },
+          "class_summary": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Class Summary"
+          },
+          "pre_post": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Pre Post"
+          },
+          "disclaimer": {
+            "type": "string",
+            "title": "Disclaimer"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "generated_by",
+          "model",
+          "artifact_source",
+          "policy",
+          "input_info",
+          "mastery_profiles_target",
+          "learning_gaps",
+          "intervention_recommendations",
+          "class_summary",
+          "pre_post",
+          "disclaimer"
+        ],
+        "title": "OriginalReport"
+      },
+      "Recommendation": {
+        "properties": {
+          "attributeId": {
+            "type": "integer",
+            "title": "Attributeid"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason"
+          },
+          "blockIndex": {
+            "type": "integer",
+            "title": "Blockindex"
+          },
+          "action": {
+            "type": "string",
+            "title": "Action"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "attributeId",
+          "title",
+          "reason",
+          "blockIndex",
+          "action"
+        ],
+        "title": "Recommendation"
+      },
+      "ResponseItem": {
+        "properties": {
+          "question_id": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Question Id",
+            "description": "App item ID for edubridge; numeric QuestionId as a string for eedi/calculus."
+          },
+          "answer_option": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 3,
+                "minimum": 0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Answer Option",
+            "description": "Zero-based selected option, only for the EduBridge instrument. null means missing, never incorrect."
+          },
+          "response": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "enum": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response",
+            "description": "Scored response for original EEDI/calculus instruments: 1 correct, 0 incorrect, null missing."
+          },
+          "content_hash": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Content Hash",
+            "description": "SHA-256 of the frozen item snapshot; changed items are excluded from calibrated evidence."
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "question_id"
+        ],
+        "title": "ResponseItem"
+      },
+      "StudentResponses": {
+        "properties": {
+          "student_id": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Student Id",
+            "description": "Pseudonymous ID; do not send student names or email addresses.",
+            "default": "anonymous"
+          },
+          "responses": {
+            "items": {
+              "$ref": "#/components/schemas/ResponseItem"
+            },
+            "type": "array",
+            "maxItems": 250,
+            "minItems": 1,
+            "title": "Responses"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "responses"
+        ],
+        "title": "StudentResponses"
+      },
+      "TutorMessage": {
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": [
+              "user",
+              "assistant"
+            ],
+            "title": "Role"
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 1,
+            "title": "Text"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "role",
+          "text"
+        ],
+        "title": "TutorMessage"
+      },
+      "TutorRequest": {
+        "properties": {
+          "topic_id": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Topic Id"
+          },
+          "message": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 1,
+            "title": "Message"
+          },
+          "history": {
+            "items": {
+              "$ref": "#/components/schemas/TutorMessage"
+            },
+            "type": "array",
+            "maxItems": 6,
+            "title": "History"
+          },
+          "lesson": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/LessonContext"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Optional current curated lesson from the application backend, excluding assessment questions, answer keys, and account identities."
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "topic_id",
+          "message"
+        ],
+        "title": "TutorRequest"
+      },
+      "TutorResponse": {
+        "properties": {
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "provider": {
+            "type": "string",
+            "title": "Provider"
+          },
+          "fallback": {
+            "type": "boolean",
+            "title": "Fallback"
+          },
+          "simulated": {
+            "type": "boolean",
+            "title": "Simulated",
+            "default": false
+          },
+          "blockIndex": {
+            "type": "integer",
+            "title": "Blockindex"
+          },
+          "reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reason"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "message",
+          "provider",
+          "fallback",
+          "blockIndex"
+        ],
+        "title": "TutorResponse"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "WorkedExample": {
+        "properties": {
+          "prompt": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 5,
+            "title": "Prompt"
+          },
+          "steps": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 8,
+            "minItems": 2,
+            "title": "Steps"
+          },
+          "conclusion": {
+            "type": "string",
+            "maxLength": 1500,
+            "minLength": 5,
+            "title": "Conclusion"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "prompt",
+          "steps",
+          "conclusion"
+        ],
+        "title": "WorkedExample"
+      }
+    },
+    "securitySchemes": {
+      "APIKeyHeader": {
+        "type": "apiKey",
+        "description": "Server-to-server secret AI_SERVICE_KEY. Never put this key in frontend code.",
+        "in": "header",
+        "name": "X-Service-Key"
+      }
+    }
+  }
+}
