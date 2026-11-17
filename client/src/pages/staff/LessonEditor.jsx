@@ -1,4 +1,5 @@
-export default function LessonEditor({ block, onChange }) {
+import { Button } from '../../components/ui/Kit';
+export default function LessonEditor({ block, onChange, expandable = false }) {
   return (
     <div className="extended-lesson-editor form-stack">
       {block.sections?.length > 0 && (
@@ -6,6 +7,20 @@ export default function LessonEditor({ block, onChange }) {
           <h4>Penjelasan bertahap</h4>
           {block.sections.map((section, i) => (
             <div className="form-stack editor-subsection" key={i}>
+              {expandable && (
+                <Button
+                  type="button"
+                  variant="ghost"
+                  onClick={() =>
+                    onChange(
+                      'sections',
+                      block.sections.filter((_, j) => j !== i),
+                    )
+                  }
+                >
+                  Hapus subbagian {i + 1}
+                </Button>
+              )}
               <label>
                 Judul subbagian {i + 1}
                 <input
@@ -43,6 +58,11 @@ export default function LessonEditor({ block, onChange }) {
       {block.worked && (
         <>
           <h4>Contoh berlangkah</h4>
+          {expandable && (
+            <Button type="button" variant="ghost" onClick={() => onChange('worked', undefined)}>
+              Hapus contoh berlangkah
+            </Button>
+          )}
           <label>
             Soal contoh
             <textarea
@@ -85,6 +105,15 @@ export default function LessonEditor({ block, onChange }) {
       {block.misconception && (
         <>
           <h4>Miskonsepsi umum</h4>
+          {expandable && (
+            <Button
+              type="button"
+              variant="ghost"
+              onClick={() => onChange('misconception', undefined)}
+            >
+              Hapus miskonsepsi
+            </Button>
+          )}
           <label>
             Kekeliruan yang perlu dihindari
             <textarea
@@ -120,6 +149,20 @@ export default function LessonEditor({ block, onChange }) {
         return (
           <div key={practice.id} className="form-stack editor-subsection">
             <h4>Latihan mandiri {i + 1}</h4>
+            {expandable && (
+              <Button
+                type="button"
+                variant="ghost"
+                onClick={() =>
+                  onChange(
+                    'practice',
+                    block.practice.filter((_, j) => j !== i),
+                  )
+                }
+              >
+                Hapus latihan {i + 1}
+              </Button>
+            )}
             <label>
               Pertanyaan latihan
               <textarea
@@ -152,6 +195,56 @@ export default function LessonEditor({ block, onChange }) {
           </div>
         );
       })}
+      {expandable && (
+        <div className="material-rich-options">
+          <span className="field-help">Lengkapi materi (opsional)</span>
+          <div className="button-row">
+            {(block.sections?.length ?? 0) < 8 && (
+              <Button
+                type="button"
+                variant="secondary"
+                onClick={() =>
+                  onChange('sections', [...(block.sections ?? []), { title: '', body: '' }])
+                }
+              >
+                + Penjelasan bertahap
+              </Button>
+            )}
+            {!block.worked && (
+              <Button
+                type="button"
+                variant="secondary"
+                onClick={() => onChange('worked', { prompt: '', steps: ['', ''], conclusion: '' })}
+              >
+                + Contoh berlangkah
+              </Button>
+            )}
+            {!block.misconception && (
+              <Button
+                type="button"
+                variant="secondary"
+                onClick={() => onChange('misconception', { mistake: '', correction: '' })}
+              >
+                + Miskonsepsi
+              </Button>
+            )}
+            {(block.practice?.length ?? 0) < 5 && (
+              <Button
+                type="button"
+                variant="secondary"
+                onClick={() =>
+                  onChange('practice', [
+                    ...(block.practice ?? []),
+                    { id: crypto.randomUUID(), question: '', answer: '', explanation: '' },
+                  ])
+                }
+              >
+                + Latihan mandiri
+              </Button>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -10,6 +10,7 @@ import pandas as pd
 from cdacdm.service import CDMService
 from cdacdm.narrative import NarrativeConfig, NarrativeGenerator, GeminiTransport
 from .schemas import DiagnoseRequest, TutorRequest
+from .materials import MaterialGenerator
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -43,6 +44,7 @@ class Engine:
             examples_path=str(ROOT / 'configs/narrative_examples.jsonl'), max_class_concepts=18, max_student_concepts=18)
         self.narrative = NarrativeGenerator(self.config)
         self.tutor_transport = GeminiTransport(self.config)
+        self.material_generator = MaterialGenerator(self.config)
         self.tutor_lock = threading.Lock()
         self.tutor_failures = 0
         self.tutor_open_until = 0.0

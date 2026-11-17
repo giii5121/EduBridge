@@ -73,12 +73,13 @@ export default function DashboardLayout() {
     : [
         ...(user.role === 'admin' ? [['/admin', 'Panel admin', ShieldCheck]] : []),
         ['/guru', 'Ruang guru', GraduationCap],
+        ['/kelola-materi', 'Kelola materi', BookOpen],
         ['/katalog', 'Katalog materi', BookOpen],
         ['/profil', 'Profil saya', UserRound],
       ];
   const active =
     menu.find(([path]) => location.pathname.startsWith(path))?.[1] ??
-    (location.pathname.startsWith('/materi') ? 'Materi penguatan' : 'Asesmen & latihan');
+    (/^\/(materi|penguatan)\//.test(location.pathname) ? 'Materi penguatan' : 'Asesmen & latihan');
   const pending = student
     ? data.topics.filter((t) => t.state.status !== 'completed' && t.state.pre)
     : [];

@@ -11,7 +11,13 @@ export async function api(path, { method = 'GET', body, signal, retryCsrf = true
     response = await fetch(`/api${path}`, {
       method,
       credentials: 'same-origin',
-      signal: signal ?? AbortSignal.timeout(path === '/assistant' || path.endsWith('/narrative') ? 95000 : 35000),
+      signal:
+        signal ??
+        AbortSignal.timeout(
+          path === '/assistant' || path.endsWith('/narrative') || path === '/materials/generate'
+            ? 95000
+            : 35000,
+        ),
       headers: {
         ...(body === undefined ? {} : { 'Content-Type': 'application/json' }),
         ...(!['GET', 'HEAD'].includes(method) && csrfToken ? { 'X-CSRF-Token': csrfToken } : {}),

@@ -10,6 +10,7 @@ from fastapi import Depends, FastAPI, HTTPException, Request, Security
 from fastapi.responses import JSONResponse
 from fastapi.security import APIKeyHeader
 from .engine import Engine
+from .materials import MaterialGenerateRequest, MaterialGenerateResponse
 from .schemas import (DiagnoseRequest, Diagnosis, OriginalReport, ModelStatus, NarrativeRequest,
                       NarrativeResponse, CompareRequest, TutorRequest, TutorResponse, ClassNarrativeRequest)
 
@@ -35,7 +36,7 @@ async def lifespan(app: FastAPI):
     app.state.engine = Engine()
     yield
     # Google SDK clients are created lazily; close them when present.
-    for transport in [app.state.engine.tutor_transport, app.state.engine.narrative._transport]:
+    for transport in [app.state.engine.tutor_transport, app.state.engine.narrative._transport, app.state.engine.material_generator.transport]:
         client = getattr(transport, '_client', None)
         if client is not None:
             client.close()
@@ -148,6 +149,17 @@ def narrative(body: NarrativeRequest, request: Request):
 @app.post('/v1/tutor', response_model=TutorResponse, tags=['Gemini'], dependencies=[Depends(authorize)])
 def tutor(body: TutorRequest, request: Request):
     return guarded(lambda: request.app.state.engine.tutor(body), slow_slots)
+
+
+@app.post('/v1/materials/generate', response_model=MaterialGenerateResponse, tags=['Gemini'], dependencies=[Depends(authorize)],
+          summary='Generate a lesson draft requiring human review',
+          responses={422: {'description': 'Invalid topic or request.'}, 502: {'description': 'Provider unavailable or invalid/incomplete output.'}, 503: {'description': 'Generator unconfigured or capacity reached.'}})
+def generate_material(body: MaterialGenerateRequest, request: Request):
+    engine = request.app.state.engine
+    topic = engine.topics.get(body.topic_id)
+    if topic is None:
+        raise HTTPException(422, 'Unknown topic_id.')
+    return guarded(lambda: engine.material_generator.generate(body, topic), slow_slots)
 
 
 @app.post('/v1/class-narrative', response_model=NarrativeResponse, tags=['Gemini'], dependencies=[Depends(authorize)])

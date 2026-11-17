@@ -18,7 +18,10 @@ export function createModelClient({
   fetcher = fetch,
 } = {}) {
   const url = new URL(baseUrl);
-  const llmTimeout = Math.min(90000, Math.max(25000, Number(process.env.GEMINI_TIMEOUT_SECONDS || 20) * 1000 + 5000));
+  const llmTimeout = Math.min(
+    90000,
+    Math.max(25000, Number(process.env.GEMINI_TIMEOUT_SECONDS || 20) * 1000 + 5000),
+  );
   if (!['http:', 'https:'].includes(url.protocol) || url.username || url.password)
     throw new Error('Invalid AI_BASE_URL');
   let activeFast = 0;
@@ -90,6 +93,24 @@ export function createModelClient({
     })),
   });
   return {
+    async generateMaterial(topic, { title, sectionTitle, instructions, blockCount }) {
+      return call(
+        '/v1/materials/generate',
+        {
+          topic_id: topic.id,
+          title,
+          section_title: sectionTitle,
+          instructions,
+          block_count: blockCount,
+          context: {
+            title: topic.title,
+            attributes: topic.attributes,
+            blocks: topic.blocks.map(({ title, body, example }) => ({ title, body, example })),
+          },
+        },
+        85000,
+      );
+    },
     async diagnose(topic, questions, responses, studentId) {
       const result = await call(
         '/v1/diagnose',

@@ -26,6 +26,7 @@ import {
 } from '../../components/ui/Kit';
 import { LearningPath } from './Dashboard';
 import ConceptContent from '../../components/learning/ConceptContent';
+import RelatedMaterials from '../../components/learning/RelatedMaterials';
 export default function Lesson() {
   const { topicId } = useParams();
   const [params] = useSearchParams();
@@ -124,6 +125,16 @@ export default function Lesson() {
       >
         {topic.summary}
       </PageHead>
+      {!student && (
+        <div className="button-row">
+          <ButtonLink to={`/kelola-materi?topik=${topic.id}`} variant="secondary">
+            Sesuaikan materi untuk kelas
+          </ButtonLink>
+          <ButtonLink to="/kelola-materi" variant="ghost">
+            Kelola materi tambahan
+          </ButtonLink>
+        </div>
+      )}
       {student && (
         <section className="card lesson-path">
           <LearningPath topic={topic} />
@@ -272,7 +283,13 @@ export default function Lesson() {
                   )}
                   {chat.map((c, i) => (
                     <div key={i} className={`chat-bubble ${c.role}`}>
-                        {c.role === 'assistant' ? <Suspense fallback={plainMarkdown(c.text)}><FormattedMessage text={c.text} /></Suspense> : c.text}
+                      {c.role === 'assistant' ? (
+                        <Suspense fallback={plainMarkdown(c.text)}>
+                          <FormattedMessage text={c.text} />
+                        </Suspense>
+                      ) : (
+                        c.text
+                      )}
                       {c.fallback && (
                         <small className="field-help">
                           Penjelasan dari materi terkurasi; Gemini sedang tidak tersedia.
@@ -301,6 +318,7 @@ export default function Lesson() {
           </aside>
         </div>
       )}
+      <RelatedMaterials key={topic.id} topic={topic} />
     </>
   );
 }

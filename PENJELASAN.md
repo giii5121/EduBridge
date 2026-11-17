@@ -32,7 +32,25 @@ flowchart LR
 
 Ruang siswa berisi jalur belajar, katalog, materi penguatan, kuis, pembahasan, progres, profil, maskot, XP, level, streak, dan lencana. Tema tersimpan dalam cookie. Guru memiliki pengaturan fase kelas, peta atribut, detail hasil, ekspor, dan ringkasan pretest/posttest. Admin mengelola pengguna, materi, bank soal, publikasi, dan status layanan. Screenshot memperlihatkan aplikasi aktual, termasuk tema gelap, dengan viewport desktop landscape 1600×1000 dan skala gambar 1,5.
 
-#### Rendering matematika
+#### Pengelolaan materi kelas
+
+Menu **Kelola materi** tersedia untuk guru dan admin. Guru membuat, mengedit, menerbitkan, dan menghapus materi untuk kelas yang dikelolanya; admin juga mengelola materi umum. Editor mendukung beberapa bagian, rumus LaTeX, penjelasan bertahap, contoh berlangkah, miskonsepsi, dan latihan mandiri. Ikon dipilih secara deterministik dari enam ilustrasi katalog berdasarkan judul dan topik, dengan aturan yang sama untuk pratinjau frontend dan penyimpanan backend (`shared/materialIcons.js`).
+
+Materi terbit tampil pada katalog siswa dan topik penguatan terkait; draf hanya dapat dibaca pengelola. Materi bawaan dapat disalin untuk disesuaikan dengan kebutuhan kelas. Penambahan materi tetap terhubung ke topik asesmen terkalibrasi tanpa mengganti pertanyaan, fingerprint instrumen, parameter PDINA, atau riwayat siswa. Penghapusan bersifat logis dan diaudit; edit/hapus memakai versi untuk menolak perubahan yang sudah kedaluwarsa. Validasi dan otorisasi dijalankan di backend, di dalam transaksi bersama audit. Migrasi tabel berjalan otomatis saat database dibuka.
+
+Verifikasi iterasi materi: build produksi berhasil; 33 tes backend lulus, termasuk enam tes baru untuk CRUD, cakupan kelas, izin, versi, validasi, audit, dan persistensi. Seluruh 16 skenario browser terverifikasi: 15 lulus pada regresi terakhir dan satu skenario login awal yang timeout lulus saat diulang. Tes kini menunggu respons autentikasi/pengumpulan asesmen secara eksplisit dan tetap memeriksa HTTP 200. Materi baru diuji pada desktop dan ponsel 320–390 px, termasuk mode gelap, ikon, rumus, latihan, draf, publikasi, edit, dan hapus. Pengujian memakai database terisolasi; data pengguna tidak diubah.
+
+#### Generator dan validasi materi
+
+Generator materi AI tersedia untuk seluruh materi atau setiap bagian editor. Backend meneruskan konteks materi terbaru dan atribut topik ke FastAPI, yang meminta JSON terstruktur dari Gemini serta memvalidasinya dengan Pydantic. Bank soal, kunci asesmen, identitas akun, dan diagnosis siswa tidak dimasukkan ke prompt. Setiap hasil merupakan draf, bukan materi terbit. Publikasi memerlukan konfirmasi peninjauan guru/pengelola; backend mencatat peninjau, waktu, dan hash isi. Perubahan isi, kelas, atau topik memerlukan validasi ulang. Gangguan AI dan pembatalan menjaga tulisan manual tetap utuh. Endpoint dan skema generator tersedia di Swagger, tanpa retraining model PDINA.
+
+Generator telah diuji langsung dengan Gemini yang dikonfigurasi untuk satu bagian dan tiga bagian. Keduanya menghasilkan HTTP 200; penyimpanan draf berhasil, publikasi tanpa peninjauan ditolak (`422`), publikasi dengan konfirmasi diterima, dan perubahan setelah peninjauan kembali ditolak tanpa validasi ulang. Ketiga bagian keluaran terakhir memuat 105 ekspresi matematika yang dapat dirender KaTeX tanpa kesalahan sintaks. Ini memverifikasi mekanisme dan tampilan, bukan menggantikan pemeriksaan kebenaran matematika oleh guru. Pengujian publikasi memakai database dalam memori dan tidak menerbitkan draf ke kelas pengguna. Regresi backend terbaru: 36 lulus; AI: 93 lulus, satu tes opsional dilewati.
+
+Regresi browser iterasi generator: seluruh 18 skenario lulus dalam satu eksekusi, termasuk dua skenario generator untuk pengisian seluruh/per bagian, pratinjau rumus, draf privat, validasi ulang, gangguan provider, dan pembatalan. Build produksi berhasil; lint tidak menemukan error (peringatan lama masih ada). Frontend lokal, API aplikasi, dan Swagger generator juga merespons HTTP 200 setelah stack pengembangan dimuat ulang.
+
+Setiap bagian editor juga mempunyai pratinjau dengan renderer yang sama seperti halaman siswa, termasuk rumus dan pembahasan latihan. Gunakan pratinjau sebelum mengonfirmasi validasi. Panduan generator dan perintah uji live tersedia di README; hasil uji live terakhir dan contoh draf berada di `artifacts/` lokal yang diabaikan Git.
+
+#### Rendering matematika dalam materi dan asesmen
 
 Rumus dirender dengan KaTeX pada teks soal, pilihan jawaban, pembahasan setelah pengumpulan, materi penguatan, pratinjau editor bank soal admin, tutor, dan narasi. Bank soal lama memakai notasi Unicode seperti `(x − 6)/2`, `√(13² − 5²)`, `f⁻¹(6)`, `(f ∘ g)(x)`, dan `[[2, 1], [3, 4]]`; `client/src/lib/mathText.js` mengubahnya menjadi pecahan, akar, pangkat, komposisi/invers, dan matriks **pada lapisan presentasi saja**. Kalimat Indonesia tetap teks biasa, dan teks asli selalu dapat direkonstruksi utuh dari segmen tampilan. Karena teks soal, kunci, snapshot, Q-matrix, dan fingerprint instrumen tidak diubah, kalibrasi PDINA tetap berlaku dan tidak ada retraining.
 

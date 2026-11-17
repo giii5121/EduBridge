@@ -15,6 +15,8 @@ import Lesson from '../pages/dashboard/Lesson';
 import Teacher from '../pages/staff/Teacher';
 import Admin from '../pages/staff/Admin';
 import Home from '../pages/Home';
+import Materials from '../pages/staff/Materials';
+import MaterialReader from '../pages/dashboard/MaterialReader';
 function ScrollReset() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -62,6 +64,15 @@ export default function AppRouter() {
             }
           />
           <Route path="/katalog" element={<KatalogMateri />} />
+          <Route
+            path="/kelola-materi"
+            element={
+              <Gate roles={['teacher', 'admin']}>
+                <Materials />
+              </Gate>
+            }
+          />
+          <Route path="/penguatan/:materialId" element={<MaterialReader />} />
           <Route path="/materi/:topicId" element={<Lesson />} />
           <Route
             path="/kuis"
