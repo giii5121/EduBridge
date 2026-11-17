@@ -1,0 +1,121 @@
+{
+  "capturedAt": "2026-11-17T09:52:39.212Z",
+  "applicationEndpointCount": 33,
+  "aiEndpointCount": 9,
+  "syntheticData": true,
+  "localDatabaseModified": false,
+  "newGeminiCalls": 0,
+  "sensitiveHeaders": "omitted from screenshots",
+  "captures": [
+    {
+      "file": "01-ai-swagger-desktop.png",
+      "title": "Swagger UI FastAPI: seluruh endpoint AI",
+      "device": "desktop"
+    },
+    {
+      "file": "02-diagnosis-request-desktop.png",
+      "title": "Body request diagnosis CDA/CDM P-DINA",
+      "device": "desktop"
+    },
+    {
+      "file": "03-diagnosis-response-desktop.png",
+      "title": "Respons nyata diagnosis PDINA: HTTP 200",
+      "device": "desktop"
+    },
+    {
+      "file": "11-prepost-response-desktop.png",
+      "title": "Respons nyata perbandingan CDA sebelum dan sesudah pembelajaran",
+      "device": "desktop"
+    },
+    {
+      "file": "04-generator-contract-desktop.png",
+      "title": "Kontrak generator materi AI: request, respons draf, dan validasi",
+      "device": "desktop"
+    },
+    {
+      "file": "05-app-overview-desktop.png",
+      "title": "Swagger reference: 33 endpoint backend aplikasi",
+      "device": "desktop"
+    },
+    {
+      "file": "06-auth-contract-desktop.png",
+      "title": "Autentikasi: body login dan cookie/CSRF",
+      "device": "desktop"
+    },
+    {
+      "file": "07-material-contract-desktop.png",
+      "title": "Materi: payload lengkap, draf, dan publikasi dengan peninjauan",
+      "device": "desktop"
+    },
+    {
+      "file": "08-review-errors-desktop.png",
+      "title": "Contoh respons 409 dan 422: versi dan validasi materi",
+      "device": "desktop"
+    },
+    {
+      "file": "09-assessment-contract-desktop.png",
+      "title": "Asesmen: pengumpulan jawaban dan hasil diagnosis",
+      "device": "desktop"
+    },
+    {
+      "file": "10-class-admin-api-desktop.png",
+      "title": "API pengelolaan kelas, fase, ekspor, dan administrasi",
+      "device": "desktop"
+    },
+    {
+      "file": "01-ai-swagger-mobile.png",
+      "title": "Swagger UI FastAPI: seluruh endpoint AI",
+      "device": "mobile"
+    },
+    {
+      "file": "02-diagnosis-request-mobile.png",
+      "title": "Body request diagnosis CDA/CDM P-DINA",
+      "device": "mobile"
+    },
+    {
+      "file": "03-diagnosis-response-mobile.png",
+      "title": "Respons nyata diagnosis PDINA: HTTP 200",
+      "device": "mobile"
+    },
+    {
+      "file": "11-prepost-response-mobile.png",
+      "title": "Respons nyata perbandingan CDA sebelum dan sesudah pembelajaran",
+      "device": "mobile"
+    },
+    {
+      "file": "04-generator-contract-mobile.png",
+      "title": "Kontrak generator materi AI: request, respons draf, dan validasi",
+      "device": "mobile"
+    },
+    {
+      "file": "05-app-overview-mobile.png",
+      "title": "Swagger reference: 33 endpoint backend aplikasi",
+      "device": "mobile"
+    },
+    {
+      "file": "06-auth-contract-mobile.png",
+      "title": "Autentikasi: body login dan cookie/CSRF",
+      "device": "mobile"
+    },
+    {
+      "file": "07-material-contract-mobile.png",
+      "title": "Materi: payload lengkap, draf, dan publikasi dengan peninjauan",
+      "device": "mobile"
+    },
+    {
+      "file": "08-review-errors-mobile.png",
+      "title": "Contoh respons 409 dan 422: versi dan validasi materi",
+      "device": "mobile"
+    },
+    {
+      "file": "09-assessment-contract-mobile.png",
+      "title": "Asesmen: pengumpulan jawaban dan hasil diagnosis",
+      "device": "mobile"
+    },
+    {
+      "file": "10-class-admin-api-mobile.png",
+      "title": "API pengelolaan kelas, fase, ekspor, dan administrasi",
+      "device": "mobile"
+    }
+  ]
+}

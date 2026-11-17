@@ -2,6 +2,8 @@
 
 Platform deteksi dan pengurangan learning gap **Matematika kelas XI SMA**, melalui CDA sebelum/sesudah pembelajaran dan inferensi CDM **P-DINA**. Alur: **pretest → diagnosis awal → pembelajaran di kelas → penguatan konsep → posttest → perbandingan dalam siklus yang sama**. Peran: siswa, guru, admin.
 
+Lihat [preview aplikasi](#preview-desktop-dan-mobile) dan [preview Swagger/API](#preview-swagger-dan-api).
+
 ## Preview desktop dan mobile
 
 Screenshot diambil langsung dari build aplikasi menggunakan data demo. **Desktop di kiri** (viewport 1600 × 1000), **mobile di kanan** (390 × 844). Klik gambar untuk membuka versi resolusi penuh.
@@ -115,6 +117,117 @@ Pengelolaan pengguna, kelas, materi, dan layanan aplikasi.
 </p>
 
 Screenshot dapat diperbarui dengan `npm run build` lalu `node scripts/capture-readme.mjs` saat layanan FastAPI lokal berjalan. Skrip memakai database demo dalam memori, memeriksa gambar/error/overflow dan kredensial yang terlihat, serta menyimpan catatan pengambilan di [manifest preview](snapshots/readme/manifest.json).
+
+## Preview Swagger dan API
+
+**42 endpoint terdokumentasi:** 33 endpoint aplikasi Node.js dan 9 endpoint AI FastAPI. Screenshot desktop di kiri, mobile di kanan; klik gambar untuk resolusi penuh.
+
+- [Kontrak OpenAPI aplikasi](snapshots/api/application-openapi.json) dan [viewer Swagger aplikasi](snapshots/api/application.html).
+- [Kontrak OpenAPI AI](snapshots/api/ai-openapi.json) dan [viewer Swagger AI](snapshots/api/ai.html).
+- [Daftar seluruh endpoint](snapshots/api/endpoint-inventory.md), [contoh request/response HTTP](snapshots/api/http-examples.json), dan [catatan screenshot API](snapshots/api/manifest.json).
+
+Swagger AI interaktif tersedia di `http://127.0.0.1:8000/docs`. Referensi Node.js dibuat dari route dan peran dalam kode; viewer HTML merupakan dokumentasi baca yang dapat dibuka lokal dengan akses CDN Swagger UI. Contoh sensitif disamarkan, dan aturan kondisional/izin tetap mengikuti backend. Panggilan aplikasi memakai database demo dalam memori; contoh diagnosis dan compare berasal dari PDINA lokal. Contoh keluaran generator memakai hasil uji Gemini sebelumnya, tanpa panggilan Gemini baru saat pengambilan screenshot.
+
+### Swagger UI FastAPI
+
+Daftar endpoint kesehatan layanan, model, CDA/CDM, serta fitur Gemini.
+
+<p>
+  <a href="snapshots/api/01-ai-swagger-desktop.png"><img src="snapshots/api/01-ai-swagger-desktop.png" width="76%" alt="Swagger UI FastAPI versi desktop" /></a>
+  <a href="snapshots/api/01-ai-swagger-mobile.png"><img src="snapshots/api/01-ai-swagger-mobile.png" width="22%" alt="Swagger UI FastAPI versi mobile" /></a>
+</p>
+
+### Request diagnosis CDA–PDINA
+
+Contoh payload dengan ID siswa sintetis, topik, dan pilihan jawaban.
+
+<p>
+  <a href="snapshots/api/02-diagnosis-request-desktop.png"><img src="snapshots/api/02-diagnosis-request-desktop.png" width="76%" alt="Request diagnosis CDA–PDINA versi desktop" /></a>
+  <a href="snapshots/api/02-diagnosis-request-mobile.png"><img src="snapshots/api/02-diagnosis-request-mobile.png" width="22%" alt="Request diagnosis CDA–PDINA versi mobile" /></a>
+</p>
+
+### Respons diagnosis nyata
+
+HTTP 200 dari checkpoint lokal: skor, bukti, estimasi penguasaan, dan status atribut.
+
+<p>
+  <a href="snapshots/api/03-diagnosis-response-desktop.png"><img src="snapshots/api/03-diagnosis-response-desktop.png" width="76%" alt="Respons diagnosis nyata versi desktop" /></a>
+  <a href="snapshots/api/03-diagnosis-response-mobile.png"><img src="snapshots/api/03-diagnosis-response-mobile.png" width="22%" alt="Respons diagnosis nyata versi mobile" /></a>
+</p>
+
+### Perbandingan pretest dan posttest
+
+Respons nyata endpoint compare untuk dua asesmen dalam topik dan siswa yang sama.
+
+<p>
+  <a href="snapshots/api/11-prepost-response-desktop.png"><img src="snapshots/api/11-prepost-response-desktop.png" width="76%" alt="Perbandingan pretest dan posttest versi desktop" /></a>
+  <a href="snapshots/api/11-prepost-response-mobile.png"><img src="snapshots/api/11-prepost-response-mobile.png" width="22%" alt="Perbandingan pretest dan posttest versi mobile" /></a>
+</p>
+
+### Kontrak generator materi AI
+
+Request, bentuk draf terstruktur, dan aturan peninjauan sebelum publikasi.
+
+<p>
+  <a href="snapshots/api/04-generator-contract-desktop.png"><img src="snapshots/api/04-generator-contract-desktop.png" width="76%" alt="Kontrak generator materi AI versi desktop" /></a>
+  <a href="snapshots/api/04-generator-contract-mobile.png"><img src="snapshots/api/04-generator-contract-mobile.png" width="22%" alt="Kontrak generator materi AI versi mobile" /></a>
+</p>
+
+### Referensi seluruh API aplikasi
+
+33 endpoint Node.js untuk auth, pembelajaran, asesmen, materi, kelas, dan admin.
+
+<p>
+  <a href="snapshots/api/05-app-overview-desktop.png"><img src="snapshots/api/05-app-overview-desktop.png" width="76%" alt="Referensi seluruh API aplikasi versi desktop" /></a>
+  <a href="snapshots/api/05-app-overview-mobile.png"><img src="snapshots/api/05-app-overview-mobile.png" width="22%" alt="Referensi seluruh API aplikasi versi mobile" /></a>
+</p>
+
+### Autentikasi dan sesi
+
+Payload login dan dokumentasi sesi HttpOnly serta CSRF; nilai kredensial disamarkan.
+
+<p>
+  <a href="snapshots/api/06-auth-contract-desktop.png"><img src="snapshots/api/06-auth-contract-desktop.png" width="76%" alt="Autentikasi dan sesi versi desktop" /></a>
+  <a href="snapshots/api/06-auth-contract-mobile.png"><img src="snapshots/api/06-auth-contract-mobile.png" width="22%" alt="Autentikasi dan sesi versi mobile" /></a>
+</p>
+
+### API pengelolaan materi
+
+Struktur body materi, bagian pembelajaran, status draf, dan peninjauan manusia.
+
+<p>
+  <a href="snapshots/api/07-material-contract-desktop.png"><img src="snapshots/api/07-material-contract-desktop.png" width="76%" alt="API pengelolaan materi versi desktop" /></a>
+  <a href="snapshots/api/07-material-contract-mobile.png"><img src="snapshots/api/07-material-contract-mobile.png" width="22%" alt="API pengelolaan materi versi mobile" /></a>
+</p>
+
+### Konflik versi dan validasi materi
+
+Contoh respons aktual 409 saat versi tertinggal dan 422 saat publikasi belum ditinjau.
+
+<p>
+  <a href="snapshots/api/08-review-errors-desktop.png"><img src="snapshots/api/08-review-errors-desktop.png" width="76%" alt="Konflik versi dan validasi materi versi desktop" /></a>
+  <a href="snapshots/api/08-review-errors-mobile.png"><img src="snapshots/api/08-review-errors-mobile.png" width="22%" alt="Konflik versi dan validasi materi versi mobile" /></a>
+</p>
+
+### API pengumpulan asesmen
+
+Kontrak pengiriman jawaban dan contoh hasil diagnosis; bank soal privat disamarkan.
+
+<p>
+  <a href="snapshots/api/09-assessment-contract-desktop.png"><img src="snapshots/api/09-assessment-contract-desktop.png" width="76%" alt="API pengumpulan asesmen versi desktop" /></a>
+  <a href="snapshots/api/09-assessment-contract-mobile.png"><img src="snapshots/api/09-assessment-contract-mobile.png" width="22%" alt="API pengumpulan asesmen versi mobile" /></a>
+</p>
+
+### API kelas dan administrasi
+
+Kepemilikan kelas, fase pembelajaran, ekspor CSV, serta pengelolaan akun dan materi inti.
+
+<p>
+  <a href="snapshots/api/10-class-admin-api-desktop.png"><img src="snapshots/api/10-class-admin-api-desktop.png" width="76%" alt="API kelas dan administrasi versi desktop" /></a>
+  <a href="snapshots/api/10-class-admin-api-mobile.png"><img src="snapshots/api/10-class-admin-api-mobile.png" width="22%" alt="API kelas dan administrasi versi mobile" /></a>
+</p>
+
+Untuk memperbarui referensi dan screenshot API, jalankan `node scripts/capture-api-previews.mjs` saat FastAPI lokal tersedia. Skrip memverifikasi cakupan route, membuat contoh melalui API aplikasi terisolasi, menyembunyikan header rahasia, dan memeriksa screenshot sebelum menyimpan.
 
 ## Dokumentasi dan bukti
 
