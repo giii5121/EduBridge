@@ -1,0 +1,126 @@
+{
+  "version": "edubridge-xi-v1",
+  "generated_at": "2026-11-16T23:18:21.045535+00:00",
+  "data": {
+    "artifact_source": "edubridge_indonesian_synthetic",
+    "students": 2000,
+    "items": 180,
+    "concepts": 18,
+    "observed_responses": 187035,
+    "splits": {
+      "train": 1600,
+      "val": 200,
+      "test": 200
+    },
+    "note": "SYNTHETIC, not actual Indonesian student responses. No empirical classroom validation claimed."
+  },
+  "rationale": "Supplied EEDI and calculus checkpoints have incompatible item IDs and attributes. Original checkpoints preserved unchanged.",
+  "model_selection": {
+    "main_model": "P-DINA",
+    "selected": {
+      "prior": "higher_order",
+      "strength": 10,
+      "validation_log_loss": 0.5053108043456676
+    },
+    "candidates": [
+      {
+        "prior": "independent",
+        "strength": 2,
+        "validation_log_loss": 0.5132875522467704
+      },
+      {
+        "prior": "independent",
+        "strength": 10,
+        "validation_log_loss": 0.5131829539999828
+      },
+      {
+        "prior": "higher_order",
+        "strength": 2,
+        "validation_log_loss": 0.5053474471584855
+      },
+      {
+        "prior": "higher_order",
+        "strength": 10,
+        "validation_log_loss": 0.5053108043456676
+      }
+    ]
+  },
+  "diagnosis_policy": {
+    "tau": 0.45,
+    "delta": 0.05,
+    "n_min": 5,
+    "target_concept_ids": [
+      11001,
+      11002,
+      11003,
+      11004,
+      11005,
+      11006,
+      11007,
+      11008,
+      11009,
+      11010,
+      11011,
+      11012,
+      11013,
+      11014,
+      11015,
+      11016,
+      11017,
+      11018
+    ],
+    "provenance": {
+      "source": "synthetic_validation_only",
+      "tau": "validation synthetic mastery accuracy; ties favor 0.5",
+      "n_min": "conservative five observed answers per attribute; not field-validated",
+      "delta": "conservative uncertainty band; not empirically field-validated"
+    }
+  },
+  "validation_thresholds": [
+    {
+      "tau": 0.35,
+      "synthetic_attribute_accuracy": 0.9714876033057851
+    },
+    {
+      "tau": 0.4,
+      "synthetic_attribute_accuracy": 0.9727272727272728
+    },
+    {
+      "tau": 0.45,
+      "synthetic_attribute_accuracy": 0.9731404958677686
+    },
+    {
+      "tau": 0.5,
+      "synthetic_attribute_accuracy": 0.971900826446281
+    },
+    {
+      "tau": 0.55,
+      "synthetic_attribute_accuracy": 0.9727272727272728
+    },
+    {
+      "tau": 0.6,
+      "synthetic_attribute_accuracy": 0.971900826446281
+    },
+    {
+      "tau": 0.65,
+      "synthetic_attribute_accuracy": 0.9710743801652892
+    },
+    {
+      "tau": 0.7,
+      "synthetic_attribute_accuracy": 0.968595041322314
+    }
+  ],
+  "test_evaluation": {
+    "log_loss": 0.5220199512249353,
+    "roc_auc": 0.8086070703329543,
+    "brier": 0.1710910269420432,
+    "synthetic_mastery_accuracy": 0.9659806803863923,
+    "heldout_responses": 3561,
+    "students": 200
+  },
+  "limitations": [
+    "Synthetic calibration only; validate Q-matrix/content with teachers and collect real pre/post responses.",
+    "Posterior estimates are not verified mastery. Pre/post changes do not establish causal treatment effects.",
+    "Editing item text, answer key, options, or attributes invalidates calibration for that item."
+  ]
+}

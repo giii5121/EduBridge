@@ -1,0 +1,19 @@
+% Percent correct vs P(mastery) for 2,121 test cells (target concepts, >= 5 answers);
+% slides/data/pdina_deep/pc_vs_pi_test.csv, from artifacts/diagnosis/test_mastery_profiles.csv
+\begin{tikzpicture}
+\begin{axis}[
+  width=\linewidth, height=\figH, xmin=-0.02, xmax=1.02, ymin=-0.03, ymax=1.03,
+  xlabel={persentase jawaban benar pada konsep}, ylabel={P(mastery) dari P-DINA}, grid=major,
+  xtick={0,0.2,...,1}, ytick={0,0.25,0.5,0.75,1},
+  xticklabel={\pgfmathparse{\tick*100}\pgfmathprintnumber[fixed,precision=0]{\pgfmathresult}\%},
+  yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=2},
+]
+  \fill[accent!12] (axis cs:0.5,-0.03) rectangle (axis cs:0.6,1.03);
+  \addplot[only marks, mark=*, mark size=0.8pt, navy, fill opacity=0.3, draw opacity=0.3]
+    table[col sep=comma, x=pc, y=mastery_prob] {data/pdina_deep/pc_vs_pi_test.csv};
+  \draw[dashed, gapred] (axis cs:-0.02,0.5) -- (axis cs:1.02,0.5);
+  \node[font=\tiny, text=gapred, anchor=south west] at (axis cs:0.0,0.5) {$\tau=0{,}5$};
+  \node[font=\tiny, text=accent!80!black, anchor=north, align=center, fill=white, inner sep=1pt] at (axis cs:0.55,0.42)
+    {50--60\% benar:\\69\% tetap gap};
+\end{axis}
+\end{tikzpicture}

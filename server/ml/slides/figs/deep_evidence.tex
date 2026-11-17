@@ -1,0 +1,18 @@
+% Worked example: log-odds contribution of each of the 25 Writing Expressions answers of Siswa-e7f6c011
+% (slides/data/pdina_deep/worked_items.csv), sorted; plus the prior and the total.
+\begin{tikzpicture}
+\begin{axis}[
+  ybar, width=\linewidth, height=\figH, bar width=5pt, ymin=-2.4, ymax=1.5,
+  xmin=0.2, xmax=25.8, xtick=\empty, ylabel={sumbangan log-odds},
+  ymajorgrids, xlabel={25 jawaban siswa, diurutkan (hijau = benar, merah = salah)},
+  yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=1},
+]
+  \addplot+[fill=okgreen, draw=none, bar shift=0pt] coordinates {
+    (1,1.1669) (2,1.1390) (3,0.9155) (4,0.9150) (5,0.8992) (6,0.8770) (7,0.8518) (8,0.8063) (9,0.7962)
+    (10,0.7447) (11,0.6078) (12,0.5905) (13,0.5074)};
+  \addplot+[fill=gapred, draw=none, bar shift=0pt] coordinates {
+    (14,-0.0691) (15,-0.1638) (16,-0.2854) (17,-0.5685) (18,-0.5733) (19,-0.5995) (20,-0.6837) (21,-0.7035)
+    (22,-1.1678) (23,-1.2549) (24,-1.4057) (25,-1.8364)};
+  \draw[black!60] (axis cs:0.2,0) -- (axis cs:25.8,0);
+\end{axis}
+\end{tikzpicture}

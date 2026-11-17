@@ -1,0 +1,11 @@
+% Distribution of P(mastery) on train, target concepts with >= 5 responses (16,410 cells; pi_hist_target.csv)
+\begin{tikzpicture}
+\begin{axis}[
+  ybar interval, width=\linewidth, height=\figH, xmin=0, xmax=1, ymode=log, ymin=100, ymax=15000, log origin=infty,
+  xlabel={P(mastery)}, ylabel={jumlah sel siswa $\times$ konsep}, ymajorgrids,
+  xtick={0,0.1,...,1}, xticklabel={\pgfmathprintnumber[fixed,precision=1]{\tick}},
+]
+  \addplot[fill=navy!55, draw=white] coordinates {
+    (0.0,9290) (0.1,374) (0.2,244) (0.3,221) (0.4,160) (0.5,196) (0.6,197) (0.7,209) (0.8,375) (0.9,5144) (1.0,100)};
+\end{axis}
+\end{tikzpicture}

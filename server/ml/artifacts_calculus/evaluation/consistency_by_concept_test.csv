@@ -1,0 +1,14 @@
+concept_index,consistency,n_cells,concept_id,concept_name
+0,0.9393939393939394,132,9001,Fungsi dan notasi fungsi
+1,0.86,200,9002,Faktorisasi dan manipulasi bentuk aljabar
+2,0.9179487179487179,195,9003,Limit fungsi aljabar
+3,0.8520710059171598,169,9004,Limit fungsi di tak hingga
+4,0.9047619047619048,168,9005,Limit fungsi trigonometri
+5,0.8620689655172413,145,9006,Turunan sebagai limit (definisi turunan)
+6,0.81,200,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)"
+7,0.8657718120805369,149,9008,Aturan perkalian dan pembagian
+8,0.8466257668711656,163,9009,Aturan rantai
+9,0.8636363636363636,132,9010,Turunan fungsi trigonometri
+10,0.8775510204081632,98,9011,Persamaan garis singgung kurva
+11,0.9016393442622951,183,9012,Fungsi naik/turun dan titik stasioner
+12,0.9119496855345912,159,9013,Nilai maksimum/minimum dan masalah optimasi

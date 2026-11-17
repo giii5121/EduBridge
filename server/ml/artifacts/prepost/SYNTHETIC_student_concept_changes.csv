@@ -1,0 +1,441 @@
+student_id,concept_id,concept_name,mastery_prob_pre,mastery_prob_post,mastery_change,n_evidence_pre,n_evidence_post,label_pre,label_post,both_diagnosable,direction
+SIM-001,70,Writing Expressions,0.9995355972911685,0.9983798537114013,-0.001155743579767221,5,4,mastered,insufficient_evidence,False,not_comparable
+SIM-002,70,Writing Expressions,0.03901879976048386,0.01925684361065591,-0.019761956149827953,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-003,70,Writing Expressions,0.9826019026481198,0.9978533295231907,0.015251426875070972,5,5,mastered,mastered,True,increase
+SIM-004,70,Writing Expressions,0.017755254938774223,0.9866570786548308,0.9689018237160565,5,5,not_mastered,mastered,True,increase
+SIM-005,70,Writing Expressions,0.9992852681432718,0.9998972482247744,0.0006119800815026499,5,4,mastered,insufficient_evidence,False,not_comparable
+SIM-006,70,Writing Expressions,0.03346309526920603,0.9015480424673055,0.8680849471980995,5,3,not_mastered,insufficient_evidence,False,not_comparable
+SIM-007,70,Writing Expressions,0.9914286685139014,0.959614912204997,-0.031813756308904484,5,5,mastered,mastered,True,decrease
+SIM-008,70,Writing Expressions,0.9999498144384069,0.9976873046350896,-0.002262509803317325,5,5,mastered,mastered,True,decrease
+SIM-009,70,Writing Expressions,0.8353375530941473,0.9941012100418415,0.15876365694769423,5,5,mastered,mastered,True,increase
+SIM-010,70,Writing Expressions,0.9982243531450515,0.9940996590669633,-0.004124694078088242,4,5,insufficient_evidence,mastered,False,not_comparable
+SIM-011,70,Writing Expressions,0.0006529067951562348,0.0049335039660684515,0.004280597170912216,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-012,70,Writing Expressions,0.9887514946843947,0.9963503419272366,0.007598847242841877,5,5,mastered,mastered,True,increase
+SIM-013,70,Writing Expressions,0.004358905561692976,0.006188951234393808,0.0018300456727008323,5,5,not_mastered,not_mastered,True,increase
+SIM-014,70,Writing Expressions,0.9861959694829286,0.9984244717843679,0.012228502301439237,5,4,mastered,insufficient_evidence,False,not_comparable
+SIM-015,70,Writing Expressions,6.808177829978389e-05,0.9972256181110869,0.9971575363327871,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-016,70,Writing Expressions,0.0006854406857279518,0.9923327566081266,0.9916473159223986,5,5,not_mastered,mastered,True,increase
+SIM-017,70,Writing Expressions,0.0023393617006178,0.9864056703881615,0.9840663086875437,5,5,not_mastered,mastered,True,increase
+SIM-018,70,Writing Expressions,0.9847693972715099,0.9992351820263979,0.014465784754888023,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-019,70,Writing Expressions,0.058147143117210684,0.7772924964095946,0.7191453532923839,5,5,not_mastered,mastered,True,increase
+SIM-020,70,Writing Expressions,0.14342631206716028,0.004544939929605727,-0.13888137213755455,4,5,insufficient_evidence,not_mastered,False,not_comparable
+SIM-021,70,Writing Expressions,0.01127621396197251,0.8626582065980678,0.8513819926360953,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-022,70,Writing Expressions,1.891279733923114e-05,0.020826622496212175,0.020807709698872943,5,5,not_mastered,not_mastered,True,increase
+SIM-023,70,Writing Expressions,0.0014451472073789134,0.0027248284223073843,0.0012796812149284708,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-024,70,Writing Expressions,0.0029324221656647368,0.9989351949535841,0.9960027727879194,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-025,70,Writing Expressions,0.0006119972718339447,0.47230268903390643,0.4716906917620725,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-026,70,Writing Expressions,3.133776851542336e-05,0.7766033201665207,0.7765719823980053,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-027,70,Writing Expressions,0.0317845359292567,0.022558553426931485,-0.009225982502325217,5,5,not_mastered,not_mastered,True,decrease
+SIM-028,70,Writing Expressions,1.8524836482953942e-05,0.015181855758787185,0.01516333092230423,5,5,not_mastered,not_mastered,True,increase
+SIM-029,70,Writing Expressions,0.9946611481257226,0.9978347225268704,0.0031735744011478495,5,5,mastered,mastered,True,increase
+SIM-030,70,Writing Expressions,0.9797464693213923,0.9968293945959238,0.01708292527453148,5,5,mastered,mastered,True,increase
+SIM-031,70,Writing Expressions,0.9916563524375404,0.9985193089030562,0.006862956465515824,5,4,mastered,insufficient_evidence,False,not_comparable
+SIM-032,70,Writing Expressions,0.9993578102355121,0.9994046603832477,4.685014773564422e-05,5,5,mastered,mastered,True,increase
+SIM-033,70,Writing Expressions,0.9999325878437734,0.9999756231598096,4.3035316036221793e-05,4,5,insufficient_evidence,mastered,False,not_comparable
+SIM-034,70,Writing Expressions,0.9916673553797133,0.9965853282675818,0.004917972887868549,5,5,mastered,mastered,True,increase
+SIM-035,70,Writing Expressions,0.9858347209709528,0.7632932612510299,-0.2225414597199229,4,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-036,70,Writing Expressions,1.8853208827355504e-05,0.0487520428606755,0.04873318965184814,5,5,not_mastered,not_mastered,True,increase
+SIM-037,70,Writing Expressions,0.004178856875054236,0.9915765331743988,0.9873976762993445,5,5,not_mastered,mastered,True,increase
+SIM-038,70,Writing Expressions,0.9971855388558039,0.999908893860964,0.0027233550051601885,5,5,mastered,mastered,True,increase
+SIM-039,70,Writing Expressions,0.9728274893937814,0.977393408953841,0.004565919560059584,5,4,mastered,insufficient_evidence,False,not_comparable
+SIM-040,70,Writing Expressions,0.9803217946303834,0.990911209269838,0.01058941463945462,5,5,mastered,mastered,True,increase
+SIM-001,251,Simplifying Expressions by Collecting Like Terms,0.7803509886278871,0.01846348174510651,-0.7618875068827806,5,5,mastered,not_mastered,True,decrease
+SIM-002,251,Simplifying Expressions by Collecting Like Terms,0.6518384290319968,0.15332727718479414,-0.49851115184720274,5,5,mastered,not_mastered,True,decrease
+SIM-003,251,Simplifying Expressions by Collecting Like Terms,0.9888429492034135,0.9993336069343323,0.010490657730918729,4,5,insufficient_evidence,mastered,False,not_comparable
+SIM-004,251,Simplifying Expressions by Collecting Like Terms,0.00927097419378059,0.0009690741191634152,-0.008301900074617174,4,5,insufficient_evidence,not_mastered,False,not_comparable
+SIM-005,251,Simplifying Expressions by Collecting Like Terms,0.9996896275088926,0.9989142859706652,-0.0007753415382273365,5,5,mastered,mastered,True,decrease
+SIM-006,251,Simplifying Expressions by Collecting Like Terms,0.005250300500238987,0.007359023701018942,0.002108723200779955,4,5,insufficient_evidence,not_mastered,False,not_comparable
+SIM-007,251,Simplifying Expressions by Collecting Like Terms,0.9709741257216592,0.9897224697872462,0.018748344065587008,5,5,mastered,mastered,True,increase
+SIM-008,251,Simplifying Expressions by Collecting Like Terms,0.9841116582734761,0.9968779362321474,0.012766277958671246,5,5,mastered,mastered,True,increase
+SIM-009,251,Simplifying Expressions by Collecting Like Terms,0.630203430567954,0.9986306016714469,0.3684271711034929,4,5,insufficient_evidence,mastered,False,not_comparable
+SIM-010,251,Simplifying Expressions by Collecting Like Terms,0.9931994358310295,0.8193219263649576,-0.17387750946607194,4,5,insufficient_evidence,mastered,False,not_comparable
+SIM-011,251,Simplifying Expressions by Collecting Like Terms,0.05738404020201175,0.0011510221279422371,-0.05623301807406952,5,5,not_mastered,not_mastered,True,decrease
+SIM-012,251,Simplifying Expressions by Collecting Like Terms,0.151433522380768,0.01357304624283916,-0.13786047613792882,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-013,251,Simplifying Expressions by Collecting Like Terms,0.00026588006465441005,1.8207561848316268e-05,-0.0002476725028060938,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-014,251,Simplifying Expressions by Collecting Like Terms,0.9232786818951392,0.9981977159068216,0.07491903401168243,5,5,mastered,mastered,True,increase
+SIM-015,251,Simplifying Expressions by Collecting Like Terms,0.0005648665526357456,0.011167160657335511,0.010602294104699766,5,5,not_mastered,not_mastered,True,increase
+SIM-016,251,Simplifying Expressions by Collecting Like Terms,0.023891223034012886,0.0969626034461115,0.07307138041209862,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-017,251,Simplifying Expressions by Collecting Like Terms,0.02323812103781949,0.006955636100046525,-0.016282484937772967,5,5,not_mastered,not_mastered,True,decrease
+SIM-018,251,Simplifying Expressions by Collecting Like Terms,0.27946385673981,0.9908475114860164,0.7113836547462064,5,5,not_mastered,mastered,True,increase
+SIM-019,251,Simplifying Expressions by Collecting Like Terms,0.03463578134691247,0.003000346009339962,-0.03163543533757251,5,5,not_mastered,not_mastered,True,decrease
+SIM-020,251,Simplifying Expressions by Collecting Like Terms,0.5907402474837757,0.004467218486230294,-0.5862730289975454,5,4,mastered,insufficient_evidence,False,not_comparable
+SIM-021,251,Simplifying Expressions by Collecting Like Terms,0.0014067250143594064,0.9699156801919672,0.9685089551776077,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-022,251,Simplifying Expressions by Collecting Like Terms,0.0006387052331232744,0.82646798544162,0.8258292802084968,5,5,not_mastered,mastered,True,increase
+SIM-023,251,Simplifying Expressions by Collecting Like Terms,7.261419255745409e-05,0.01547102674192178,0.015398412549364325,5,5,not_mastered,not_mastered,True,increase
+SIM-024,251,Simplifying Expressions by Collecting Like Terms,0.822915727897914,0.9990856006891042,0.17616987279119023,4,5,insufficient_evidence,mastered,False,not_comparable
+SIM-025,251,Simplifying Expressions by Collecting Like Terms,0.0002731799314748958,7.840181268576101e-05,-0.00019477811878913483,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-026,251,Simplifying Expressions by Collecting Like Terms,0.0013814588744197882,0.010589628029298805,0.009208169154879016,5,5,not_mastered,not_mastered,True,increase
+SIM-027,251,Simplifying Expressions by Collecting Like Terms,0.558205514842242,0.8997528005864416,0.34154728574419957,5,5,mastered,mastered,True,increase
+SIM-028,251,Simplifying Expressions by Collecting Like Terms,0.011928416200967138,0.9898987057657715,0.9779702895648044,5,5,not_mastered,mastered,True,increase
+SIM-029,251,Simplifying Expressions by Collecting Like Terms,0.9765780290114209,0.994213945434687,0.017635916423266118,5,5,mastered,mastered,True,increase
+SIM-030,251,Simplifying Expressions by Collecting Like Terms,0.9912471856833303,0.9980613120276248,0.006814126344294569,5,4,mastered,insufficient_evidence,False,not_comparable
+SIM-031,251,Simplifying Expressions by Collecting Like Terms,0.14824320893129436,0.001006320745567709,-0.14723688818572667,4,5,insufficient_evidence,not_mastered,False,not_comparable
+SIM-032,251,Simplifying Expressions by Collecting Like Terms,0.9977410322072592,0.9956924806069246,-0.0020485516003345694,5,4,mastered,insufficient_evidence,False,not_comparable
+SIM-033,251,Simplifying Expressions by Collecting Like Terms,0.9928994446488603,0.9999346256575651,0.007035181008704816,5,5,mastered,mastered,True,increase
+SIM-034,251,Simplifying Expressions by Collecting Like Terms,0.9970818440083125,0.9992688628926586,0.002187018884346137,5,5,mastered,mastered,True,increase
+SIM-035,251,Simplifying Expressions by Collecting Like Terms,0.8510501832903319,0.0001878406248686403,-0.8508623426654632,5,5,mastered,not_mastered,True,decrease
+SIM-036,251,Simplifying Expressions by Collecting Like Terms,7.807598584404414e-05,0.9958200652642444,0.9957419892784003,5,5,not_mastered,mastered,True,increase
+SIM-037,251,Simplifying Expressions by Collecting Like Terms,0.2778633979821986,0.1469368140343979,-0.1309265839478007,5,5,not_mastered,not_mastered,True,decrease
+SIM-038,251,Simplifying Expressions by Collecting Like Terms,0.9989123490748397,0.9980501413320575,-0.0008622077427822283,5,5,mastered,mastered,True,decrease
+SIM-039,251,Simplifying Expressions by Collecting Like Terms,0.39637651073083874,0.9983240845669433,0.6019475738361046,5,5,not_mastered,mastered,True,increase
+SIM-040,251,Simplifying Expressions by Collecting Like Terms,0.9270037168103613,0.9591180785805891,0.03211436177022775,5,5,mastered,mastered,True,increase
+SIM-001,67,Substitution into Formula,0.9998497367867747,0.975043322764339,-0.024806414022435663,5,5,mastered,mastered,True,decrease
+SIM-002,67,Substitution into Formula,0.03042356033093501,0.9768513905708861,0.9464278302399511,5,5,not_mastered,mastered,True,increase
+SIM-003,67,Substitution into Formula,0.9996527699093436,0.999227709427679,-0.0004250604816645742,5,5,mastered,mastered,True,decrease
+SIM-004,67,Substitution into Formula,0.005084907301265426,0.056807059602177155,0.051722152300911726,4,5,insufficient_evidence,not_mastered,False,not_comparable
+SIM-005,67,Substitution into Formula,0.9997687005248119,0.9998977446024425,0.00012904407763059123,5,5,mastered,mastered,True,increase
+SIM-006,67,Substitution into Formula,2.1411455187061087e-05,1.3246281810672027e-05,-8.16517337638906e-06,5,5,not_mastered,not_mastered,True,decrease
+SIM-007,67,Substitution into Formula,0.9596301437455276,0.9970956776835251,0.037465533937997564,5,4,mastered,insufficient_evidence,False,not_comparable
+SIM-008,67,Substitution into Formula,0.9998682501058314,0.9995461805509979,-0.00032206955483349287,5,5,mastered,mastered,True,decrease
+SIM-009,67,Substitution into Formula,0.9738252975643689,0.9984131659521254,0.024587868387756506,5,5,mastered,mastered,True,increase
+SIM-010,67,Substitution into Formula,0.5154987980977825,0.9880801447916017,0.4725813466938191,5,3,mastered,insufficient_evidence,False,not_comparable
+SIM-011,67,Substitution into Formula,0.0005355613441685529,0.0036983227643144537,0.0031627614201459008,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-012,67,Substitution into Formula,0.0001808422390114576,4.997791024044883e-05,-0.00013086432877100878,5,5,not_mastered,not_mastered,True,decrease
+SIM-013,67,Substitution into Formula,0.0004266623175527192,0.00812742406877735,0.007700761751224631,5,5,not_mastered,not_mastered,True,increase
+SIM-014,67,Substitution into Formula,0.03002295099320035,0.0002718709881910206,-0.029751080005009332,5,5,not_mastered,not_mastered,True,decrease
+SIM-015,67,Substitution into Formula,1e-06,0.0034937426587930195,0.0034927426587930193,5,5,not_mastered,not_mastered,True,increase
+SIM-016,67,Substitution into Formula,0.006139083935767225,0.008382382971362871,0.002243299035595646,5,5,not_mastered,not_mastered,True,increase
+SIM-017,67,Substitution into Formula,0.004557401137353153,0.9963221762436911,0.991764775106338,5,5,not_mastered,mastered,True,increase
+SIM-018,67,Substitution into Formula,0.1768307771795942,0.9998913042019854,0.8230605270223912,5,5,not_mastered,mastered,True,increase
+SIM-019,67,Substitution into Formula,0.00031446793189790685,0.01557822713137284,0.015263759199474933,5,5,not_mastered,not_mastered,True,increase
+SIM-020,67,Substitution into Formula,0.09484765537323586,4.857186536161411e-05,-0.09479908350787425,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-021,67,Substitution into Formula,0.00024815449207013095,0.12747938513309337,0.12723123064102324,5,5,not_mastered,not_mastered,True,increase
+SIM-022,67,Substitution into Formula,1e-06,0.016563418936437226,0.016562418936437225,5,5,not_mastered,not_mastered,True,increase
+SIM-023,67,Substitution into Formula,1.5626096083257855e-05,0.00469494401888572,0.004679317922802462,5,5,not_mastered,not_mastered,True,increase
+SIM-024,67,Substitution into Formula,0.0012052548341971161,0.9989403339339848,0.9977350790997878,5,5,not_mastered,mastered,True,increase
+SIM-025,67,Substitution into Formula,1.4976847015093868e-05,0.002423031581113006,0.0024080547340979124,5,5,not_mastered,not_mastered,True,increase
+SIM-026,67,Substitution into Formula,1.2435967684645892e-05,1.8683466149061443e-05,6.247498464415551e-06,5,5,not_mastered,not_mastered,True,increase
+SIM-027,67,Substitution into Formula,0.9928117686072416,0.984487064575578,-0.008324704031663632,5,4,mastered,insufficient_evidence,False,not_comparable
+SIM-028,67,Substitution into Formula,3.8113986858969882e-06,0.004158943043851212,0.004155131645165315,5,3,not_mastered,insufficient_evidence,False,not_comparable
+SIM-029,67,Substitution into Formula,0.9982668313903212,0.8974620686038385,-0.10080476278648276,5,5,mastered,mastered,True,decrease
+SIM-030,67,Substitution into Formula,0.993463059285165,0.831729280622688,-0.16173377866247696,5,5,mastered,mastered,True,decrease
+SIM-031,67,Substitution into Formula,0.9931320843449607,0.9744577430669837,-0.018674341277976958,4,5,insufficient_evidence,mastered,False,not_comparable
+SIM-032,67,Substitution into Formula,0.8764525014339059,0.9981517360334012,0.12169923459949539,4,5,insufficient_evidence,mastered,False,not_comparable
+SIM-033,67,Substitution into Formula,0.9986922486378578,0.9999242296826633,0.0012319810448054858,5,5,mastered,mastered,True,increase
+SIM-034,67,Substitution into Formula,0.9997327838773653,0.981566647485207,-0.01816613639215836,5,5,mastered,mastered,True,decrease
+SIM-035,67,Substitution into Formula,0.0006680736612023727,0.022202899513714392,0.02153482585251202,5,5,not_mastered,not_mastered,True,increase
+SIM-036,67,Substitution into Formula,0.0022270373541831354,0.9905501962165907,0.9883231588624075,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-037,67,Substitution into Formula,0.1856122582013211,0.3414756761216768,0.15586341792035568,5,5,not_mastered,not_mastered,True,increase
+SIM-038,67,Substitution into Formula,0.9999116600536497,0.9940701452429433,-0.005841514810706383,5,5,mastered,mastered,True,decrease
+SIM-039,67,Substitution into Formula,0.001361191577062503,0.9965193338447789,0.9951581422677164,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-040,67,Substitution into Formula,0.0008448377603920644,0.99645905440066,0.995614216640268,5,5,not_mastered,mastered,True,increase
+SIM-001,52,Factorising into a Single Bracket,0.9966130354240293,0.9038676537666536,-0.09274538165737578,4,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-002,52,Factorising into a Single Bracket,0.0076649347905099665,0.003394056452628485,-0.004270878337881482,4,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-003,52,Factorising into a Single Bracket,0.9990102467279139,0.9986241238827739,-0.0003861228451400578,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-004,52,Factorising into a Single Bracket,3.20931350818199e-05,0.005358083130815062,0.005325989995733242,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-005,52,Factorising into a Single Bracket,0.9977754569483244,0.996452943151115,-0.0013225137972093792,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-006,52,Factorising into a Single Bracket,2.9531209304107804e-05,0.004962819034898941,0.004933287825594833,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-007,52,Factorising into a Single Bracket,0.9799248460959556,0.9983281041856695,0.01840325808971388,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-008,52,Factorising into a Single Bracket,0.9995581427567631,0.9882584529707411,-0.011299689786022027,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-009,52,Factorising into a Single Bracket,0.9942102856131846,0.9673793927723272,-0.02683089284085738,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-010,52,Factorising into a Single Bracket,0.0034267276310780454,0.0558518025078434,0.05242507487676535,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-011,52,Factorising into a Single Bracket,0.4587902266615562,0.9097064498354519,0.4509162231738957,4,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-012,52,Factorising into a Single Bracket,0.008601085083156289,0.0031139018827922972,-0.0054871832003639915,4,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-013,52,Factorising into a Single Bracket,0.0009798776890104497,0.0020245273857050737,0.001044649696694624,4,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-014,52,Factorising into a Single Bracket,0.047932972773335865,0.9905790159994176,0.9426460432260817,4,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-015,52,Factorising into a Single Bracket,0.0002854006374737021,0.937974797493276,0.9376893968558022,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-016,52,Factorising into a Single Bracket,0.0006174320187798578,0.17836336179850154,0.17774592977972167,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-017,52,Factorising into a Single Bracket,0.0018767418557375916,0.03706191273435287,0.03518517087861528,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-018,52,Factorising into a Single Bracket,0.6151551854697564,0.996399141025467,0.38124395555571056,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-019,52,Factorising into a Single Bracket,0.06710971868168554,0.9587361118829747,0.8916263932012891,4,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-020,52,Factorising into a Single Bracket,0.0001963726614998054,0.9544484813143217,0.9542521086528218,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-021,52,Factorising into a Single Bracket,0.035152230295737705,0.956410149102918,0.9212579188071803,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-022,52,Factorising into a Single Bracket,0.005252584056689787,0.9399048876423818,0.934652303585692,4,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-023,52,Factorising into a Single Bracket,0.0002968470239827028,0.005735362112499663,0.005438515088516961,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-024,52,Factorising into a Single Bracket,0.00036298514465512715,0.04327029352753643,0.04290730838288131,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-025,52,Factorising into a Single Bracket,4.30099896080424e-05,0.046711457799025205,0.04666844780941716,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-026,52,Factorising into a Single Bracket,0.0033071163209311073,0.7051801123426008,0.7018729960216697,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-027,52,Factorising into a Single Bracket,0.8603458026230795,0.2780106806105134,-0.5823351220125661,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-028,52,Factorising into a Single Bracket,5.4364268353490034e-05,0.9868226496304866,0.9867682853621331,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-029,52,Factorising into a Single Bracket,0.9882015239516184,0.9917030543819956,0.0035015304303771533,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-030,52,Factorising into a Single Bracket,0.029663660037175136,0.007550873085385371,-0.022112786951789764,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-031,52,Factorising into a Single Bracket,0.9946029508837093,0.9971633673704934,0.0025604164867840673,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-032,52,Factorising into a Single Bracket,0.996320214221209,0.9971564314545565,0.0008362172333474804,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-033,52,Factorising into a Single Bracket,0.9997277655361403,0.999800765506803,7.299997066267938e-05,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-034,52,Factorising into a Single Bracket,0.9945411364264182,0.9962584796727857,0.0017173432463675198,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-035,52,Factorising into a Single Bracket,0.0006171332873899449,0.9886167348410883,0.9879996015536983,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-036,52,Factorising into a Single Bracket,0.00031531855868032035,0.9936668073385198,0.9933514887798395,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-037,52,Factorising into a Single Bracket,0.000374950861523568,0.5317820349633345,0.5314070841018109,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-038,52,Factorising into a Single Bracket,0.9049955284164384,0.9605804578315995,0.05558492941516113,4,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-039,52,Factorising into a Single Bracket,0.9877722116416806,0.9966235517892216,0.008851340147540965,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-040,52,Factorising into a Single Bracket,0.3384466670815544,0.9951171719756531,0.6566705048940986,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-001,64,Linear Equations,0.9798963697540719,0.9785352680664376,-0.0013611016876342585,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-002,64,Linear Equations,0.0003333276964787142,0.6451627979961367,0.644829470299658,3,2,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-003,64,Linear Equations,0.784998405239434,0.9912593292834676,0.20626092404403362,2,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-004,64,Linear Equations,0.00033821748843414293,0.0008935309067358669,0.000555313418301724,2,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-005,64,Linear Equations,0.997430467601052,0.9963578611015974,-0.0010726064994546203,3,2,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-006,64,Linear Equations,0.0008099775963017819,0.011495410978083652,0.01068543338178187,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-007,64,Linear Equations,0.9872660109059418,0.9891454895499129,0.0018794786439710887,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-008,64,Linear Equations,0.9984787663527844,0.9855238013430033,-0.012954965009781105,3,2,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-009,64,Linear Equations,0.9733302984443326,0.5198220941070537,-0.4535082043372789,3,2,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-010,64,Linear Equations,0.982218883107933,0.9761912560444194,-0.006027627063513674,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-011,64,Linear Equations,0.06480358214426363,0.8456448324593514,0.7808412503150878,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-012,64,Linear Equations,0.00048725711375297476,0.0030163767165702214,0.0025291196028172465,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-013,64,Linear Equations,4.23581125563833e-05,0.0012592943829011557,0.0012169362703447725,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-014,64,Linear Equations,0.7148858749523284,0.7839310643589725,0.06904518940664417,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-015,64,Linear Equations,0.0026113623548301526,0.6965080832810807,0.6938967209262505,2,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-016,64,Linear Equations,0.03660458971680623,0.8211944460096219,0.7845898562928156,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-017,64,Linear Equations,0.18588252295888863,0.9115585662808363,0.7256760433219477,3,2,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-018,64,Linear Equations,0.2512477645742062,0.9985878822682064,0.7473401176940002,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-019,64,Linear Equations,0.7996036221677885,0.8918271936343449,0.09222357146655646,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-020,64,Linear Equations,0.0031060399222314554,0.000700079238023751,-0.0024059606842077043,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-021,64,Linear Equations,0.015389808739484354,0.7699050642553082,0.7545152555158239,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-022,64,Linear Equations,2.502620976398983e-05,0.051926888810591716,0.05190186260082773,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-023,64,Linear Equations,0.000644753376407068,0.5344764799365583,0.5338317265601513,3,2,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-024,64,Linear Equations,0.005313994222909373,0.8194006250313978,0.8140866308084884,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-025,64,Linear Equations,4.768402235242163e-05,0.007314350128645431,0.00726666610629301,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-026,64,Linear Equations,0.0010376327863852463,0.0012064930104611058,0.0001688602240758595,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-027,64,Linear Equations,0.04524722294363907,0.06913335213586796,0.02388612919222889,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-028,64,Linear Equations,2.4546856157711985e-05,0.01330379442741179,0.013279247571254078,3,2,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-029,64,Linear Equations,0.983386473955306,0.9375818824097487,-0.04580459154555727,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-030,64,Linear Equations,0.9446724871784968,0.9874587983890094,0.04278631121051257,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-031,64,Linear Equations,0.7683270008144226,0.9805155414622566,0.212188540647834,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-032,64,Linear Equations,0.15575993048224365,0.016208792569782922,-0.13955113791246074,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-033,64,Linear Equations,0.9991155881738584,0.9989912062719689,-0.00012438190188945875,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-034,64,Linear Equations,0.9970609812758986,0.9986198221775812,0.0015588409016825677,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-035,64,Linear Equations,0.0009435149059982199,0.04080712461289376,0.039863609706895536,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-036,64,Linear Equations,0.00029712908504077784,0.3751256824303992,0.3748285533453584,3,2,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-037,64,Linear Equations,0.15109529546612577,0.9670429497123901,0.8159476542462644,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-038,64,Linear Equations,0.9989518989898426,0.9965561939260398,-0.002395705063802822,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-039,64,Linear Equations,0.5682110451637971,0.9839225657063683,0.4157115205425712,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-040,64,Linear Equations,0.9460891735754773,0.9646844019499589,0.018595228374481576,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-001,166,Solving Linear Inequalities,0.9967812932516769,0.9912996072001959,-0.005481686051480916,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-002,166,Solving Linear Inequalities,0.009725306804394783,0.0012297342804168535,-0.00849557252397793,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-003,166,Solving Linear Inequalities,0.9428432095516607,0.775847194726932,-0.1669960148247287,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-004,166,Solving Linear Inequalities,0.04651279033847152,0.01873874861314175,-0.02777404172532977,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-005,166,Solving Linear Inequalities,0.9983370874371796,0.9951643371078743,-0.003172750329305307,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-006,166,Solving Linear Inequalities,0.00011299960800857806,0.0030655209283288725,0.0029525213203202946,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-007,166,Solving Linear Inequalities,0.2777441498783025,0.7415517370067297,0.46380758712842723,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-008,166,Solving Linear Inequalities,0.9958773995220453,0.3428362149328442,-0.6530411845892011,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-009,166,Solving Linear Inequalities,0.16772421575198126,0.04124284694636954,-0.12648136880561173,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-010,166,Solving Linear Inequalities,0.9912109266789246,0.8091588463223346,-0.18205208035659004,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-011,166,Solving Linear Inequalities,0.0002972734517333519,0.9487581113093264,0.948460837857593,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-012,166,Solving Linear Inequalities,0.9246984607188975,0.9096464656267015,-0.015051995092196013,4,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-013,166,Solving Linear Inequalities,0.014525398626043674,0.00811781791542631,-0.006407580710617363,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-014,166,Solving Linear Inequalities,0.9640706163690409,0.6093441980727076,-0.35472641829633333,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-015,166,Solving Linear Inequalities,0.000965070401377932,0.512942967465484,0.511977897064106,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-016,166,Solving Linear Inequalities,0.00017758586682051412,0.722828180350796,0.7226505944839755,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-017,166,Solving Linear Inequalities,0.7746305649420391,0.986155964542533,0.21152539960049388,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-018,166,Solving Linear Inequalities,0.009155100336277979,0.9798984285434493,0.9707433282071714,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-019,166,Solving Linear Inequalities,0.10356380374541517,0.0020077891781330607,-0.10155601456728211,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-020,166,Solving Linear Inequalities,0.06680234405706797,0.0006308523611594753,-0.0661714916959085,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-021,166,Solving Linear Inequalities,0.004470820497352596,0.9448990769221366,0.940428256424784,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-022,166,Solving Linear Inequalities,0.004139029754794209,0.8754400910824507,0.8713010613276565,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-023,166,Solving Linear Inequalities,0.0010022166126101818,0.010869901272647477,0.009867684660037295,4,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-024,166,Solving Linear Inequalities,0.02511790798605663,0.7327082159161553,0.7075903079300987,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-025,166,Solving Linear Inequalities,0.0066597519014754076,0.015161185588918139,0.00850143368744273,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-026,166,Solving Linear Inequalities,0.0005447856854553485,0.929379366350005,0.9288345806645496,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-027,166,Solving Linear Inequalities,0.5264057644702362,0.9800051340071567,0.4535993695369205,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-028,166,Solving Linear Inequalities,0.034747282963257166,0.9655832275245745,0.9308359445613174,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-029,166,Solving Linear Inequalities,0.7770247202562477,0.020125415434650587,-0.7568993048215971,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-030,166,Solving Linear Inequalities,0.003979921924000919,0.9945370731604548,0.9905571512364539,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-031,166,Solving Linear Inequalities,0.9883167295478257,0.9920008722472987,0.0036841426994730364,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-032,166,Solving Linear Inequalities,0.8232315366497464,0.9685280554649586,0.14529651881521222,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-033,166,Solving Linear Inequalities,0.997408183830858,0.9993740348352326,0.001965851004374519,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-034,166,Solving Linear Inequalities,0.9531475676303958,0.996033236000985,0.04288566837058927,4,2,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-035,166,Solving Linear Inequalities,0.6546478469547653,0.8412823730565776,0.1866345261018123,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-036,166,Solving Linear Inequalities,0.001062040604402431,0.9827924098707347,0.9817303692663323,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-037,166,Solving Linear Inequalities,0.0012986731677751915,0.005940452829020418,0.0046417796612452265,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-038,166,Solving Linear Inequalities,0.9982563369734689,0.989139851491851,-0.00911648548161792,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-039,166,Solving Linear Inequalities,0.11308586129909003,0.9970238006219897,0.8839379393228997,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-040,166,Solving Linear Inequalities,0.12317486675287237,0.005588824907442805,-0.11758604184542956,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-001,171,Linear Sequences (nth term),0.9889417895568935,0.9963498287598469,0.007408039202953409,5,5,mastered,mastered,True,increase
+SIM-002,171,Linear Sequences (nth term),0.8957279556293792,0.9234802782015966,0.02775232257221738,5,5,mastered,mastered,True,increase
+SIM-003,171,Linear Sequences (nth term),0.9883390248757903,0.9994442355987004,0.011105210722910153,5,5,mastered,mastered,True,increase
+SIM-004,171,Linear Sequences (nth term),0.04350954912329309,0.970643495091042,0.9271339459677489,5,5,not_mastered,mastered,True,increase
+SIM-005,171,Linear Sequences (nth term),0.9999204619407,0.995759697779009,-0.004160764161690977,5,5,mastered,mastered,True,decrease
+SIM-006,171,Linear Sequences (nth term),0.039535527979362474,0.0002707352639917497,-0.03926479271537073,5,5,not_mastered,not_mastered,True,decrease
+SIM-007,171,Linear Sequences (nth term),0.947201197232434,0.991595601886689,0.04439440465425504,5,5,mastered,mastered,True,increase
+SIM-008,171,Linear Sequences (nth term),0.999251802809377,0.9991902550653863,-6.154774399069751e-05,5,5,mastered,mastered,True,decrease
+SIM-009,171,Linear Sequences (nth term),0.1198216501831276,0.9962377839344448,0.8764161337513172,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-010,171,Linear Sequences (nth term),0.9894875744685433,0.9959123233675731,0.006424748899029775,5,5,mastered,mastered,True,increase
+SIM-011,171,Linear Sequences (nth term),0.07361322539912182,0.013655842797257166,-0.05995738260186466,5,5,not_mastered,not_mastered,True,decrease
+SIM-012,171,Linear Sequences (nth term),0.1267936145672009,0.7540353420119699,0.627241727444769,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-013,171,Linear Sequences (nth term),0.0024364752656168744,0.06293493236622395,0.06049845710060708,5,5,not_mastered,not_mastered,True,increase
+SIM-014,171,Linear Sequences (nth term),0.9907117153205466,0.9198452354498338,-0.07086647987071282,5,5,mastered,mastered,True,decrease
+SIM-015,171,Linear Sequences (nth term),0.016243478112977213,0.988187077528877,0.9719435994158998,5,5,not_mastered,mastered,True,increase
+SIM-016,171,Linear Sequences (nth term),0.0002371561339075285,0.052758321519610796,0.05252116538570327,5,5,not_mastered,not_mastered,True,increase
+SIM-017,171,Linear Sequences (nth term),0.0022650325160063333,0.06315588629959067,0.06089085378358433,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-018,171,Linear Sequences (nth term),0.0003627779459526022,0.9998659615982026,0.99950318365225,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-019,171,Linear Sequences (nth term),0.4273888949499355,0.05053509705869389,-0.37685379789124157,5,5,not_mastered,not_mastered,True,decrease
+SIM-020,171,Linear Sequences (nth term),7.882093342776575e-05,0.7912921149366693,0.7912132940032415,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-021,171,Linear Sequences (nth term),0.005240295730311565,0.9959427401799699,0.9907024444496583,5,5,not_mastered,mastered,True,increase
+SIM-022,171,Linear Sequences (nth term),0.0006293006799892494,0.726932085771711,0.7263027850917217,5,5,not_mastered,mastered,True,increase
+SIM-023,171,Linear Sequences (nth term),0.010849181702422843,0.9574072151911205,0.9465580334886976,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-024,171,Linear Sequences (nth term),0.06132876288435887,0.9908818940038385,0.9295531311194797,4,5,insufficient_evidence,mastered,False,not_comparable
+SIM-025,171,Linear Sequences (nth term),0.21897036860430202,0.8888472214921118,0.6698768528878098,4,5,insufficient_evidence,mastered,False,not_comparable
+SIM-026,171,Linear Sequences (nth term),1.0561324244104666e-05,0.17410821054332679,0.1740976492190827,5,5,not_mastered,not_mastered,True,increase
+SIM-027,171,Linear Sequences (nth term),0.9975168109805529,0.8687299229941974,-0.1287868879863555,5,4,mastered,insufficient_evidence,False,not_comparable
+SIM-028,171,Linear Sequences (nth term),0.0013592387186160734,0.7251652597395025,0.7238060210208864,5,5,not_mastered,mastered,True,increase
+SIM-029,171,Linear Sequences (nth term),0.9994034189865915,0.6450677590277483,-0.3543356599588432,5,5,mastered,mastered,True,decrease
+SIM-030,171,Linear Sequences (nth term),0.08054227187951536,0.999178518224884,0.9186362463453687,5,5,not_mastered,mastered,True,increase
+SIM-031,171,Linear Sequences (nth term),0.9990800478253326,0.9967154119844532,-0.0023646358408793144,5,5,mastered,mastered,True,decrease
+SIM-032,171,Linear Sequences (nth term),0.9977938127143132,0.9766411941246892,-0.021152618589624028,4,5,insufficient_evidence,mastered,False,not_comparable
+SIM-033,171,Linear Sequences (nth term),0.9999746832983191,0.9968546031572306,-0.0031200801410884438,5,5,mastered,mastered,True,decrease
+SIM-034,171,Linear Sequences (nth term),0.9984834622137753,0.999810707015208,0.0013272448014327587,5,5,mastered,mastered,True,increase
+SIM-035,171,Linear Sequences (nth term),0.3391763504956428,0.8114550413582816,0.4722786908626388,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-036,171,Linear Sequences (nth term),8.318809358288102e-05,0.9965119450498572,0.9964287569562743,5,5,not_mastered,mastered,True,increase
+SIM-037,171,Linear Sequences (nth term),0.9908832182411452,0.9976376633178714,0.006754445076726179,5,5,mastered,mastered,True,increase
+SIM-038,171,Linear Sequences (nth term),0.9999696249689957,0.9975491383782502,-0.002420486590745452,5,5,mastered,mastered,True,decrease
+SIM-039,171,Linear Sequences (nth term),0.960632992389474,0.9998327373819228,0.039199744992448826,5,5,mastered,mastered,True,increase
+SIM-040,171,Linear Sequences (nth term),0.08218568291414785,0.4829100982588429,0.40072441534469505,5,5,not_mastered,not_mastered,True,increase
+SIM-001,406,Naming Co-ordinates in 2D,0.9996063228496208,0.7098878283258425,-0.2897184945237783,5,5,mastered,mastered,True,decrease
+SIM-002,406,Naming Co-ordinates in 2D,0.010550208490220928,0.015842213347364645,0.005292004857143717,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-003,406,Naming Co-ordinates in 2D,0.9991555263099264,0.9740903487676591,-0.025065177542267336,5,4,mastered,insufficient_evidence,False,not_comparable
+SIM-004,406,Naming Co-ordinates in 2D,0.0006097515001357278,0.0028948495771145034,0.0022850980769787755,4,5,insufficient_evidence,not_mastered,False,not_comparable
+SIM-005,406,Naming Co-ordinates in 2D,0.9974059602702958,0.9833169583681974,-0.014089001902098386,5,5,mastered,mastered,True,decrease
+SIM-006,406,Naming Co-ordinates in 2D,4.769162287375667e-06,0.4836007554417198,0.48359598627943245,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-007,406,Naming Co-ordinates in 2D,0.9971932297983853,0.8301203743224643,-0.167072855475921,5,5,mastered,mastered,True,decrease
+SIM-008,406,Naming Co-ordinates in 2D,0.9996507756135101,0.9986640234145676,-0.0009867521989425088,5,5,mastered,mastered,True,decrease
+SIM-009,406,Naming Co-ordinates in 2D,0.99415847567528,0.9497654914550189,-0.04439298422026117,5,4,mastered,insufficient_evidence,False,not_comparable
+SIM-010,406,Naming Co-ordinates in 2D,0.9960957576232594,0.9601168635129173,-0.03597889411034216,5,5,mastered,mastered,True,decrease
+SIM-011,406,Naming Co-ordinates in 2D,0.007232534206604673,0.9018457372181046,0.8946132030114999,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-012,406,Naming Co-ordinates in 2D,0.02024543045211495,0.7585475925308486,0.7383021620787337,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-013,406,Naming Co-ordinates in 2D,0.001035874290270889,0.0008849808387792447,-0.00015089345149164424,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-014,406,Naming Co-ordinates in 2D,0.9929036282721592,0.9946429616432825,0.0017393333711233083,5,5,mastered,mastered,True,increase
+SIM-015,406,Naming Co-ordinates in 2D,0.0025318884667625105,0.9916456962533211,0.9891138077865586,5,5,not_mastered,mastered,True,increase
+SIM-016,406,Naming Co-ordinates in 2D,0.0009281865185599801,0.00044297526905052553,-0.0004852112495094546,5,5,not_mastered,not_mastered,True,decrease
+SIM-017,406,Naming Co-ordinates in 2D,0.7513715020898305,0.9910459385059417,0.2396744364161112,5,5,mastered,mastered,True,increase
+SIM-018,406,Naming Co-ordinates in 2D,0.9606081194104625,0.9994645355143353,0.038856416103872804,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-019,406,Naming Co-ordinates in 2D,0.750750304516458,0.7409904044908816,-0.009759900025576362,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-020,406,Naming Co-ordinates in 2D,0.7137149660720439,0.002354946756445487,-0.7113600193155983,5,5,mastered,not_mastered,True,decrease
+SIM-021,406,Naming Co-ordinates in 2D,0.007484447288257597,0.9942047263629816,0.986720279074724,5,5,not_mastered,mastered,True,increase
+SIM-022,406,Naming Co-ordinates in 2D,1.7089473393102528e-05,0.9369897345352383,0.9369726450618452,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-023,406,Naming Co-ordinates in 2D,0.002643003720210589,0.017162482993160335,0.014519479272949746,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-024,406,Naming Co-ordinates in 2D,0.009586903121960243,0.8748361908802987,0.8652492877583385,5,5,not_mastered,mastered,True,increase
+SIM-025,406,Naming Co-ordinates in 2D,0.00159268314775228,0.0018192295159631918,0.00022654636821091184,5,5,not_mastered,not_mastered,True,increase
+SIM-026,406,Naming Co-ordinates in 2D,0.001344753457907065,0.15724687246655886,0.15590211900865178,5,4,not_mastered,insufficient_evidence,False,not_comparable
+SIM-027,406,Naming Co-ordinates in 2D,0.9433898479660916,0.8688636144172178,-0.07452623354887378,5,5,mastered,mastered,True,decrease
+SIM-028,406,Naming Co-ordinates in 2D,0.0004377772822623471,0.9745517308716791,0.9741139535894168,5,5,not_mastered,mastered,True,increase
+SIM-029,406,Naming Co-ordinates in 2D,0.9600849383693614,0.010426555284774234,-0.9496583830845872,5,5,mastered,not_mastered,True,decrease
+SIM-030,406,Naming Co-ordinates in 2D,0.9478690495718939,0.9920088611945227,0.04413981162262881,5,4,mastered,insufficient_evidence,False,not_comparable
+SIM-031,406,Naming Co-ordinates in 2D,0.9945907623830857,0.9782438195819789,-0.016346942801106823,5,3,mastered,insufficient_evidence,False,not_comparable
+SIM-032,406,Naming Co-ordinates in 2D,0.9964434610498365,0.9670266931366269,-0.029416767913209574,5,5,mastered,mastered,True,decrease
+SIM-033,406,Naming Co-ordinates in 2D,0.9983958836224043,0.9981517715382623,-0.0002441120841419897,5,5,mastered,mastered,True,decrease
+SIM-034,406,Naming Co-ordinates in 2D,0.9773362926898427,0.9988882768102155,0.021551984120372847,5,3,mastered,insufficient_evidence,False,not_comparable
+SIM-035,406,Naming Co-ordinates in 2D,0.9749611111293227,0.8659552339673428,-0.10900587716197996,5,5,mastered,mastered,True,decrease
+SIM-036,406,Naming Co-ordinates in 2D,0.003007210539735696,0.02030558759258551,0.01729837705284981,3,5,insufficient_evidence,not_mastered,False,not_comparable
+SIM-037,406,Naming Co-ordinates in 2D,0.8350383405763628,0.9919280193529922,0.1568896787766294,5,5,mastered,mastered,True,increase
+SIM-038,406,Naming Co-ordinates in 2D,0.999757390831897,0.6809634378039979,-0.31879395302789904,5,5,mastered,mastered,True,decrease
+SIM-039,406,Naming Co-ordinates in 2D,0.9654760321560706,0.9996825537245981,0.03420652156852755,4,5,insufficient_evidence,mastered,False,not_comparable
+SIM-040,406,Naming Co-ordinates in 2D,0.949177617859162,0.9105150270652472,-0.038662590793914764,5,5,mastered,mastered,True,decrease
+SIM-001,408,Midpoint Between Two Co-ordinates,0.9982465696571633,0.8240426507676898,-0.1742039188894735,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-002,408,Midpoint Between Two Co-ordinates,0.11509957093266082,0.3023705444629846,0.1872709735303238,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-003,408,Midpoint Between Two Co-ordinates,0.996039178538959,0.9549643148815764,-0.041074863657382554,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-004,408,Midpoint Between Two Co-ordinates,1.806006906069503e-05,0.04659488292248925,0.046576822853428554,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-005,408,Midpoint Between Two Co-ordinates,0.9806145911007086,0.9968713272149656,0.016256736114257042,4,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-006,408,Midpoint Between Two Co-ordinates,0.010848176643785526,0.6798851634383379,0.6690369867945524,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-007,408,Midpoint Between Two Co-ordinates,0.9857980897299401,0.872637246854313,-0.11316084287562711,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-008,408,Midpoint Between Two Co-ordinates,0.9984573011297723,0.9726963534786873,-0.025760947651084942,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-009,408,Midpoint Between Two Co-ordinates,0.9693069856612521,0.8573419899556868,-0.11196499570556528,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-010,408,Midpoint Between Two Co-ordinates,0.8428319152103347,0.7522042488066758,-0.09062766640365894,4,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-011,408,Midpoint Between Two Co-ordinates,5.326707942000349e-05,0.0009326152760215762,0.0008793481966015727,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-012,408,Midpoint Between Two Co-ordinates,0.0028744249120912567,0.7269778567774663,0.7241034318653751,4,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-013,408,Midpoint Between Two Co-ordinates,0.0005078982774963487,0.004697193876103804,0.004189295598607455,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-014,408,Midpoint Between Two Co-ordinates,0.9624200647114535,0.8892169675707456,-0.07320309714070783,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-015,408,Midpoint Between Two Co-ordinates,0.00019415663440010026,0.9616438634344643,0.9614497068000641,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-016,408,Midpoint Between Two Co-ordinates,0.021790420210927464,0.2983946814608383,0.27660426124991083,1,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-017,408,Midpoint Between Two Co-ordinates,0.013469732986593092,0.8218942424526756,0.8084245094660826,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-018,408,Midpoint Between Two Co-ordinates,0.3091295103539541,0.9930856308515424,0.6839561204975884,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-019,408,Midpoint Between Two Co-ordinates,0.008365465619187759,0.09934595996227961,0.09098049434309186,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-020,408,Midpoint Between Two Co-ordinates,0.0011128410459485517,0.003058624102146559,0.0019457830561980072,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-021,408,Midpoint Between Two Co-ordinates,0.001815742869638991,0.007648827864594541,0.005833084994955551,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-022,408,Midpoint Between Two Co-ordinates,0.000218881377495193,0.14588359258447667,0.14566471120698146,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-023,408,Midpoint Between Two Co-ordinates,0.014766881964141648,0.03868605394685771,0.02391917198271606,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-024,408,Midpoint Between Two Co-ordinates,0.07296546172443849,0.8996676556677713,0.8267021939433328,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-025,408,Midpoint Between Two Co-ordinates,2.544920132204205e-05,0.0023865240957647417,0.0023610748944426995,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-026,408,Midpoint Between Two Co-ordinates,0.0001568446277009408,0.0006153663963849084,0.00045852176868396764,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-027,408,Midpoint Between Two Co-ordinates,0.14997841627221103,0.7452735286133141,0.595295112341103,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-028,408,Midpoint Between Two Co-ordinates,0.00021450213695841367,0.013379834932181903,0.01316533279522349,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-029,408,Midpoint Between Two Co-ordinates,0.14006343458193227,0.022913431436076447,-0.11715000314585582,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-030,408,Midpoint Between Two Co-ordinates,0.009251564348610188,0.668795974177068,0.6595444098284579,4,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-031,408,Midpoint Between Two Co-ordinates,0.21574742509972197,0.07661964425979739,-0.13912778083992458,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-032,408,Midpoint Between Two Co-ordinates,0.004743008415933391,0.8389210746015106,0.8341780661855772,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-033,408,Midpoint Between Two Co-ordinates,0.9935691152017159,0.9915195673483522,-0.0020495478533636424,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-034,408,Midpoint Between Two Co-ordinates,0.6793270037144157,0.9883334004157971,0.3090063967013814,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-035,408,Midpoint Between Two Co-ordinates,0.07721032424072051,0.16684130580238296,0.08963098156166245,2,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-036,408,Midpoint Between Two Co-ordinates,1.2932989553343808e-05,0.03142169823854633,0.03140876524899299,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-037,408,Midpoint Between Two Co-ordinates,0.28578627549032987,0.9629887132551498,0.6772024377648199,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-038,408,Midpoint Between Two Co-ordinates,0.9905873414134498,0.9701547721396616,-0.020432569273788226,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-039,408,Midpoint Between Two Co-ordinates,0.03405274329163874,0.9988063197396568,0.9647535764480181,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-040,408,Midpoint Between Two Co-ordinates,0.08746960104710381,0.058494918748504814,-0.028974682298599,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-001,258,Horizontal and Vertical Lines,0.9961954402639892,0.18337664342993965,-0.8128187968340496,4,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-002,258,Horizontal and Vertical Lines,0.00078767086944444,0.005209985727194869,0.004422314857750429,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-003,258,Horizontal and Vertical Lines,0.5272272657935342,0.02247521417974422,-0.50475205161379,4,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-004,258,Horizontal and Vertical Lines,0.0001963427595163658,0.0007949882499178497,0.0005986454904014839,3,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-005,258,Horizontal and Vertical Lines,0.466838096597939,0.9975564583307931,0.5307183617328541,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-006,258,Horizontal and Vertical Lines,6.3414910647212544e-06,0.028326181950630858,0.028319840459566138,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-007,258,Horizontal and Vertical Lines,0.0007063628890746882,0.002284033805774414,0.0015776709166997259,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-008,258,Horizontal and Vertical Lines,0.9965630924688851,0.9356873615058409,-0.06087573096304422,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-009,258,Horizontal and Vertical Lines,0.0026568707481854155,0.4548576661802206,0.4522007954320352,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-010,258,Horizontal and Vertical Lines,0.0005330008418792181,0.001177247352863475,0.0006442465109842569,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-011,258,Horizontal and Vertical Lines,0.00020001573138682562,0.005965671018176739,0.005765655286789914,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-012,258,Horizontal and Vertical Lines,0.17225829442895255,0.5444868516647121,0.37222855723575954,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-013,258,Horizontal and Vertical Lines,0.0003741952637608823,0.000126625639469741,-0.0002475696242911413,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-014,258,Horizontal and Vertical Lines,0.00031974954621047966,0.36068961192023774,0.36036986237402724,4,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-015,258,Horizontal and Vertical Lines,1.1109881395572052e-05,0.9640773908362422,0.9640662809548467,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-016,258,Horizontal and Vertical Lines,9.829173044748412e-06,0.04376481215863408,0.04375498298558933,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-017,258,Horizontal and Vertical Lines,0.0004246640953711796,0.9619584510814908,0.9615337869861196,2,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-018,258,Horizontal and Vertical Lines,0.7739461926595808,0.9833361334195938,0.20938994076001305,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-019,258,Horizontal and Vertical Lines,0.0017721681676339726,0.9058554114774097,0.9040832433097757,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-020,258,Horizontal and Vertical Lines,0.00169725356830645,0.0008911975569048481,-0.0008060560114016019,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-021,258,Horizontal and Vertical Lines,0.00027115281971765105,0.9734863425961076,0.9732151897763899,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-022,258,Horizontal and Vertical Lines,0.04935062369742327,0.002933627515626499,-0.04641699618179677,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-023,258,Horizontal and Vertical Lines,4.966913690918873e-06,0.8118614678910911,0.8118565009774003,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-024,258,Horizontal and Vertical Lines,0.006962454511569116,0.9851895605097124,0.9782271059981433,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-025,258,Horizontal and Vertical Lines,9.001514057894787e-06,0.0016286548355539288,0.001619653321496034,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-026,258,Horizontal and Vertical Lines,7.792734857600788e-06,0.00015884902244364633,0.00015105628758604555,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-027,258,Horizontal and Vertical Lines,0.09563916722175414,0.01101090859425253,-0.0846282586275016,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-028,258,Horizontal and Vertical Lines,0.0006350460003950163,0.008898573016035628,0.008263527015640612,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-029,258,Horizontal and Vertical Lines,0.0005644978744460063,0.0005112745753810087,-5.322329906499762e-05,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-030,258,Horizontal and Vertical Lines,0.06104399688471016,0.8767066648612422,0.815662667976532,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-031,258,Horizontal and Vertical Lines,0.1861468102416797,0.9774164475264997,0.79126963728482,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-032,258,Horizontal and Vertical Lines,0.8505633444671026,0.009115475334162288,-0.8414478691329403,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-033,258,Horizontal and Vertical Lines,0.9978087640849945,0.9980624475751364,0.0002536834901418761,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-034,258,Horizontal and Vertical Lines,0.846604326766548,0.997486402861316,0.150882076094768,3,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-035,258,Horizontal and Vertical Lines,0.033671289994117296,0.6407017895678636,0.6070304995737463,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-036,258,Horizontal and Vertical Lines,0.0006437545243542163,0.9532991469645273,0.9526553924401732,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-037,258,Horizontal and Vertical Lines,0.0030966433731188223,0.9650850544868267,0.9619884111137079,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-038,258,Horizontal and Vertical Lines,0.997477062098288,0.9946310999545258,-0.002845962143762204,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-039,258,Horizontal and Vertical Lines,0.022430879124546027,0.9801853190795877,0.9577544399550417,4,4,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-040,258,Horizontal and Vertical Lines,0.9345781684619735,0.2395513741906514,-0.6950267942713221,4,3,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-001,409,Gradient Between Two Co-ordinates,0.9687080732318885,0.8080007941159454,-0.16070727911594307,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-002,409,Gradient Between Two Co-ordinates,0.316283070881362,0.2726229266056892,-0.043660144275672774,0,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-003,409,Gradient Between Two Co-ordinates,0.9535211568627289,0.6681116859135001,-0.28540947094922875,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-004,409,Gradient Between Two Co-ordinates,0.023773240411444446,0.22048437033744672,0.1967111299260023,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-005,409,Gradient Between Two Co-ordinates,0.9616073901065817,0.8446088136136164,-0.1169985764929653,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-006,409,Gradient Between Two Co-ordinates,0.02266055991692383,0.21865219027161287,0.19599163035468903,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-007,409,Gradient Between Two Co-ordinates,0.3143853050511289,0.85834321982656,0.5439579147754312,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-008,409,Gradient Between Two Co-ordinates,0.5852857296672224,0.7233040503302949,0.1380183206630725,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-009,409,Gradient Between Two Co-ordinates,0.8782993737648355,0.8267344176523809,-0.051564956112454596,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-010,409,Gradient Between Two Co-ordinates,0.8997604928992712,0.5409593009578197,-0.35880119194145144,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-011,409,Gradient Between Two Co-ordinates,0.0402918840895035,0.5797971071912815,0.5395052231017781,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-012,409,Gradient Between Two Co-ordinates,0.6971385611203835,0.3494607106734217,-0.3476778504469618,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-013,409,Gradient Between Two Co-ordinates,0.38886419360819496,0.22692329756145058,-0.1619408960467444,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-014,409,Gradient Between Two Co-ordinates,0.21724835866458822,0.806519129915313,0.5892707712507248,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-015,409,Gradient Between Two Co-ordinates,0.019037944345101084,0.4923619209086552,0.4733239765635541,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-016,409,Gradient Between Two Co-ordinates,0.41725339760388336,0.2713176994139473,-0.14593569818993607,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-017,409,Gradient Between Two Co-ordinates,0.6478860545114367,0.7592957318047961,0.11140967729335949,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-018,409,Gradient Between Two Co-ordinates,0.13047712317919452,0.8406307594506094,0.7101536362714149,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-019,409,Gradient Between Two Co-ordinates,0.6924327822486641,0.6311235758579402,-0.0613092063907239,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-020,409,Gradient Between Two Co-ordinates,0.06619886293005375,0.45653460634975124,0.39033574341969746,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-021,409,Gradient Between Two Co-ordinates,0.41143927291420296,0.7997841170828272,0.3883448441686242,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-022,409,Gradient Between Two Co-ordinates,0.020198720966552983,0.6413786802822573,0.6211799593157044,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-023,409,Gradient Between Two Co-ordinates,0.019476112152935335,0.5073282749449383,0.48785216279200294,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-024,409,Gradient Between Two Co-ordinates,0.5940820455546072,0.8533618367998258,0.2592797912452186,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-025,409,Gradient Between Two Co-ordinates,0.028128901039412135,0.18039020995119318,0.15226130891178105,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-026,409,Gradient Between Two Co-ordinates,0.3820030078192665,0.5280756908290136,0.14607268300974713,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-027,409,Gradient Between Two Co-ordinates,0.5311969551934993,0.7149141621289539,0.18371720693545457,0,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-028,409,Gradient Between Two Co-ordinates,0.01999825422747974,0.34523142978566795,0.3252331755581882,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-029,409,Gradient Between Two Co-ordinates,0.28460452534537006,0.40992260254091184,0.12531807719554178,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-030,409,Gradient Between Two Co-ordinates,0.8287266427487232,0.7497403334965663,-0.07898630925215688,1,0,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-031,409,Gradient Between Two Co-ordinates,0.2433148425346224,0.7030003372068393,0.45968549467221687,1,0,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-032,409,Gradient Between Two Co-ordinates,0.9042192772404106,0.5672344735073304,-0.33698480373308026,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-033,409,Gradient Between Two Co-ordinates,0.9151533487027297,0.9550929076936954,0.039939558990965685,0,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-034,409,Gradient Between Two Co-ordinates,0.9589022806963506,0.8422395072048783,-0.11666277349147236,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-035,409,Gradient Between Two Co-ordinates,0.12228878512259655,0.3652456576343312,0.24295687251173465,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-036,409,Gradient Between Two Co-ordinates,0.10571077154281554,0.5952700106185514,0.4895592390757359,0,0,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-037,409,Gradient Between Two Co-ordinates,0.09406415683633824,0.6405440583212227,0.5464799014848845,1,0,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-038,409,Gradient Between Two Co-ordinates,0.9757195131729385,0.7672173643413953,-0.20850214883154317,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-039,409,Gradient Between Two Co-ordinates,0.822240750768914,0.9503965311403473,0.12815578037143327,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable
+SIM-040,409,Gradient Between Two Co-ordinates,0.8307665822891834,0.762695679545295,-0.06807090274388838,1,1,insufficient_evidence,insufficient_evidence,False,not_comparable

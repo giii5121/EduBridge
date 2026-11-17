@@ -1,0 +1,14 @@
+concept_id,concept_name,n_students,mean_mastery_prob,n_mastered,n_not_mastered,n_uncertain,n_insufficient,mean_evidence,n_diagnosable,gap_share_among_diagnosable,insufficient_share
+9013,Nilai maksimum/minimum dan masalah optimasi,200,0.14957541336954358,25,175,0,0,3.845,200,0.875,0.0
+9005,Limit fungsi trigonometri,200,0.2380276251806165,47,153,0,0,3.45,200,0.765,0.0
+9009,Aturan rantai,200,0.27414160924782177,53,147,0,0,4.475,200,0.735,0.0
+9011,Persamaan garis singgung kurva,200,0.3174090379059664,54,146,0,0,3.24,200,0.73,0.0
+9006,Turunan sebagai limit (definisi turunan),200,0.3052459764976656,55,145,0,0,2.955,200,0.725,0.0
+9012,Fungsi naik/turun dan titik stasioner,200,0.2872919590054274,55,145,0,0,5.82,200,0.725,0.0
+9010,Turunan fungsi trigonometri,200,0.2938829901841422,58,142,0,0,3.015,200,0.71,0.0
+9008,Aturan perkalian dan pembagian,200,0.3291434312159718,63,137,0,0,3.46,200,0.685,0.0
+9004,Limit fungsi di tak hingga,200,0.3245077171111513,66,134,0,0,4.555,200,0.67,0.0
+9003,Limit fungsi aljabar,200,0.4562727902196951,90,110,0,0,7.35,200,0.55,0.0
+9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",200,0.5646029422238759,113,87,0,0,16.345,200,0.435,0.0
+9002,Faktorisasi dan manipulasi bentuk aljabar,200,0.6923206225622001,136,64,0,0,10.455,200,0.32,0.0
+9001,Fungsi dan notasi fungsi,200,0.8668205768065913,173,26,0,1,3.335,199,0.1306532663316583,0.005

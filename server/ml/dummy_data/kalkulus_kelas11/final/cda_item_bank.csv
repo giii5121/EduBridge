@@ -1,0 +1,97 @@
+QuestionId,question_text,answer_key,concept_codes,is_focus,concept_names,concept_count,n_attempts,pass_rate,difficulty
+5001,Diketahui f(x) = 2x² − 3x + 1. Nilai f(2) = …,3,KAL-P1,True,"[""Fungsi dan notasi fungsi""]",1,778,0.7493573264781491,0.2506426735218509
+5002,Diketahui f(x) = x² − 4x + 3. Nilai f(-1) = …,8,KAL-P1,True,"[""Fungsi dan notasi fungsi""]",1,770,0.7532467532467533,0.24675324675324672
+5003,Diketahui f(x) = 3x² − 2x − 5. Nilai f(3) = …,16,KAL-P1,True,"[""Fungsi dan notasi fungsi""]",1,789,0.7110266159695817,0.2889733840304183
+5004,Diketahui f(x) = 2x + 1 dan g(x) = x² + 3. Nilai (g∘f)(1) = …,12,KAL-P1,True,"[""Fungsi dan notasi fungsi""]",1,782,0.7608695652173914,0.23913043478260865
+5005,Diketahui f(x) = 3x − 2 dan g(x) = x² + 1. Nilai (g∘f)(2) = …,17,KAL-P1,True,"[""Fungsi dan notasi fungsi""]",1,773,0.7567917205692108,0.24320827943078915
+5006,Domain fungsi f(x) = (x + 1)/(x − 2) adalah …,"x ∈ ℝ, x ≠ 2",KAL-P1,True,"[""Fungsi dan notasi fungsi""]",1,774,0.7403100775193798,0.2596899224806202
+5007,Domain fungsi f(x) = (x + 3)/(x + 4) adalah …,"x ∈ ℝ, x ≠ -4",KAL-P1,True,"[""Fungsi dan notasi fungsi""]",1,781,0.7221510883482715,0.27784891165172854
+5008,Bentuk faktor dari x² + 5x + 6 adalah …,(x + 2)(x + 3),KAL-P2,True,"[""Faktorisasi dan manipulasi bentuk aljabar""]",1,771,0.6718547341115434,0.3281452658884566
+5009,Bentuk faktor dari x² − 3x − 4 adalah …,(x + 1)(x − 4),KAL-P2,True,"[""Faktorisasi dan manipulasi bentuk aljabar""]",1,793,0.6443883984867591,0.3556116015132409
+5010,Bentuk faktor dari x² − 7x + 10 adalah …,(x − 2)(x − 5),KAL-P2,True,"[""Faktorisasi dan manipulasi bentuk aljabar""]",1,782,0.649616368286445,0.350383631713555
+5011,"Untuk x ≠ 3, bentuk sederhana dari (x² − 9)/(x − 3) adalah …",x + 3,KAL-P2,True,"[""Faktorisasi dan manipulasi bentuk aljabar""]",1,786,0.6552162849872774,0.34478371501272265
+5012,"Untuk x ≠ 5, bentuk sederhana dari (x² − 25)/(x − 5) adalah …",x + 5,KAL-P2,True,"[""Faktorisasi dan manipulasi bentuk aljabar""]",1,788,0.6852791878172588,0.31472081218274117
+5013,"Untuk x ≠ 4, bentuk sederhana dari (√x − 2)/(x − 4) adalah …",1/(√x + 2),KAL-P2,True,"[""Faktorisasi dan manipulasi bentuk aljabar""]",1,777,0.640926640926641,0.359073359073359
+5014,"Untuk x ≠ 9, bentuk sederhana dari (√x − 3)/(x − 9) adalah …",1/(√x + 3),KAL-P2,True,"[""Faktorisasi dan manipulasi bentuk aljabar""]",1,795,0.6088050314465409,0.39119496855345914
+5015,lim_(x→3) (2x² + x) = …,21,KAL-L1,True,"[""Limit fungsi aljabar""]",1,776,0.49355670103092786,0.5064432989690721
+5016,lim_(x→2) (3x² − x) = …,10,KAL-L1,True,"[""Limit fungsi aljabar""]",1,791,0.4222503160556258,0.5777496839443742
+5017,lim_(x→3) (x² − 9)/(x − 3) = …,6,KAL-L1;KAL-P2,True,"[""Faktorisasi dan manipulasi bentuk aljabar"", ""Limit fungsi aljabar""]",2,794,0.4256926952141058,0.5743073047858942
+5018,lim_(x→4) (x² − 16)/(x − 4) = …,8,KAL-L1;KAL-P2,True,"[""Faktorisasi dan manipulasi bentuk aljabar"", ""Limit fungsi aljabar""]",2,790,0.41139240506329117,0.5886075949367089
+5019,lim_(x→5) (x² − 25)/(x − 5) = …,10,KAL-L1;KAL-P2,True,"[""Faktorisasi dan manipulasi bentuk aljabar"", ""Limit fungsi aljabar""]",2,774,0.4728682170542636,0.5271317829457365
+5020,lim_(x→3) (x² − 4x + 3)/(x − 3) = …,2,KAL-L1;KAL-P2,True,"[""Faktorisasi dan manipulasi bentuk aljabar"", ""Limit fungsi aljabar""]",2,791,0.4854614412136536,0.5145385587863465
+5021,lim_(x→4) (x² − 2x − 8)/(x − 4) = …,6,KAL-L1;KAL-P2,True,"[""Faktorisasi dan manipulasi bentuk aljabar"", ""Limit fungsi aljabar""]",2,774,0.5129198966408268,0.4870801033591732
+5022,lim_(x→2) (x² − 7x + 10)/(x − 2) = …,-3,KAL-L1;KAL-P2,True,"[""Faktorisasi dan manipulasi bentuk aljabar"", ""Limit fungsi aljabar""]",2,777,0.45302445302445304,0.546975546975547
+5023,lim_(x→4) (√x − 2)/(x − 4) = …,1/4,KAL-L1;KAL-P2,True,"[""Faktorisasi dan manipulasi bentuk aljabar"", ""Limit fungsi aljabar""]",2,792,0.38636363636363635,0.6136363636363636
+5024,lim_(x→9) (√x − 3)/(x − 9) = …,1/6,KAL-L1;KAL-P2,True,"[""Faktorisasi dan manipulasi bentuk aljabar"", ""Limit fungsi aljabar""]",2,780,0.47435897435897434,0.5256410256410257
+5025,lim_(x→1) (2x + 3)/(x + 1) = …,5/2,KAL-L1,True,"[""Limit fungsi aljabar""]",1,792,0.48358585858585856,0.5164141414141414
+5026,lim_(x→2) (4x − 1)/(x + 3) = …,7/5,KAL-L1,True,"[""Limit fungsi aljabar""]",1,796,0.49748743718592964,0.5025125628140703
+5027,lim_(x→∞) (6x² + x)/(3x² − 2) = …,2,KAL-L2,True,"[""Limit fungsi di tak hingga""]",1,791,0.336283185840708,0.663716814159292
+5028,lim_(x→∞) (4x² + 3x)/(8x² − 1) = …,1/2,KAL-L2,True,"[""Limit fungsi di tak hingga""]",1,795,0.3534591194968553,0.6465408805031447
+5029,lim_(x→∞) (5x² + 2x)/(2x² − 7) = …,5/2,KAL-L2,True,"[""Limit fungsi di tak hingga""]",1,782,0.36061381074168797,0.639386189258312
+5030,lim_(x→∞) (3x + 2)/(x² + 1) = …,0,KAL-L2,True,"[""Limit fungsi di tak hingga""]",1,791,0.31352718078381797,0.686472819216182
+5031,lim_(x→∞) (5x + 1)/(2x² + 1) = …,0,KAL-L2,True,"[""Limit fungsi di tak hingga""]",1,770,0.36753246753246754,0.6324675324675324
+5032,lim_(x→∞) (2x³ + 1)/(3x² + 1) = …,∞ (tidak ada / divergen),KAL-L2,True,"[""Limit fungsi di tak hingga""]",1,784,0.40433673469387754,0.5956632653061225
+5033,lim_(x→∞) (x³ + 1)/(5x² + 4) = …,∞ (tidak ada / divergen),KAL-L2,True,"[""Limit fungsi di tak hingga""]",1,790,0.3987341772151899,0.6012658227848101
+5034,lim_(x→∞) (√(x² + 4x) − x) = …,2,KAL-L2;KAL-P2,True,"[""Faktorisasi dan manipulasi bentuk aljabar"", ""Limit fungsi di tak hingga""]",2,792,0.2815656565656566,0.7184343434343434
+5035,lim_(x→∞) (√(x² + 6x) − x) = …,3,KAL-L2;KAL-P2,True,"[""Faktorisasi dan manipulasi bentuk aljabar"", ""Limit fungsi di tak hingga""]",2,793,0.3354350567465322,0.6645649432534678
+5036,lim_(x→0) sin(3x)/(2x) = …,3/2,KAL-L3,True,"[""Limit fungsi trigonometri""]",1,793,0.3379571248423707,0.6620428751576293
+5037,lim_(x→0) sin(5x)/(4x) = …,5/4,KAL-L3,True,"[""Limit fungsi trigonometri""]",1,797,0.36888331242158096,0.6311166875784191
+5038,lim_(x→0) sin(2x)/(6x) = …,1/3,KAL-L3,True,"[""Limit fungsi trigonometri""]",1,783,0.35887611749680715,0.6411238825031929
+5039,lim_(x→0) tan(4x)/sin(2x) = …,2,KAL-L3,True,"[""Limit fungsi trigonometri""]",1,778,0.3149100257069409,0.6850899742930592
+5040,lim_(x→0) tan(3x)/sin(5x) = …,3/5,KAL-L3,True,"[""Limit fungsi trigonometri""]",1,772,0.3173575129533679,0.6826424870466321
+5041,lim_(x→0) (1 − cos 2x)/x² = …,2,KAL-L3;KAL-P2,True,"[""Faktorisasi dan manipulasi bentuk aljabar"", ""Limit fungsi trigonometri""]",2,779,0.32349165596919127,0.6765083440308087
+5042,lim_(x→0) (1 − cos 4x)/x² = …,8,KAL-L3;KAL-P2,True,"[""Faktorisasi dan manipulasi bentuk aljabar"", ""Limit fungsi trigonometri""]",2,789,0.33713561470215464,0.6628643852978453
+5043,"Dengan definisi f′(x) = lim_(h→0) [f(x+h) − f(x)]/h, turunan f(x) = 3x² adalah …",6x,KAL-D1;KAL-L1,True,"[""Limit fungsi aljabar"", ""Turunan sebagai limit (definisi turunan)""]",2,789,0.2598225602027883,0.7401774397972116
+5044,"Dengan definisi f′(x) = lim_(h→0) [f(x+h) − f(x)]/h, turunan f(x) = 5x² adalah …",10x,KAL-D1;KAL-L1,True,"[""Limit fungsi aljabar"", ""Turunan sebagai limit (definisi turunan)""]",2,779,0.3581514762516046,0.6418485237483954
+5045,lim_(h→0) [(3 + h)² − 9]/h = …,6,KAL-D1;KAL-P2,True,"[""Faktorisasi dan manipulasi bentuk aljabar"", ""Turunan sebagai limit (definisi turunan)""]",2,793,0.3076923076923077,0.6923076923076923
+5046,lim_(h→0) [(4 + h)² − 16]/h = …,8,KAL-D1;KAL-P2,True,"[""Faktorisasi dan manipulasi bentuk aljabar"", ""Turunan sebagai limit (definisi turunan)""]",2,781,0.41101152368758004,0.58898847631242
+5047,"Dengan definisi turunan sebagai limit, turunan f(x) = 4x + 1 adalah …",4,KAL-D1;KAL-L1,True,"[""Limit fungsi aljabar"", ""Turunan sebagai limit (definisi turunan)""]",2,774,0.4160206718346253,0.5839793281653747
+5048,"Untuk sebuah fungsi f, nilai lim_(h→0) [f(2+h) − f(2)]/h menyatakan …","f′(2), yaitu gradien garis singgung kurva di x = 2",KAL-D1,True,"[""Turunan sebagai limit (definisi turunan)""]",1,793,0.3656998738965952,0.6343001261034048
+5049,Turunan pertama f(x) = 3x⁴ − 2x + 5 adalah f′(x) = …,12x³ − 2,KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)""]",1,780,0.5717948717948718,0.42820512820512824
+5050,Turunan pertama f(x) = 2x⁵ − 7x + 1 adalah f′(x) = …,10x⁴ − 7,KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)""]",1,794,0.5730478589420654,0.42695214105793455
+5051,Turunan pertama f(x) = 5x³ − 4x + 9 adalah f′(x) = …,15x² − 4,KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)""]",1,779,0.6033376123234917,0.3966623876765083
+5052,Turunan pertama f(x) = 4/x² adalah …,−8/x³,KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)""]",1,793,0.5649432534678437,0.4350567465321563
+5053,Turunan pertama f(x) = 6/x³ adalah …,−18/x⁴,KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)""]",1,772,0.6010362694300518,0.39896373056994816
+5054,Turunan pertama f(x) = 4√x adalah …,2/√x,KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)""]",1,780,0.5269230769230769,0.47307692307692306
+5055,Turunan pertama f(x) = 6√x adalah …,3/√x,KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)""]",1,798,0.5739348370927319,0.42606516290726815
+5056,"Jika f(x) = 2x³ − 3x², nilai f′(2) = …",12,KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)""]",1,773,0.5937904269081501,0.4062095730918499
+5057,"Jika f(x) = x³ − 4x², nilai f′(3) = …",3,KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)""]",1,780,0.5935897435897436,0.4064102564102564
+5058,Turunan f(x) = (2x + 1)(x² − 3) adalah …,6x² + 2x − 6,KAL-D3;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Aturan perkalian dan pembagian""]",2,765,0.3712418300653595,0.6287581699346405
+5059,Turunan f(x) = (3x − 2)(x² − 1) adalah …,9x² − 4x − 3,KAL-D3;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Aturan perkalian dan pembagian""]",2,789,0.32953105196451205,0.670468948035488
+5060,Turunan f(x) = (2x + 1)/(x + 3) adalah …,5/(x + 3)²,KAL-D3;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Aturan perkalian dan pembagian""]",2,793,0.32156368221941994,0.6784363177805801
+5061,Turunan f(x) = (3x + 4)/(x + 1) adalah …,-1/(x + 1)²,KAL-D3;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Aturan perkalian dan pembagian""]",2,795,0.3660377358490566,0.6339622641509435
+5062,"Diketahui u(2) = 3, u′(2) = 1, v(2) = 4, v′(2) = 2. Jika f = u·v, maka f′(2) = …",10,KAL-D3,True,"[""Aturan perkalian dan pembagian""]",1,797,0.4002509410288582,0.5997490589711418
+5063,"Diketahui u(2) = 2, u′(2) = 5, v(2) = 1, v′(2) = 3. Jika f = u·v, maka f′(2) = …",11,KAL-D3,True,"[""Aturan perkalian dan pembagian""]",1,767,0.3898305084745763,0.6101694915254237
+5064,Turunan f(x) = (2x + 1)⁵ adalah …,10(2x + 1)⁴,KAL-D4;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Aturan rantai""]",2,792,0.3383838383838384,0.6616161616161615
+5065,Turunan f(x) = (3x − 4)⁴ adalah …,12(3x − 4)³,KAL-D4;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Aturan rantai""]",2,780,0.36666666666666664,0.6333333333333333
+5066,Turunan f(x) = √(3x² + 1) adalah …,3x/√(3x² + 1),KAL-D4;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Aturan rantai""]",2,781,0.3866837387964149,0.6133162612035852
+5067,Turunan f(x) = √(2x² + 5) adalah …,2x/√(2x² + 5),KAL-D4;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Aturan rantai""]",2,792,0.369949494949495,0.630050505050505
+5068,"f(x) = g(h(x)) dengan h(1) = 2, h′(1) = 3, dan g′(2) = 4. Nilai f′(1) = …",12,KAL-D4,True,"[""Aturan rantai""]",1,790,0.31265822784810127,0.6873417721518987
+5069,"f(x) = g(h(x)) dengan h(1) = 5, h′(1) = 2, dan g′(5) = 3. Nilai f′(1) = …",6,KAL-D4,True,"[""Aturan rantai""]",1,788,0.3565989847715736,0.6434010152284264
+5070,Turunan f(x) = 3 sin x + 2 cos x adalah …,3 cos x − 2 sin x,KAL-D5,True,"[""Turunan fungsi trigonometri""]",1,795,0.3220125786163522,0.6779874213836479
+5071,Turunan f(x) = 5 sin x + 4 cos x adalah …,5 cos x − 4 sin x,KAL-D5,True,"[""Turunan fungsi trigonometri""]",1,790,0.3860759493670886,0.6139240506329113
+5072,Turunan f(x) = sin(3x) adalah …,3 cos(3x),KAL-D5;KAL-D4,True,"[""Aturan rantai"", ""Turunan fungsi trigonometri""]",2,793,0.2042875157629256,0.7957124842370744
+5073,Turunan f(x) = sin(5x) adalah …,5 cos(5x),KAL-D5;KAL-D4,True,"[""Aturan rantai"", ""Turunan fungsi trigonometri""]",2,790,0.33164556962025316,0.6683544303797468
+5074,Turunan f(x) = x sin x adalah …,sin x + x cos x,KAL-D5;KAL-D3,True,"[""Aturan perkalian dan pembagian"", ""Turunan fungsi trigonometri""]",2,789,0.23067173637515842,0.7693282636248415
+5075,Turunan f(x) = cos² x adalah …,−2 sin x cos x (= −sin 2x),KAL-D5;KAL-D4,True,"[""Aturan rantai"", ""Turunan fungsi trigonometri""]",2,775,0.2,0.8
+5076,Persamaan garis singgung kurva y = x² + 2x di titik berabsis x = 1 adalah …,y = 4x − 1,KAL-A1;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Persamaan garis singgung kurva""]",2,795,0.39622641509433965,0.6037735849056604
+5077,Persamaan garis singgung kurva y = x² − 3x di titik berabsis x = 1 adalah …,y = −x − 1,KAL-A1;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Persamaan garis singgung kurva""]",2,780,0.37948717948717947,0.6205128205128205
+5078,Persamaan garis singgung kurva y = x² + 2x di titik berabsis x = 3 adalah …,y = 8x − 9,KAL-A1;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Persamaan garis singgung kurva""]",2,780,0.39487179487179486,0.6051282051282052
+5079,Gradien garis singgung kurva y = 2x³ di x = 1 adalah …,6,KAL-A1;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Persamaan garis singgung kurva""]",2,787,0.4104193138500635,0.5895806861499364
+5080,Gradien garis singgung kurva y = x³ di x = 2 adalah …,12,KAL-A1;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Persamaan garis singgung kurva""]",2,785,0.3070063694267516,0.6929936305732485
+5081,Garis singgung kurva y = x² − 4x memiliki gradien 2. Absis titik singgungnya x = …,3,KAL-A1;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Persamaan garis singgung kurva""]",2,780,0.35384615384615387,0.6461538461538461
+5082,Garis singgung kurva y = x² − 6x memiliki gradien 2. Absis titik singgungnya x = …,4,KAL-A1;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Persamaan garis singgung kurva""]",2,776,0.34149484536082475,0.6585051546391752
+5083,Fungsi f(x) = x³ − 3x naik pada interval …,x < −1 atau x > 1,KAL-A2;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Fungsi naik/turun dan titik stasioner""]",2,778,0.35732647814910024,0.6426735218508998
+5084,Fungsi f(x) = x³ − 12x naik pada interval …,x < −2 atau x > 2,KAL-A2;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Fungsi naik/turun dan titik stasioner""]",2,778,0.41645244215938304,0.583547557840617
+5085,Titik stasioner fungsi f(x) = x² − 6x + 1 adalah …,"(3, -8)",KAL-A2;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Fungsi naik/turun dan titik stasioner""]",2,794,0.27581863979848864,0.7241813602015114
+5086,Titik stasioner fungsi f(x) = x² − 4x + 7 adalah …,"(2, 3)",KAL-A2;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Fungsi naik/turun dan titik stasioner""]",2,791,0.31605562579013907,0.683944374209861
+5087,Diketahui f′(x) = (x − 1)(x − 4). Fungsi f turun pada interval …,1 < x < 4,KAL-A2,True,"[""Fungsi naik/turun dan titik stasioner""]",1,777,0.36293436293436293,0.6370656370656371
+5088,Diketahui f′(x) = (x + 2)(x − 3). Fungsi f turun pada interval …,-2 < x < 3,KAL-A2,True,"[""Fungsi naik/turun dan titik stasioner""]",1,776,0.42010309278350516,0.5798969072164948
+5089,Nilai maksimum f(x) = −x² + 6x + 1 adalah …,10,KAL-A3;KAL-A2;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Fungsi naik/turun dan titik stasioner"", ""Nilai maksimum/minimum dan masalah optimasi""]",3,769,0.27828348504551365,0.7217165149544864
+5090,Nilai maksimum f(x) = −x² + 8x − 2 adalah …,14,KAL-A3;KAL-A2;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Fungsi naik/turun dan titik stasioner"", ""Nilai maksimum/minimum dan masalah optimasi""]",3,794,0.2858942065491184,0.7141057934508817
+5091,Dua bilangan positif berjumlah 20. Hasil kali maksimum kedua bilangan itu adalah …,100,KAL-A3;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Nilai maksimum/minimum dan masalah optimasi""]",2,776,0.2757731958762887,0.7242268041237113
+5092,Dua bilangan positif berjumlah 30. Hasil kali maksimum kedua bilangan itu adalah …,225,KAL-A3;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Nilai maksimum/minimum dan masalah optimasi""]",2,781,0.2714468629961588,0.7285531370038412
+5093,Nilai minimum f(x) = x³ − 3x pada interval 0 ≤ x ≤ 2 adalah …,−2,KAL-A3;KAL-A2,True,"[""Fungsi naik/turun dan titik stasioner"", ""Nilai maksimum/minimum dan masalah optimasi""]",2,788,0.19416243654822335,0.8058375634517767
+5094,Nilai minimum f(x) = x³ − 3x pada interval 0 ≤ x ≤ 3 adalah …,−2,KAL-A3;KAL-A2,True,"[""Fungsi naik/turun dan titik stasioner"", ""Nilai maksimum/minimum dan masalah optimasi""]",2,784,0.27168367346938777,0.7283163265306123
+5095,Selembar karton persegi bersisi 12 cm dipotong persegi kecil di keempat sudutnya lalu dilipat menjadi kotak tanpa tutup. Volume maksimum kotak adalah … cm³,128,KAL-A3;KAL-A2;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Fungsi naik/turun dan titik stasioner"", ""Nilai maksimum/minimum dan masalah optimasi""]",3,769,0.26397919375812745,0.7360208062418725
+5096,Selembar karton persegi bersisi 18 cm dipotong persegi kecil di keempat sudutnya lalu dilipat menjadi kotak tanpa tutup. Volume maksimum kotak adalah … cm³,432,KAL-A3;KAL-A2;KAL-D2,True,"[""Aturan dasar turunan (pangkat, konstanta, jumlah)"", ""Fungsi naik/turun dan titik stasioner"", ""Nilai maksimum/minimum dan masalah optimasi""]",3,778,0.18380462724935734,0.8161953727506427

@@ -1,0 +1,16 @@
+% Minimum evidence n_min from split-half classification consistency on validation (README_pdina.md, section 6)
+\begin{tikzpicture}
+\begin{axis}[
+  ybar, width=\linewidth, height=\figH, bar width=9pt,
+  ymin=0.78, ymax=0.90, xtick={1,2,3,4,5,6,8}, xmin=0.3, xmax=8.7,
+  xlabel={$n_{\min}$ (respons per konsep, per paruh)}, ylabel={konsistensi split-half},
+  ymajorgrids, nodes near coords, point meta=y,
+  every node near coord/.append style={font=\tiny, /pgf/number format/fixed, /pgf/number format/precision=3},
+  yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=2},
+]
+  \addplot+[fill=navy!45, draw=none, bar shift=0pt] coordinates {(1,0.837) (2,0.825) (3,0.820) (4,0.839) (6,0.879) (8,0.881)};
+  \addplot+[fill=accent, draw=none, bar shift=0pt] coordinates {(5,0.857)};
+  \draw[gapred, dashed, thick] (axis cs:0.3,0.85) -- (axis cs:8.7,0.85);
+  \node[font=\tiny, text=gapred, anchor=south] at (axis cs:7,0.85) {target 0,85};
+\end{axis}
+\end{tikzpicture}

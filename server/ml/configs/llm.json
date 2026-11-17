@@ -1,0 +1,22 @@
+{
+  "enabled": true,
+  "model": "gemini-3.1-flash-lite",
+  "api_key_env": "GEMINI_API_KEY",
+  "env_file": ".env",
+  "temperature": 1.0,
+  "top_p": null,
+  "thinking_level": "low",
+  "max_tokens": 8192,
+  "timeout_sec": 120,
+  "max_retries": 2,
+  "prompt_version": "narrative-gemini-v1",
+  "max_student_concepts": 12,
+  "max_class_concepts": 11,
+  "max_gaps": 5,
+  "max_recommendations": 5,
+  "max_examples": 1,
+  "examples_path": "configs/narrative_examples.jsonl",
+  "cache_dir": "artifacts/reports/cache",
+  "cache_ttl_hours": 168,
+  "log_path": "artifacts/reports/narrative_log.jsonl"
+}

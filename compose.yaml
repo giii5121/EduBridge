@@ -1,0 +1,53 @@
+services:
+  inference:
+    build:
+      context: .
+      dockerfile: server/ml/Dockerfile
+    env_file: server/.env
+    environment:
+      NODE_ENV: production
+      AI_HOST: 0.0.0.0
+      AI_PORT: 8000
+      AI_ROOT_PATH: /diagnostics
+      AI_DATA_DIR: /data
+    volumes:
+      - inference-data:/data
+    restart: unless-stopped
+    init: true
+    security_opt: [no-new-privileges:true]
+  app:
+    build: .
+    env_file: server/.env
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      TRUST_PROXY: 'true'
+      DATABASE_PATH: /data/edubridge.sqlite
+      SEED_DEMO: 'false'
+      AI_BASE_URL: http://inference:8000
+    volumes:
+      - app-data:/data
+    depends_on:
+      inference:
+        condition: service_healthy
+    restart: unless-stopped
+    init: true
+    security_opt: [no-new-privileges:true]
+  proxy:
+    image: caddy:2
+    environment:
+      APP_DOMAIN: ${APP_DOMAIN:-localhost}
+    ports: ['80:80', '443:443']
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      app:
+        condition: service_healthy
+    restart: unless-stopped
+volumes:
+  app-data:
+  inference-data:
+  caddy-data:
+  caddy-config:

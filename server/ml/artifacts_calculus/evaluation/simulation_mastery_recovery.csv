@@ -1,0 +1,14 @@
+concept_index,n_students_with_evidence,true_mastery_rate,accuracy_with_evidence,auc_with_evidence,mean_evidence,accuracy_without_evidence,concept_id,concept_name
+0,997,0.872,0.9729187562688064,0.9954419591484465,3.3430290872617854,1.0,9001,Fungsi dan notasi fungsi
+1,1000,0.725,0.979,0.9974219435736676,10.25,,9002,Faktorisasi dan manipulasi bentuk aljabar
+2,1000,0.597,0.981,0.9987156626806488,7.384,,9003,Limit fungsi aljabar
+3,1000,0.481,0.974,0.9970717716382456,4.467,,9004,Limit fungsi di tak hingga
+4,1000,0.428,0.98,0.9971529638585713,3.445,,9005,Limit fungsi trigonometri
+5,1000,0.457,0.947,0.9848439055252649,2.883,,9006,Turunan sebagai limit (definisi turunan)
+6,1000,0.653,0.988,0.9991967906933639,16.632,,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)"
+7,1000,0.485,0.952,0.9910359323391051,3.444,,9008,Aturan perkalian dan pembagian
+8,1000,0.454,0.948,0.9864896483839215,4.476,,9009,Aturan rantai
+9,995,0.47,0.9216080402010051,0.9835379939209726,3.020100502512563,0.8,9010,Turunan fungsi trigonometri
+10,993,0.477,0.9355488418932527,0.9793781751676489,3.488418932527694,1.0,9011,Persamaan garis singgung kurva
+11,1000,0.469,0.95,0.9892506796124302,5.78,,9012,Fungsi naik/turun dan titik stasioner
+12,1000,0.333,0.936,0.9874342108225167,3.881,,9013,Nilai maksimum/minimum dan masalah optimasi

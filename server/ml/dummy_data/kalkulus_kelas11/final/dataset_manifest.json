@@ -1,0 +1,13 @@
+{
+  "artifact_source": "dummy_synthetic_calculus_kelas11",
+  "population_note": "DUMMY: 2.000 siswa SINTETIS untuk kalibrasi bank soal kalkulus kelas XI; dibangkitkan oleh cdacdm/dummy_calculus.py dari parameter yang ditetapkan, bukan data siswa nyata.",
+  "observed": {
+    "students": 2000,
+    "questions": 96,
+    "interactions": 94086
+  },
+  "npz_encoding": {
+    "matrix": "int8; 1 benar, 0 salah, -1 tidak dijawab/tidak diberikan"
+  },
+  "seed": 2026
+}

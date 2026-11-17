@@ -1,0 +1,12 @@
+concept_name,n_evidence,n_correct,mastery_prob,mastery_label
+Linear Sequences (nth term),11,1,1e-06,not_mastered
+Simplifying Expressions by Collecting Like Terms,19,8,1.9440154207671768e-06,not_mastered
+Horizontal and Vertical Lines,4,0,3.635975578965829e-05,insufficient_evidence
+Substitution into Formula,22,8,6.524711579599446e-05,not_mastered
+Midpoint Between Two Co-ordinates,4,1,0.00044884598456522407,insufficient_evidence
+Factorising into a Single Bracket,8,3,0.0004959813835104722,not_mastered
+Linear Equations,7,3,0.0011619824743316553,not_mastered
+Solving Linear Inequalities,8,4,0.03183217564304297,not_mastered
+Naming Co-ordinates in 2D,11,4,0.04156220256832664,not_mastered
+Writing Expressions,25,13,0.33572473903355193,not_mastered
+Gradient Between Two Co-ordinates,1,1,0.4670441106628049,insufficient_evidence

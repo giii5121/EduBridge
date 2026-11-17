@@ -1,0 +1,150 @@
+{
+  "experiment_name": "dummy_calculus_kelas11_pdina_vem",
+  "seed": 42,
+  "paths": {
+    "_comment": "data_dir: null = auto-detect. Order: env CDACDM_DATA_DIR -> data_dir -> data_dir_candidates -> recursive search for q_matrix.csv under search_roots. Relative paths are resolved against the project root (folder containing this configs/ directory).",
+    "data_dir": "dummy_data/kalkulus_kelas11/final",
+    "data_dir_candidates": [],
+    "search_roots": [],
+    "output_dir": "artifacts_calculus",
+    "target_concept_map": "configs/calculus/target_concept_map.csv",
+    "target_curriculum": "configs/calculus/target_curriculum.csv",
+    "intervention_map": "configs/calculus/intervention_map.csv",
+    "focus_item_content_audit": null,
+    "raw_image_root": null
+  },
+  "data": {
+    "expected_splits": {
+      "train": 1600,
+      "val": 200,
+      "test": 200
+    },
+    "expected_n_questions": 96,
+    "expected_n_concepts": 13,
+    "model_columns": [
+      "UserId",
+      "QuestionId",
+      "IsCorrect"
+    ],
+    "leakage_prone_columns": [
+      "question_pass_rate",
+      "question_pass_rate_z",
+      "question_difficulty",
+      "question_difficulty_z",
+      "prior_accuracy",
+      "prior_accuracy_z",
+      "student_mean_confidence",
+      "pass_rate",
+      "difficulty",
+      "student_accuracy",
+      "student_attempts",
+      "question_attempts",
+      "question_confidence",
+      "option_entropy"
+    ]
+  },
+  "model": {
+    "_comment": "Hyperparameters are selected on validation held-out log-loss. Item parameters are fitted on train only.",
+    "max_em_iter": 150,
+    "em_tol": 1e-06,
+    "e_step_iter": 30,
+    "guess_prior_mean": 0.2,
+    "slip_prior_mean": 0.2,
+    "max_guess_slip_sum": 0.98,
+    "hp_grid": {
+      "prior": [
+        "independent",
+        "higher_order"
+      ],
+      "gs_prior_strength": [
+        2.0,
+        10.0,
+        40.0
+      ],
+      "class_weighting": [
+        false,
+        true
+      ]
+    },
+    "baselines": {
+      "concept_score_strength": [
+        1.0,
+        5.0,
+        20.0
+      ],
+      "q_logistic_sigma": [
+        0.5,
+        1.0,
+        2.0
+      ]
+    }
+  },
+  "evaluation": {
+    "heldout_fraction": 0.2,
+    "min_context_responses": 5,
+    "calibration_bins": 10,
+    "bootstrap_reps": 200,
+    "min_items_per_concept_for_eval": 5,
+    "simulation_students": 1000
+  },
+  "diagnosis": {
+    "_comment": "tau is selected on validation (see evaluation/threshold_selection.csv). n_min and delta are selected on validation split-half classification consistency to reach target_consistency. Values below are fallbacks only.",
+    "tau_grid": [
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7
+    ],
+    "tau_fallback": 0.5,
+    "n_min_grid": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8
+    ],
+    "n_min_fallback": 2,
+    "delta_grid": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3
+    ],
+    "delta_fallback": 0.1,
+    "target_consistency": 0.85
+  },
+  "assessment": {
+    "min_train_attempts": 30,
+    "min_discrimination": 0.1,
+    "_comment": "items_per_concept / max_length null = auto: items_per_concept = diagnosis n_min (selected on validation), max_length = items_per_concept x number of target concepts. Fixed numbers override this.",
+    "items_per_concept": 3,
+    "max_length": null,
+    "adaptive_max_length": 30,
+    "adaptive_uncertainty_weight": 1.0,
+    "adaptive_coverage_weight": 0.5,
+    "replay_lengths": [
+      5,
+      10,
+      15,
+      20
+    ],
+    "replay_students": 200,
+    "_comment_dummy": "items_per_concept=3 is a test-design choice for the dummy kelas XI scenario."
+  },
+  "intervention": {
+    "_comment": "Pedagogical policy settings (not learned from data). Edit as needed.",
+    "whole_class_gap_share": 0.5,
+    "small_group_gap_share": 0.25,
+    "practice_items_per_concept": 5
+  }
+}

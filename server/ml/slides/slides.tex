@@ -1,0 +1,737 @@
+% Presentasi: P-DINA + lapisan naratif Gemini untuk diagnosis learning gap.
+% Build: latexmk -pdf slides.tex   (atau: pdflatex slides.tex dua kali)
+\documentclass[aspectratio=169,10pt]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[indonesian]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,tabularx,array,colortbl}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit,backgrounds}
+\usepackage{pgfplots}
+\usepackage{listings}
+\usepackage[most]{tcolorbox}
+\input{common/style}
+
+% ------------------------------------------------------------------ theme
+\usetheme{default}
+\setbeamercolor{structure}{fg=navy}
+\setbeamercolor{normal text}{fg=black!85}
+\setbeamercolor{frametitle}{fg=white,bg=navy}
+\setbeamercolor{title}{fg=navy}
+\setbeamercolor{alerted text}{fg=accent!90!black}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize items}[circle]
+\makeatletter
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,ht=3.2ex,dp=1.4ex,leftskip=1.2em]{frametitle}%
+    \usebeamerfont{frametitle}\insertframetitle
+    \ifx\insertframesubtitle\@empty\else{\usebeamerfont{framesubtitle}\normalsize\mdseries\ --\ \insertframesubtitle}\fi
+  \end{beamercolorbox}\vspace{1ex}}
+\makeatother
+\setbeamertemplate{footline}{%
+  \hbox to \paperwidth{\hspace{1.2em}{\tiny\color{midgray}P-DINA + Gemini LLM untuk diagnosis learning gap}%
+  \hfill{\tiny\color{midgray}\insertframenumber/\inserttotalframenumber}\hspace{1.2em}}\vspace{1.2ex}}
+\setlength{\leftmargini}{1.2em}
+
+\newcommand{\src}[1]{\par\vfill{\tiny\color{midgray}Sumber: #1}}
+\newtcolorbox{infobox}[1][]{colback=lightbg, colframe=navy, boxrule=0.4pt, arc=2pt, left=4pt, right=4pt,
+  top=2pt, bottom=2pt, fontupper=\small, #1}
+\newtcolorbox{warnbox}[1][]{colback=accent!8, colframe=accent, boxrule=0.4pt, arc=2pt, left=4pt, right=4pt,
+  top=2pt, bottom=2pt, fontupper=\small, #1}
+\lstset{basicstyle=\ttfamily\tiny, breaklines=true, columns=fullflexible, keepspaces=true,
+  frame=none, backgroundcolor=\color{lightbg}, xleftmargin=3pt, xrightmargin=3pt}
+
+\title{Diagnosis Learning Gap Matematika dengan P-DINA\\ dan Laporan Naratif LLM}
+\subtitle{Pengembangan dengan data EEDI NeurIPS 2020 Task 3/4}
+\author{Muhammad Fariq Faqih}
+\date{\today}
+
+\begin{document}
+
+% ================================================================== title
+\begin{frame}[plain]
+  \vfill
+  {\usebeamerfont{title}\usebeamercolor[fg]{title}\Large\bfseries\inserttitle\par}
+  \vspace{0.6em}
+  {\color{black!70}\insertsubtitle\par}
+  \vspace{1.2em}
+  {\color{accent}\rule{0.35\linewidth}{1.2pt}}\par
+  \vspace{0.8em}
+  {\small\insertauthor\par}
+  {\small\color{midgray}\insertdate\par}
+  \vfill
+  {\tiny\color{midgray}Semua angka berasal dari artefak hasil run (\texttt{artifacts/}). EEDI adalah data pengembangan
+  (mayoritas siswa SMP di UK), bukan validasi pada kelas SMA penelitian.}
+\end{frame}
+
+\begin{frame}{Agenda}
+  \begin{columns}[T]
+    \column{0.48\linewidth}
+    \begin{enumerate}\small
+      \item Posisi model di pipeline
+      \item Pipeline end-to-end
+      \item P-DINA: probabilistic DINA + variational EM
+      \item Parameter awal dan proses training
+      \item Data, evaluasi performa, dan alasan P-DINA
+      \item Hyperparameter tuning dan kebijakan diagnosis
+    \end{enumerate}
+    \column{0.48\linewidth}
+    \begin{enumerate}\small\setcounter{enumi}{6}
+      \item Penyimpanan model (checkpoint)
+      \item Pemilihan LLM dan spesifikasi
+      \item Konfigurasi model
+      \item System prompt dan pengaman
+      \item Output sistem AI secara keseluruhan
+      \item Kesimpulan, keterbatasan, langkah berikutnya
+    \end{enumerate}
+  \end{columns}
+\end{frame}
+
+% ================================================================== 1. position
+\begin{frame}{Posisi tahap model di pipeline}
+  \centering
+  \resizebox{0.92\linewidth}{!}{\input{figs/model_position}}
+  \vspace{0.4em}
+
+  \footnotesize
+  \begin{tabularx}{\linewidth}{@{}l L L@{}}
+    \toprule
+    & \textbf{P-DINA} & \textbf{Gemini LLM} \\
+    \midrule
+    Peran & \emph{menghitung} P(mastery) per siswa $\times$ konsep & \emph{mengomunikasikan}: laporan berbahasa Indonesia \\
+    Input & respons benar/salah + Q-matrix & fakta JSON hasil P-DINA (ID dipseudonimkan) \\
+    Wajib? & ya, inti sistem & opsional; tanpa API key tampil template \\
+    Dilarang & -- & menghitung/mengubah angka, menambah konsep, klaim efektivitas \\
+    \bottomrule
+  \end{tabularx}
+\end{frame}
+
+% ================================================================== 2. pipeline
+\begin{frame}{Pipeline end-to-end}
+  \centering
+  \resizebox{\linewidth}{!}{\input{figs/pipeline}}
+  \vspace{0.8em}
+
+  \begin{columns}[T]
+    \column{0.5\linewidth}
+    \begin{infobox}
+      \textbf{Satu arah data:} tahap 1--4 menghasilkan checkpoint dan diagnosis yang dapat diaudit;
+      tahap 5 hanya membaca hasilnya, tidak pernah menulis balik.
+    \end{infobox}
+    \column{0.46\linewidth}
+    \small
+    \begin{itemize}
+      \item Train $\to$ fit, validation $\to$ seleksi, test $\to$ evaluasi \textbf{sekali}.
+      \item Aplikasi tidak melatih ulang; hanya memuat checkpoint.
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+% ================================================================== 3. P-DINA
+\begin{frame}{P-DINA: probabilistic DINA + variational EM}{jenis masalah}
+  \begin{columns}[T]
+    \column{0.5\linewidth}
+    \small
+    \textbf{Masalah:} dari pola jawaban benar/salah, perkirakan \alert{probabilitas siswa menguasai tiap konsep}.
+    \begin{itemize}
+      \item \textbf{Variabel laten:} penguasaan $\alpha_{ik}\in\{0,1\}$ tidak pernah diamati; tidak ada label ``jawaban benar''.
+      \item \textbf{Multi-atribut:} 57 konsep sekaligus, terhubung lewat Q-matrix (948 soal $\times$ 57 konsep, dari pakar).
+      \item \textbf{Data jarang:} tiap siswa hanya menjawab sebagian soal; yang tidak dijawab $\neq$ salah.
+    \end{itemize}
+    \vspace{0.3em}
+    \begin{infobox}
+      \textbf{Intuisi DINA:} siswa yang menguasai semua konsep sebuah soal tetap bisa salah (\emph{slip} $s$);
+      yang belum menguasai bisa benar karena menebak (\emph{guess} $g$).
+    \end{infobox}
+    \column{0.47\linewidth}
+    \small
+    \textbf{Model formal} (siswa $i$, soal $j$, konsep $k$)
+    \begin{align*}
+      \eta_{ij} &= \textstyle\prod_k \alpha_{ik}^{\,q_{jk}} \\
+      P(X_{ij}{=}1\mid\boldsymbol\alpha_i) &= (1-s_j)^{\eta_{ij}}\, g_j^{\,1-\eta_{ij}} \\
+      \alpha_{ik} &\sim \mathrm{Bern}\big(\sigma(a_k\theta_i - b_k)\big),\ \theta_i\sim\mathcal N(0,1)
+    \end{align*}
+    \vspace{-0.6em}
+    \begin{itemize}\footnotesize
+      \item Prior \emph{higher-order}: kemampuan umum $\theta_i$ membuat konsep dengan sedikit bukti ``meminjam'' informasi dari konsep lain.
+      \item Mean-field $q(\boldsymbol\alpha_i)=\prod_k\mathrm{Bern}(\pi_{ik})$ menghindari enumerasi $2^{57}\approx1{,}4\times10^{17}$ profil.
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{P-DINA: probabilistic DINA + variational EM}{keunggulan}
+  \begin{columns}[T]
+    \column{0.56\linewidth}
+    \footnotesize
+    \begin{tabularx}{\linewidth}{@{}>{\bfseries}l L@{}}
+      \toprule
+      Keunggulan & Penjelasan \\
+      \midrule
+      Interpretabel & tiap soal punya $g$ dan $s$; tiap konsep punya P(mastery) yang langsung bermakna bagi guru \\
+      Ringan & $\pm$2.000 parameter; satu fit $\pm$30 detik di CPU laptop \\
+      Missing $\neq$ salah & likelihood hanya menjumlah respons teramati (mask) \\
+      Tahu kapan tidak tahu & bukti sedikit $\Rightarrow$ \emph{insufficient\_evidence}, bukan gap \\
+      Terkalibrasi & ECE test 0,008 (Q-logistic 0,036) \\
+      Siswa baru & cukup E-step dengan parameter beku; 30 siswa $\pm$0,4 detik \\
+      Update eksak & untuk 934 dari 948 soal (satu konsep), E-step = posterior Bayes tepat \\
+      \bottomrule
+    \end{tabularx}
+    \column{0.4\linewidth}
+    \footnotesize
+    \textbf{Contoh Q-matrix} (biner, dari pakar)\\[3pt]
+    \begin{tabular}{@{}lccc@{}}
+      \toprule
+      Soal & Writing Expr. & Linear Eq. & \dots \\
+      \midrule
+      Q-101 & 1 & 0 & \dots \\
+      Q-102 & 0 & 1 & \dots \\
+      Q-103 & 1 & 1 & \dots \\
+      \bottomrule
+    \end{tabular}\\[4pt]
+    Q-103 menuntut \emph{kedua} konsep (aturan konjungtif ``AND''). Di EEDI hanya 14 soal yang multi-konsep.
+    \vspace{0.6em}
+    \begin{warnbox}
+      Kualitas diagnosis bergantung pada ketepatan Q-matrix: audit 22 soal fokus, 17 cocok, 5 parsial.
+    \end{warnbox}
+  \end{columns}
+\end{frame}
+
+% ================================================================== 4. init + training
+\begin{frame}{Parameter awal dan proses training}
+  \centering
+  \resizebox{0.9\linewidth}{!}{\input{figs/em_loop}}
+  \vspace{0.3em}
+
+  \begin{columns}[T]
+    \column{0.54\linewidth}
+    \scriptsize
+    \begin{tabularx}{\linewidth}{@{}l l L@{}}
+      \toprule
+      Parameter & Nilai awal & Keterangan \\
+      \midrule
+      $g_j$, $s_j$ (948 soal) & 0,2 & prior $\mathrm{Beta}(1{+}0{,}2\kappa;\,1{+}0{,}8\kappa)$ \\
+      $a_k$, $b_k$ (57 konsep) & 1 dan 0 & prior higher-order \\
+      $\theta_i$ (3.934 siswa) & 0 & kemampuan umum, MAP (Newton) \\
+      $\pi_{ik}$ & E-step pertama & keyakinan mastery \\
+      batas & $g,s\in[0{,}001;\,0{,}7]$ & dan $g+s\le0{,}98$ \\
+      \bottomrule
+    \end{tabularx}
+    \column{0.42\linewidth}
+    \footnotesize
+    \begin{itemize}
+      \item \textbf{E-step:} update tertutup untuk soal satu-konsep (2 perkalian matriks); 14 soal multi-konsep pakai titik tetap dengan \emph{damping} 0,5.
+      \item \textbf{M-step:} $g_j, s_j$ rumus tertutup (MAP Beta).
+      \item \textbf{Henti:} perubahan relatif ELBO $\le10^{-6}$ atau 150 iterasi.
+      \item \textbf{Hasil terpilih:} konvergen dalam \alert{44 iterasi}, ELBO akhir $-630.546$, \alert{29,8 detik} CPU.
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Hasil training: parameter yang dipelajari}
+  \begin{columns}[c]
+    \column{0.58\linewidth}
+    \setlength\figH{5.6cm}
+    \input{figs/itemparams}
+    \column{0.4\linewidth}
+    \footnotesize
+    \begin{tabular}{@{}lccc@{}}
+      \toprule
+      & rata-rata & median & rentang \\
+      \midrule
+      $g$ & 0,338 & 0,317 & 0,017--0,700 \\
+      $s$ & 0,253 & 0,217 & 0,002--0,700 \\
+      $1-s-g$ & 0,409 & 0,417 & 0,020--0,976 \\
+      \bottomrule
+    \end{tabular}
+    \vspace{0.6em}
+    \begin{itemize}
+      \item $g\approx0{,}33$ wajar untuk pilihan ganda 4 opsi (tebak acak 0,25).
+      \item Daya beda sedang $\Rightarrow$ satu konsep butuh $\pm$5 respons agar stabil.
+      \item 900 dari 948 soal punya $\ge$30 respons train (parameter andal).
+      \item Rata-rata $a_k=3{,}67$: penguasaan antar-konsep sangat terkait kemampuan umum $\theta$.
+    \end{itemize}
+  \end{columns}
+  \src{\texttt{artifacts/model/item\_parameters.csv}, \texttt{pdina\_config.json}}
+\end{frame}
+
+% ================================================================== 5. data + evaluation
+\begin{frame}{Data dan protokol evaluasi}
+  \begin{columns}[T]
+    \column{0.5\linewidth}
+    \footnotesize
+    \textbf{Dataset hasil preprocessing (dipakai penuh, tidak di-sampling)}\\[3pt]
+    \begin{tabular}{@{}lrrl@{}}
+      \toprule
+      Split & Siswa & Interaksi & Dipakai untuk \\
+      \midrule
+      train & 3.934 & 1.112.450 & fit P-DINA \& baseline \\
+      validation & 492 & 129.242 & seleksi HP \& kebijakan \\
+      test & 492 & 141.035 & evaluasi akhir, sekali \\
+      \midrule
+      total & 4.918 & 1.382.727 & \\
+      \bottomrule
+    \end{tabular}\\[4pt]
+    \begin{itemize}
+      \item Split \textbf{per siswa} (80/10/10, seed 42): siswa tidak muncul di dua split.
+      \item Model hanya membaca \texttt{UserId}, \texttt{QuestionId}, \texttt{IsCorrect}; kolom rawan leakage
+            (pass rate, difficulty, prior accuracy, \dots) dikecualikan.
+      \item Rekonstruksi lokal identik dengan file Drive (train/val: 0 baris berbeda).
+    \end{itemize}
+    \column{0.46\linewidth}
+    \footnotesize
+    \textbf{Protokol held-out}
+    \begin{enumerate}
+      \item Pada tiap siswa val/test, 20\% respons disembunyikan (min.\ 5 tetap terlihat).
+      \item Parameter soal dibekukan dari train.
+      \item Mastery ditebak dari konteks (E-step).
+      \item Respons tersembunyi diprediksi $\Rightarrow$ AUC, log-loss, Brier, ECE.
+      \item CI 95\%: bootstrap per siswa, 200 ulangan.
+    \end{enumerate}
+    \begin{warnbox}
+      Tidak ada ground truth mastery di EEDI: prediksi respons yang baik \emph{tidak} membuktikan diagnosis benar,
+      sehingga dilengkapi konsistensi split-half dan simulasi.
+    \end{warnbox}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Evaluasi performa: prediksi respons pada test}
+  \centering
+  \setlength\figH{3.6cm}
+  \input{figs/auc_ece}
+
+  \footnotesize
+  \begin{tabular}{@{}lcccccc@{}}
+    \toprule
+    Model & ROC-AUC [CI 95\%] & Log-loss & Brier & Accuracy & F1 & ECE \\
+    \midrule
+    \rowcolor{navy!8}\textbf{P-DINA (utama)} & 0,768 [0,759--0,779] & 0,568 & 0,194 & 0,699 & 0,704 & \textbf{0,008} \\
+    P-DINA prior independen & 0,761 [0,751--0,772] & 0,575 & 0,197 & 0,693 & 0,701 & 0,006 \\
+    Q-logistic & 0,775 [0,766--0,786] & 0,567 & 0,193 & 0,704 & 0,726 & 0,036 \\
+    Concept-score & 0,718 [0,707--0,733] & 0,611 & 0,213 & 0,658 & 0,681 & 0,016 \\
+    Item-mean & 0,672 [0,661--0,682] & 0,644 & 0,226 & 0,627 & 0,665 & 0,005 \\
+    \bottomrule
+  \end{tabular}
+  \src{\texttt{artifacts/evaluation/test\_metrics.csv}; 492 siswa, 28.003 respons held-out}
+\end{frame}
+
+\begin{frame}{Evaluasi performa: kalibrasi dan kualitas diagnosis}
+  \begin{columns}[T]
+    \column{0.48\linewidth}
+    \setlength\figH{5.6cm}
+    \input{figs/calibration}
+    \column{0.5\linewidth}
+    \footnotesize
+    \textbf{Kualitas diagnosis (proksi)}\\[3pt]
+    \begin{tabularx}{\linewidth}{@{}L r@{}}
+      \toprule
+      Ukuran & Hasil \\
+      \midrule
+      Konsistensi split-half (test, 880 sel) & \textbf{0,876} \\
+      Akurasi atribut, simulasi (ada / tanpa bukti) & 0,957 / 0,851 \\
+      Recovery parameter, simulasi $r(g)$ / $r(s)$ & 0,965 / 0,982 \\
+      \bottomrule
+    \end{tabularx}\\[4pt]
+    \textbf{Diagnosis 492 siswa test} (5.412 sel konsep target): 727 \emph{mastered}, 1.394 \emph{not\_mastered},
+    3.291 \emph{insufficient\_evidence}; 322 siswa punya $\ge$1 gap.\\[4pt]
+    \begin{infobox}
+      Kurva P-DINA hampir berimpit dengan diagonal: P(benar) = 0,7 berarti $\pm$70\% benar.
+      Q-logistic melenceng di ujung bawah dan atas.
+    \end{infobox}
+  \end{columns}
+  \src{\texttt{calibration\_test.csv}, \texttt{run\_summary.json}}
+\end{frame}
+
+\begin{frame}{Alasan menggunakan P-DINA}
+  \begin{columns}[T]
+    \column{0.55\linewidth}
+    \footnotesize
+    \scriptsize\begin{tabular}{@{}l P{2.6cm} P{2.2cm}@{}}
+      \toprule
+      & \textbf{P-DINA} & \textbf{Q-logistic} \\
+      \midrule
+      AUC test & 0,768 & 0,775 \\
+      Log-loss test & 0,568 & 0,567 \\
+      Kalibrasi (ECE) & \textbf{0,008} & 0,036 \\
+      Konsep ``menguasai'' & ya, P(mastery) per konsep & tidak (kompensatori) \\
+      Parameter & guess \& slip per soal & bobot logistik \\
+      \bottomrule
+    \end{tabular}\\[3pt]
+    {\scriptsize Selisih berpasangan (bootstrap per siswa): AUC $-0{,}007$ [$-0{,}011$; $-0{,}003$],
+    log-loss $+0{,}001$ [$-0{,}003$; $+0{,}007$].}
+    \begin{itemize}
+      \item Akurasi prediksi praktis \textbf{setara}: log-loss tidak berbeda bermakna.
+      \item Untuk keputusan pendidikan, probabilitas yang \textbf{terkalibrasi} dan \textbf{dapat dijelaskan}
+            lebih penting daripada selisih AUC 0,007.
+      \item Jauh lebih baik dari concept-score dan item-mean.
+    \end{itemize}
+    \column{0.42\linewidth}
+    \footnotesize
+    \textbf{Asesmen adaptif dari model yang sama}
+    \setlength\figH{3.9cm}
+    \input{figs/adaptive}
+    Replay 300 siswa test: 10 soal adaptif menyamai label dari semua respons 86\% (acak 82\%).
+  \end{columns}
+\end{frame}
+
+% ================================================================== 6. HP tuning
+\begin{frame}{Hyperparameter tuning}
+  \begin{columns}[T]
+    \column{0.58\linewidth}
+    \setlength\figH{6.2cm}
+    \input{figs/hp_search}
+    \column{0.4\linewidth}
+    \footnotesize
+    \textbf{Grid} (12 konfigurasi P-DINA + baseline):
+    \begin{itemize}
+      \item prior: \emph{independent} / \emph{higher-order} (HO)
+      \item kekuatan prior Beta $\kappa\in\{2, 10, 40\}$
+      \item class weighting (cw): ya / tidak
+    \end{itemize}
+    Kriteria: \textbf{log-loss} respons held-out validation.\\[4pt]
+    \textbf{Temuan}
+    \begin{itemize}
+      \item HO konsisten lebih baik (0,572 vs 0,579).
+      \item $\kappa$ hampir tidak berpengaruh: data per soal cukup.
+      \item Class weighting memperburuk log-loss dan ECE di semua konfigurasi $\Rightarrow$ tidak dipakai.
+    \end{itemize}
+    \begin{infobox}
+      Terpilih: \textbf{HO, $\kappa=2$, tanpa cw} $\Rightarrow$ prior $g,s\sim\mathrm{Beta}(1{,}4;\,2{,}6)$.
+    \end{infobox}
+  \end{columns}
+  \src{\texttt{artifacts/evaluation/hp\_search\_validation.csv}}
+\end{frame}
+
+\begin{frame}{Hyperparameter tuning: kebijakan diagnosis}
+  \begin{columns}[T]
+    \column{0.48\linewidth}
+    \setlength\figH{4.1cm}
+    \input{figs/tau}
+    \footnotesize
+    \textbf{$\tau = 0{,}5$}: semua $\tau\in[0{,}45;0{,}70]$ dalam 1 SE dari minimum (0,65) $\Rightarrow$ aturan
+    \emph{one-standard-error} memilih nilai netral 0,5.
+    \column{0.48\linewidth}
+    \setlength\figH{4.1cm}
+    \input{figs/nmin}
+    \footnotesize
+    \textbf{$n_{\min}=5$}: nilai terkecil dengan konsistensi split-half $\ge0{,}85$. \textbf{$\delta=0$}: tanpa pita
+    ketidakpastian target sudah tercapai.
+  \end{columns}
+  \vspace{0.3em}
+  \footnotesize
+  \centering
+  \begin{tabular}{@{}llll@{}}
+    \toprule
+    \emph{insufficient\_evidence} & \emph{mastered} & \emph{not\_mastered} = learning gap & \emph{uncertain} \\
+    respons $<n_{\min}$ & $\pi\ge\tau+\delta$ & $\pi<\tau-\delta$ & $|\pi-\tau|<\delta$ \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+% ================================================================== 7. storage
+\begin{frame}{Penyimpanan model}
+  \begin{columns}[T]
+    \column{0.55\linewidth}
+    \footnotesize
+    \textbf{Checkpoint \texttt{artifacts/model/}} ($\pm$1,1 MB, tanpa GPU/framework DL)\\[3pt]
+    \scriptsize
+    \begin{tabular}{@{}>{\ttfamily}l P{3.3cm} r@{}}
+      \toprule
+      \normalfont File & Isi & Ukuran \\
+      \midrule
+      pdina\_params.npz & Q-matrix, $g$, $s$, $\lambda$, $a$, $b$, ID soal \& konsep & 459 KB \\
+      pdina\_config.json & hyperparameter, 44 iterasi, ELBO & 1 KB \\
+      diagnosis\_policy.json & $\tau$, $\delta$, $n_{\min}$, konsep target & 1 KB \\
+      item\_parameters.csv & guess, slip, daya beda per soal & 202 KB \\
+      item\_bank.csv, q\_matrix.csv & item bank \& Q-matrix & 331 KB \\
+      concept\_metadata.csv, \dots & nama konsep, target, prasyarat & 23 KB \\
+      intervention\_map\_resolved.csv & peta intervensi (placeholder) & 8 KB \\
+      model\_card.json & ringkasan run, data, metrik & 17 KB \\
+      \bottomrule
+    \end{tabular}
+    \column{0.42\linewidth}
+    \footnotesize
+    \textbf{Saat dipakai}
+    \begin{enumerate}
+      \item \texttt{CDMService.load()} memuat checkpoint dan memeriksa konsistensi ID soal, urutan konsep, konsep target.
+      \item \texttt{diagnose()} menjalankan E-step saja (parameter beku).
+      \item Aplikasi Streamlit \textbf{tidak} membaca dataset jutaan baris dan tidak melatih ulang.
+    \end{enumerate}
+    \textbf{Training ulang diperlukan bila:}
+    \begin{itemize}
+      \item ada soal baru (butuh $\ge$30 respons/soal),
+      \item Q-matrix atau daftar konsep berubah,
+      \item populasi berbeda (kelas SMA penelitian).
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+% ================================================================== 8. LLM choice
+\begin{frame}{Pemilihan LLM dan spesifikasi}
+  \begin{columns}[T]
+    \column{0.55\linewidth}
+    \footnotesize
+    \textbf{Perbandingan yang sudah diukur}\\[3pt]
+    \scriptsize
+    \begin{tabularx}{\linewidth}{@{}l L L@{}}
+      \toprule
+      & SLM lokal (sebelumnya) & \textbf{Gemini 3.1 Flash-Lite} \\
+      \midrule
+      Model & Qwen3-4B-Instruct (Ollama) & \texttt{gemini-3.1-flash-lite} \\
+      Tempat jalan & laptop, RTX 2050 4 GB & server Google (Gemini API) \\
+      Waktu/laporan & guru $\pm$80--105 s & $\pm$6 s (30 siswa demo) \\
+      Validator & lolos percobaan 1 & lolos percobaan 1 \\
+      Beban laptop & VRAM penuh, baterai boros & hanya klien HTTP \\
+      Kebutuhan & unduh 2,5 GB, server lokal & API key + internet \\
+      \bottomrule
+    \end{tabularx}
+    \vspace{0.4em}
+    \begin{itemize}
+      \item Tugasnya hanya \emph{menulis ulang fakta} $\Rightarrow$ model kecil-cepat cukup; validator menjaga angka.
+      \item Flash-Lite: varian paling ringan Gemini 3.1, cocok untuk banyak laporan pendek.
+    \end{itemize}
+    \column{0.42\linewidth}
+    \footnotesize
+    \textbf{Spesifikasi yang dipakai}\\[3pt]
+    \begin{tabular}{@{}ll@{}}
+      \toprule
+      Akses & Gemini API (key AI Studio) \\
+      SDK & \texttt{google-genai} 2.33.0 \\
+      Model ID & \texttt{gemini-3.1-flash-lite} \\
+      Mode & teks $\to$ teks, tanpa streaming \\
+      Thinking & level \texttt{low} \\
+      Request & 1 per laporan (+ repair) \\
+      \bottomrule
+    \end{tabular}\\[5pt]
+    \textbf{Pemakaian terukur} (laporan guru, 30 siswa demo EEDI): 3.246 token input, 618 output, 119 thinking;
+    5,97 detik; 1 percobaan.
+    \begin{warnbox}
+      Fakta (pseudonim, agregat) dikirim ke Google. Untuk data kelas nyata, gunakan tier berbayar dan cek ketentuan data.
+    \end{warnbox}
+  \end{columns}
+\end{frame}
+
+% ================================================================== 9. config
+\begin{frame}{Konfigurasi model}
+  \begin{columns}[T]
+    \column{0.6\linewidth}
+    \footnotesize
+    \textbf{\texttt{configs/llm.json}}\\[3pt]
+    \scriptsize
+    \begin{tabular}{@{}>{\ttfamily}l >{\ttfamily}l P{3.3cm}@{}}
+      \toprule
+      \normalfont Kunci & \normalfont Nilai & Alasan \\
+      \midrule
+      model & gemini-3.1-flash-lite & versi stabil (preview juga tersedia) \\
+      api\_key\_env & GEMINI\_API\_KEY & key tidak pernah ditulis di config \\
+      env\_file & .env & cadangan bila env proses kosong \\
+      temperature & 1.0 & rekomendasi Google untuk Gemini 3 \\
+      top\_p & null & default API \\
+      thinking\_level & low & latensi \& biaya rendah \\
+      max\_tokens & 8192 & termasuk token thinking \\
+      timeout\_sec & 120 & batas per request \\
+      max\_retries & 2 & repair setelah gagal validasi \\
+      prompt\_version & narrative-gemini-v1 & ikut kunci cache \\
+      max\_class\_concepts & 11 & batas ukuran fakta (gap/rek.\ 5) \\
+      max\_examples & 1 & contoh few-shot per request \\
+      cache\_ttl\_hours & 168 & laporan sama $\Rightarrow$ $<$1 s \\
+      \bottomrule
+    \end{tabular}
+    \column{0.37\linewidth}
+    \footnotesize
+    \textbf{Ketahanan}
+    \begin{itemize}
+      \item HTTP 429/5xx: retry dengan backoff 2 s / 8 s.
+      \item 3 kegagalan beruntun: \emph{circuit breaker} 60 s.
+      \item Output terpotong (\texttt{MAX\_TOKENS}) atau kosong ditolak.
+      \item Tanpa key/internet: template langsung, aplikasi tidak crash.
+    \end{itemize}
+    \textbf{Audit log} per laporan: waktu, model, hash input, latensi, token, status validasi, fallback.
+    \textbf{Tidak} menyimpan teks laporan, ID siswa, maupun key.
+  \end{columns}
+\end{frame}
+
+% ================================================================== 10. system prompt
+\begin{frame}[fragile]{System prompt}
+  \begin{columns}[T]
+    \column{0.64\linewidth}
+    \footnotesize\textbf{Teks persis (audiens guru)} -- \texttt{cdacdm/narrative.py}
+    \lstinputlisting[basicstyle=\ttfamily\fontsize{4.4pt}{5.1pt}\selectfont]{data/system_prompt_teacher.txt}
+    \column{0.33\linewidth}
+    \footnotesize
+    \textbf{Struktur pesan ke Gemini}
+    \begin{enumerate}
+      \item \texttt{system\_instruction}: aturan di samping.
+      \item 1 contoh few-shot (user $\to$ model) untuk audiens yang sama.
+      \item \texttt{user}: ``FAKTA DIAGNOSIS (JSON)'' + instruksi menulis.
+    \end{enumerate}
+    \textbf{Audiens siswa:} sapa ``kamu'', tanpa data kelas, heading Ringkasan / Yang sudah dikuasai / Yang perlu
+    dilatih / Langkah belajar / Catatan.
+    \vspace{0.3em}
+    \begin{infobox}
+      Prompt hanya \emph{meminta}; kepatuhan \emph{diperiksa} oleh validator (slide berikut).
+    \end{infobox}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Pengaman di sekitar LLM}
+  \centering
+  \resizebox{0.95\linewidth}{!}{\input{figs/guardrail}}
+  \vspace{0.6em}
+
+  \begin{columns}[T]
+    \column{0.5\linewidth}
+    \footnotesize
+    \textbf{Validator (hard fail)}
+    \begin{itemize}
+      \item Setiap angka harus ada di fakta JSON, dan pada baris yang menyebut konsep harus milik konsep itu.
+      \item Lima heading wajib lengkap dan berurutan; tanpa HTML/daftar bernomor.
+      \item Rekomendasi placeholder wajib disebut ``perlu validasi guru''.
+      \item Klaim terlarang: \emph{terbukti, dijamin, efektif meningkatkan, siswa malas}, \dots
+      \item Konsep di luar fakta ditolak; panjang 120--900 kata.
+    \end{itemize}
+    \column{0.46\linewidth}
+    \footnotesize
+    \textbf{Privasi}
+    \begin{itemize}
+      \item Tidak ada matriks respons, nama, sekolah, atau \texttt{UserId} asli.
+      \item Siswa disebut \texttt{Siswa-<sha256[:8]>}.
+      \item Laporan guru hanya agregat kelas.
+    \end{itemize}
+    \textbf{Template deterministik} selalu lolos validator, jadi pengguna tidak pernah melihat teks yang belum
+    divalidasi.
+  \end{columns}
+\end{frame}
+
+% ================================================================== 11. output
+\begin{frame}{Output sistem AI: diagnosis P-DINA}
+  \begin{columns}[T]
+    \column{0.5\linewidth}
+    \footnotesize
+    \textbf{Ringkasan kelas} (30 siswa demo EEDI, 8.653 respons)
+    \setlength\figH{4.5cm}
+    \input{figs/class_demo}
+    \column{0.47\linewidth}
+    \footnotesize
+    \textbf{Profil satu siswa} (\texttt{Siswa-e7f6c011}, 7 dari 11 konsep)\\[3pt]
+    \scriptsize
+    \setlength\tabcolsep{4pt}
+    \begin{tabular}{@{}l r r r l@{}}
+      \toprule
+      Konsep & bukti & benar & P(m.) & label \\
+      \midrule
+      Linear Sequences & 11 & 1 & 0,00 & gap \\
+      Substitution into Formula & 22 & 8 & 0,00 & gap \\
+      Factorising & 8 & 3 & 0,00 & gap \\
+      Solving Linear Inequalities & 8 & 4 & 0,03 & gap \\
+      Writing Expressions & 25 & 13 & 0,34 & gap \\
+      Horiz.\ \& Vertical Lines & 4 & 0 & 0,00 & kurang \\
+      Gradient & 1 & 1 & 0,47 & kurang \\
+      \bottomrule
+    \end{tabular}\\[4pt]
+    \footnotesize
+    ``kurang'' = bukti $<5$ respons: \textbf{tidak} dicap gap, walau probabilitasnya rendah.\\[4pt]
+    \textbf{Rekomendasi R1--R5}: tindakan (remediasi / asesmen ulang / tambah bukti), level (seluruh kelas /
+    kelompok / individual), aktivitas \& soal latihan dari item bank. Aktivitas masih \emph{placeholder}.
+  \end{columns}
+  \src{diagnosis \texttt{artifacts/demo/test\_split\_responses.csv} (30 siswa pertama), checkpoint EEDI}
+\end{frame}
+
+\begin{frame}{Output sistem AI: laporan naratif Gemini}
+  \begin{columns}[T]
+    \column{0.62\linewidth}
+    \begin{tcolorbox}[colback=white, colframe=accent, boxrule=0.5pt, arc=2pt, left=5pt, right=5pt, top=3pt, bottom=3pt,
+                      fontupper=\scriptsize, title={\scriptsize Laporan guru -- dihasilkan \texttt{gemini-3.1-flash-lite} (dipotong)},
+                      coltitle=white, colbacktitle=accent]
+      \textbf{Ringkasan kelas}\\
+      Data mencakup 30 siswa yang diuji pada 11 konsep target dengan total 8653 respons. Estimasi model mendeteksi
+      18 siswa memiliki learning gap berdasarkan ambang batas diagnostik yang ditetapkan.\\[3pt]
+      \textbf{Temuan utama}
+      \begin{itemize}
+        \item \textbf{Simplifying Expressions by Collecting Like Terms} memiliki 13 siswa yang belum menguasai, dengan
+              estimasi probabilitas penguasaan 35\%.
+        \item \textbf{Substitution into Formula} menunjukkan 12 siswa belum menguasai, dengan estimasi probabilitas
+              penguasaan 30\%.
+        \item \textbf{Gradient Between Two Co-ordinates} mencatat 30 siswa dengan bukti tidak cukup, yang berarti
+              memerlukan soal tambahan [\dots]
+      \end{itemize}
+      \textbf{Rekomendasi tindakan}
+      \begin{itemize}
+        \item \textbf{Simplifying Expressions by Collecting Like Terms} (seluruh kelas): Penjelasan ulang dengan contoh
+              terbimbing, lalu latihan bertahap dengan umpan balik untuk 13 siswa. Rekomendasi ini adalah placeholder dan
+              perlu validasi guru. [\dots]
+      \end{itemize}
+    \end{tcolorbox}
+    \column{0.35\linewidth}
+    \footnotesize
+    \textbf{Metadata request}\\[3pt]
+    \begin{tabular}{@{}ll@{}}
+      \toprule
+      Validator & lolos \\
+      Percobaan & 1 \\
+      Latensi & 5,97 s \\
+      Token in/out/think & 3.246 / 618 / 119 \\
+      Fallback & tidak \\
+      \bottomrule
+    \end{tabular}\\[5pt]
+    Semua angka (30, 11, 8653, 18, 13, 35\%, \dots) berasal dari fakta P-DINA; LLM hanya merangkai kalimat.
+    \begin{warnbox}
+      Validator memeriksa angka, bukan makna pedagogis. Laporan adalah draf yang tetap ditinjau guru.
+    \end{warnbox}
+  \end{columns}
+  \src{\texttt{slides/data/example\_teacher\_report.json} (dibuat 27-10-2026)}
+\end{frame}
+
+% ================================================================== 12. conclusion
+\begin{frame}{Kesimpulan}
+  \begin{enumerate}
+    \item \textbf{P-DINA} (prior higher-order, variational EM) dilatih pada 1,1 juta respons train EEDI dalam
+          $\pm$30 detik CPU dan menghasilkan P(mastery) per siswa $\times$ konsep yang \textbf{terkalibrasi} (ECE 0,008).
+    \item Akurasi prediksi respons \textbf{setara} baseline terkuat (AUC 0,768 vs 0,775; log-loss tidak berbeda
+          bermakna), dengan parameter yang dapat dijelaskan (guess, slip).
+    \item Kebijakan diagnosis dipilih dari data validation: $\tau=0{,}5$, $n_{\min}=5$, $\delta=0$; konsistensi
+          split-half test 0,876.
+    \item \textbf{Gemini 3.1 Flash-Lite} hanya mengomunikasikan hasil: $\pm$6 detik per laporan, lolos validator pada
+          percobaan pertama; tanpa API key sistem tetap berjalan dengan template.
+    \item Seluruh sistem berjalan end-to-end di laptop (CPU) dan dikemas dalam aplikasi Streamlit.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Keterbatasan dan langkah berikutnya}
+  \begin{columns}[T]
+    \column{0.5\linewidth}
+    \footnotesize
+    \textbf{Keterbatasan}
+    \begin{itemize}
+      \item EEDI = siswa SMP di UK; 11 konsep target hanya \emph{prasyarat} aljabar SMA, tanpa kalkulus.
+      \item Tidak ada ground truth mastery; kualitas diagnosis hanya proksi.
+      \item Q-matrix dianggap benar (5 dari 22 soal yang diaudit hanya cocok sebagian).
+      \item Daya beda soal sedang: 3.291 dari 5.412 sel test masih \emph{insufficient\_evidence};
+            \emph{Gradient} hanya 2 soal.
+      \item Rekomendasi intervensi masih placeholder; tidak ada klaim efektivitas.
+      \item LLM: baru beberapa laporan nyata; bergantung internet, kuota, dan pengiriman data ke Google.
+    \end{itemize}
+    \column{0.46\linewidth}
+    \footnotesize
+    \textbf{Langkah berikutnya}
+    \begin{enumerate}
+      \item Menyusun bank soal SMA (aljabar \& kalkulus) dengan Q-matrix yang ditinjau guru.
+      \item Mengumpulkan respons kelas nyata dan melatih ulang (min.\ 30 respons per soal).
+      \item Pre-test/post-test dengan kelompok pembanding.
+      \item Guru memvalidasi peta intervensi.
+      \item Mengevaluasi laporan LLM secara sistematis (\texttt{scripts/eval\_narrative.py}) dan menilainya bersama guru.
+    \end{enumerate}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[plain]
+  \centering\vfill
+  {\Large\bfseries\color{navy} Terima kasih}\\[0.8em]
+  {\small\color{midgray}Kode, artefak, dan naskah lengkap: \texttt{D:\textbackslash finalIL}, folder \texttt{slides/}}
+  \vfill
+\end{frame}
+
+\end{document}

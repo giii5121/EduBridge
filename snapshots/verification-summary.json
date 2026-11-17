@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-17",
+  "recordedAt": "2026-11-17T01:01:00Z",
+  "environment": "Windows 11 · Node.js 24 · Python 3.12 · NODE_ENV=development · loopback only",
+  "scope": "Rendering matematika KaTeX (kuis, pilihan, pembahasan, materi, tutor, narasi), regresi penuh, screenshot ulang, uji Gemini langsung, login operator.",
+  "checks": {
+    "build": {
+      "status": "lulus",
+      "command": "npm.cmd run build",
+      "result": "Vite build sukses; KaTeX dimuat sebagai chunk terpisah (katexRuntime)."
+    },
+    "lint": {
+      "status": "lulus",
+      "command": "npm.cmd run lint",
+      "result": "0 error; peringatan lama oxlint tetap, tidak ada peringatan pada file rumus baru."
+    },
+    "backend_tests": {
+      "status": "lulus",
+      "command": "npm.cmd test",
+      "result": "27/27 lulus (21 sebelumnya + 6 tes format matematika dan keamanan)."
+    },
+    "ml_tests": {
+      "status": "lulus",
+      "command": "npm.cmd run test:ml",
+      "result": "84 lulus, 1 dilewati (tes live opsional yang memerlukan opt-in)."
+    },
+    "browser_tests": {
+      "status": "lulus",
+      "command": "npm.cmd run test:e2e",
+      "result": "11/11 lulus (9 sebelumnya + 2 tes rumus kuis dan sanitasi tutor)."
+    },
+    "audit": {
+      "status": "lulus",
+      "command": "npm.cmd audit --audit-level=low",
+      "result": "0 vulnerabilities; katex@0.19.1 untuk semua dependensi (override root)."
+    },
+    "math_rendering": {
+      "status": "lulus",
+      "command": "node --test server/test/math-format.test.js · tests/math.spec.js · audit visual",
+      "result": "Semua teks soal, opsi, pembahasan, dan materi (>1.000 string) dirender KaTeX tanpa error; teks asli dapat direkonstruksi utuh; desktop terang/gelap dan ponsel 360–390 px tanpa LaTeX mentah, rumus terpotong, atau overflow; pilihan tetap dapat dipilih dengan keyboard."
+    },
+    "live_gemini": {
+      "status": "lulus",
+      "command": "node scripts/live-check.mjs --confirm",
+      "result": "Tutor, narasi siswa, narasi guru: HTTP 200, fallback=false; kedua narasi lolos validator fakta (narasi guru dari cache layanan). Model gemini-3.1-flash-lite. Capture tutor juga memakai Gemini nyata."
+    },
+    "operator_login": {
+      "status": "lulus",
+      "command": "login API lokal dengan akun operator dari file privat (nilai tidak dicetak)",
+      "result": "Login 200, peran admin, bootstrap 200, logout dengan CSRF 200; cookie HttpOnly + SameSite."
+    },
+    "local_services": {
+      "status": "lulus",
+      "command": "GET /api/health, /api/ready, :5173/login, :8000/docs",
+      "result": "Semua HTTP 200; stack yang sudah berjalan dipakai ulang, tidak ada proses kedua."
+    },
+    "screenshots": {
+      "status": "lulus",
+      "command": "node scripts/capture-snapshots.mjs · node scripts/build-snapshot-report.mjs",
+      "result": "17 screenshot aplikasi + 2 gambar diagram, 1600×1000 @1.5x; skrip menolak gambar bila secret atau LaTeX/Markdown mentah terlihat; gambar diperiksa manual."
+    },
+    "secrets": {
+      "status": "lulus",
+      "command": "pemindaian string secret pada snapshots/, SNAPSHOT.html, README.md, PENJELASAN.md",
+      "result": "Tidak ada API key, service key, atau password operator; CREDENTIALS.local.txt dan server/.env diabaikan Git dan Docker."
+    }
+  },
+  "instrument": {
+    "bankTextChanged": false,
+    "keysChanged": false,
+    "qMatrixChanged": false,
+    "retrained": false,
+    "note": "Rumus diformat di lapisan presentasi; teks soal, kunci, snapshot, Q-matrix, dan fingerprint PDINA tidak diubah."
+  },
+  "limits": [
+    "Kalibrasi PDINA aplikasi masih sintetis; belum ada validasi dengan respons siswa nyata.",
+    "Docker, TLS, domain publik, serta backup/restore volume produksi belum diuji karena host deployment belum tersedia.",
+    "Uji Gemini langsung bergantung pada kuota/akses akun dan dijalankan terpisah dari tes otomatis.",
+    "Deteksi notasi otomatis bersifat heuristik untuk teks Unicode; konten baru sebaiknya memakai delimiter $…$ untuk rumus kompleks.",
+    "LaTeX tidak valid dari model AI ditampilkan apa adanya oleh KaTeX (tanpa eksekusi), bukan disembunyikan."
+  ]
+}

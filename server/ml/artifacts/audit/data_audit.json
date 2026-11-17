@@ -1,0 +1,238 @@
+{
+  "data_dir": "D:\\finalIL\\ILCDA\\processed_task34_cda_cdm\\final_local_reconstruction",
+  "presence": {
+    "responses_train.npz": {
+      "exists": true,
+      "size_bytes": 713414
+    },
+    "responses_val.npz": {
+      "exists": true,
+      "size_bytes": 89515
+    },
+    "responses_test.npz": {
+      "exists": true,
+      "size_bytes": 91713
+    },
+    "q_matrix.csv": {
+      "exists": true,
+      "size_bytes": 112928
+    },
+    "concept_metadata.csv": {
+      "exists": true,
+      "size_bytes": 8479
+    },
+    "cda_item_bank.csv": {
+      "exists": true,
+      "size_bytes": 217506
+    },
+    "interactions_train.csv": {
+      "exists": true,
+      "size_bytes": 307113841
+    },
+    "interactions_val.csv": {
+      "exists": true,
+      "size_bytes": 35320256
+    },
+    "interactions_test.csv": {
+      "exists": true,
+      "size_bytes": 39006436
+    },
+    "dataset_manifest.json": {
+      "exists": true,
+      "size_bytes": 523
+    },
+    "eda_summary.json": {
+      "exists": true,
+      "size_bytes": 1429
+    }
+  },
+  "missing_files": [],
+  "q_matrix": {
+    "n_items": 948,
+    "n_concepts": 57,
+    "binary": true,
+    "items_without_concept": [],
+    "concepts_without_items": []
+  },
+  "artifact_source": "local_reconstruction",
+  "splits": {
+    "train": {
+      "interactions": {
+        "rows": 1112450,
+        "students": 3934,
+        "questions": 948,
+        "duplicate_user_question_pairs": 0,
+        "correct_rate": 0.5374875275293272,
+        "dtypes": {
+          "UserId": "int64",
+          "QuestionId": "int64",
+          "AnswerId": "int64",
+          "IsCorrect": "int64",
+          "DateAnswered": "str"
+        }
+      },
+      "npz_encoding": {
+        "keys": [
+          "matrix",
+          "user_ids",
+          "question_ids"
+        ],
+        "matrix_key": "matrix",
+        "user_key": "user_ids",
+        "question_key": "question_ids",
+        "mask_key": null,
+        "dtype": "int8",
+        "shape": [
+          3934,
+          948
+        ],
+        "unique_values": [
+          -1,
+          0,
+          1
+        ],
+        "missing_scheme": "-1 = missing"
+      },
+      "alignment_npz_vs_csv": {
+        "same_users": true,
+        "mask_equal": true,
+        "value_mismatches": 0,
+        "cells_only_in_npz": 0,
+        "cells_only_in_csv": 0,
+        "aligned": true
+      },
+      "source_used": "interactions_csv",
+      "n_students": 3934,
+      "observed_cells": 1112450,
+      "matrix_density": 0.2982893909850079,
+      "responses_per_student": {
+        "min": 50,
+        "median": 241.0,
+        "max": 827
+      },
+      "expected_students": 3934,
+      "count_matches_expected": true
+    },
+    "val": {
+      "interactions": {
+        "rows": 129242,
+        "students": 492,
+        "questions": 937,
+        "duplicate_user_question_pairs": 0,
+        "correct_rate": 0.5400875876263135,
+        "dtypes": {
+          "UserId": "int64",
+          "QuestionId": "int64",
+          "AnswerId": "int64",
+          "IsCorrect": "int64",
+          "DateAnswered": "str"
+        }
+      },
+      "npz_encoding": {
+        "keys": [
+          "matrix",
+          "user_ids",
+          "question_ids"
+        ],
+        "matrix_key": "matrix",
+        "user_key": "user_ids",
+        "question_key": "question_ids",
+        "mask_key": null,
+        "dtype": "int8",
+        "shape": [
+          492,
+          948
+        ],
+        "unique_values": [
+          -1,
+          0,
+          1
+        ],
+        "missing_scheme": "-1 = missing"
+      },
+      "alignment_npz_vs_csv": {
+        "same_users": true,
+        "mask_equal": true,
+        "value_mismatches": 0,
+        "cells_only_in_npz": 0,
+        "cells_only_in_csv": 0,
+        "aligned": true
+      },
+      "source_used": "interactions_csv",
+      "n_students": 492,
+      "observed_cells": 129242,
+      "matrix_density": 0.2770959829851463,
+      "responses_per_student": {
+        "min": 50,
+        "median": 227.0,
+        "max": 812
+      },
+      "expected_students": 492,
+      "count_matches_expected": true
+    },
+    "test": {
+      "interactions": {
+        "rows": 141035,
+        "students": 492,
+        "questions": 916,
+        "duplicate_user_question_pairs": 0,
+        "correct_rate": 0.5335767717233311,
+        "dtypes": {
+          "UserId": "int64",
+          "QuestionId": "int64",
+          "AnswerId": "int64",
+          "IsCorrect": "int64",
+          "DateAnswered": "str"
+        }
+      },
+      "npz_encoding": {
+        "keys": [
+          "matrix",
+          "user_ids",
+          "question_ids"
+        ],
+        "matrix_key": "matrix",
+        "user_key": "user_ids",
+        "question_key": "question_ids",
+        "mask_key": null,
+        "dtype": "int8",
+        "shape": [
+          492,
+          948
+        ],
+        "unique_values": [
+          -1,
+          0,
+          1
+        ],
+        "missing_scheme": "-1 = missing"
+      },
+      "alignment_npz_vs_csv": {
+        "same_users": true,
+        "mask_equal": true,
+        "value_mismatches": 0,
+        "cells_only_in_npz": 0,
+        "cells_only_in_csv": 0,
+        "aligned": true
+      },
+      "source_used": "interactions_csv",
+      "n_students": 492,
+      "observed_cells": 141035,
+      "matrix_density": 0.30238027854962096,
+      "responses_per_student": {
+        "min": 50,
+        "median": 240.5,
+        "max": 807
+      },
+      "expected_students": 492,
+      "count_matches_expected": true
+    }
+  },
+  "student_disjoint": true,
+  "item_bank_stats_source": {
+    "checked": true,
+    "max_abs_diff_vs_train_pass_rate": 0.0,
+    "matches_train_only": true,
+    "n_attempts_matches_train_counts": true
+  }
+}

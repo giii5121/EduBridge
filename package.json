@@ -1,27 +1,37 @@
 {
-  "name": "edubridge",
+  "name": "edubridge-workspace",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "oxlint",
-    "preview": "vite preview"
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "engines": {
+    "node": ">=24.0.0"
   },
-  "dependencies": {
-    "react": "^19.3.1",
-    "react-dom": "^19.3.1",
-    "react-router-dom": "^7.18.4"
+  "scripts": {
+    "setup:admin": "npm run setup:admin --workspace server",
+    "backup": "npm run backup --workspace server",
+    "reset:password": "npm run reset:password --workspace server",
+    "dev": "node scripts/stack.mjs --dev",
+    "dev:client": "npm run dev --workspace client",
+    "dev:server": "npm run dev --workspace server",
+    "dev:ai": "node scripts/ai.mjs",
+    "start:ai": "node scripts/ai.mjs",
+    "train:ai": "node scripts/train.mjs",
+    "build": "npm run build --workspace client",
+    "start": "node scripts/stack.mjs",
+    "test": "node scripts/with-ai.mjs",
+    "test:ml": "node scripts/test-ml.mjs",
+    "test:e2e": "node scripts/with-ai.mjs e2e",
+    "lint": "npm run lint --workspace client"
   },
   "devDependencies": {
-    "@types/react": "^19.3.0",
-    "@types/react-dom": "^19.3.0",
-    "@vitejs/plugin-react": "^6.1.2",
-    "autoprefixer": "^10.4.20",
-    "oxlint": "^1.88.0",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.17",
-    "vite": "^8.3.4"
+    "@playwright/test": "^1.58.0",
+    "prettier": "^3.6.2"
+  },
+  "overrides": {
+    "katex": "^0.19.1"
   }
 }

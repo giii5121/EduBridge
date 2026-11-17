@@ -1,0 +1,14 @@
+concept_id,concept_code,concept_name,in_target_scope,target_domain,relevance_level,mapped_target_topics,curriculum_order,prerequisite_concept_ids,mapping_basis,review_status
+9001,KAL-P1,Fungsi dan notasi fungsi,True,algebra_prerequisite,prerequisite,K0,1,,DUMMY scenario: concept list drafted for kelas XI kalkulus; align with the syllabus actually used,draft_needs_researcher_review
+9002,KAL-P2,Faktorisasi dan manipulasi bentuk aljabar,True,algebra_prerequisite,prerequisite,K0,2,,DUMMY scenario: concept list drafted for kelas XI kalkulus; align with the syllabus actually used,draft_needs_researcher_review
+9003,KAL-L1,Limit fungsi aljabar,True,calculus,core_limit,K1,3,9001;9002,DUMMY scenario: concept list drafted for kelas XI kalkulus; align with the syllabus actually used,draft_needs_researcher_review
+9004,KAL-L2,Limit fungsi di tak hingga,True,calculus,core_limit,K1,4,9003,DUMMY scenario: concept list drafted for kelas XI kalkulus; align with the syllabus actually used,draft_needs_researcher_review
+9005,KAL-L3,Limit fungsi trigonometri,True,calculus,core_limit,K1,5,9003,DUMMY scenario: concept list drafted for kelas XI kalkulus; align with the syllabus actually used,draft_needs_researcher_review
+9006,KAL-D1,Turunan sebagai limit (definisi turunan),True,calculus,core_derivative,K2,6,9003,DUMMY scenario: concept list drafted for kelas XI kalkulus; align with the syllabus actually used,draft_needs_researcher_review
+9007,KAL-D2,"Aturan dasar turunan (pangkat, konstanta, jumlah)",True,calculus,core_derivative,K2,7,9001,DUMMY scenario: concept list drafted for kelas XI kalkulus; align with the syllabus actually used,draft_needs_researcher_review
+9008,KAL-D3,Aturan perkalian dan pembagian,True,calculus,core_derivative,K2,8,9007,DUMMY scenario: concept list drafted for kelas XI kalkulus; align with the syllabus actually used,draft_needs_researcher_review
+9009,KAL-D4,Aturan rantai,True,calculus,core_derivative,K2,9,9007,DUMMY scenario: concept list drafted for kelas XI kalkulus; align with the syllabus actually used,draft_needs_researcher_review
+9010,KAL-D5,Turunan fungsi trigonometri,True,calculus,core_derivative,K2,10,9007,DUMMY scenario: concept list drafted for kelas XI kalkulus; align with the syllabus actually used,draft_needs_researcher_review
+9011,KAL-A1,Persamaan garis singgung kurva,True,calculus,application,K3,11,9007,DUMMY scenario: concept list drafted for kelas XI kalkulus; align with the syllabus actually used,draft_needs_researcher_review
+9012,KAL-A2,Fungsi naik/turun dan titik stasioner,True,calculus,application,K3,12,9007,DUMMY scenario: concept list drafted for kelas XI kalkulus; align with the syllabus actually used,draft_needs_researcher_review
+9013,KAL-A3,Nilai maksimum/minimum dan masalah optimasi,True,calculus,application,K3,13,9012,DUMMY scenario: concept list drafted for kelas XI kalkulus; align with the syllabus actually used,draft_needs_researcher_review

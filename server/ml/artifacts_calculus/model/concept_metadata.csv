@@ -1,0 +1,14 @@
+concept_id,concept_index,concept_code,concept_name,role,path,n_questions,in_target_scope,relevance_level,curriculum_order
+9001,0,KAL-P1,Fungsi dan notasi fungsi,prerequisite,Kalkulus kelas XI (DUMMY) > prerequisite > Fungsi dan notasi fungsi,7,True,prerequisite,1
+9002,1,KAL-P2,Faktorisasi dan manipulasi bentuk aljabar,prerequisite,Kalkulus kelas XI (DUMMY) > prerequisite > Faktorisasi dan manipulasi bentuk aljabar,21,True,prerequisite,2
+9003,2,KAL-L1,Limit fungsi aljabar,core_limit,Kalkulus kelas XI (DUMMY) > core_limit > Limit fungsi aljabar,15,True,core_limit,3
+9004,3,KAL-L2,Limit fungsi di tak hingga,core_limit,Kalkulus kelas XI (DUMMY) > core_limit > Limit fungsi di tak hingga,9,True,core_limit,4
+9005,4,KAL-L3,Limit fungsi trigonometri,core_limit,Kalkulus kelas XI (DUMMY) > core_limit > Limit fungsi trigonometri,7,True,core_limit,5
+9006,5,KAL-D1,Turunan sebagai limit (definisi turunan),core_derivative,Kalkulus kelas XI (DUMMY) > core_derivative > Turunan sebagai limit (definisi turunan),6,True,core_derivative,6
+9007,6,KAL-D2,"Aturan dasar turunan (pangkat, konstanta, jumlah)",core_derivative,"Kalkulus kelas XI (DUMMY) > core_derivative > Aturan dasar turunan (pangkat, konstanta, jumlah)",34,True,core_derivative,7
+9008,7,KAL-D3,Aturan perkalian dan pembagian,core_derivative,Kalkulus kelas XI (DUMMY) > core_derivative > Aturan perkalian dan pembagian,7,True,core_derivative,8
+9009,8,KAL-D4,Aturan rantai,core_derivative,Kalkulus kelas XI (DUMMY) > core_derivative > Aturan rantai,9,True,core_derivative,9
+9010,9,KAL-D5,Turunan fungsi trigonometri,core_derivative,Kalkulus kelas XI (DUMMY) > core_derivative > Turunan fungsi trigonometri,6,True,core_derivative,10
+9011,10,KAL-A1,Persamaan garis singgung kurva,application,Kalkulus kelas XI (DUMMY) > application > Persamaan garis singgung kurva,7,True,application,11
+9012,11,KAL-A2,Fungsi naik/turun dan titik stasioner,application,Kalkulus kelas XI (DUMMY) > application > Fungsi naik/turun dan titik stasioner,12,True,application,12
+9013,12,KAL-A3,Nilai maksimum/minimum dan masalah optimasi,application,Kalkulus kelas XI (DUMMY) > application > Nilai maksimum/minimum dan masalah optimasi,8,True,application,13

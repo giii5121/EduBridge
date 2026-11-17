@@ -1,0 +1,14 @@
+{
+  "artifact_source": "edubridge_indonesian_synthetic",
+  "students": 2000,
+  "items": 180,
+  "concepts": 18,
+  "observed_responses": 187035,
+  "splits": {
+    "train": 1600,
+    "val": 200,
+    "test": 200
+  },
+  "note": "SYNTHETIC, not actual Indonesian student responses. No empirical classroom validation claimed.",
+  "seed": 20261117
+}

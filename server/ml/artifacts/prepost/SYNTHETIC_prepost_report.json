@@ -1,0 +1,181 @@
+{
+  "LABEL": "SIMULATION - synthetic students generated from the fitted model; not EEDI students, not an experiment",
+  "summary": {
+    "n_students_pre": 40,
+    "n_students_post": 40,
+    "n_matched": 40,
+    "unmatched_pre_only": [],
+    "unmatched_post_only": [],
+    "overall_score": {
+      "n_pairs": 40,
+      "mean_pre": 0.5479679299241126,
+      "mean_post": 0.6413183052452054,
+      "mean_change": 0.09335037532109285,
+      "mean_change_ci95": [
+        0.05054499185151836,
+        0.14062093479210966
+      ],
+      "cohens_dz": 0.6365042155701669,
+      "wilcoxon_p": 0.0005725602195510243,
+      "rank_biserial_r": 0.6410256410256411,
+      "paired_t_p": 0.00025365281528674853
+    },
+    "comparability": {
+      "same_item_set": false,
+      "n_items_pre": 45,
+      "n_items_post": 45,
+      "n_shared_items": 0,
+      "same_model_scale": true,
+      "scale_note": "Both tests are scored with the same frozen item parameters, so mastery probabilities are on one scale.",
+      "blueprint": [
+        {
+          "concept_id": 70,
+          "n_items_pre": 5,
+          "n_items_post": 5,
+          "mean_difficulty_pre": 0.43566676034114915,
+          "mean_difficulty_post": 0.438599244959624
+        },
+        {
+          "concept_id": 251,
+          "n_items_pre": 5,
+          "n_items_post": 5,
+          "mean_difficulty_pre": 0.43924625085221847,
+          "mean_difficulty_post": 0.43532562674344816
+        },
+        {
+          "concept_id": 67,
+          "n_items_pre": 5,
+          "n_items_post": 5,
+          "mean_difficulty_pre": 0.46235737878287964,
+          "mean_difficulty_post": 0.4544649292514678
+        },
+        {
+          "concept_id": 52,
+          "n_items_pre": 4,
+          "n_items_post": 4,
+          "mean_difficulty_pre": 0.5425078361589408,
+          "mean_difficulty_post": 0.5418153651470932
+        },
+        {
+          "concept_id": 64,
+          "n_items_pre": 3,
+          "n_items_post": 3,
+          "mean_difficulty_pre": 0.5191406773099762,
+          "mean_difficulty_post": 0.512670197213663
+        },
+        {
+          "concept_id": 166,
+          "n_items_pre": 4,
+          "n_items_post": 4,
+          "mean_difficulty_pre": 0.500955927810975,
+          "mean_difficulty_post": 0.48500747609489914
+        },
+        {
+          "concept_id": 171,
+          "n_items_pre": 5,
+          "n_items_post": 5,
+          "mean_difficulty_pre": 0.42765377056910053,
+          "mean_difficulty_post": 0.43422560506609365
+        },
+        {
+          "concept_id": 406,
+          "n_items_pre": 5,
+          "n_items_post": 5,
+          "mean_difficulty_pre": 0.3593530649953481,
+          "mean_difficulty_post": 0.3222806446248304
+        },
+        {
+          "concept_id": 408,
+          "n_items_pre": 4,
+          "n_items_post": 4,
+          "mean_difficulty_pre": 0.5598019058020381,
+          "mean_difficulty_post": 0.5733747364720545
+        },
+        {
+          "concept_id": 258,
+          "n_items_pre": 4,
+          "n_items_post": 4,
+          "mean_difficulty_pre": 0.603323210375611,
+          "mean_difficulty_post": 0.6143462663020881
+        },
+        {
+          "concept_id": 409,
+          "n_items_pre": 1,
+          "n_items_post": 1,
+          "mean_difficulty_pre": 0.5297279137068402,
+          "mean_difficulty_post": 0.5449723158577378
+        }
+      ],
+      "form_design": "parallel/different forms",
+      "warnings": []
+    },
+    "design": {
+      "has_control_group": false,
+      "groups": [
+        "treatment"
+      ],
+      "randomized_design_declared": false
+    },
+    "interpretation_guard": "No control/comparison group: results are OBSERVED CHANGES after the intervention period and must not be interpreted as evidence that the intervention caused them (maturation, retest and other effects are not ruled out).",
+    "policy": {
+      "tau": 0.5,
+      "delta": 0.0,
+      "n_min": 5,
+      "target_concept_ids": [
+        70,
+        251,
+        67,
+        52,
+        64,
+        166,
+        171,
+        406,
+        408,
+        258,
+        409
+      ],
+      "provenance": {
+        "tau": "validation held-out log-loss of hard-label DINA prediction; one-SE rule (student bootstrap) toward 0.5",
+        "n_min": 5,
+        "n_min_selected_from_data": true,
+        "delta": 0.0,
+        "delta_selected_from_data": true,
+        "target_consistency": 0.85,
+        "note": "n_min is the per-half evidence at which agreement between two independent half-test classifications reaches target_consistency; agreement between two noisy classifications understates the reliability of each, so the rule is conservative.",
+        "tau_grid": [
+          0.3,
+          0.35,
+          0.4,
+          0.45,
+          0.5,
+          0.55,
+          0.6,
+          0.65,
+          0.7
+        ]
+      }
+    },
+    "input_info": {
+      "pre": {
+        "n_students": 40,
+        "n_rows": 1800,
+        "n_observed": 1729,
+        "n_blank": 71,
+        "students_with_no_observed_response": [],
+        "warnings": []
+      },
+      "post": {
+        "n_students": 40,
+        "n_rows": 1800,
+        "n_observed": 1703,
+        "n_blank": 97,
+        "students_with_no_observed_response": [],
+        "warnings": []
+      }
+    }
+  },
+  "simulation_check": {
+    "corr_estimated_change_vs_true_change": 0.7437636015602151,
+    "true_gain_rate_target": 0.2431818181818182
+  }
+}

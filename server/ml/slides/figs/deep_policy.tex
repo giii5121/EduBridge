@@ -1,0 +1,18 @@
+% Labelling rule: evidence first, then probability.
+\begin{tikzpicture}[node distance=5mm and 9mm]
+  \node[boxsoft, text width=2.3cm] (in) {P(mastery) $\pi$\\ dan jumlah bukti $n$};
+  \node[diamond, draw=navy, aspect=2, inner sep=1pt, font=\tiny, align=center, right=of in] (q1) {$n\ge n_{\min}$?\\($n_{\min}=5$)};
+  \node[box, draw=midgray, below=8mm of q1, text width=2.6cm] (ins) {\textbf{insufficient\_evidence}\\{\tiny butuh soal tambahan; \emph{bukan} gap}};
+  \node[diamond, draw=navy, aspect=2, inner sep=1pt, font=\tiny, align=center, right=of q1] (q2) {$|\pi-\tau|<\delta$?\\($\delta=0$)};
+  \node[box, draw=accent, below=8mm of q2, text width=2.2cm] (unc) {\textbf{uncertain}\\{\tiny terlalu dekat batas}};
+  \node[diamond, draw=navy, aspect=2, inner sep=1pt, font=\tiny, align=center, right=of q2] (q3) {$\pi\ge\tau$?\\($\tau=0{,}5$)};
+  \node[box, draw=okgreen, above right=2mm and 6mm of q3, text width=1.9cm] (mas) {\textbf{mastered}};
+  \node[box, draw=gapred, below right=2mm and 6mm of q3, text width=1.9cm] (gap) {\textbf{not\_mastered}\\{\tiny = learning gap}};
+  \draw[arr] (in) -- (q1);
+  \draw[arr] (q1) -- node[lbl, right]{tidak} (ins);
+  \draw[arr] (q1) -- node[lbl, above]{ya} (q2);
+  \draw[arr] (q2) -- node[lbl, right]{ya} (unc);
+  \draw[arr] (q2) -- node[lbl, above]{tidak} (q3);
+  \draw[arr] (q3) |- node[lbl, pos=0.25, left]{ya} (mas);
+  \draw[arr] (q3) |- node[lbl, pos=0.25, left]{tidak} (gap);
+\end{tikzpicture}

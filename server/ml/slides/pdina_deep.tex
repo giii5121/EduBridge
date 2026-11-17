@@ -1,0 +1,536 @@
+% P-DINA secara mendalam: model diagnosis kognitif yang diimplementasikan di proyek CDA-CDM.
+% Build (dari folder slides/): pdflatex pdina_deep.tex (dua kali)
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[indonesian]{babel}
+\usepackage[margin=2.3cm]{geometry}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,tabularx,array,colortbl}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit,backgrounds}
+\usepackage{pgfplots}
+\usepackage[most]{tcolorbox}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{needspace}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\input{common/style}
+
+\captionsetup{font=small, labelfont={bf,color=navy}}
+\titleformat{\section}{\Needspace{10\baselineskip}\large\bfseries\color{navy}}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\Needspace{7\baselineskip}\normalsize\bfseries\color{navy}}{\thesubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{12pt}{4pt}
+\titlespacing*{\subsection}{0pt}{8pt}{3pt}
+\setlist{itemsep=1pt, topsep=3pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{midgray}P-DINA secara mendalam}
+\fancyhead[R]{\small\color{midgray}\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{0pt}
+
+\newtcolorbox{intinya}{colback=lightbg, colframe=navy, boxrule=0.4pt, arc=2pt, left=6pt, right=6pt,
+  top=3pt, bottom=3pt, fontupper=\small}
+\newtcolorbox{awas}{colback=accent!8, colframe=accent, boxrule=0.4pt, arc=2pt, left=6pt, right=6pt,
+  top=3pt, bottom=3pt, fontupper=\small}
+\newcommand{\sumber}[1]{{\footnotesize\color{midgray}#1}}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries\color{navy} P-DINA secara Mendalam}\\[4pt]
+  {\large Cara model diagnosis kognitif di proyek ini bekerja, langkah demi langkah}\\[6pt]
+  {\small\color{midgray} Muhammad Fariq Faqih \quad·\quad \today}
+\end{center}
+
+\begin{intinya}
+  \textbf{Tentang dokumen ini.} Semua angka berasal dari checkpoint yang dipakai aplikasi (\texttt{artifacts/model/})
+  atau dihitung ulang dari checkpoint itu dengan kode proyek (\texttt{cdacdm/models.py}). Model juga dilatih ulang
+  sekali untuk mencatat kurva ELBO; hasilnya identik dengan checkpoint (selisih $g$ dan $s$ = 0, 44 iterasi,
+  32 detik CPU). Data: EEDI NeurIPS 2020 Task 3/4, yang merupakan data pengembangan (mayoritas siswa SMP di Inggris),
+  bukan data kelas SMA penelitian.
+\end{intinya}
+
+% ======================================================================================================
+\section{Pertanyaan yang dijawab P-DINA}
+
+Seorang guru melihat lembar jawaban siswa: 13 dari 25 soal \emph{Writing Expressions} benar. Apakah siswa ini sudah
+menguasai konsep itu? ``52\% benar'' tidak langsung menjawab, karena:
+\begin{itemize}
+  \item soal pilihan ganda bisa dijawab benar dengan \textbf{menebak};
+  \item siswa yang paham pun bisa \textbf{salah karena ceroboh};
+  \item setiap soal punya tingkat tebakan dan kecerobohan yang berbeda;
+  \item soal yang tidak dikerjakan bukan berarti salah.
+\end{itemize}
+P-DINA menjawab pertanyaan itu dengan angka yang jelas artinya: \textbf{P(mastery)}, yaitu peluang siswa sudah
+menguasai sebuah konsep, \emph{setelah} memperhitungkan semua hal di atas. Untuk siswa tadi jawabannya 0,34 (dihitung
+lengkap di Bagian~\ref{sec:worked}).
+
+P-DINA termasuk model \textbf{unsupervised} (model variabel laten): tidak ada data yang memberi tahu ``siswa ini
+sebenarnya menguasai konsep ini''. Model hanya melihat jawaban benar/salah dan Q-matrix dari pakar, lalu mencari
+pola penguasaan tersembunyi yang paling masuk akal untuk menjelaskan jawaban-jawaban itu.
+
+% ======================================================================================================
+\section{Bahan baku: jawaban siswa dan Q-matrix}
+
+\textbf{Matriks jawaban.} Data train berisi 3.934 siswa $\times$ 948 soal. Hanya 29,8\% sel yang terisi (median
+241 jawaban per siswa), sisanya kosong karena siswa tidak mengerjakan soal itu. Nilai sel: 1 = benar, 0 = salah,
+kosong = tidak teramati. Total 1.112.450 jawaban teramati.
+
+\textbf{Q-matrix.} Tabel biner 948 soal $\times$ 57 konsep yang disusun pakar: $q_{jk}=1$ bila soal $j$ menguji konsep
+$k$. Q-matrix \emph{tidak dipelajari} model; ia adalah pengetahuan awal yang menentukan struktur model. Sangat jarang
+terisi (1,78\%): 934 soal menguji tepat satu konsep, hanya 14 soal menguji dua konsep.
+
+\begin{table}[h]
+  \centering\small
+  \begin{tabular}{@{}lr@{\hspace{2em}}lr@{}}
+    \toprule
+    Konsep target & Soal & Konsep target & Soal \\
+    \midrule
+    Writing Expressions & 25 & Factorising into a Single Bracket & 8 \\
+    Naming Co-ordinates in 2D & 24 & Solving Linear Inequalities & 8 \\
+    Substitution into Formula & 22 & Horizontal and Vertical Lines & 8 \\
+    Simplifying Expr.\ (Collecting Like Terms) & 19 & Linear Equations & 7 \\
+    Linear Sequences (nth term) & 12 & \textcolor{gapred}{Gradient Between Two Co-ordinates} & \textcolor{gapred}{2} \\
+    Midpoint Between Two Co-ordinates & 9 & & \\
+    \bottomrule
+  \end{tabular}
+  \caption{Jumlah soal per konsep target di Q-matrix. Konsep dengan 2 soal tidak pernah bisa memenuhi syarat bukti
+  minimum 5 jawaban, sehingga tidak dapat didiagnosis.}
+\end{table}
+
+% ======================================================================================================
+\section{Inti model: aturan DINA}
+
+DINA adalah singkatan \emph{Deterministic Inputs, Noisy ``And'' gate}. Idenya dua langkah (Gambar~\ref{fig:tree}):
+
+\begin{enumerate}
+  \item \textbf{Apakah siswa ``siap'' untuk soal ini?} Siswa siap ($\eta_{ij}=1$) hanya jika menguasai \emph{semua}
+        konsep yang dibutuhkan soal (gerbang ``AND''). Kurang satu konsep saja berarti belum siap.
+        \[\eta_{ij}=\prod_{k}\alpha_{ik}^{\,q_{jk}}\]
+        dengan $\alpha_{ik}\in\{0,1\}$ status penguasaan siswa $i$ pada konsep $k$.
+  \item \textbf{Tambahkan ``noise'' yang realistis.} Siswa siap tetap bisa salah dengan peluang $s_j$ (\emph{slip});
+        siswa belum siap tetap bisa benar dengan peluang $g_j$ (\emph{guess}):
+        \[P(X_{ij}=1\mid\boldsymbol\alpha_i)=(1-s_j)^{\eta_{ij}}\,g_j^{\,1-\eta_{ij}}.\]
+\end{enumerate}
+
+\begin{figure}[h]
+  \centering
+  \resizebox{0.95\linewidth}{!}{\input{figs/deep_dina_tree}}
+  \caption{Cara DINA menghitung peluang benar. Soal butuh konsep A dan C; siswa menguasai keduanya, jadi siap.}
+  \label{fig:tree}
+\end{figure}
+
+Setiap soal hanya punya dua parameter, $g_j$ dan $s_j$, dan keduanya punya arti langsung. Dengan nilai median di
+EEDI ($g\approx0{,}32$, $s\approx0{,}22$), siswa yang menguasai menjawab benar sekitar 78\% dan yang belum sekitar 32\%.
+Selisih keduanya, $1-s_j-g_j$, adalah \textbf{daya beda} soal: makin besar, makin jelas soal itu memisahkan siswa
+yang paham dan yang belum. Rata-rata daya beda soal EEDI 0,41, tergolong sedang.
+
+\subsection{Seperti apa soal-soal EEDI?}
+
+Gambar~\ref{fig:gs} menempatkan ke-948 soal menurut guess dan slip hasil training. Soal di pojok kiri bawah adalah
+soal ``tajam'' (jarang ditebak, jarang membuat siswa paham tergelincir); soal di dekat garis merah hampir tidak
+membedakan siapa pun.
+
+\begin{figure}[h]
+  \centering
+  \setlength\figH{6.2cm}
+  \begin{minipage}[c]{0.52\linewidth}\input{figs/deep_gs_scatter}\end{minipage}\hfill
+  \begin{minipage}[c]{0.44\linewidth}\small
+    \begin{itemize}
+      \item Mayoritas soal berkumpul di $g\approx0{,}2$--$0{,}4$: wajar untuk pilihan ganda 4 opsi (tebakan acak 0,25).
+      \item 81 soal sangat tajam (daya beda $>0{,}6$); 30 soal nyaris tidak berguna (daya beda $<0{,}1$).
+      \item 8 soal menyentuh batas $g=0{,}7$ dan 18 soal batas $s=0{,}7$: soal ``aneh'' yang mungkin salah label di
+            Q-matrix atau kuncinya membingungkan; layak ditinjau guru.
+      \item Model otomatis memberi bobot kecil pada soal yang lemah (Bagian~\ref{sec:worked}), jadi soal buruk tidak
+            merusak diagnosis, hanya tidak menyumbang informasi.
+    \end{itemize}
+  \end{minipage}
+  \caption{Guess dan slip seluruh 948 soal. Garis putus-putus: daya beda 0,1 (merah) dan 0,6 (hijau).}
+  \label{fig:gs}
+\end{figure}
+
+% ======================================================================================================
+\section{Mengapa ``probabilistik'': dua lapis prior}
+
+DINA klasik hanya mengestimasi $g$, $s$, dan proporsi penguasaan. P-DINA menambahkan dua \emph{prior}, yaitu
+keyakinan awal yang dipakai sebelum melihat data.
+
+\subsection{Prior untuk guess dan slip}
+
+Setiap $g_j$ dan $s_j$ diberi prior $\mathrm{Beta}(1+0{,}2\kappa;\ 1+0{,}8\kappa)$. Cara mudah membacanya: prior ini
+seperti menambahkan $\kappa$ ``jawaban bayangan'' dengan tingkat tebakan/kecerobohan 20\% ke setiap soal. Untuk soal
+dengan ribuan jawaban, efeknya hampir nol; untuk soal dengan sedikit jawaban, prior mencegah nilai ekstrem (misalnya
+$g=0$ hanya karena 3 siswa kebetulan salah semua). Model terpilih memakai $\kappa=2$, yaitu $\mathrm{Beta}(1{,}4;\
+2{,}6)$. Selain itu ada batas keras: $g,s\in[0{,}001;\ 0{,}7]$ dan $g+s\le0{,}98$, agar soal selalu lebih mudah bagi
+siswa yang menguasai.
+
+\subsection{Prior higher-order untuk penguasaan}
+
+Siswa yang kuat di banyak konsep cenderung kuat juga di konsep lain. P-DINA memodelkannya dengan satu angka per siswa,
+\textbf{kemampuan umum} $\theta_i$, dan dua angka per konsep:
+\[P(\alpha_{ik}=1\mid\theta_i)=\sigma(a_k\theta_i-b_k),\qquad \theta_i\sim\mathcal N(0,1),\qquad
+\sigma(z)=\frac{1}{1+e^{-z}}.\]
+$b_k$ adalah \emph{kesulitan} konsep (makin besar, makin sulit dikuasai) dan $a_k$ adalah seberapa kuat konsep itu
+mengikuti kemampuan umum (makin besar, kurva makin curam).
+
+\begin{figure}[h]
+  \centering
+  \setlength\figH{5.2cm}
+  \input{figs/deep_ho_prior}
+  \caption{Kiri: peluang awal menguasai sebagai fungsi kemampuan umum untuk empat konsep target. Kanan: sebaran
+  $\theta$ ke-3.934 siswa train.}
+  \label{fig:ho}
+\end{figure}
+
+Gambar~\ref{fig:ho} memperlihatkan bahwa untuk siswa rata-rata ($\theta=0$) peluang awal menguasai \emph{Writing
+Expressions} 0,66, sedangkan \emph{Horizontal and Vertical Lines} hanya 0,11: konsep kedua jauh lebih sulit. Manfaat
+utamanya: konsep dengan sedikit jawaban ``meminjam'' informasi dari konsep lain milik siswa yang sama melalui
+$\theta_i$, sehingga tidak hanya bertumpu pada 2--3 jawaban.
+
+\begin{awas}
+  Rata-rata $a_k$ untuk 57 konsep adalah 3,67, artinya penguasaan antar-konsep sangat terkait dengan kemampuan umum.
+  Pada 4 dari 11 konsep target, $a_k$ menyentuh batas atas 5 yang dipasang di kode. Akibatnya kurva prior sangat
+  curam: siswa dengan $\theta$ sedikit di bawah rata-rata langsung mendapat prior rendah. Ini salah satu alasan
+  P(mastery) di EEDI cenderung sangat dekat ke 0 atau 1 (Bagian~\ref{sec:label}).
+\end{awas}
+
+% ======================================================================================================
+\section{Dari jawaban ke P(mastery): menimbang bukti}
+\label{sec:worked}
+
+\subsection{Rumusnya ternyata sederhana}
+
+Untuk soal yang menguji satu konsep (934 dari 948 soal), perhitungan P(mastery) adalah aturan Bayes biasa. Paling
+mudah ditulis dalam \emph{log-odds} (logit), yaitu $\mathrm{logit}(p)=\ln\frac{p}{1-p}$:
+\[
+  \mathrm{logit}\,\pi_{ik} \;=\; \underbrace{\mathrm{logit}\,\sigma(a_k\theta_i-b_k)}_{\text{prior}}
+  \;+\; \sum_{\text{jawaban benar}}\underbrace{\ln\frac{1-s_j}{g_j}}_{\text{bobot benar}}
+  \;+\; \sum_{\text{jawaban salah}}\underbrace{\ln\frac{s_j}{1-g_j}}_{\text{bobot salah}} .
+\]
+Jadi setiap jawaban menambah atau mengurangi ``skor keyakinan'', dan \textbf{besarnya tergantung soalnya}.
+
+\begin{table}[h]
+  \centering\small
+  \begin{tabularx}{\linewidth}{@{}lccrrL@{}}
+    \toprule
+    Soal & $g$ & $s$ & Bobot benar & Bobot salah & Artinya \\
+    \midrule
+    842 & 0,16 & 0,09 & $+1{,}73$ & $-2{,}18$ & soal tajam: setiap jawaban sangat informatif \\
+    median 948 soal & 0,32 & 0,22 & $+0{,}77$ & $-1{,}14$ & soal tipikal \\
+    820 & 0,26 & 0,55 & $+0{,}54$ & $-0{,}29$ & sering salah walau paham: jawaban salah lemah \\
+    239 & 0,56 & 0,42 & $+0{,}04$ & $-0{,}05$ & hampir tidak membedakan apa pun \\
+    \bottomrule
+  \end{tabularx}
+  \caption{Bobot bukti satu jawaban (dalam log-odds) untuk beberapa soal nyata. Baris median memakai median bobot
+  dari 948 soal.}
+  \label{tab:bobot}
+\end{table}
+
+Temuan penting dari Tabel~\ref{tab:bobot}: pada soal tipikal EEDI, \textbf{satu jawaban salah adalah bukti yang lebih
+kuat ($-1{,}14$) daripada satu jawaban benar ($+0{,}77$)}. Alasannya, jawaban benar bisa saja hasil menebak (tebakan
+sekitar 32\%), sedangkan siswa yang paham jarang salah. Karena itu 50\% benar \emph{tidak} berarti P(mastery) 0,5.
+
+\subsection{Contoh nyata: satu siswa, satu konsep}
+
+Siswa \texttt{Siswa-e7f6c011} (siswa test EEDI) menjawab 25 soal \emph{Writing Expressions}: 13 benar, 12 salah.
+Kemampuan umumnya $\theta=-0{,}57$ (di bawah rata-rata, dari jawabannya pada konsep lain), sehingga prior-nya
+$\sigma(5\times(-0{,}57)+0{,}67)=0{,}10$, atau $-2{,}19$ dalam log-odds.
+
+\begin{figure}[h]
+  \centering
+  \setlength\figH{4.4cm}
+  \begin{minipage}[c]{0.6\linewidth}\input{figs/deep_evidence}\end{minipage}\hfill
+  \begin{minipage}[c]{0.37\linewidth}\resizebox{\linewidth}{!}{\input{figs/deep_waterfall}}\end{minipage}
+  \caption{Kiri: bobot setiap jawaban siswa. Kanan: prior ditambah total bukti benar dan salah menghasilkan log-odds
+  akhir $-0{,}68$, yaitu P(mastery) = 0,34.}
+  \label{fig:worked}
+\end{figure}
+
+Hitungan lengkapnya: $-2{,}19+10{,}82-9{,}31=-0{,}68$, dan $\sigma(-0{,}68)=0{,}3357$. Fungsi \texttt{infer()} model
+memberi \textbf{0,3357} juga; rumus di atas memang persis yang dikerjakan model untuk soal satu-konsep. Perhatikan:
+13 jawaban benar menyumbang $+10{,}82$, tetapi 12 jawaban salah menyumbang $-9{,}31$ dan prior awalnya sudah negatif.
+Hasil akhirnya, siswa ini lebih mungkin \emph{belum} menguasai, walaupun lebih dari separuh jawabannya benar.
+
+\subsection{Seberapa cepat keyakinan berubah}
+
+Gambar~\ref{fig:traj} memperlihatkan siswa baru (tanpa jawaban di konsep lain, jadi $\theta$ hanya ditaksir dari
+jawaban ini) yang mengerjakan 10 soal \emph{Writing Expressions} dengan daya beda tipikal.
+
+\begin{figure}[h]
+  \centering
+  \setlength\figH{5cm}
+  \begin{minipage}{0.75\linewidth}\input{figs/deep_trajectory}\end{minipage}
+  \caption{P(mastery) setelah $n$ jawaban, dihitung dengan model terlatih.}
+  \label{fig:traj}
+\end{figure}
+
+Tiga hal terlihat. Pertama, keyakinan bergerak sangat cepat: satu jawaban benar langsung menaikkan P(mastery) dari
+0,66 ke 0,90. Kedua, pola benar--salah bergantian berakhir \emph{rendah} (0,003 setelah 10 jawaban), karena 50\% benar
+pada soal dengan tebakan sekitar 40\% lebih mirip siswa yang menebak daripada siswa yang paham (yang benar sekitar
+85\%). Ketiga, pada 1--4 jawaban pertama nilainya masih melompat-lompat. Itulah alasan ada aturan \textbf{bukti minimum}:
+konsep dengan kurang dari 5 jawaban tidak diberi label gap, seberapa pun rendah probabilitasnya.
+
+\subsection{Persentase benar bukan P(mastery)}
+
+Apakah P-DINA sekadar ``persentase benar yang dihaluskan''? Gambar~\ref{fig:pcpi} membandingkan keduanya pada 2.121 sel
+siswa test $\times$ konsep target dengan bukti minimal 5 jawaban.
+
+\begin{figure}[h]
+  \centering
+  \setlength\figH{5.4cm}
+  \begin{minipage}[c]{0.55\linewidth}\input{figs/deep_pc_vs_pi}\end{minipage}\hfill
+  \begin{minipage}[c]{0.42\linewidth}\small
+    \begin{tabular}{@{}lrr@{}}
+      \toprule
+      \% benar & sel & label gap \\
+      \midrule
+      40--50\% & 232 & 94\% \\
+      50--60\% & 274 & 69\% \\
+      60--70\% & 211 & 28\% \\
+      70--80\% & 128 & 3\% \\
+      \bottomrule
+    \end{tabular}\\[4pt]
+    Korelasi keduanya 0,85: searah, tetapi tidak sama. Batas ``paham'' versi P-DINA berada di sekitar 60\%
+    benar, bukan 50\%, karena tebakan membuat 30--40\% benar bisa dicapai tanpa paham.
+  \end{minipage}
+  \caption{Persentase benar vs P(mastery) pada siswa test (\texttt{test\_mastery\_profiles.csv}).}
+  \label{fig:pcpi}
+\end{figure}
+
+Sebaran vertikal yang lebar pada persentase yang sama terjadi karena dua hal: soal yang dikerjakan berbeda (benar di
+soal tajam bernilai lebih dari benar di soal yang mudah ditebak), dan kemampuan umum $\theta$ siswa ikut
+memengaruhi prior. Inilah nilai tambah P-DINA dibanding skor proporsi: dua siswa dengan 55\% benar bisa didiagnosis
+berbeda, dan alasannya dapat ditelusuri.
+
+\textbf{Soal multi-konsep.} Untuk 14 soal yang menguji dua konsep, siswa siap hanya jika menguasai keduanya, sehingga
+peluang siap $\rho_{ij}=\prod_k\pi_{ik}^{q_{jk}}$. Bukti dari soal itu dibagi ke kedua konsep secara proporsional, dan
+karena bagiannya saling bergantung, dihitung berulang (iterasi titik tetap dengan \emph{damping} 0,5) sampai stabil.
+
+% ======================================================================================================
+\section{Training: variational EM}
+
+\subsection{Mengapa tidak dihitung langsung}
+
+Bagian sebelumnya mengandaikan $g$, $s$, $a$, $b$ sudah diketahui. Saat training, keduanya harus dicari bersamaan:
+parameter soal butuh status penguasaan siswa, dan status penguasaan butuh parameter soal. Algoritme EM menyelesaikan
+``ayam dan telur'' ini dengan bergantian menebak satu sisi lalu memperbaiki sisi lain.
+
+EM klasik untuk DINA harus menghitung peluang setiap kombinasi penguasaan. Dengan 57 konsep ada
+$2^{57}\approx1{,}4\times10^{17}$ kombinasi per siswa, mustahil. P-DINA memakai pendekatan \textbf{mean-field}: status
+setiap konsep dianggap berdiri sendiri, $q(\boldsymbol\alpha_i)=\prod_k\mathrm{Bern}(\pi_{ik})$, sehingga cukup
+menyimpan 57 angka per siswa (Gambar~\ref{fig:mf}). Untuk soal satu-konsep pendekatan ini tidak kehilangan apa pun;
+aproksimasi hanya terjadi pada 14 soal multi-konsep.
+
+\begin{figure}[h]
+  \centering
+  \resizebox{0.92\linewidth}{!}{\input{figs/deep_meanfield}}
+  \caption{Mean-field mengganti tabel peluang $2^K$ profil dengan $K$ peluang terpisah.}
+  \label{fig:mf}
+\end{figure}
+
+Yang dioptimalkan adalah \textbf{ELBO} (\emph{evidence lower bound}), batas bawah log-likelihood data yang punya
+bentuk tertutup di bawah mean-field:
+\[
+  \mathrm{ELBO}=\sum_{i,j} m_{ij}\big[\rho_{ij}\,\ell^{(1)}_{ij}+(1-\rho_{ij})\,\ell^{(0)}_{ij}\big]
+  -\sum_{i,k}\mathrm{KL}\big(\mathrm{Bern}(\pi_{ik})\,\|\,\mathrm{Bern}(\lambda_{ik})\big)+\log p(g,s,\theta),
+\]
+dengan $m_{ij}=1$ bila jawaban teramati, $\ell^{(1)}$ dan $\ell^{(0)}$ log-likelihood jawaban bila siswa siap atau
+belum siap, dan $\lambda_{ik}=\sigma(a_k\theta_i-b_k)$. Suku pertama: ``seberapa baik model menjelaskan jawaban''.
+Suku kedua: ``jangan terlalu jauh dari prior tanpa bukti''. \textbf{Hanya jawaban teramati yang dijumlahkan}, jadi
+soal kosong tidak pernah dihitung sebagai salah.
+
+\subsection{Satu putaran EM}
+
+\begin{figure}[h]
+  \centering
+  \resizebox{0.95\linewidth}{!}{\input{figs/em_loop}}
+  \caption{Alur training. Semua langkah memakai perkalian matriks, tanpa GPU.}
+\end{figure}
+
+\begin{itemize}
+  \item \textbf{Mulai}: $g_j=s_j=0{,}2$, $a_k=1$, $b_k=0$, $\theta_i=0$.
+  \item \textbf{E-step}: dengan $g,s,a,b$ tetap, hitung $\pi_{ik}$ semua siswa memakai rumus log-odds di Bagian~\ref{sec:worked}
+        (dua perkalian matriks untuk seluruh siswa sekaligus), lalu perbarui $\theta_i$ dengan metode Newton.
+  \item \textbf{M-step}: dengan $\pi$ tetap, perbarui parameter soal. Rumusnya tertutup dan mudah dibaca:
+        \[
+          s_j=\frac{\text{(siswa siap yang salah)}+a_s-1}{\text{(siswa siap)}+a_s+b_s-2},\qquad
+          g_j=\frac{\text{(siswa belum siap yang benar)}+a_g-1}{\text{(siswa belum siap)}+a_g+b_g-2},
+        \]
+        di mana ``siswa siap'' dihitung secara lunak (dijumlahkan dengan bobot $\rho_{ij}$). Jadi slip adalah
+        proporsi salah di antara yang (diperkirakan) siap, ditambah jawaban bayangan dari prior. Lalu $a_k,b_k$
+        diperbarui dengan Newton.
+  \item \textbf{Berhenti} bila ELBO naik kurang dari $10^{-6}$ relatif, atau setelah 150 putaran.
+\end{itemize}
+
+\begin{figure}[h]
+  \centering
+  \setlength\figH{4.3cm}
+  \begin{minipage}{0.7\linewidth}\input{figs/deep_elbo}\end{minipage}
+  \caption{ELBO per iterasi pada konfigurasi terpilih. Kenaikan terbesar terjadi di 10 iterasi pertama.}
+\end{figure}
+
+Model terpilih berhenti pada iterasi 44 dengan ELBO $-630.546$, dalam 32 detik di CPU laptop. Karena tidak ada unsur
+acak dalam training, menjalankan ulang memberi parameter yang persis sama dengan checkpoint.
+
+% ======================================================================================================
+\section{Dari probabilitas ke label}
+\label{sec:label}
+
+Guru butuh keputusan, bukan hanya angka. P(mastery) diubah menjadi label dengan tiga angka kebijakan yang dipilih dari
+data validation (Gambar~\ref{fig:policy}).
+
+\begin{figure}[h]
+  \centering
+  \resizebox{0.98\linewidth}{!}{\input{figs/deep_policy}}
+  \caption{Urutan aturan label. Jumlah bukti dicek lebih dulu.}
+  \label{fig:policy}
+\end{figure}
+
+\begin{itemize}
+  \item $\boldsymbol{n_{\min}=5}$: respons tiap siswa dibagi dua secara acak, diagnosis dibuat dari masing-masing
+        paruh, lalu dihitung seberapa sering keduanya sepakat. Lima adalah jumlah terkecil yang mencapai kesepakatan
+        minimal 0,85.
+  \item $\boldsymbol{\tau=0{,}5}$: semua nilai $\tau$ antara 0,45 dan 0,70 memberi prediksi yang setara (dalam satu
+        standard error dari yang terbaik), sehingga dipilih nilai netral 0,5.
+  \item $\boldsymbol{\delta=0}$: tanpa pita ketidakpastian target kesepakatan sudah tercapai. Gambar~\ref{fig:pihist}
+        menjelaskan alasannya: P(mastery) hampir selalu dekat 0 atau 1.
+\end{itemize}
+
+\begin{figure}[h]
+  \centering
+  \setlength\figH{4.2cm}
+  \begin{minipage}[c]{0.58\linewidth}\input{figs/deep_pi_hist}\end{minipage}\hfill
+  \begin{minipage}[c]{0.38\linewidth}\small
+    Dari 16.410 sel siswa train $\times$ konsep target dengan bukti $\ge5$:\\[3pt]
+    \begin{tabular}{@{}lr@{}}
+      \toprule
+      P(mastery) $<0{,}1$ & 56,6\% \\
+      P(mastery) $>0{,}9$ & 31,3\% \\
+      $0{,}4<$ P(mastery) $<0{,}6$ & 2,2\% \\
+      \bottomrule
+    \end{tabular}
+  \end{minipage}
+  \caption{Sebaran P(mastery) di train sangat terpolarisasi, sehingga pilihan $\tau$ dan $\delta$ hanya memengaruhi
+  sedikit sel.}
+  \label{fig:pihist}
+\end{figure}
+
+\begin{awas}
+  \textbf{Membaca kolom SD.} Output menyertakan $\mathrm{SD}=\sqrt{\pi(1-\pi)}$. Angka ini sepenuhnya ditentukan oleh
+  $\pi$ (maksimum 0,5 saat $\pi=0{,}5$) dan \emph{tidak} memperhitungkan jumlah bukti maupun ketidakpastian parameter
+  soal. Konsep dengan 4 jawaban dan $\pi=0{,}00$ tetap punya SD sekitar 0. Untuk menilai seberapa kuat dasar
+  diagnosis, lihat kolom jumlah bukti, bukan SD.
+\end{awas}
+
+% ======================================================================================================
+\section{Seberapa bagus modelnya?}
+
+EEDI tidak punya ``kunci jawaban'' penguasaan, jadi kualitas diukur secara tidak langsung, semuanya pada siswa yang
+tidak dipakai untuk training.
+
+\begin{table}[h]
+  \centering\small
+  \begin{tabularx}{\linewidth}{@{}L r L@{}}
+    \toprule
+    Ukuran (test, 492 siswa) & Hasil & Cara membaca \\
+    \midrule
+    ROC-AUC prediksi 28.003 jawaban tersembunyi & 0,768 & setara Q-logistic (0,775); log-loss tidak berbeda bermakna \\
+    ECE (kalibrasi) & 0,008 & ``P(benar) 0,7'' memang benar sekitar 70\%; Q-logistic 0,036 \\
+    Konsistensi split-half (880 sel) & 0,876 & dua diagnosis dari data berbeda sepakat 88\% \\
+    Akurasi atribut, simulasi (ada / tanpa bukti) & 0,957 / 0,851 & batas atas: data dibangkitkan dari model sendiri \\
+    Recovery parameter, simulasi $r(g)$ / $r(s)$ & 0,965 / 0,982 & prosedur training menemukan kembali parameter yang benar \\
+    \bottomrule
+  \end{tabularx}
+  \caption{Ringkasan evaluasi. Detail dan grafik ada di \texttt{README\_pdina.md} dan slide presentasi.}
+\end{table}
+
+Prediksi jawaban yang baik tidak membuktikan diagnosis benar, karena itu ketiga jenis ukuran dilaporkan bersama.
+
+% ======================================================================================================
+\section{Memakai model: siswa baru dan kapan training ulang}
+
+Untuk siswa baru, model \textbf{tidak dilatih ulang}. Fungsi \texttt{infer()} hanya menjalankan E-step dengan
+$g,s,a,b$ yang dibekukan, sehingga diagnosis 30 siswa butuh sekitar 0,4 detik dan bisa memakai tes yang tidak lengkap.
+Syaratnya, soal yang dipakai harus sudah ada di item bank checkpoint.
+
+\begin{table}[h]
+  \centering\small
+  \begin{tabularx}{\linewidth}{@{}L l L@{}}
+    \toprule
+    Situasi & Training ulang? & Alasan \\
+    \midrule
+    Siswa baru mengerjakan soal yang sudah ada & tidak & cukup E-step \\
+    Mengubah $\tau$, $\delta$, $n_{\min}$ atau peta intervensi & tidak & hanya kebijakan, bukan model \\
+    Menambah soal baru & ya & $g,s$ soal baru harus dikalibrasi (sekitar $\ge30$ jawaban per soal) \\
+    Mengubah Q-matrix atau daftar konsep & ya & struktur model berubah \\
+    Populasi lain (kelas SMA penelitian) & ya / validasi ulang & parameter EEDI berasal dari siswa SMP di Inggris \\
+    \bottomrule
+  \end{tabularx}
+  \caption{Kapan checkpoint perlu dilatih ulang.}
+\end{table}
+
+% ======================================================================================================
+\section{Asumsi dan keterbatasan}
+
+\begin{table}[h]
+  \centering\small
+  \begin{tabularx}{\linewidth}{@{}l L L@{}}
+    \toprule
+    Asumsi & Artinya & Akibat bila tidak terpenuhi \\
+    \midrule
+    Q-matrix benar & soal benar-benar menguji konsep yang tertulis & diagnosis salah secara sistematis; audit 22 soal: 17 cocok, 5 parsial \\
+    Konjungtif (``AND'') & soal multi-konsep butuh semua konsepnya & terlalu ketat bila sebenarnya bisa saling menutupi (hanya 14 soal) \\
+    Penguasaan statis & siswa tidak belajar selama tes & perubahan antar-waktu dianalisis terpisah (pre/post) \\
+    Independensi lokal & bila status diketahui, jawaban saling bebas & soal yang mirip bisa ``dihitung dua kali'' \\
+    Mean-field & status antar-konsep dihitung terpisah & eksak untuk soal satu-konsep; aproksimasi untuk 14 soal \\
+    $\theta$ titik (MAP) & kemampuan umum tidak diberi rentang ketidakpastian & keyakinan bisa terlalu tinggi; diperkuat oleh $a_k$ yang menyentuh batas 5 \\
+    \bottomrule
+  \end{tabularx}
+  \caption{Asumsi P-DINA dan dampaknya.}
+\end{table}
+
+Keterbatasan data: EEDI tidak punya ground truth penguasaan; populasinya siswa SMP di Inggris dengan 11 konsep target
+yang hanya merupakan prasyarat aljabar SMA (tanpa kalkulus); daya beda soal sedang sehingga banyak sel masih
+\emph{insufficient\_evidence}; dan \emph{Gradient Between Two Co-ordinates} hanya punya 2 soal.
+
+\begin{intinya}
+  \textbf{Ringkasnya.} P-DINA menimbang setiap jawaban sesuai seberapa informatif soalnya (guess dan slip),
+  menggabungkannya dengan kemampuan umum siswa, dan menghasilkan P(mastery) yang terkalibrasi dengan sekitar 2.000
+  parameter yang semuanya bisa dijelaskan. Kekuatannya adalah transparansi: setiap angka dapat ditelusuri sampai ke
+  jawaban yang membentuknya, seperti contoh 0,34 di Bagian~\ref{sec:worked}.
+\end{intinya}
+
+% ======================================================================================================
+\appendix
+\section{Daftar notasi}
+
+\begin{table}[h]
+  \centering\small
+  \begin{tabularx}{\linewidth}{@{}l L l L@{}}
+    \toprule
+    Simbol & Arti & Simbol & Arti \\
+    \midrule
+    $X_{ij}$ & jawaban siswa $i$ pada soal $j$ (1/0) & $m_{ij}$ & 1 bila jawaban teramati \\
+    $q_{jk}$ & 1 bila soal $j$ menguji konsep $k$ & $\alpha_{ik}$ & penguasaan sebenarnya (tidak teramati) \\
+    $\eta_{ij}$ & siswa siap untuk soal (semua konsep dikuasai) & $\pi_{ik}$ & P(mastery), output model \\
+    $\rho_{ij}$ & peluang siswa siap, $\prod_k\pi_{ik}^{q_{jk}}$ & $\lambda_{ik}$ & peluang awal, $\sigma(a_k\theta_i-b_k)$ \\
+    $g_j$, $s_j$ & guess dan slip soal $j$ & $\theta_i$ & kemampuan umum siswa \\
+    $a_k$, $b_k$ & keterkaitan dan kesulitan konsep $k$ & $\kappa$ & kekuatan prior Beta untuk $g,s$ \\
+    $\tau$, $\delta$, $n_{\min}$ & threshold, pita ragu, bukti minimum & $\sigma(\cdot)$ & fungsi logistik \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\sumber{Referensi: Junker \& Sijtsma (2001) untuk DINA; de la Torre \& Douglas (2004) untuk prior higher-order; Blei,
+Kucukelbir \& McAuliffe (2017) untuk inferensi variasional; Wang et al.\ (2020) untuk data EEDI. Kode:
+\texttt{cdacdm/models.py}, \texttt{cdacdm/diagnosis.py}; angka tambahan: \texttt{slides/data/pdina\_deep/}.}
+
+\end{document}

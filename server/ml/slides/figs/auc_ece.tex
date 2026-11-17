@@ -1,0 +1,37 @@
+% Test ROC-AUC with bootstrap 95% CI (left) and ECE (right); artifacts/evaluation/test_metrics.csv
+% Rows (bottom -> top): 1 item-mean, 2 concept-score, 3 Q-logistic, 4 P-DINA independent, 5 P-DINA main
+\begin{tikzpicture}
+\pgfplotsset{
+  rowbars/.style={xbar, bar width=7pt, ymin=0.4, ymax=5.6, ytick={1,...,5}, xmajorgrids, height=\figH,
+                  scaled x ticks=false},
+  ci/.style={draw=none, bar shift=0pt, fill=#1,
+             error bars/.cd, x dir=both, x explicit, error bar style={black!70}},
+}
+\begin{axis}[
+  name=auc, rowbars, scale only axis, width=0.42\linewidth,
+  xmin=0.62, xmax=0.80,
+  yticklabels={Item-mean, Concept-score, Q-logistic, P-DINA independen, \textbf{P-DINA (utama)}},
+  xlabel={ROC-AUC test [CI 95\%]},
+  xticklabel style={/pgf/number format/fixed, /pgf/number format/precision=2},
+]
+  \addplot+[ci=midgray]  coordinates {(0.6722,1) += (0.0095,0) -= (0.0114,0)};
+  \addplot+[ci=midgray]  coordinates {(0.7182,2) += (0.0148,0) -= (0.0114,0)};
+  \addplot+[ci=tealc]    coordinates {(0.7746,3) += (0.0116,0) -= (0.0089,0)};
+  \addplot+[ci=navy!45]  coordinates {(0.7613,4) += (0.0102,0) -= (0.0099,0)};
+  \addplot+[ci=navy]     coordinates {(0.7684,5) += (0.0110,0) -= (0.0097,0)};
+\end{axis}
+\begin{axis}[
+  at={(auc.east)}, anchor=west, xshift=0.5cm, rowbars, scale only axis, width=0.27\linewidth,
+  xmin=0, xmax=0.045, yticklabels={},
+  xlabel={ECE (makin kecil makin baik)},
+  xtick={0,0.01,...,0.04},
+  xticklabel style={/pgf/number format/fixed, /pgf/number format/precision=2},
+  nodes near coords, point meta=explicit symbolic,
+]
+  \addplot+[draw=none, bar shift=0pt, fill=midgray] coordinates {(0.0052,1) [$0{,}005$]};
+  \addplot+[draw=none, bar shift=0pt, fill=midgray] coordinates {(0.0165,2) [$0{,}016$]};
+  \addplot+[draw=none, bar shift=0pt, fill=tealc]   coordinates {(0.0363,3) [$0{,}036$]};
+  \addplot+[draw=none, bar shift=0pt, fill=navy!45] coordinates {(0.0063,4) [$0{,}006$]};
+  \addplot+[draw=none, bar shift=0pt, fill=navy]    coordinates {(0.0077,5) [$0{,}008$]};
+\end{axis}
+\end{tikzpicture}

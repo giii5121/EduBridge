@@ -1,0 +1,9 @@
+{$APP_DOMAIN:localhost} {
+  encode zstd gzip
+  handle_path /diagnostics/* {
+    reverse_proxy inference:8000
+  }
+  handle {
+    reverse_proxy app:4000
+  }
+}

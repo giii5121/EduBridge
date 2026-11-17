@@ -1,0 +1,73 @@
+{
+  "tutor": {
+    "http": 200,
+    "seconds": 2.53,
+    "fallback": false,
+    "provider": "gemini",
+    "validation": null,
+    "meta": null,
+    "text": "Komposisi fungsi (f ∘ g)(x) berarti memasukkan seluruh hasil fungsi g(x) ke dalam fungsi f(x). Urutan sangat penting: fungsi yang ada di sebelah kanan (dalam hal ini g) dikerjakan atau dimasukkan terlebih dahulu ke fungsi yang di sebelah kiri (f).\n\n**Contoh:**\nDiberikan $f(x) = 2x + 1$ dan $g(x) = x^2 - 3$. Tentukan $(f \\circ g)(x)$.\n\n**Langkah-langkah:**\n\n1.  **Pahami notasi:** $(f \\circ g)(x)$ artinya $f(g(x))$. Kita akan memasukkan aturan $g(x)$ ke dalam setiap posisi $x$ pada $f(x)$.\n2.  **Substitusi:**\n    $f(g(x)) = 2(\\text{seluruh aturan } g(x)) + 1$\n    $f(g(x)) = 2(x^2 - 3) + 1$\n3.  **Sederhanakan:**\n    Gunakan sifat distributif:\n    $= 2x^2 - 6 + 1$\n    $= 2x^2 - 5$\n\nJadi, $(f \\circ g)(x) = 2x^2 - 5$."
+  },
+  "student_narrative": {
+    "http": 200,
+    "seconds": 2.67,
+    "fallback": false,
+    "provider": null,
+    "validation": {
+      "ok": true,
+      "errors": [],
+      "invented_numbers": [],
+      "word_count": 173
+    },
+    "meta": {
+      "model": "gemini-3.1-flash-lite",
+      "llm_model": "gemini-3.1-flash-lite",
+      "prompt_version": "narrative-gemini-v1",
+      "audience": "student",
+      "latency_ms": 2322,
+      "attempts": 1,
+      "cache_hit": false,
+      "input_hash": "6b91d7094ec645c3066d41d0578bbbceaa4132be7852debf93620230660f1d42",
+      "reason": null,
+      "usage": {
+        "prompt_tokens": 1611,
+        "completion_tokens": 301,
+        "thinking_tokens": 109,
+        "total_tokens": 2021
+      },
+      "generated_at": "2026-11-17T01:00:07+00:00"
+    },
+    "text": "## Ringkasan\nHalo Siswa-5e99eb7f! Berikut adalah hasil asesmen kamu pada 3 konsep berdasarkan 15 jawaban yang telah kamu kerjakan. Berdasarkan estimasi model, saat ini kamu telah menguasai 2 konsep dan masih ada 1 konsep yang perlu perhatian khusus. Tetap semangat belajar ya!\n\n## Yang sudah dikuasai\n- **Komposisi fungsi**: dengan 4 jawaban benar dari 5 kesempatan, estimasi penguasaan kamu adalah 1.0.\n- **Invers fungsi**: dengan 5 jawaban benar dari 5 kesempatan, estimasi penguasaan kamu adalah 1.0.\n\n## Yang perlu dilatih\n- **Evaluasi fungsi**: dengan 1 jawaban benar dari 5 kesempatan, estimasi penguasaan kamu adalah 0.01. Kamu disarankan untuk melatih kembali konsep ini.\n\n## Langkah belajar\n- Lakukan penguatan pada **Evaluasi fungsi** dengan memahami bahwa nilai fungsi adalah keluaran yang diperoleh ketika sebuah masukan dimasukkan ke aturan fungsi. Satu masukan yang berada dalam domain harus mempunyai tepat satu... (Kegiatan ini masih placeholder dan perlu validasi guru).\n- Waktu yang disarankan untuk langkah ini adalah 10 menit.\n\n## Catatan\n- Semua angka penguasaan adalah estimasi model dari hasil pekerjaanmu.\n- Rekomendasi belajar di atas masih placeholder dan perlu validasi guru sebelum kamu memulainya."
+  },
+  "teacher_narrative": {
+    "http": 200,
+    "seconds": 0.21,
+    "fallback": false,
+    "provider": null,
+    "validation": {
+      "ok": true,
+      "errors": [],
+      "invented_numbers": [],
+      "word_count": 180
+    },
+    "meta": {
+      "model": "gemini-3.1-flash-lite",
+      "llm_model": "gemini-3.1-flash-lite",
+      "prompt_version": "narrative-gemini-v1",
+      "audience": "teacher",
+      "latency_ms": 29,
+      "attempts": 0,
+      "cache_hit": true,
+      "input_hash": "5c2c61f6bb279dabcc4d0603c71febb032b6e4f1d9c9c07f4b031b008b016672",
+      "reason": null,
+      "usage": {
+        "prompt_tokens": 1937,
+        "completion_tokens": 328,
+        "thinking_tokens": 107,
+        "total_tokens": 2372
+      },
+      "generated_at": "2026-11-17T01:00:08+00:00"
+    },
+    "text": "## Ringkasan kelas\nDiagnosis dilakukan terhadap 1 siswa dengan 3 konsep target berdasarkan 15 respons. Estimasi model menunjukkan 1 siswa memiliki learning gap.\n\n## Temuan utama\n- **Evaluasi fungsi**: Konsep ini menjadi fokus karena 1 siswa terdeteksi memiliki learning gap (100% dari siswa yang dapat didiagnosis) dengan rata-rata probabilitas penguasaan 0.01.\n- **Komposisi fungsi**: 1 siswa telah menguasai konsep ini dengan rata-rata probabilitas penguasaan 1.0.\n- **Invers fungsi**: 1 siswa telah menguasai konsep ini dengan rata-rata probabilitas penguasaan 1.0.\n\n## Konsep prioritas\n- **Evaluasi fungsi**: Satu-satunya konsep yang memerlukan tindakan remedial bagi 1 siswa.\n\n## Rekomendasi tindakan\n- **Evaluasi fungsi**: Direkomendasikan intervensi individual selama 10 menit dengan kegiatan: Nilai fungsi adalah keluaran yang diperoleh ketika sebuah masukan dimasukkan ke aturan fungsi. Satu masukan yang berada dalam domain harus mempunyai tepat satu... (Catatan: rekomendasi ini adalah placeholder dan perlu validasi guru).\n\n## Keterbatasan dan catatan\n- Estimasi model mengenai penguasaan konsep bukan merupakan fakta terverifikasi, melainkan estimasi model.\n- Rekomendasi tindakan masih bersifat placeholder dan perlu validasi guru; tidak ada jaminan efektivitas intervensi.\n- Status bukti belum cukup (jika muncul) berarti membutuhkan data tambahan, bukan learning gap."
+  }
+}

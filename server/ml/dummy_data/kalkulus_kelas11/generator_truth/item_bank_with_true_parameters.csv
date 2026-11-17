@@ -1,0 +1,97 @@
+QuestionId,template_id,question_text,answer_key,concept_codes,true_guess,true_slip,difficulty_tier
+5001,0,Diketahui f(x) = 2x² − 3x + 1. Nilai f(2) = …,3,KAL-P1,0.1051,0.114,0
+5002,0,Diketahui f(x) = x² − 4x + 3. Nilai f(-1) = …,8,KAL-P1,0.1454,0.0871,0
+5003,0,Diketahui f(x) = 3x² − 2x − 5. Nilai f(3) = …,16,KAL-P1,0.1297,0.1291,0
+5004,1,Diketahui f(x) = 2x + 1 dan g(x) = x² + 3. Nilai (g∘f)(1) = …,12,KAL-P1,0.2067,0.1077,1
+5005,1,Diketahui f(x) = 3x − 2 dan g(x) = x² + 1. Nilai (g∘f)(2) = …,17,KAL-P1,0.1714,0.1198,1
+5006,2,Domain fungsi f(x) = (x + 1)/(x − 2) adalah …,"x ∈ ℝ, x ≠ 2",KAL-P1,0.2154,0.142,0
+5007,2,Domain fungsi f(x) = (x + 3)/(x + 4) adalah …,"x ∈ ℝ, x ≠ -4",KAL-P1,0.169,0.1253,0
+5008,3,Bentuk faktor dari x² + 5x + 6 adalah …,(x + 2)(x + 3),KAL-P2,0.1521,0.1326,0
+5009,3,Bentuk faktor dari x² − 3x − 4 adalah …,(x + 1)(x − 4),KAL-P2,0.1428,0.0839,0
+5010,3,Bentuk faktor dari x² − 7x + 10 adalah …,(x − 2)(x − 5),KAL-P2,0.1189,0.0726,0
+5011,4,"Untuk x ≠ 3, bentuk sederhana dari (x² − 9)/(x − 3) adalah …",x + 3,KAL-P2,0.1536,0.0931,0
+5012,4,"Untuk x ≠ 5, bentuk sederhana dari (x² − 25)/(x − 5) adalah …",x + 5,KAL-P2,0.1728,0.0513,0
+5013,5,"Untuk x ≠ 4, bentuk sederhana dari (√x − 2)/(x − 4) adalah …",1/(√x + 2),KAL-P2,0.1427,0.1265,1
+5014,5,"Untuk x ≠ 9, bentuk sederhana dari (√x − 3)/(x − 9) adalah …",1/(√x + 3),KAL-P2,0.1074,0.1495,1
+5015,6,lim_(x→3) (2x² + x) = …,21,KAL-L1,0.1409,0.08,0
+5016,6,lim_(x→2) (3x² − x) = …,10,KAL-L1,0.1093,0.1375,0
+5017,7,lim_(x→3) (x² − 9)/(x − 3) = …,6,KAL-L1;KAL-P2,0.1916,0.1707,1
+5018,7,lim_(x→4) (x² − 16)/(x − 4) = …,8,KAL-L1;KAL-P2,0.1283,0.2047,1
+5019,7,lim_(x→5) (x² − 25)/(x − 5) = …,10,KAL-L1;KAL-P2,0.1589,0.1533,1
+5020,8,lim_(x→3) (x² − 4x + 3)/(x − 3) = …,2,KAL-L1;KAL-P2,0.2061,0.1419,1
+5021,8,lim_(x→4) (x² − 2x − 8)/(x − 4) = …,6,KAL-L1;KAL-P2,0.1774,0.1414,1
+5022,8,lim_(x→2) (x² − 7x + 10)/(x − 2) = …,-3,KAL-L1;KAL-P2,0.1166,0.1801,1
+5023,9,lim_(x→4) (√x − 2)/(x − 4) = …,1/4,KAL-L1;KAL-P2,0.1119,0.1993,2
+5024,9,lim_(x→9) (√x − 3)/(x − 9) = …,1/6,KAL-L1;KAL-P2,0.1612,0.1689,2
+5025,10,lim_(x→1) (2x + 3)/(x + 1) = …,5/2,KAL-L1,0.1824,0.1048,0
+5026,10,lim_(x→2) (4x − 1)/(x + 3) = …,7/5,KAL-L1,0.167,0.0872,0
+5027,11,lim_(x→∞) (6x² + x)/(3x² − 2) = …,2,KAL-L2,0.1388,0.1395,1
+5028,11,lim_(x→∞) (4x² + 3x)/(8x² − 1) = …,1/2,KAL-L2,0.1458,0.1576,1
+5029,11,lim_(x→∞) (5x² + 2x)/(2x² − 7) = …,5/2,KAL-L2,0.1608,0.1316,1
+5030,12,lim_(x→∞) (3x + 2)/(x² + 1) = …,0,KAL-L2,0.0803,0.1694,1
+5031,12,lim_(x→∞) (5x + 1)/(2x² + 1) = …,0,KAL-L2,0.1527,0.1227,1
+5032,13,lim_(x→∞) (2x³ + 1)/(3x² + 1) = …,∞ (tidak ada / divergen),KAL-L2,0.15,0.0993,1
+5033,13,lim_(x→∞) (x³ + 1)/(5x² + 4) = …,∞ (tidak ada / divergen),KAL-L2,0.2067,0.189,1
+5034,14,lim_(x→∞) (√(x² + 4x) − x) = …,2,KAL-L2;KAL-P2,0.0882,0.1858,2
+5035,14,lim_(x→∞) (√(x² + 6x) − x) = …,3,KAL-L2;KAL-P2,0.1822,0.1814,2
+5036,15,lim_(x→0) sin(3x)/(2x) = …,3/2,KAL-L3,0.1594,0.1317,1
+5037,15,lim_(x→0) sin(5x)/(4x) = …,5/4,KAL-L3,0.1884,0.1858,1
+5038,15,lim_(x→0) sin(2x)/(6x) = …,1/3,KAL-L3,0.2044,0.1521,1
+5039,16,lim_(x→0) tan(4x)/sin(2x) = …,2,KAL-L3,0.1024,0.1847,1
+5040,16,lim_(x→0) tan(3x)/sin(5x) = …,3/5,KAL-L3,0.0833,0.1198,1
+5041,17,lim_(x→0) (1 − cos 2x)/x² = …,2,KAL-L3;KAL-P2,0.1194,0.2172,2
+5042,17,lim_(x→0) (1 − cos 4x)/x² = …,8,KAL-L3;KAL-P2,0.1482,0.1593,2
+5043,18,"Dengan definisi f′(x) = lim_(h→0) [f(x+h) − f(x)]/h, turunan f(x) = 3x² adalah …",6x,KAL-D1;KAL-L1,0.0818,0.1704,1
+5044,18,"Dengan definisi f′(x) = lim_(h→0) [f(x+h) − f(x)]/h, turunan f(x) = 5x² adalah …",10x,KAL-D1;KAL-L1,0.1488,0.1701,1
+5045,19,lim_(h→0) [(3 + h)² − 9]/h = …,6,KAL-D1;KAL-P2,0.159,0.199,1
+5046,19,lim_(h→0) [(4 + h)² − 16]/h = …,8,KAL-D1;KAL-P2,0.2086,0.1288,1
+5047,20,"Dengan definisi turunan sebagai limit, turunan f(x) = 4x + 1 adalah …",4,KAL-D1;KAL-L1,0.2119,0.1488,0
+5048,21,"Untuk sebuah fungsi f, nilai lim_(h→0) [f(2+h) − f(2)]/h menyatakan …","f′(2), yaitu gradien garis singgung kurva di x = 2",KAL-D1,0.1695,0.156,1
+5049,22,Turunan pertama f(x) = 3x⁴ − 2x + 5 adalah f′(x) = …,12x³ − 2,KAL-D2,0.1564,0.1417,0
+5050,22,Turunan pertama f(x) = 2x⁵ − 7x + 1 adalah f′(x) = …,10x⁴ − 7,KAL-D2,0.1127,0.1099,0
+5051,22,Turunan pertama f(x) = 5x³ − 4x + 9 adalah f′(x) = …,15x² − 4,KAL-D2,0.194,0.0635,0
+5052,23,Turunan pertama f(x) = 4/x² adalah …,−8/x³,KAL-D2,0.1662,0.1303,1
+5053,23,Turunan pertama f(x) = 6/x³ adalah …,−18/x⁴,KAL-D2,0.1872,0.0968,1
+5054,24,Turunan pertama f(x) = 4√x adalah …,2/√x,KAL-D2,0.165,0.1757,1
+5055,24,Turunan pertama f(x) = 6√x adalah …,3/√x,KAL-D2,0.168,0.1221,1
+5056,25,"Jika f(x) = 2x³ − 3x², nilai f′(2) = …",12,KAL-D2,0.1718,0.0838,0
+5057,25,"Jika f(x) = x³ − 4x², nilai f′(3) = …",3,KAL-D2,0.1736,0.0628,0
+5058,26,Turunan f(x) = (2x + 1)(x² − 3) adalah …,6x² + 2x − 6,KAL-D3;KAL-D2,0.1192,0.1133,1
+5059,26,Turunan f(x) = (3x − 2)(x² − 1) adalah …,9x² − 4x − 3,KAL-D3;KAL-D2,0.0917,0.1655,1
+5060,27,Turunan f(x) = (2x + 1)/(x + 3) adalah …,5/(x + 3)²,KAL-D3;KAL-D2,0.1124,0.2016,2
+5061,27,Turunan f(x) = (3x + 4)/(x + 1) adalah …,-1/(x + 1)²,KAL-D3;KAL-D2,0.1723,0.2381,2
+5062,28,"Diketahui u(2) = 3, u′(2) = 1, v(2) = 4, v′(2) = 2. Jika f = u·v, maka f′(2) = …",10,KAL-D3,0.1297,0.1219,1
+5063,28,"Diketahui u(2) = 2, u′(2) = 5, v(2) = 1, v′(2) = 3. Jika f = u·v, maka f′(2) = …",11,KAL-D3,0.1239,0.1018,1
+5064,29,Turunan f(x) = (2x + 1)⁵ adalah …,10(2x + 1)⁴,KAL-D4;KAL-D2,0.1728,0.192,1
+5065,29,Turunan f(x) = (3x − 4)⁴ adalah …,12(3x − 4)³,KAL-D4;KAL-D2,0.1462,0.1658,1
+5066,30,Turunan f(x) = √(3x² + 1) adalah …,3x/√(3x² + 1),KAL-D4;KAL-D2,0.2142,0.2199,2
+5067,30,Turunan f(x) = √(2x² + 5) adalah …,2x/√(2x² + 5),KAL-D4;KAL-D2,0.1843,0.2389,2
+5068,31,"f(x) = g(h(x)) dengan h(1) = 2, h′(1) = 3, dan g′(2) = 4. Nilai f′(1) = …",12,KAL-D4,0.1102,0.155,1
+5069,31,"f(x) = g(h(x)) dengan h(1) = 5, h′(1) = 2, dan g′(5) = 3. Nilai f′(1) = …",6,KAL-D4,0.1804,0.1742,1
+5070,32,Turunan f(x) = 3 sin x + 2 cos x adalah …,3 cos x − 2 sin x,KAL-D5,0.1281,0.1189,0
+5071,32,Turunan f(x) = 5 sin x + 4 cos x adalah …,5 cos x − 4 sin x,KAL-D5,0.1646,0.0909,0
+5072,33,Turunan f(x) = sin(3x) adalah …,3 cos(3x),KAL-D5;KAL-D4,0.0942,0.1453,1
+5073,33,Turunan f(x) = sin(5x) adalah …,5 cos(5x),KAL-D5;KAL-D4,0.2149,0.1317,1
+5074,34,Turunan f(x) = x sin x adalah …,sin x + x cos x,KAL-D5;KAL-D3,0.0959,0.1468,1
+5075,35,Turunan f(x) = cos² x adalah …,−2 sin x cos x (= −sin 2x),KAL-D5;KAL-D4,0.0941,0.1767,2
+5076,36,Persamaan garis singgung kurva y = x² + 2x di titik berabsis x = 1 adalah …,y = 4x − 1,KAL-A1;KAL-D2,0.208,0.1419,1
+5077,36,Persamaan garis singgung kurva y = x² − 3x di titik berabsis x = 1 adalah …,y = −x − 1,KAL-A1;KAL-D2,0.162,0.1339,1
+5078,36,Persamaan garis singgung kurva y = x² + 2x di titik berabsis x = 3 adalah …,y = 8x − 9,KAL-A1;KAL-D2,0.1735,0.1228,1
+5079,37,Gradien garis singgung kurva y = 2x³ di x = 1 adalah …,6,KAL-A1;KAL-D2,0.1906,0.1123,0
+5080,37,Gradien garis singgung kurva y = x³ di x = 2 adalah …,12,KAL-A1;KAL-D2,0.1057,0.1458,0
+5081,38,Garis singgung kurva y = x² − 4x memiliki gradien 2. Absis titik singgungnya x = …,3,KAL-A1;KAL-D2,0.1576,0.1538,1
+5082,38,Garis singgung kurva y = x² − 6x memiliki gradien 2. Absis titik singgungnya x = …,4,KAL-A1;KAL-D2,0.1137,0.1881,1
+5083,39,Fungsi f(x) = x³ − 3x naik pada interval …,x < −1 atau x > 1,KAL-A2;KAL-D2,0.1311,0.1143,1
+5084,39,Fungsi f(x) = x³ − 12x naik pada interval …,x < −2 atau x > 2,KAL-A2;KAL-D2,0.2152,0.113,1
+5085,40,Titik stasioner fungsi f(x) = x² − 6x + 1 adalah …,"(3, -8)",KAL-A2;KAL-D2,0.0969,0.1566,1
+5086,40,Titik stasioner fungsi f(x) = x² − 4x + 7 adalah …,"(2, 3)",KAL-A2;KAL-D2,0.1091,0.1435,1
+5087,41,Diketahui f′(x) = (x − 1)(x − 4). Fungsi f turun pada interval …,1 < x < 4,KAL-A2,0.1595,0.1858,1
+5088,41,Diketahui f′(x) = (x + 2)(x − 3). Fungsi f turun pada interval …,-2 < x < 3,KAL-A2,0.2111,0.0974,1
+5089,42,Nilai maksimum f(x) = −x² + 6x + 1 adalah …,10,KAL-A3;KAL-A2;KAL-D2,0.1995,0.1468,1
+5090,42,Nilai maksimum f(x) = −x² + 8x − 2 adalah …,14,KAL-A3;KAL-A2;KAL-D2,0.1936,0.1596,1
+5091,43,Dua bilangan positif berjumlah 20. Hasil kali maksimum kedua bilangan itu adalah …,100,KAL-A3;KAL-D2,0.1805,0.2219,2
+5092,43,Dua bilangan positif berjumlah 30. Hasil kali maksimum kedua bilangan itu adalah …,225,KAL-A3;KAL-D2,0.1991,0.248,2
+5093,44,Nilai minimum f(x) = x³ − 3x pada interval 0 ≤ x ≤ 2 adalah …,−2,KAL-A3;KAL-A2,0.1186,0.2128,2
+5094,44,Nilai minimum f(x) = x³ − 3x pada interval 0 ≤ x ≤ 3 adalah …,−2,KAL-A3;KAL-A2,0.1835,0.158,2
+5095,45,Selembar karton persegi bersisi 12 cm dipotong persegi kecil di keempat sudutnya lalu dilipat menjadi kotak tanpa tutup. Volume maksimum kotak adalah … cm³,128,KAL-A3;KAL-A2;KAL-D2,0.1728,0.2022,2
+5096,45,Selembar karton persegi bersisi 18 cm dipotong persegi kecil di keempat sudutnya lalu dilipat menjadi kotak tanpa tutup. Volume maksimum kotak adalah … cm³,432,KAL-A3;KAL-A2;KAL-D2,0.1026,0.2249,2

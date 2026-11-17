@@ -1,0 +1,15 @@
+% Variational EM training loop.
+\begin{tikzpicture}[node distance=4mm and 5mm]
+  \node[boxsoft, text width=2.3cm] (init) {\textbf{Inisialisasi}\\{\tiny $g_j{=}s_j{=}0{,}2$, $a_k{=}1$, $b_k{=}0$, $\theta_i{=}0$}};
+  \node[boxnavy, right=of init, text width=2.5cm] (e) {\textbf{E-step}\\{\tiny perbarui $\pi_{ik}$ (keyakinan mastery) dan $\theta_i$ (Newton)}};
+  \node[boxnavy, right=of e, text width=2.5cm] (m) {\textbf{M-step}\\{\tiny $g_j, s_j$ tertutup (MAP Beta); $a_k, b_k$ (Newton)}};
+  \node[boxsoft, right=of m, text width=2.1cm] (elbo) {\textbf{Hitung ELBO}};
+  \node[diamond, draw=navy, aspect=2.2, inner sep=1pt, font=\tiny, align=center, right=of elbo] (conv) {$\Delta\text{ELBO}/|\text{ELBO}|$\\$\le 10^{-6}$?};
+  \node[boxacc, below=7mm of conv, text width=1.9cm] (stop) {\textbf{Checkpoint}\\{\tiny $g, s, a, b$}};
+  \draw[arr] (init) -- (e);
+  \draw[arr] (e) -- (m);
+  \draw[arr] (m) -- (elbo);
+  \draw[arr] (elbo) -- (conv);
+  \draw[arr] (conv) -- node[lbl, right]{ya (atau 150 iterasi)} (stop);
+  \draw[arr] (conv.north) -- ++(0,0.55) -| node[lbl, pos=0.25, above]{tidak} (e.north);
+\end{tikzpicture}

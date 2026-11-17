@@ -1,0 +1,16 @@
+% Adaptive (mutual information) vs random item selection, replay on 300 test students;
+% artifacts/evaluation/adaptive_replay_summary.csv
+\begin{tikzpicture}
+\begin{axis}[
+  scale only axis, width=\dimexpr\linewidth-1.5cm\relax, height=\figH, xmin=4, xmax=21, ymin=0.75, ymax=0.93,
+  xtick={5,10,15,20}, xlabel={panjang tes (jumlah soal)},
+  ylabel={kesepakatan label vs.\ semua respons}, grid=major,
+  legend pos=south east, legend cell align=left,
+  yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=2},
+]
+  \addplot[accent, thick, mark=*, mark size=1.5pt] coordinates {(5,0.789) (10,0.862) (15,0.892) (20,0.911)};
+  \addlegendentry{adaptif (mutual information)}
+  \addplot[midgray, thick, mark=square*, mark size=1.4pt] coordinates {(5,0.771) (10,0.824) (15,0.851) (20,0.871)};
+  \addlegendentry{acak}
+\end{axis}
+\end{tikzpicture}

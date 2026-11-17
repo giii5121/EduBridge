@@ -1,0 +1,16 @@
+# core pipeline
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+scikit-learn>=1.3
+matplotlib>=3.8
+# app
+streamlit>=1.36
+plotly>=5.18
+# optional narrative layer: official Google Gen AI SDK for the Gemini API (key in env GEMINI_API_KEY)
+google-genai>=1.51
+# tests / notebook execution
+pytest>=8.0
+nbformat>=5.9
+nbclient>=0.10
+ipykernel>=6.29

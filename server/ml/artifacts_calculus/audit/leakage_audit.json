@@ -1,0 +1,56 @@
+{
+  "train": {
+    "columns": [
+      "UserId",
+      "QuestionId",
+      "AnswerId",
+      "IsCorrect",
+      "DateAnswered",
+      "split"
+    ],
+    "roles": {
+      "UserId": "used_by_model",
+      "QuestionId": "used_by_model",
+      "AnswerId": "read_for_ordering_only",
+      "IsCorrect": "used_by_model",
+      "DateAnswered": "read_for_ordering_only",
+      "split": "excluded_not_used"
+    }
+  },
+  "val": {
+    "columns": [
+      "UserId",
+      "QuestionId",
+      "AnswerId",
+      "IsCorrect",
+      "DateAnswered",
+      "split"
+    ],
+    "roles": {
+      "UserId": "used_by_model",
+      "QuestionId": "used_by_model",
+      "AnswerId": "read_for_ordering_only",
+      "IsCorrect": "used_by_model",
+      "DateAnswered": "read_for_ordering_only",
+      "split": "excluded_not_used"
+    }
+  },
+  "test": {
+    "columns": [
+      "UserId",
+      "QuestionId",
+      "AnswerId",
+      "IsCorrect",
+      "DateAnswered",
+      "split"
+    ],
+    "roles": {
+      "UserId": "used_by_model",
+      "QuestionId": "used_by_model",
+      "AnswerId": "read_for_ordering_only",
+      "IsCorrect": "used_by_model",
+      "DateAnswered": "read_for_ordering_only",
+      "split": "excluded_not_used"
+    }
+  }
+}

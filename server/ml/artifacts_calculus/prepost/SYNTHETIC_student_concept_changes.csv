@@ -1,0 +1,521 @@
+student_id,concept_id,concept_name,mastery_prob_pre,mastery_prob_post,mastery_change,n_evidence_pre,n_evidence_post,label_pre,label_post,both_diagnosable,direction
+SIM-001,9001,Fungsi dan notasi fungsi,0.9998929673760711,0.9999954988219348,0.00010253144586369611,3,3,mastered,mastered,True,increase
+SIM-002,9001,Fungsi dan notasi fungsi,0.9999632349786516,0.9999581820453929,-5.052933258697934e-06,3,3,mastered,mastered,True,decrease
+SIM-003,9001,Fungsi dan notasi fungsi,0.999999,0.999999,0.0,3,3,mastered,mastered,True,stable
+SIM-004,9001,Fungsi dan notasi fungsi,0.9992326930501623,0.9986965053764277,-0.0005361876737345339,3,3,mastered,mastered,True,decrease
+SIM-005,9001,Fungsi dan notasi fungsi,0.999999,0.9999898298600238,-9.170139976144576e-06,3,2,mastered,mastered,True,decrease
+SIM-006,9001,Fungsi dan notasi fungsi,0.9923118054016572,0.9999988121266481,0.007687006724990897,3,3,mastered,mastered,True,increase
+SIM-007,9001,Fungsi dan notasi fungsi,0.999999,0.9999982105097165,-7.894902834815198e-07,3,3,mastered,mastered,True,decrease
+SIM-008,9001,Fungsi dan notasi fungsi,0.999999,0.999999,0.0,2,3,mastered,mastered,True,stable
+SIM-009,9001,Fungsi dan notasi fungsi,0.999998912795791,0.9999041986202997,-9.471417549133943e-05,3,3,mastered,mastered,True,decrease
+SIM-010,9001,Fungsi dan notasi fungsi,0.9994493031597445,0.9999760696352825,0.0005267664755380652,3,3,mastered,mastered,True,increase
+SIM-011,9001,Fungsi dan notasi fungsi,0.021442116126383855,0.9993853206211449,0.9779432044947611,3,3,not_mastered,mastered,True,increase
+SIM-012,9001,Fungsi dan notasi fungsi,0.9999725259738297,0.9999241057277624,-4.8420246067326644e-05,3,3,mastered,mastered,True,decrease
+SIM-013,9001,Fungsi dan notasi fungsi,0.9997211980456283,0.999962880060865,0.0002416820152366661,3,3,mastered,mastered,True,increase
+SIM-014,9001,Fungsi dan notasi fungsi,0.9999581401015324,0.9999216243369583,-3.651576457408545e-05,2,3,mastered,mastered,True,decrease
+SIM-015,9001,Fungsi dan notasi fungsi,0.0009593499650497492,0.001232727597136637,0.0002733776320868879,3,3,not_mastered,not_mastered,True,increase
+SIM-016,9001,Fungsi dan notasi fungsi,0.006974801557480402,0.7574826592302631,0.7505078576727827,2,3,not_mastered,mastered,True,increase
+SIM-017,9001,Fungsi dan notasi fungsi,0.9996234983913515,0.999524520322438,-9.897806891345784e-05,3,3,mastered,mastered,True,decrease
+SIM-018,9001,Fungsi dan notasi fungsi,0.9999932241981971,0.9999931887569129,-3.544128424071147e-08,3,3,mastered,mastered,True,decrease
+SIM-019,9001,Fungsi dan notasi fungsi,0.9998484921109736,0.9613530782794398,-0.038495413831533765,3,3,mastered,mastered,True,decrease
+SIM-020,9001,Fungsi dan notasi fungsi,0.9997031902044727,0.9999739629161878,0.00027077271171505046,3,2,mastered,mastered,True,increase
+SIM-021,9001,Fungsi dan notasi fungsi,0.9936422340928406,0.999997799850075,0.006355565757234394,3,3,mastered,mastered,True,increase
+SIM-022,9001,Fungsi dan notasi fungsi,0.9935700201682538,0.9999936653366567,0.006423645168402881,3,3,mastered,mastered,True,increase
+SIM-023,9001,Fungsi dan notasi fungsi,0.7560993282171315,0.04666130016998678,-0.7094380280471447,3,3,mastered,not_mastered,True,decrease
+SIM-024,9001,Fungsi dan notasi fungsi,0.9989935033075774,0.9998575445725318,0.0008640412649544293,3,3,mastered,mastered,True,increase
+SIM-025,9001,Fungsi dan notasi fungsi,0.9493958764911724,0.9999910928357947,0.050595216344622274,2,3,mastered,mastered,True,increase
+SIM-026,9001,Fungsi dan notasi fungsi,0.9981264207905829,0.9862587864023552,-0.011867634388227688,2,3,mastered,mastered,True,decrease
+SIM-027,9001,Fungsi dan notasi fungsi,0.9999539146106287,0.999980711247005,2.6796636376391625e-05,2,3,mastered,mastered,True,increase
+SIM-028,9001,Fungsi dan notasi fungsi,0.9998415268263412,0.9997962998898812,-4.5226936460029954e-05,3,3,mastered,mastered,True,decrease
+SIM-029,9001,Fungsi dan notasi fungsi,0.999999,0.999999,0.0,3,3,mastered,mastered,True,stable
+SIM-030,9001,Fungsi dan notasi fungsi,0.9949879710765801,0.9999968079953803,0.005008836918800164,3,3,mastered,mastered,True,increase
+SIM-031,9001,Fungsi dan notasi fungsi,0.9997940857937772,0.9999947577647221,0.00020067197094497669,3,3,mastered,mastered,True,increase
+SIM-032,9001,Fungsi dan notasi fungsi,0.9966078891355608,0.9999976526709246,0.003389763535363799,3,3,mastered,mastered,True,increase
+SIM-033,9001,Fungsi dan notasi fungsi,0.999999,0.999999,0.0,3,3,mastered,mastered,True,stable
+SIM-034,9001,Fungsi dan notasi fungsi,0.999795055807638,0.999990526048824,0.0001954702411860465,3,2,mastered,mastered,True,increase
+SIM-035,9001,Fungsi dan notasi fungsi,0.9999256157838708,0.999749080513128,-0.00017653527074279474,3,3,mastered,mastered,True,decrease
+SIM-036,9001,Fungsi dan notasi fungsi,0.9989222899356728,0.9999806820254485,0.0010583920897757615,3,3,mastered,mastered,True,increase
+SIM-037,9001,Fungsi dan notasi fungsi,0.9998943712723257,0.999999,0.00010462872767424969,1,3,mastered,mastered,True,increase
+SIM-038,9001,Fungsi dan notasi fungsi,0.999999,0.9999970856008183,-1.914399181623949e-06,3,3,mastered,mastered,True,decrease
+SIM-039,9001,Fungsi dan notasi fungsi,0.9999915193145368,0.9997704452819426,-0.0002210740325941929,3,3,mastered,mastered,True,decrease
+SIM-040,9001,Fungsi dan notasi fungsi,0.9841175550351162,0.9999942355115911,0.015876680476474836,3,3,mastered,mastered,True,increase
+SIM-001,9002,Faktorisasi dan manipulasi bentuk aljabar,0.999999,0.999999,0.0,5,7,mastered,mastered,True,stable
+SIM-002,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9999367929080223,0.9845766568719401,-0.015360136036082217,6,6,mastered,mastered,True,decrease
+SIM-003,9002,Faktorisasi dan manipulasi bentuk aljabar,0.999999,0.9999986656805853,-3.3431941470762894e-07,6,7,mastered,mastered,True,decrease
+SIM-004,9002,Faktorisasi dan manipulasi bentuk aljabar,0.04952481096025891,0.9986392949097133,0.9491144839494543,6,6,not_mastered,mastered,True,increase
+SIM-005,9002,Faktorisasi dan manipulasi bentuk aljabar,0.999999,0.999999,0.0,6,7,mastered,mastered,True,stable
+SIM-006,9002,Faktorisasi dan manipulasi bentuk aljabar,0.007010377273562599,0.999999,0.9929886227264374,6,7,not_mastered,mastered,True,increase
+SIM-007,9002,Faktorisasi dan manipulasi bentuk aljabar,0.999999,0.999999,0.0,6,6,mastered,mastered,True,stable
+SIM-008,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9996068407700909,0.9995992239585477,-7.616811543154078e-06,4,7,mastered,mastered,True,decrease
+SIM-009,9002,Faktorisasi dan manipulasi bentuk aljabar,0.999999,0.9999895946514807,-9.40534851923136e-06,6,7,mastered,mastered,True,decrease
+SIM-010,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9999292453506967,0.999986898941196,5.765359049925145e-05,6,7,mastered,mastered,True,increase
+SIM-011,9002,Faktorisasi dan manipulasi bentuk aljabar,0.00013169756743761963,0.0011739675411302339,0.0010422699736926141,6,7,not_mastered,not_mastered,True,increase
+SIM-012,9002,Faktorisasi dan manipulasi bentuk aljabar,0.2452576577641602,0.999999,0.7547413422358398,6,7,not_mastered,mastered,True,increase
+SIM-013,9002,Faktorisasi dan manipulasi bentuk aljabar,0.8725284359784066,0.9988258408546982,0.1262974048762916,4,6,mastered,mastered,True,increase
+SIM-014,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9999278401169893,0.9999780033881438,5.0163271154479716e-05,6,7,mastered,mastered,True,increase
+SIM-015,9002,Faktorisasi dan manipulasi bentuk aljabar,0.00012939206199120778,0.0002072578888500202,7.786582685881242e-05,5,7,not_mastered,not_mastered,True,increase
+SIM-016,9002,Faktorisasi dan manipulasi bentuk aljabar,0.0001276773779094832,0.0008555814141231347,0.0007279040362136515,6,7,not_mastered,not_mastered,True,increase
+SIM-017,9002,Faktorisasi dan manipulasi bentuk aljabar,0.321305177651695,0.0025926998713643535,-0.3187124777803306,6,7,not_mastered,not_mastered,True,decrease
+SIM-018,9002,Faktorisasi dan manipulasi bentuk aljabar,0.7672379537442493,0.9999175665365716,0.2326796127923223,6,7,mastered,mastered,True,increase
+SIM-019,9002,Faktorisasi dan manipulasi bentuk aljabar,0.002016315373075176,0.0011435137691364877,-0.0008728016039386884,6,7,not_mastered,not_mastered,True,decrease
+SIM-020,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9958359727540591,0.9999881968986515,0.004152224144592376,6,7,mastered,mastered,True,increase
+SIM-021,9002,Faktorisasi dan manipulasi bentuk aljabar,0.00030896267693209455,0.999949511564928,0.9996405488879958,5,6,not_mastered,mastered,True,increase
+SIM-022,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9976151986672122,0.9998689525146671,0.0022537538474549645,5,6,mastered,mastered,True,increase
+SIM-023,9002,Faktorisasi dan manipulasi bentuk aljabar,0.7971963789453029,0.0018125318285644528,-0.7953838471167385,6,6,mastered,not_mastered,True,decrease
+SIM-024,9002,Faktorisasi dan manipulasi bentuk aljabar,0.000719289254759241,0.023102434901096862,0.022383145646337622,6,7,not_mastered,not_mastered,True,increase
+SIM-025,9002,Faktorisasi dan manipulasi bentuk aljabar,0.8448687973492469,0.9999824453096335,0.15511364796038662,6,7,mastered,mastered,True,increase
+SIM-026,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9956846577217884,0.9998432725680693,0.004158614846280884,6,7,mastered,mastered,True,increase
+SIM-027,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9999978770580782,0.9996628680409472,-0.00033500901713101605,6,7,mastered,mastered,True,decrease
+SIM-028,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9971099338349024,0.9999964848377163,0.0028865510028138752,6,7,mastered,mastered,True,increase
+SIM-029,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9999678543904497,0.999999,3.114560955030932e-05,6,7,mastered,mastered,True,increase
+SIM-030,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9999495846990157,0.9983947198437086,-0.001554864855307092,6,7,mastered,mastered,True,decrease
+SIM-031,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9986136400936121,0.9999880820812403,0.001374441987628261,6,5,mastered,mastered,True,increase
+SIM-032,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9971332162911644,0.9994137703727508,0.00228055408158645,6,7,mastered,mastered,True,increase
+SIM-033,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9998667776605483,0.999999,0.00013222233945164863,6,7,mastered,mastered,True,increase
+SIM-034,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9999949984465772,0.999999,4.001553422727788e-06,6,7,mastered,mastered,True,increase
+SIM-035,9002,Faktorisasi dan manipulasi bentuk aljabar,0.807478242125629,0.9975516263633271,0.19007338423769804,6,7,mastered,mastered,True,increase
+SIM-036,9002,Faktorisasi dan manipulasi bentuk aljabar,0.0006773171172225981,0.9970220065441615,0.9963446894269389,6,7,not_mastered,mastered,True,increase
+SIM-037,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9998671848981009,0.999570782829112,-0.0002964020689888436,6,6,mastered,mastered,True,decrease
+SIM-038,9002,Faktorisasi dan manipulasi bentuk aljabar,0.999999,0.999999,0.0,6,6,mastered,mastered,True,stable
+SIM-039,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9999813703501524,0.9995881296855174,-0.0003932406646350861,6,7,mastered,mastered,True,decrease
+SIM-040,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9962483301557554,0.9999871854599216,0.0037388553041661776,6,7,mastered,mastered,True,increase
+SIM-001,9003,Limit fungsi aljabar,0.999999,0.9999540389069266,-4.4961093073392355e-05,6,2,mastered,mastered,True,decrease
+SIM-002,9003,Limit fungsi aljabar,0.8966774361095696,0.9968397265474409,0.10016229043787128,6,3,mastered,mastered,True,increase
+SIM-003,9003,Limit fungsi aljabar,0.999933069581842,0.9999930672509589,5.999766911690685e-05,6,3,mastered,mastered,True,increase
+SIM-004,9003,Limit fungsi aljabar,0.007747989086001246,0.9982201129883985,0.9904721239023973,6,3,not_mastered,mastered,True,increase
+SIM-005,9003,Limit fungsi aljabar,0.999999,0.9989062356148434,-0.0010927643851565971,5,2,mastered,mastered,True,decrease
+SIM-006,9003,Limit fungsi aljabar,0.9998318489350695,0.9999123711034172,8.052216834775194e-05,6,3,mastered,mastered,True,increase
+SIM-007,9003,Limit fungsi aljabar,0.9999588319537688,0.9999942689451806,3.543699141184131e-05,4,3,mastered,mastered,True,increase
+SIM-008,9003,Limit fungsi aljabar,0.9998982284130564,0.9999423487819347,4.412036887824211e-05,4,3,mastered,mastered,True,increase
+SIM-009,9003,Limit fungsi aljabar,0.9999534144246346,0.9996932429284298,-0.0002601714962048307,6,3,mastered,mastered,True,decrease
+SIM-010,9003,Limit fungsi aljabar,0.9606718345652296,0.9999233622152488,0.03925152765001916,6,3,mastered,mastered,True,increase
+SIM-011,9003,Limit fungsi aljabar,0.002718836213499912,0.05646126127376497,0.05374242506026505,5,3,not_mastered,not_mastered,True,increase
+SIM-012,9003,Limit fungsi aljabar,0.8836799753586171,0.6598169255696913,-0.2238630497889258,6,3,mastered,mastered,True,decrease
+SIM-013,9003,Limit fungsi aljabar,0.004497180207573738,0.017949532253091458,0.01345235204551772,5,2,not_mastered,not_mastered,True,increase
+SIM-014,9003,Limit fungsi aljabar,0.9981586807068037,0.9997490255085753,0.0015903448017715593,6,3,mastered,mastered,True,increase
+SIM-015,9003,Limit fungsi aljabar,0.0003875715415985368,3.8907659143798935e-05,-0.0003486638824547379,6,3,not_mastered,not_mastered,True,decrease
+SIM-016,9003,Limit fungsi aljabar,0.0003800521341994585,0.9004928227832005,0.9001127706490011,6,3,not_mastered,mastered,True,increase
+SIM-017,9003,Limit fungsi aljabar,0.07169851680090691,0.9962209565327089,0.924522439731802,6,3,not_mastered,mastered,True,increase
+SIM-018,9003,Limit fungsi aljabar,0.9974185157503559,0.0180539457862086,-0.9793645699641473,6,3,mastered,not_mastered,True,decrease
+SIM-019,9003,Limit fungsi aljabar,0.589205414898724,0.000914653977041709,-0.5882907609216823,5,3,mastered,not_mastered,True,decrease
+SIM-020,9003,Limit fungsi aljabar,0.016170124776480083,0.9996259887814962,0.9834558640050162,6,3,not_mastered,mastered,True,increase
+SIM-021,9003,Limit fungsi aljabar,0.607863798261403,0.9949027439558507,0.38703894569444763,4,3,mastered,mastered,True,increase
+SIM-022,9003,Limit fungsi aljabar,0.0077317322646855815,0.9854651343501604,0.9777334020854748,5,3,not_mastered,mastered,True,increase
+SIM-023,9003,Limit fungsi aljabar,0.028513006804869744,4.1283581608780374e-05,-0.028471723223260963,6,3,not_mastered,not_mastered,True,decrease
+SIM-024,9003,Limit fungsi aljabar,0.006274774866641514,0.9401397921083361,0.9338650172416946,6,3,not_mastered,mastered,True,increase
+SIM-025,9003,Limit fungsi aljabar,0.0007230419026441283,0.9993432716066797,0.9986202297040355,6,3,not_mastered,mastered,True,increase
+SIM-026,9003,Limit fungsi aljabar,0.000602908267797657,0.9746467926789397,0.9740438844111421,6,3,not_mastered,mastered,True,increase
+SIM-027,9003,Limit fungsi aljabar,0.9986712304938634,0.9999381912167874,0.001266960722923982,6,3,mastered,mastered,True,increase
+SIM-028,9003,Limit fungsi aljabar,0.028625518837097737,0.19397523436569664,0.1653497155285989,6,2,not_mastered,not_mastered,True,increase
+SIM-029,9003,Limit fungsi aljabar,0.9994220216792973,0.9999941224886311,0.0005721008093337865,6,3,mastered,mastered,True,increase
+SIM-030,9003,Limit fungsi aljabar,0.9800415210606147,0.9985117634975966,0.01847024243698192,5,2,mastered,mastered,True,increase
+SIM-031,9003,Limit fungsi aljabar,0.9983107205253129,0.9996133889089174,0.0013026683836044883,6,3,mastered,mastered,True,increase
+SIM-032,9003,Limit fungsi aljabar,0.9766564129891586,0.9871453931439729,0.010488980154814254,6,3,mastered,mastered,True,increase
+SIM-033,9003,Limit fungsi aljabar,0.9999985243060585,0.9969600585867029,-0.003038465719355621,6,2,mastered,mastered,True,decrease
+SIM-034,9003,Limit fungsi aljabar,0.9999987474863985,0.9997302802690289,-0.00026846721736961676,6,3,mastered,mastered,True,decrease
+SIM-035,9003,Limit fungsi aljabar,0.05242498465226202,0.8624602097965339,0.810035225144272,6,2,not_mastered,mastered,True,increase
+SIM-036,9003,Limit fungsi aljabar,0.005623034083205386,0.0064721552662124265,0.0008491211830070405,6,3,not_mastered,not_mastered,True,increase
+SIM-037,9003,Limit fungsi aljabar,0.9788908110985969,0.9997968575633367,0.020906046464739814,6,3,mastered,mastered,True,increase
+SIM-038,9003,Limit fungsi aljabar,0.9999947022180892,0.9999942271816443,-4.750364448469213e-07,6,3,mastered,mastered,True,decrease
+SIM-039,9003,Limit fungsi aljabar,0.998161552435805,0.9902255550714576,-0.007935997364347358,6,3,mastered,mastered,True,decrease
+SIM-040,9003,Limit fungsi aljabar,0.0006486599824768918,0.9809540165052206,0.9803053565227438,6,3,not_mastered,mastered,True,increase
+SIM-001,9004,Limit fungsi di tak hingga,0.997740341634868,0.9999273695472501,0.0021870279123821224,3,3,mastered,mastered,True,increase
+SIM-002,9004,Limit fungsi di tak hingga,0.0009458105924534492,0.0013827099716560666,0.00043689937920261736,3,3,not_mastered,not_mastered,True,increase
+SIM-003,9004,Limit fungsi di tak hingga,0.9999453116026527,0.998393404357329,-0.0015519072453236138,3,3,mastered,mastered,True,decrease
+SIM-004,9004,Limit fungsi di tak hingga,0.001566076149253771,0.9793725385949439,0.9778064624456901,3,3,not_mastered,mastered,True,increase
+SIM-005,9004,Limit fungsi di tak hingga,0.9999462665026959,0.5024259025619175,-0.49752036394077837,3,3,mastered,mastered,True,decrease
+SIM-006,9004,Limit fungsi di tak hingga,0.14474977937633682,0.970595159339033,0.8258453799626961,3,3,not_mastered,mastered,True,increase
+SIM-007,9004,Limit fungsi di tak hingga,0.9999470885901693,0.9976614553984912,-0.0022856331916781825,3,3,mastered,mastered,True,decrease
+SIM-008,9004,Limit fungsi di tak hingga,0.9957178990772713,0.9868036160702569,-0.008914283007014356,3,3,mastered,mastered,True,decrease
+SIM-009,9004,Limit fungsi di tak hingga,0.8387773582853971,0.3247376706913495,-0.5140396875940476,2,3,mastered,not_mastered,True,decrease
+SIM-010,9004,Limit fungsi di tak hingga,0.1025280494453777,0.6581626971644211,0.5556346477190434,3,3,not_mastered,mastered,True,increase
+SIM-011,9004,Limit fungsi di tak hingga,2.2116140103573843e-06,0.0050705480661646435,0.005068336452154286,3,3,not_mastered,not_mastered,True,increase
+SIM-012,9004,Limit fungsi di tak hingga,0.001265265983833164,0.9898017582526208,0.9885364922687877,3,2,not_mastered,mastered,True,increase
+SIM-013,9004,Limit fungsi di tak hingga,0.0007173091936294883,0.04355827530264793,0.04284096610901844,2,3,not_mastered,not_mastered,True,increase
+SIM-014,9004,Limit fungsi di tak hingga,0.10406267971070646,0.07903965167993846,-0.025023028030768002,3,2,not_mastered,not_mastered,True,decrease
+SIM-015,9004,Limit fungsi di tak hingga,2.1030801075063192e-06,6.506682995951999e-05,6.296374985201367e-05,3,3,not_mastered,not_mastered,True,increase
+SIM-016,9004,Limit fungsi di tak hingga,7.913535514520064e-05,0.00022548572937929832,0.00014635037423409768,3,3,not_mastered,not_mastered,True,increase
+SIM-017,9004,Limit fungsi di tak hingga,0.9868655210768769,0.9923820249886828,0.0055165039118059145,3,3,mastered,mastered,True,increase
+SIM-018,9004,Limit fungsi di tak hingga,0.12613034673158546,0.498640491498005,0.3725101447664195,3,2,not_mastered,not_mastered,True,increase
+SIM-019,9004,Limit fungsi di tak hingga,0.007885996678184373,0.0427203677898708,0.03483437111168643,3,3,not_mastered,not_mastered,True,increase
+SIM-020,9004,Limit fungsi di tak hingga,0.020775543547014594,0.01128908060081133,-0.009486462946203264,2,3,not_mastered,not_mastered,True,decrease
+SIM-021,9004,Limit fungsi di tak hingga,0.009356439409740262,0.9468683983873201,0.9375119589775798,3,3,not_mastered,mastered,True,increase
+SIM-022,9004,Limit fungsi di tak hingga,0.7252451412573376,0.6143047795728813,-0.11094036168445631,2,2,mastered,mastered,True,decrease
+SIM-023,9004,Limit fungsi di tak hingga,0.0008659570276710058,0.003551614717517447,0.0026856576898464414,2,3,not_mastered,not_mastered,True,increase
+SIM-024,9004,Limit fungsi di tak hingga,3.454627502974174e-05,0.06611738032524961,0.06608283405021986,3,2,not_mastered,not_mastered,True,increase
+SIM-025,9004,Limit fungsi di tak hingga,8.522078760579078e-05,0.15952137493491736,0.15943615414731158,3,3,not_mastered,not_mastered,True,increase
+SIM-026,9004,Limit fungsi di tak hingga,0.004279701502502245,0.8394011787333355,0.8351214772308333,3,3,not_mastered,mastered,True,increase
+SIM-027,9004,Limit fungsi di tak hingga,0.9954698924500629,0.9992690719907088,0.003799179540645903,3,3,mastered,mastered,True,increase
+SIM-028,9004,Limit fungsi di tak hingga,0.22651562440140993,0.9813217010737221,0.7548060766723121,3,2,not_mastered,mastered,True,increase
+SIM-029,9004,Limit fungsi di tak hingga,0.9994881758328646,0.9976018364876951,-0.0018863393451695742,3,3,mastered,mastered,True,decrease
+SIM-030,9004,Limit fungsi di tak hingga,0.9972420666725502,0.997219370785696,-2.2695886854218195e-05,3,3,mastered,mastered,True,decrease
+SIM-031,9004,Limit fungsi di tak hingga,0.9975524443603867,0.9954414995164911,-0.0021109448438956235,3,3,mastered,mastered,True,decrease
+SIM-032,9004,Limit fungsi di tak hingga,0.9302245773055569,0.9979536832419971,0.06772910593644021,3,3,mastered,mastered,True,increase
+SIM-033,9004,Limit fungsi di tak hingga,0.9999458709707025,0.9999238488336003,-2.202213710222889e-05,3,3,mastered,mastered,True,decrease
+SIM-034,9004,Limit fungsi di tak hingga,0.9999458004116921,0.9999300311768851,-1.5769234807061494e-05,3,3,mastered,mastered,True,decrease
+SIM-035,9004,Limit fungsi di tak hingga,0.0004676809309543457,0.7825506786190115,0.7820829976880571,3,3,not_mastered,mastered,True,increase
+SIM-036,9004,Limit fungsi di tak hingga,3.2261285773639705e-05,0.00298843064171016,0.0029561693559365205,3,3,not_mastered,not_mastered,True,increase
+SIM-037,9004,Limit fungsi di tak hingga,0.22493036620999074,0.9999237361718727,0.774993369961882,3,3,not_mastered,mastered,True,increase
+SIM-038,9004,Limit fungsi di tak hingga,0.9998998270932247,0.9999316508032472,3.182371002252715e-05,3,3,mastered,mastered,True,increase
+SIM-039,9004,Limit fungsi di tak hingga,0.993539325687484,0.9963085081345655,0.002769182447081464,3,3,mastered,mastered,True,increase
+SIM-040,9004,Limit fungsi di tak hingga,0.00013879451824498485,0.9949896356513663,0.9948508411331214,3,3,not_mastered,mastered,True,increase
+SIM-001,9005,Limit fungsi trigonometri,0.9998987253524643,0.9958985520442709,-0.0040001733081933555,3,3,mastered,mastered,True,decrease
+SIM-002,9005,Limit fungsi trigonometri,0.0013372700736916758,0.23190284515536008,0.23056557508166842,3,2,not_mastered,not_mastered,True,increase
+SIM-003,9005,Limit fungsi trigonometri,0.9999052842449196,0.9999034710959682,-1.8131489514239263e-06,3,3,mastered,mastered,True,decrease
+SIM-004,9005,Limit fungsi trigonometri,0.0004031819689325625,0.0019876133137017664,0.001584431344769204,3,3,not_mastered,not_mastered,True,increase
+SIM-005,9005,Limit fungsi trigonometri,0.99990682506219,0.998352989331914,-0.0015538357302760097,3,3,mastered,mastered,True,decrease
+SIM-006,9005,Limit fungsi trigonometri,0.4534785871947371,0.9989762912230137,0.5454977040282766,3,3,not_mastered,mastered,True,increase
+SIM-007,9005,Limit fungsi trigonometri,0.9979671169647681,0.9999191491681054,0.0019520322033372839,3,3,mastered,mastered,True,increase
+SIM-008,9005,Limit fungsi trigonometri,0.9998158722794281,0.5714620345486731,-0.4283538377307551,3,3,mastered,mastered,True,decrease
+SIM-009,9005,Limit fungsi trigonometri,0.9988045138843722,0.9967192988873586,-0.00208521499701364,3,3,mastered,mastered,True,decrease
+SIM-010,9005,Limit fungsi trigonometri,0.9918887485501873,0.999096294237903,0.007207545687715755,3,3,mastered,mastered,True,increase
+SIM-011,9005,Limit fungsi trigonometri,0.0029290917632297797,0.9580155496085381,0.9550864578453083,2,3,not_mastered,mastered,True,increase
+SIM-012,9005,Limit fungsi trigonometri,0.2589460665124735,0.9983089932127239,0.7393629267002504,3,3,not_mastered,mastered,True,increase
+SIM-013,9005,Limit fungsi trigonometri,0.0011263486969532604,0.0013303714967101764,0.00020402279975691596,2,3,not_mastered,not_mastered,True,increase
+SIM-014,9005,Limit fungsi trigonometri,0.7229736504800306,0.9882094123705447,0.2652357618905141,3,2,mastered,mastered,True,increase
+SIM-015,9005,Limit fungsi trigonometri,2.5168267784026073e-05,0.005613362979533635,0.005588194711749609,2,2,not_mastered,not_mastered,True,increase
+SIM-016,9005,Limit fungsi trigonometri,2.461175038253785e-05,0.22322387409092875,0.2231992623405462,3,2,not_mastered,not_mastered,True,increase
+SIM-017,9005,Limit fungsi trigonometri,0.008551109585602967,0.02606005066411357,0.017508941078510604,3,3,not_mastered,not_mastered,True,increase
+SIM-018,9005,Limit fungsi trigonometri,0.8525276122377576,0.9948160215646453,0.1422884093268877,3,3,mastered,mastered,True,increase
+SIM-019,9005,Limit fungsi trigonometri,0.001979143022269099,0.00043060144554984633,-0.0015485415767192527,3,3,not_mastered,not_mastered,True,decrease
+SIM-020,9005,Limit fungsi trigonometri,0.00019278365109146706,0.9960566259675999,0.9958638423165085,3,3,not_mastered,mastered,True,increase
+SIM-021,9005,Limit fungsi trigonometri,0.5588960545402023,0.9906058115547511,0.43170975701454883,3,2,mastered,mastered,True,increase
+SIM-022,9005,Limit fungsi trigonometri,0.05543824269591745,0.9008097408093222,0.8453714981134047,2,3,not_mastered,mastered,True,increase
+SIM-023,9005,Limit fungsi trigonometri,0.00034236297940627524,2.4133620294465637e-05,-0.0003182293591118096,3,3,not_mastered,not_mastered,True,decrease
+SIM-024,9005,Limit fungsi trigonometri,0.00034044856652255936,0.0020816511172946943,0.0017412025507721348,3,3,not_mastered,not_mastered,True,increase
+SIM-025,9005,Limit fungsi trigonometri,0.00018559657724791898,0.9452590062204392,0.9450734096431913,3,2,not_mastered,mastered,True,increase
+SIM-026,9005,Limit fungsi trigonometri,0.004066511030145348,0.08421414972090623,0.08014763869076087,3,3,not_mastered,not_mastered,True,increase
+SIM-027,9005,Limit fungsi trigonometri,0.9942202385089476,0.999260171831234,0.005039933322286361,3,3,mastered,mastered,True,increase
+SIM-028,9005,Limit fungsi trigonometri,0.009248262389179814,0.9970099076618213,0.9877616452726414,3,3,not_mastered,mastered,True,increase
+SIM-029,9005,Limit fungsi trigonometri,0.6867957221641416,0.9999172271070638,0.3131215049429221,3,3,mastered,mastered,True,increase
+SIM-030,9005,Limit fungsi trigonometri,0.9833660773823945,0.8902244502834127,-0.09314162709898177,2,3,mastered,mastered,True,decrease
+SIM-031,9005,Limit fungsi trigonometri,0.9967313588029206,0.9824698230762223,-0.014261535726698304,3,2,mastered,mastered,True,decrease
+SIM-032,9005,Limit fungsi trigonometri,0.9964549112183054,0.9495143078891521,-0.046940603329153285,3,3,mastered,mastered,True,decrease
+SIM-033,9005,Limit fungsi trigonometri,0.9999061622553223,0.9999099816553764,3.8194000541169615e-06,3,3,mastered,mastered,True,increase
+SIM-034,9005,Limit fungsi trigonometri,0.9999060718983235,0.9981227313977521,-0.0017833405005713843,3,3,mastered,mastered,True,decrease
+SIM-035,9005,Limit fungsi trigonometri,0.36692238110982656,0.02116659036494057,-0.345755790744886,3,2,not_mastered,not_mastered,True,decrease
+SIM-036,9005,Limit fungsi trigonometri,0.00032025535440269727,0.23454007167388957,0.23421981631948688,3,2,not_mastered,not_mastered,True,increase
+SIM-037,9005,Limit fungsi trigonometri,0.9150458295874802,0.9999097938185066,0.08486396423102649,3,3,mastered,mastered,True,increase
+SIM-038,9005,Limit fungsi trigonometri,0.90924190096919,0.9992957196185714,0.09005381864938145,3,2,mastered,mastered,True,increase
+SIM-039,9005,Limit fungsi trigonometri,0.005219791821244258,0.8617986791029482,0.856578887281704,3,3,not_mastered,mastered,True,increase
+SIM-040,9005,Limit fungsi trigonometri,0.00022546082202569578,0.9955592057421323,0.9953337449201066,3,3,not_mastered,mastered,True,increase
+SIM-001,9006,Turunan sebagai limit (definisi turunan),0.9999133295883906,0.9952458207967534,-0.004667508791637243,3,3,mastered,mastered,True,decrease
+SIM-002,9006,Turunan sebagai limit (definisi turunan),0.44628670621640515,0.13120290233565393,-0.3150838038807512,3,2,not_mastered,not_mastered,True,decrease
+SIM-003,9006,Turunan sebagai limit (definisi turunan),0.9972087633398921,0.9998090082137654,0.0026002448738733364,3,3,mastered,mastered,True,increase
+SIM-004,9006,Turunan sebagai limit (definisi turunan),0.01376230964108327,0.06957770923555742,0.05581539959447415,3,3,not_mastered,not_mastered,True,increase
+SIM-005,9006,Turunan sebagai limit (definisi turunan),0.9995494685116467,0.9261257711332924,-0.0734236973783543,2,3,mastered,mastered,True,decrease
+SIM-006,9006,Turunan sebagai limit (definisi turunan),0.9946940824252499,0.9981860895224217,0.00349200709717179,3,3,mastered,mastered,True,increase
+SIM-007,9006,Turunan sebagai limit (definisi turunan),0.9982729527154183,0.9998387052809867,0.0015657525655684568,1,3,mastered,mastered,True,increase
+SIM-008,9006,Turunan sebagai limit (definisi turunan),0.9947546791799455,0.9720910003197629,-0.022663678860182612,3,3,mastered,mastered,True,decrease
+SIM-009,9006,Turunan sebagai limit (definisi turunan),0.9553178997720015,0.8874886591685598,-0.06782924060344175,3,3,mastered,mastered,True,decrease
+SIM-010,9006,Turunan sebagai limit (definisi turunan),0.005385256755739938,0.9569625336942205,0.9515772769384805,3,3,not_mastered,mastered,True,increase
+SIM-011,9006,Turunan sebagai limit (definisi turunan),0.0009793577782880804,0.40671516424363047,0.4057358064653424,3,2,not_mastered,not_mastered,True,increase
+SIM-012,9006,Turunan sebagai limit (definisi turunan),0.0028572991138488346,0.924384376814948,0.9215270777010992,3,3,not_mastered,mastered,True,increase
+SIM-013,9006,Turunan sebagai limit (definisi turunan),0.034166639141002056,0.0018243457463292517,-0.0323422933946728,3,3,not_mastered,not_mastered,True,decrease
+SIM-014,9006,Turunan sebagai limit (definisi turunan),0.003746299924913349,0.9953948060716875,0.9916485061467741,3,3,not_mastered,mastered,True,increase
+SIM-015,9006,Turunan sebagai limit (definisi turunan),0.0009479781334949856,0.004928615754023865,0.0039806376205288796,3,3,not_mastered,not_mastered,True,increase
+SIM-016,9006,Turunan sebagai limit (definisi turunan),0.0009296151110157775,0.007448493597906242,0.006518878486890465,3,3,not_mastered,not_mastered,True,increase
+SIM-017,9006,Turunan sebagai limit (definisi turunan),0.27194036434351565,0.12997512854175686,-0.1419652358017588,3,3,not_mastered,not_mastered,True,decrease
+SIM-018,9006,Turunan sebagai limit (definisi turunan),0.0054779375966487985,0.5192147554375567,0.5137368178409079,3,2,not_mastered,mastered,True,increase
+SIM-019,9006,Turunan sebagai limit (definisi turunan),0.007451310315450445,0.075264426878238,0.06781311656278756,2,3,not_mastered,not_mastered,True,increase
+SIM-020,9006,Turunan sebagai limit (definisi turunan),0.031630677347453715,0.010551893281421261,-0.021078784066032454,3,3,not_mastered,not_mastered,True,decrease
+SIM-021,9006,Turunan sebagai limit (definisi turunan),0.052624415643460556,0.9968681982303418,0.9442437825868812,2,3,not_mastered,mastered,True,increase
+SIM-022,9006,Turunan sebagai limit (definisi turunan),0.07822657449771572,0.9920275156516382,0.9138009411539224,3,3,not_mastered,mastered,True,increase
+SIM-023,9006,Turunan sebagai limit (definisi turunan),0.042620890040231174,0.00018782005808437753,-0.0424330699821468,3,3,not_mastered,not_mastered,True,decrease
+SIM-024,9006,Turunan sebagai limit (definisi turunan),0.011197767932837218,0.011668457778295158,0.0004706898454579396,3,3,not_mastered,not_mastered,True,increase
+SIM-025,9006,Turunan sebagai limit (definisi turunan),0.024725180241251317,0.12913656295473708,0.10441138271348577,3,3,not_mastered,not_mastered,True,increase
+SIM-026,9006,Turunan sebagai limit (definisi turunan),0.03127080494663434,0.9868724469797634,0.955601642033129,3,3,not_mastered,mastered,True,increase
+SIM-027,9006,Turunan sebagai limit (definisi turunan),0.12128310950080731,0.9641587061089374,0.84287559660813,3,3,not_mastered,mastered,True,increase
+SIM-028,9006,Turunan sebagai limit (definisi turunan),0.05265262692032982,0.9949657635112233,0.9423131365908936,3,3,not_mastered,mastered,True,increase
+SIM-029,9006,Turunan sebagai limit (definisi turunan),0.9994059300384315,0.9954222361908578,-0.003983693847573688,3,3,mastered,mastered,True,decrease
+SIM-030,9006,Turunan sebagai limit (definisi turunan),0.62279296679863,0.3106640038198365,-0.31212896297879356,2,3,mastered,not_mastered,True,decrease
+SIM-031,9006,Turunan sebagai limit (definisi turunan),0.9489121440942447,0.19242262040568925,-0.7564895236885555,3,1,mastered,not_mastered,True,decrease
+SIM-032,9006,Turunan sebagai limit (definisi turunan),0.18828504375299454,0.37115009056369147,0.18286504681069693,3,3,not_mastered,not_mastered,True,increase
+SIM-033,9006,Turunan sebagai limit (definisi turunan),0.9999194287356674,0.9991326706591179,-0.0007867580765494875,3,2,mastered,mastered,True,decrease
+SIM-034,9006,Turunan sebagai limit (definisi turunan),0.9981869910886894,0.9963248515140102,-0.001862139574679178,3,3,mastered,mastered,True,decrease
+SIM-035,9006,Turunan sebagai limit (definisi turunan),0.0808541981708577,0.7756102516107388,0.6947560534398811,3,3,not_mastered,mastered,True,increase
+SIM-036,9006,Turunan sebagai limit (definisi turunan),0.010324440851263411,0.9786447916417385,0.9683203507904751,3,3,not_mastered,mastered,True,increase
+SIM-037,9006,Turunan sebagai limit (definisi turunan),0.011147641482542934,0.9990312753164918,0.987883633833949,3,2,not_mastered,mastered,True,increase
+SIM-038,9006,Turunan sebagai limit (definisi turunan),0.9929235103101189,0.9998376621961123,0.006914151885993314,3,3,mastered,mastered,True,increase
+SIM-039,9006,Turunan sebagai limit (definisi turunan),0.13324020403386944,0.012359129405492858,-0.12088107462837658,3,3,not_mastered,not_mastered,True,decrease
+SIM-040,9006,Turunan sebagai limit (definisi turunan),0.03763808914005343,0.858819278653004,0.8211811895129506,3,3,not_mastered,mastered,True,increase
+SIM-001,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.999999,0.0,15,13,mastered,mastered,True,stable
+SIM-002,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9978393356504103,0.9035004786082462,-0.09433885704216405,16,13,mastered,mastered,True,decrease
+SIM-003,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.999999,0.0,16,13,mastered,mastered,True,stable
+SIM-004,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.007970747336766474,0.0005212117026772219,-0.007449535634089253,16,13,not_mastered,not_mastered,True,decrease
+SIM-005,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.999999,0.0,14,13,mastered,mastered,True,stable
+SIM-006,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999434705823917,0.9999442641307229,0.0005095583068058795,15,13,mastered,mastered,True,increase
+SIM-007,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.999999,0.0,15,12,mastered,mastered,True,stable
+SIM-008,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.999999,0.0,15,13,mastered,mastered,True,stable
+SIM-009,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.9999981030739868,-8.969260131275192e-07,16,12,mastered,mastered,True,decrease
+SIM-010,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.999999,0.0,15,13,mastered,mastered,True,stable
+SIM-011,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.0004514066131770487,0.999999,0.999547593386823,15,13,not_mastered,mastered,True,increase
+SIM-012,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9999516485785105,0.9999982459308885,4.6597352377997225e-05,14,11,mastered,mastered,True,increase
+SIM-013,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.0002518616834984369,0.002287471623114392,0.0020356099396159548,16,13,not_mastered,not_mastered,True,increase
+SIM-014,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9999984124502015,0.9998797706532947,-0.00011864179690679322,16,12,mastered,mastered,True,decrease
+SIM-015,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.0003731712064660327,0.006082561268430448,0.005709390061964415,15,10,not_mastered,not_mastered,True,increase
+SIM-016,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",1.0411049575936701e-05,0.0075601604661217235,0.007549749416545787,15,11,not_mastered,not_mastered,True,increase
+SIM-017,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9999987208483614,0.999996125147564,-2.5957007974142243e-06,16,11,mastered,mastered,True,decrease
+SIM-018,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.03362983522698025,-0.9663691647730197,16,13,mastered,not_mastered,True,decrease
+SIM-019,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.624074710478707,0.00020583708004241123,-0.6238688733986646,16,11,mastered,not_mastered,True,decrease
+SIM-020,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.00039758952816794607,0.999999,0.999601410471832,15,12,not_mastered,mastered,True,increase
+SIM-021,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.034266009934390204,7.023138117052242e-05,-0.03419577855321968,15,13,not_mastered,not_mastered,True,decrease
+SIM-022,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.054106393911458425,0.999999,0.9458926060885415,16,12,not_mastered,mastered,True,increase
+SIM-023,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.6226847552407884,1.4471981707158054e-05,-0.6226702832590812,15,13,mastered,not_mastered,True,decrease
+SIM-024,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.00015303722606716555,0.00023976117977684763,8.672395370968209e-05,15,13,not_mastered,not_mastered,True,increase
+SIM-025,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.0003933983438416603,0.9976168365797473,0.9972234382359056,14,12,not_mastered,mastered,True,increase
+SIM-026,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.00035388607399775766,0.004966127637868876,0.004612241563871118,16,11,not_mastered,not_mastered,True,increase
+SIM-027,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9999973034675016,0.999999,1.6965324983742036e-06,16,12,mastered,mastered,True,increase
+SIM-028,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.00020075414273354055,0.9996882593403342,0.9994875051976007,16,13,not_mastered,mastered,True,increase
+SIM-029,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.999999,0.0,16,13,mastered,mastered,True,stable
+SIM-030,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",3.1717975834450695e-05,0.0001874535178726306,0.0001557355420381799,15,12,not_mastered,not_mastered,True,increase
+SIM-031,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.999999,0.0,16,13,mastered,mastered,True,stable
+SIM-032,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.9999970306747981,-1.9693252019115093e-06,16,13,mastered,mastered,True,decrease
+SIM-033,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.999999,0.0,15,13,mastered,mastered,True,stable
+SIM-034,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.999999,0.0,15,12,mastered,mastered,True,stable
+SIM-035,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9782393444450956,0.9986111098384964,0.020371765393400798,15,12,mastered,mastered,True,increase
+SIM-036,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.00013837588685131644,0.004736061569638066,0.004597685682786749,16,12,not_mastered,not_mastered,True,increase
+SIM-037,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.999999,0.0,16,12,mastered,mastered,True,stable
+SIM-038,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.999999,0.0,16,13,mastered,mastered,True,stable
+SIM-039,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.9999801476771382,-1.8852322861806492e-05,14,13,mastered,mastered,True,decrease
+SIM-040,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.023595549481492034,0.0008771841675319559,-0.022718365313960077,16,13,not_mastered,not_mastered,True,decrease
+SIM-001,9008,Aturan perkalian dan pembagian,0.9962522577621835,0.999991295914969,0.0037390381527855343,3,4,mastered,mastered,True,increase
+SIM-002,9008,Aturan perkalian dan pembagian,0.09796870704518779,0.0668624003199367,-0.03110630672525108,3,4,not_mastered,not_mastered,True,decrease
+SIM-003,9008,Aturan perkalian dan pembagian,0.9999158913292349,0.9999903487828264,7.445745359158096e-05,3,4,mastered,mastered,True,increase
+SIM-004,9008,Aturan perkalian dan pembagian,0.15248545672752617,0.07315065358953146,-0.07933480313799471,3,4,not_mastered,not_mastered,True,decrease
+SIM-005,9008,Aturan perkalian dan pembagian,0.9996401852806267,0.9988312213793329,-0.0008089639012938132,2,4,mastered,mastered,True,decrease
+SIM-006,9008,Aturan perkalian dan pembagian,0.9962641393636953,0.9999257458982451,0.0036616065345498328,3,4,mastered,mastered,True,increase
+SIM-007,9008,Aturan perkalian dan pembagian,0.9999181002263215,0.9999917601360556,7.365990973406955e-05,3,4,mastered,mastered,True,increase
+SIM-008,9008,Aturan perkalian dan pembagian,0.903668188612393,0.18600349734545346,-0.7176646912669395,3,4,mastered,not_mastered,True,decrease
+SIM-009,9008,Aturan perkalian dan pembagian,0.9952548102186369,0.945144999782461,-0.050109810436175906,2,4,mastered,mastered,True,decrease
+SIM-010,9008,Aturan perkalian dan pembagian,0.04266051618737898,0.9806476009160567,0.9379870847286778,2,4,not_mastered,mastered,True,increase
+SIM-011,9008,Aturan perkalian dan pembagian,0.0003830142497276857,0.05259506578726536,0.052212051537537676,3,4,not_mastered,not_mastered,True,increase
+SIM-012,9008,Aturan perkalian dan pembagian,0.9395492835037245,0.9998233440852545,0.060274060581530065,2,4,mastered,mastered,True,increase
+SIM-013,9008,Aturan perkalian dan pembagian,0.009785786808868217,0.7838093080415587,0.7740235212326905,3,3,not_mastered,mastered,True,increase
+SIM-014,9008,Aturan perkalian dan pembagian,0.005679428420980948,0.012474011917737065,0.006794583496756117,3,4,not_mastered,not_mastered,True,increase
+SIM-015,9008,Aturan perkalian dan pembagian,0.015294989277484253,0.0004099218970379121,-0.014885067380446341,3,4,not_mastered,not_mastered,True,decrease
+SIM-016,9008,Aturan perkalian dan pembagian,0.00036133475883274343,0.011964146260691897,0.011602811501859154,3,4,not_mastered,not_mastered,True,increase
+SIM-017,9008,Aturan perkalian dan pembagian,0.0037574576899915167,0.9962023842820564,0.992444926592065,3,4,not_mastered,mastered,True,increase
+SIM-018,9008,Aturan perkalian dan pembagian,0.9967124312857458,0.9880770906371934,-0.008635340648552425,3,4,mastered,mastered,True,decrease
+SIM-019,9008,Aturan perkalian dan pembagian,0.0021880604801392768,0.005328178970464028,0.003140118490324751,3,4,not_mastered,not_mastered,True,increase
+SIM-020,9008,Aturan perkalian dan pembagian,0.009304586408579299,0.994656968125823,0.9853523817172437,3,4,not_mastered,mastered,True,increase
+SIM-021,9008,Aturan perkalian dan pembagian,0.015035638767887612,0.9520051817923676,0.93696954302448,3,4,not_mastered,mastered,True,increase
+SIM-022,9008,Aturan perkalian dan pembagian,0.018569925548745866,0.006671958912108028,-0.011897966636637837,3,4,not_mastered,not_mastered,True,decrease
+SIM-023,9008,Aturan perkalian dan pembagian,0.01037566174526375,0.00043760206639333667,-0.009938059678870412,2,4,not_mastered,not_mastered,True,decrease
+SIM-024,9008,Aturan perkalian dan pembagian,0.0034997556399259215,0.019727058752935907,0.016227303113009985,3,3,not_mastered,not_mastered,True,increase
+SIM-025,9008,Aturan perkalian dan pembagian,0.007215728462091597,0.15196570438109716,0.14474997591900557,2,3,not_mastered,not_mastered,True,increase
+SIM-026,9008,Aturan perkalian dan pembagian,0.008951535325588834,0.5611295609594333,0.5521780256338445,3,3,not_mastered,mastered,True,increase
+SIM-027,9008,Aturan perkalian dan pembagian,0.9970442883015962,0.9996563928510359,0.00261210454943972,3,3,mastered,mastered,True,increase
+SIM-028,9008,Aturan perkalian dan pembagian,0.01534383394763374,0.9192242036068942,0.9038803696592604,3,4,not_mastered,mastered,True,increase
+SIM-029,9008,Aturan perkalian dan pembagian,0.999490283698521,0.9993907131707513,-9.957052776965458e-05,3,4,mastered,mastered,True,decrease
+SIM-030,9008,Aturan perkalian dan pembagian,0.2472827782292037,0.9935204299434663,0.7462376517142626,3,4,not_mastered,mastered,True,increase
+SIM-031,9008,Aturan perkalian dan pembagian,0.014515988509126831,0.009120957870856448,-0.005395030638270383,3,4,not_mastered,not_mastered,True,decrease
+SIM-032,9008,Aturan perkalian dan pembagian,0.924718998742059,0.9986939451844759,0.07397494644241687,3,3,mastered,mastered,True,increase
+SIM-033,9008,Aturan perkalian dan pembagian,0.9999165851301819,0.9912817399928167,-0.008634845137365232,3,4,mastered,mastered,True,decrease
+SIM-034,9008,Aturan perkalian dan pembagian,0.9956096333223711,0.9997033979568273,0.0040937646344562095,3,4,mastered,mastered,True,increase
+SIM-035,9008,Aturan perkalian dan pembagian,0.0012503295645635072,0.0013131949435533712,6.286537898986407e-05,3,4,not_mastered,not_mastered,True,increase
+SIM-036,9008,Aturan perkalian dan pembagian,0.021748119067450965,0.09168539695103398,0.069937277883583,2,3,not_mastered,not_mastered,True,increase
+SIM-037,9008,Aturan perkalian dan pembagian,0.9981245987502635,0.9999909467083541,0.0018663479580905973,3,4,mastered,mastered,True,increase
+SIM-038,9008,Aturan perkalian dan pembagian,0.9991359045720666,0.999991711786913,0.0008558072148464602,2,4,mastered,mastered,True,increase
+SIM-039,9008,Aturan perkalian dan pembagian,0.261813103749018,0.9977712196813893,0.7359581159323713,3,4,not_mastered,mastered,True,increase
+SIM-040,9008,Aturan perkalian dan pembagian,0.009892459818962359,0.2019374494847616,0.19204498966579925,3,4,not_mastered,not_mastered,True,increase
+SIM-001,9009,Aturan rantai,0.9999053425292193,0.999423816965318,-0.0004815255639012417,4,4,mastered,mastered,True,decrease
+SIM-002,9009,Aturan rantai,0.002466686918636344,0.004474221991382065,0.0020075350727457213,5,4,not_mastered,not_mastered,True,increase
+SIM-003,9009,Aturan rantai,0.9999562520981604,0.9980941350269997,-0.001862117071160685,4,4,mastered,mastered,True,decrease
+SIM-004,9009,Aturan rantai,0.007072203581352528,0.06726333973021618,0.06019113614886366,5,4,not_mastered,not_mastered,True,increase
+SIM-005,9009,Aturan rantai,0.9998067557432349,0.9726673354538327,-0.027139420289402194,5,3,mastered,mastered,True,decrease
+SIM-006,9009,Aturan rantai,0.8306809918507927,0.9959676336266455,0.16528664177585284,5,4,mastered,mastered,True,increase
+SIM-007,9009,Aturan rantai,0.99972141166406,0.9999653988036423,0.00024398713958229123,5,4,mastered,mastered,True,increase
+SIM-008,9009,Aturan rantai,0.8419722440333448,0.9970031680114473,0.15503092397810248,5,4,mastered,mastered,True,increase
+SIM-009,9009,Aturan rantai,0.9971119277407885,0.9937520998033884,-0.003359827937400084,5,4,mastered,mastered,True,decrease
+SIM-010,9009,Aturan rantai,0.9888321939167077,0.9113365994758186,-0.07749559444088916,5,4,mastered,mastered,True,decrease
+SIM-011,9009,Aturan rantai,0.0008015217110960797,0.0030350122708533555,0.0022334905597572756,5,4,not_mastered,not_mastered,True,increase
+SIM-012,9009,Aturan rantai,0.062140242909667825,0.008901952972196724,-0.0532382899374711,5,4,not_mastered,not_mastered,True,decrease
+SIM-013,9009,Aturan rantai,0.21342837372234164,0.9551951535873777,0.741766779865036,5,4,not_mastered,mastered,True,increase
+SIM-014,9009,Aturan rantai,0.13086169930197478,0.9315399844202503,0.8006782851182755,5,4,not_mastered,mastered,True,increase
+SIM-015,9009,Aturan rantai,0.0007737080844137875,0.024713842802827957,0.02394013471841417,5,4,not_mastered,not_mastered,True,increase
+SIM-016,9009,Aturan rantai,0.0007603898021245226,0.012915193306716364,0.012154803504591841,4,4,not_mastered,not_mastered,True,increase
+SIM-017,9009,Aturan rantai,0.9807597077178773,0.9893064209023834,0.00854671318450606,5,4,mastered,mastered,True,increase
+SIM-018,9009,Aturan rantai,0.7740626346351553,0.9859924331909682,0.21192979855581284,5,4,mastered,mastered,True,increase
+SIM-019,9009,Aturan rantai,0.0247340495624869,0.20467612117346967,0.17994207161098277,5,3,not_mastered,not_mastered,True,increase
+SIM-020,9009,Aturan rantai,0.014511902615491366,0.10013592359397526,0.0856240209784839,5,4,not_mastered,not_mastered,True,increase
+SIM-021,9009,Aturan rantai,0.024018362026872464,0.9468369383932855,0.9228185763664131,5,4,not_mastered,mastered,True,increase
+SIM-022,9009,Aturan rantai,0.025831932902248493,0.040528281477220804,0.01469634857497231,5,3,not_mastered,not_mastered,True,increase
+SIM-023,9009,Aturan rantai,0.0023133305626580657,0.000636727631614856,-0.0016766029310432097,5,4,not_mastered,not_mastered,True,decrease
+SIM-024,9009,Aturan rantai,0.0052320190331061,0.4598853645439379,0.4546533455108318,5,4,not_mastered,not_mastered,True,increase
+SIM-025,9009,Aturan rantai,0.011417818578090596,0.038586333745572785,0.02716851516748219,5,2,not_mastered,not_mastered,True,increase
+SIM-026,9009,Aturan rantai,0.014012708884189932,0.11792997678137018,0.10391726789718025,5,3,not_mastered,not_mastered,True,increase
+SIM-027,9009,Aturan rantai,0.006806553139558775,0.9998024019588004,0.9929958488192416,5,4,not_mastered,mastered,True,increase
+SIM-028,9009,Aturan rantai,0.2905415117549107,0.9937573634511289,0.7032158516962181,5,4,not_mastered,mastered,True,increase
+SIM-029,9009,Aturan rantai,0.9999436100105857,0.9999645394118388,2.0929401253089175e-05,5,4,mastered,mastered,True,increase
+SIM-030,9009,Aturan rantai,0.9209976824867172,0.9926139873274394,0.07161630484072223,5,4,mastered,mastered,True,increase
+SIM-031,9009,Aturan rantai,0.24103646962105094,0.9105291516101877,0.6694926819891367,5,4,not_mastered,mastered,True,increase
+SIM-032,9009,Aturan rantai,0.9825798510279793,0.9825344381993646,-4.541282861469931e-05,5,4,mastered,mastered,True,decrease
+SIM-033,9009,Aturan rantai,0.9989781545411821,0.9807854191470597,-0.01819273539412236,4,4,mastered,mastered,True,decrease
+SIM-034,9009,Aturan rantai,0.9999422486353082,0.9998759639352316,-6.628470007663534e-05,4,3,mastered,mastered,True,decrease
+SIM-035,9009,Aturan rantai,0.04354972836623474,0.0030016865402684736,-0.04054804182596627,5,4,not_mastered,not_mastered,True,decrease
+SIM-036,9009,Aturan rantai,0.005669847197093529,0.9678745442688882,0.9622046970717947,5,3,not_mastered,mastered,True,increase
+SIM-037,9009,Aturan rantai,0.9997375416014727,0.999962306423839,0.0002247648223663301,5,4,mastered,mastered,True,increase
+SIM-038,9009,Aturan rantai,0.9999829645396623,0.9999652142466765,-1.7750292985785343e-05,5,4,mastered,mastered,True,decrease
+SIM-039,9009,Aturan rantai,0.9889099698189481,0.9937323753952418,0.0048224055762937645,5,3,mastered,mastered,True,increase
+SIM-040,9009,Aturan rantai,0.010669114474784858,0.896109496529838,0.8854403820550532,5,4,not_mastered,mastered,True,increase
+SIM-001,9010,Turunan fungsi trigonometri,0.9743224314091261,0.9999613275606353,0.02563889615150916,2,3,mastered,mastered,True,increase
+SIM-002,9010,Turunan fungsi trigonometri,0.0285265551838273,0.02192780929339468,-0.00659874589043262,3,3,not_mastered,not_mastered,True,decrease
+SIM-003,9010,Turunan fungsi trigonometri,0.9996700677904609,0.9979249966971091,-0.0017450710933517577,2,3,mastered,mastered,True,decrease
+SIM-004,9010,Turunan fungsi trigonometri,0.0016887850802662072,0.03242648858449164,0.03073770350422543,3,3,not_mastered,not_mastered,True,increase
+SIM-005,9010,Turunan fungsi trigonometri,0.9969512819104978,0.013003502068690949,-0.9839477798418068,3,3,mastered,not_mastered,True,decrease
+SIM-006,9010,Turunan fungsi trigonometri,0.8460427851707801,0.9995319061013257,0.15348912093054556,3,3,mastered,mastered,True,increase
+SIM-007,9010,Turunan fungsi trigonometri,0.997915638939207,0.9999637546926026,0.002048115753395585,3,3,mastered,mastered,True,increase
+SIM-008,9010,Turunan fungsi trigonometri,0.9956918160085703,0.9953855603984004,-0.0003062556101698366,3,3,mastered,mastered,True,decrease
+SIM-009,9010,Turunan fungsi trigonometri,0.04475569065900885,0.007026867591379598,-0.03772882306762925,3,3,not_mastered,not_mastered,True,decrease
+SIM-010,9010,Turunan fungsi trigonometri,0.12281382024936972,0.02679926087483664,-0.09601455937453308,3,3,not_mastered,not_mastered,True,decrease
+SIM-011,9010,Turunan fungsi trigonometri,0.00010228935449288184,0.7027222332330629,0.7026199438785701,3,3,not_mastered,mastered,True,increase
+SIM-012,9010,Turunan fungsi trigonometri,0.03152044402059934,0.8133362328339515,0.7818157888133521,3,3,not_mastered,mastered,True,increase
+SIM-013,9010,Turunan fungsi trigonometri,0.0024210317327804324,0.9792513940133061,0.9768303622805257,3,3,not_mastered,mastered,True,increase
+SIM-014,9010,Turunan fungsi trigonometri,0.09010782497152284,0.05581329196664463,-0.034294533004878204,3,3,not_mastered,not_mastered,True,decrease
+SIM-015,9010,Turunan fungsi trigonometri,9.759723476959663e-05,8.786757997857162e-05,-9.729654791025018e-06,3,3,not_mastered,not_mastered,True,decrease
+SIM-016,9010,Turunan fungsi trigonometri,9.554203220458568e-05,0.004497519868046439,0.004401977835841853,2,3,not_mastered,not_mastered,True,increase
+SIM-017,9010,Turunan fungsi trigonometri,0.0036688904771945393,0.003192948960458704,-0.00047594151673583523,3,3,not_mastered,not_mastered,True,decrease
+SIM-018,9010,Turunan fungsi trigonometri,0.01570561028988087,0.9974865551321201,0.9817809448422393,3,3,not_mastered,mastered,True,increase
+SIM-019,9010,Turunan fungsi trigonometri,0.0072814976139661935,0.0028138976282322693,-0.004467599985733924,3,3,not_mastered,not_mastered,True,decrease
+SIM-020,9010,Turunan fungsi trigonometri,0.004190164703184923,0.40254717848294563,0.39835701377976074,3,3,not_mastered,not_mastered,True,increase
+SIM-021,9010,Turunan fungsi trigonometri,0.0077484906957691925,0.01346454277523966,0.005716052079470468,3,3,not_mastered,not_mastered,True,increase
+SIM-022,9010,Turunan fungsi trigonometri,0.01061508743759709,0.1220963799773168,0.11148129253971971,3,3,not_mastered,not_mastered,True,increase
+SIM-023,9010,Turunan fungsi trigonometri,0.005243599196265844,0.0029208716601901146,-0.002322727536075729,3,3,not_mastered,not_mastered,True,decrease
+SIM-024,9010,Turunan fungsi trigonometri,0.04733184981688837,0.003908879144390989,-0.04342297067249738,3,2,not_mastered,not_mastered,True,decrease
+SIM-025,9010,Turunan fungsi trigonometri,0.003006000610590963,0.09855538683023476,0.0955493862196438,3,1,not_mastered,not_mastered,True,increase
+SIM-026,9010,Turunan fungsi trigonometri,0.004012446732996982,0.9077723833733816,0.9037599366403847,3,2,not_mastered,mastered,True,increase
+SIM-027,9010,Turunan fungsi trigonometri,0.13759048183727912,0.9996651076775511,0.8620746258402721,3,3,not_mastered,mastered,True,increase
+SIM-028,9010,Turunan fungsi trigonometri,0.003295529850514591,0.051745425342526484,0.048449895492011896,3,2,not_mastered,not_mastered,True,increase
+SIM-029,9010,Turunan fungsi trigonometri,0.99933270562092,0.9973054577108134,-0.0020272479101066665,3,3,mastered,mastered,True,decrease
+SIM-030,9010,Turunan fungsi trigonometri,0.9957732989226158,0.9987946925473214,0.0030213936247056594,3,3,mastered,mastered,True,increase
+SIM-031,9010,Turunan fungsi trigonometri,0.12752152267604525,0.039461904202023286,-0.08805961847402197,3,3,not_mastered,not_mastered,True,decrease
+SIM-032,9010,Turunan fungsi trigonometri,0.38251298372665143,0.990790298489451,0.6082773147627996,3,2,not_mastered,mastered,True,increase
+SIM-033,9010,Turunan fungsi trigonometri,0.9999180148212445,0.9986997548741496,-0.0012182599470949018,3,3,mastered,mastered,True,decrease
+SIM-034,9010,Turunan fungsi trigonometri,0.9999181880346237,0.9999626674985549,4.4479463931157426e-05,3,3,mastered,mastered,True,increase
+SIM-035,9010,Turunan fungsi trigonometri,0.015197666072550861,0.7311521020643241,0.7159544359917732,3,3,not_mastered,mastered,True,increase
+SIM-036,9010,Turunan fungsi trigonometri,0.001234405439133844,0.9237243101787738,0.9224899047396399,3,3,not_mastered,mastered,True,increase
+SIM-037,9010,Turunan fungsi trigonometri,0.8974467246366893,0.999959571398584,0.10251284676189476,3,3,mastered,mastered,True,increase
+SIM-038,9010,Turunan fungsi trigonometri,0.9998547502377771,0.999963507825778,0.00010875758800088509,3,3,mastered,mastered,True,increase
+SIM-039,9010,Turunan fungsi trigonometri,0.12376474625775924,0.02978964790902431,-0.09397509834873494,3,2,not_mastered,not_mastered,True,decrease
+SIM-040,9010,Turunan fungsi trigonometri,0.15221053433159298,0.02564753324973408,-0.12656300108185892,3,3,not_mastered,not_mastered,True,decrease
+SIM-001,9011,Persamaan garis singgung kurva,0.9996450489995112,0.990969742118508,-0.008675306881003264,3,3,mastered,mastered,True,decrease
+SIM-002,9011,Persamaan garis singgung kurva,0.0023297703395326608,0.0037591593522591175,0.0014293890127264567,3,3,not_mastered,not_mastered,True,increase
+SIM-003,9011,Persamaan garis singgung kurva,0.9900506040207633,0.9997002277097244,0.009649623688961162,3,3,mastered,mastered,True,increase
+SIM-004,9011,Persamaan garis singgung kurva,0.04204317816451162,0.35280762884731476,0.3107644506828031,3,3,not_mastered,not_mastered,True,increase
+SIM-005,9011,Persamaan garis singgung kurva,0.990434032849657,0.9231278405707183,-0.06730619227893875,3,3,mastered,mastered,True,decrease
+SIM-006,9011,Persamaan garis singgung kurva,0.006713086944817313,0.4786538485006735,0.4719407615558562,3,3,not_mastered,not_mastered,True,increase
+SIM-007,9011,Persamaan garis singgung kurva,0.9996701055884856,0.9987549644914047,-0.0009151410970809071,3,2,mastered,mastered,True,decrease
+SIM-008,9011,Persamaan garis singgung kurva,0.9994448422335349,0.9986876039976951,-0.0007572382358398411,3,3,mastered,mastered,True,decrease
+SIM-009,9011,Persamaan garis singgung kurva,0.9385879260617793,0.011436776865482674,-0.9271511491962966,3,3,mastered,not_mastered,True,decrease
+SIM-010,9011,Persamaan garis singgung kurva,0.15604752399151067,0.99839887713838,0.8423513531468694,3,3,not_mastered,mastered,True,increase
+SIM-011,9011,Persamaan garis singgung kurva,0.005368686480682779,0.9915591479689831,0.9861904614883004,2,3,not_mastered,mastered,True,increase
+SIM-012,9011,Persamaan garis singgung kurva,0.27112363910520565,0.018677419322152354,-0.2524462197830533,2,3,not_mastered,not_mastered,True,decrease
+SIM-013,9011,Persamaan garis singgung kurva,0.08269292062692613,0.2852417722598715,0.2025488516329454,3,3,not_mastered,not_mastered,True,increase
+SIM-014,9011,Persamaan garis singgung kurva,0.005555302758268103,0.5615684524553911,0.556013149697123,3,2,not_mastered,mastered,True,increase
+SIM-015,9011,Persamaan garis singgung kurva,0.00518668871184879,0.005318833603256851,0.00013214489140806092,2,3,not_mastered,not_mastered,True,increase
+SIM-016,9011,Persamaan garis singgung kurva,0.005107468854734372,0.09478743904218898,0.0896799701874546,3,2,not_mastered,not_mastered,True,increase
+SIM-017,9011,Persamaan garis singgung kurva,0.10397818077554602,0.006817713704595196,-0.09716046707095083,3,3,not_mastered,not_mastered,True,decrease
+SIM-018,9011,Persamaan garis singgung kurva,0.007461676070512579,0.5802621931184067,0.572800517047894,3,3,not_mastered,mastered,True,increase
+SIM-019,9011,Persamaan garis singgung kurva,0.045251398955052924,0.04751919772507292,0.0022677987700199936,3,3,not_mastered,not_mastered,True,increase
+SIM-020,9011,Persamaan garis singgung kurva,0.07937024210996857,0.16784674685361273,0.08847650474364416,2,3,not_mastered,not_mastered,True,increase
+SIM-021,9011,Persamaan garis singgung kurva,0.11986709320883299,0.7435331436097563,0.6236660504009233,3,3,not_mastered,mastered,True,increase
+SIM-022,9011,Persamaan garis singgung kurva,0.16420968154643803,0.9943692412938947,0.8301595597474567,3,3,not_mastered,mastered,True,increase
+SIM-023,9011,Persamaan garis singgung kurva,0.0043346852701130634,0.005728321142367943,0.0013936358722548793,3,3,not_mastered,not_mastered,True,increase
+SIM-024,9011,Persamaan garis singgung kurva,0.03547990130224002,0.13625646761307386,0.10077656631083384,2,3,not_mastered,not_mastered,True,increase
+SIM-025,9011,Persamaan garis singgung kurva,0.06463727909056766,0.0068357118252558545,-0.0578015672653118,2,3,not_mastered,not_mastered,True,decrease
+SIM-026,9011,Persamaan garis singgung kurva,0.0768335813339677,0.47642903721190744,0.39959545587793976,3,3,not_mastered,not_mastered,True,increase
+SIM-027,9011,Persamaan garis singgung kurva,0.8766188501878382,0.9731189529269635,0.09650010273912524,3,3,mastered,mastered,True,increase
+SIM-028,9011,Persamaan garis singgung kurva,0.11788438608050222,0.9268829912983299,0.8089986052178276,3,3,not_mastered,mastered,True,increase
+SIM-029,9011,Persamaan garis singgung kurva,0.9983941884782763,0.99973284399805,0.001338655519773635,3,3,mastered,mastered,True,increase
+SIM-030,9011,Persamaan garis singgung kurva,0.6520293758760325,0.6908612053267589,0.038831829450726385,3,3,mastered,mastered,True,increase
+SIM-031,9011,Persamaan garis singgung kurva,0.9952232114017885,0.9950625284025738,-0.00016068299921467855,3,3,mastered,mastered,True,decrease
+SIM-032,9011,Persamaan garis singgung kurva,0.9949349621538053,0.9463324324506728,-0.0486025297031325,3,3,mastered,mastered,True,decrease
+SIM-033,9011,Persamaan garis singgung kurva,0.9903854207410323,0.9997155080456637,0.009330087304631363,3,3,mastered,mastered,True,increase
+SIM-034,9011,Persamaan garis singgung kurva,0.990376760616959,0.9997318266738329,0.009355066056873862,3,3,mastered,mastered,True,increase
+SIM-035,9011,Persamaan garis singgung kurva,0.0015750717103483961,0.9493421966051211,0.9477671248947727,3,2,not_mastered,mastered,True,increase
+SIM-036,9011,Persamaan garis singgung kurva,0.033874248693965756,0.3872915537536585,0.3534173050596927,3,3,not_mastered,not_mastered,True,increase
+SIM-037,9011,Persamaan garis singgung kurva,0.8710134938124001,0.9598909515127919,0.0888774577003918,3,2,mastered,mastered,True,increase
+SIM-038,9011,Persamaan garis singgung kurva,0.9994850789270524,0.9997361728358373,0.0002510939087848607,3,3,mastered,mastered,True,increase
+SIM-039,9011,Persamaan garis singgung kurva,0.9607220833833507,0.8832060340646132,-0.07751604931873757,2,3,mastered,mastered,True,decrease
+SIM-040,9011,Persamaan garis singgung kurva,0.08537593151255335,0.5964808181300603,0.511104886617507,3,3,not_mastered,mastered,True,increase
+SIM-001,9012,Fungsi naik/turun dan titik stasioner,0.9999902984395357,0.9986535425921736,-0.0013367558473620367,4,5,mastered,mastered,True,decrease
+SIM-002,9012,Fungsi naik/turun dan titik stasioner,0.00400688483357842,0.1094165296253471,0.10540964479176869,5,5,not_mastered,not_mastered,True,increase
+SIM-003,9012,Fungsi naik/turun dan titik stasioner,0.9999502800689775,0.9992425279982746,-0.0007077520707028384,5,5,mastered,mastered,True,decrease
+SIM-004,9012,Fungsi naik/turun dan titik stasioner,0.0074905083403572085,0.6872295164761859,0.6797390081358287,5,4,not_mastered,mastered,True,increase
+SIM-005,9012,Fungsi naik/turun dan titik stasioner,0.9999877100645124,0.9946995722370067,-0.005288137827505701,4,5,mastered,mastered,True,decrease
+SIM-006,9012,Fungsi naik/turun dan titik stasioner,0.01555916665105326,0.03717621432844814,0.021617047677394884,4,5,not_mastered,not_mastered,True,increase
+SIM-007,9012,Fungsi naik/turun dan titik stasioner,0.999517894600013,0.9999785765693242,0.0004606819693112607,4,4,mastered,mastered,True,increase
+SIM-008,9012,Fungsi naik/turun dan titik stasioner,0.999997029939887,0.999967431650794,-2.9598289092991337e-05,5,5,mastered,mastered,True,decrease
+SIM-009,9012,Fungsi naik/turun dan titik stasioner,0.993150160177051,0.983828370923497,-0.009321789253554091,5,4,mastered,mastered,True,decrease
+SIM-010,9012,Fungsi naik/turun dan titik stasioner,0.9735946951606418,0.9988579882977336,0.025263293137091858,5,5,mastered,mastered,True,increase
+SIM-011,9012,Fungsi naik/turun dan titik stasioner,0.0003785973183551208,0.9798126454138761,0.979434048095521,5,5,not_mastered,mastered,True,increase
+SIM-012,9012,Fungsi naik/turun dan titik stasioner,0.017945171834684345,0.9021129809289589,0.8841678090942745,4,3,not_mastered,mastered,True,increase
+SIM-013,9012,Fungsi naik/turun dan titik stasioner,0.02094153462202713,0.041153168558775384,0.020211633936748255,5,5,not_mastered,not_mastered,True,increase
+SIM-014,9012,Fungsi naik/turun dan titik stasioner,0.9892122800386256,0.9915140362588803,0.002301756220254747,5,5,mastered,mastered,True,increase
+SIM-015,9012,Fungsi naik/turun dan titik stasioner,0.00036012944723587035,0.001982812550916776,0.0016226831036809059,5,5,not_mastered,not_mastered,True,increase
+SIM-016,9012,Fungsi naik/turun dan titik stasioner,0.0003521533102622867,0.005074652449660072,0.004722499139397786,4,5,not_mastered,not_mastered,True,increase
+SIM-017,9012,Fungsi naik/turun dan titik stasioner,0.947871751399511,0.9579218018156801,0.010050050416169132,5,5,mastered,mastered,True,increase
+SIM-018,9012,Fungsi naik/turun dan titik stasioner,0.9874190209919604,0.8186260015135428,-0.16879301947841763,5,5,mastered,mastered,True,decrease
+SIM-019,9012,Fungsi naik/turun dan titik stasioner,0.003955322792330476,0.045081026013748846,0.04112570322141837,5,5,not_mastered,not_mastered,True,increase
+SIM-020,9012,Fungsi naik/turun dan titik stasioner,0.01968525975910844,0.9988799059343543,0.9791946461752459,5,4,not_mastered,mastered,True,increase
+SIM-021,9012,Fungsi naik/turun dan titik stasioner,0.03568379628517359,0.997036720569239,0.9613529242840654,4,5,not_mastered,mastered,True,increase
+SIM-022,9012,Fungsi naik/turun dan titik stasioner,0.04610270613452167,0.601582993640731,0.5554802875062093,5,5,not_mastered,mastered,True,increase
+SIM-023,9012,Fungsi naik/turun dan titik stasioner,0.0069388143445582515,8.1322707182926e-05,-0.0068574916373753255,4,5,not_mastered,not_mastered,True,decrease
+SIM-024,9012,Fungsi naik/turun dan titik stasioner,0.0058879686707456885,0.008872955879806542,0.0029849872090608534,5,5,not_mastered,not_mastered,True,increase
+SIM-025,9012,Fungsi naik/turun dan titik stasioner,0.01438830922619649,0.992713798221166,0.9783254889949695,5,5,not_mastered,mastered,True,increase
+SIM-026,9012,Fungsi naik/turun dan titik stasioner,0.018748643788889033,0.10354976635977442,0.08480112257088539,5,5,not_mastered,not_mastered,True,increase
+SIM-027,9012,Fungsi naik/turun dan titik stasioner,0.01847085293664441,0.0052895311420535895,-0.013181321794590821,5,5,not_mastered,not_mastered,True,decrease
+SIM-028,9012,Fungsi naik/turun dan titik stasioner,0.03627656512338906,0.5209645195585981,0.48468795443520907,5,5,not_mastered,mastered,True,increase
+SIM-029,9012,Fungsi naik/turun dan titik stasioner,0.9976019473830473,0.9999966971531662,0.002394749770118887,5,5,mastered,mastered,True,increase
+SIM-030,9012,Fungsi naik/turun dan titik stasioner,0.6233756450907526,0.9090391320197336,0.285663486928981,4,5,mastered,mastered,True,increase
+SIM-031,9012,Fungsi naik/turun dan titik stasioner,0.9900000005248111,0.5149560701938823,-0.47504393033092873,5,5,mastered,mastered,True,decrease
+SIM-032,9012,Fungsi naik/turun dan titik stasioner,0.027604839780994005,0.056246323339339564,0.02864148355834556,5,5,not_mastered,not_mastered,True,increase
+SIM-033,9012,Fungsi naik/turun dan titik stasioner,0.9999507918593932,0.9999463139027032,-4.477956690007723e-06,5,5,mastered,mastered,True,decrease
+SIM-034,9012,Fungsi naik/turun dan titik stasioner,0.9999985583356801,0.9973108917091101,-0.00268766662656994,5,5,mastered,mastered,True,decrease
+SIM-035,9012,Fungsi naik/turun dan titik stasioner,0.08665958288617173,0.013065673171429894,-0.07359390971474183,5,5,not_mastered,not_mastered,True,decrease
+SIM-036,9012,Fungsi naik/turun dan titik stasioner,0.005500951634515394,0.6356497032629143,0.6301487516283989,5,4,not_mastered,mastered,True,increase
+SIM-037,9012,Fungsi naik/turun dan titik stasioner,0.49636473193331493,0.9999813430881045,0.5036166111547895,5,4,not_mastered,mastered,True,increase
+SIM-038,9012,Fungsi naik/turun dan titik stasioner,0.9990101510211663,0.9973732731539622,-0.0016368778672041229,5,5,mastered,mastered,True,decrease
+SIM-039,9012,Fungsi naik/turun dan titik stasioner,0.008980502280859188,0.4915801717931856,0.4825996695123264,5,5,not_mastered,not_mastered,True,increase
+SIM-040,9012,Fungsi naik/turun dan titik stasioner,0.023341580235789555,0.8549629393137888,0.8316213590779992,5,5,not_mastered,mastered,True,increase
+SIM-001,9013,Nilai maksimum/minimum dan masalah optimasi,0.9998453798928213,0.9968016723155456,-0.0030437075772756783,4,4,mastered,mastered,True,decrease
+SIM-002,9013,Nilai maksimum/minimum dan masalah optimasi,0.013181130912257618,0.008066296605996238,-0.0051148343062613795,4,4,not_mastered,not_mastered,True,decrease
+SIM-003,9013,Nilai maksimum/minimum dan masalah optimasi,0.9950921094921743,0.953664287551357,-0.04142782194081729,4,4,mastered,mastered,True,decrease
+SIM-004,9013,Nilai maksimum/minimum dan masalah optimasi,0.0032908056728923555,0.21827012799400886,0.2149793223211165,4,3,not_mastered,not_mastered,True,increase
+SIM-005,9013,Nilai maksimum/minimum dan masalah optimasi,0.9998569717459969,0.3259948806463058,-0.6738620910996911,4,4,mastered,not_mastered,True,decrease
+SIM-006,9013,Nilai maksimum/minimum dan masalah optimasi,0.04585770641387635,0.8206103321345422,0.7747526257206658,3,4,not_mastered,mastered,True,increase
+SIM-007,9013,Nilai maksimum/minimum dan masalah optimasi,0.9989025291197358,0.9986473827288396,-0.0002551463908961882,3,3,mastered,mastered,True,decrease
+SIM-008,9013,Nilai maksimum/minimum dan masalah optimasi,0.9997297964374411,0.9984793521786122,-0.00125044425882892,4,4,mastered,mastered,True,decrease
+SIM-009,9013,Nilai maksimum/minimum dan masalah optimasi,0.5227874684805305,0.005303399796374673,-0.5174840686841559,4,3,mastered,not_mastered,True,decrease
+SIM-010,9013,Nilai maksimum/minimum dan masalah optimasi,0.0020983662211048705,0.9980414115574231,0.9959430453363183,3,4,not_mastered,mastered,True,increase
+SIM-011,9013,Nilai maksimum/minimum dan masalah optimasi,0.00024033083710596535,0.6735375502064462,0.6732972193693403,4,4,not_mastered,mastered,True,increase
+SIM-012,9013,Nilai maksimum/minimum dan masalah optimasi,0.18776115394246634,0.8940004451467815,0.7062392912043152,4,4,not_mastered,mastered,True,increase
+SIM-013,9013,Nilai maksimum/minimum dan masalah optimasi,0.007991348705667024,0.05658261290652684,0.04859126420085981,4,4,not_mastered,not_mastered,True,increase
+SIM-014,9013,Nilai maksimum/minimum dan masalah optimasi,0.7231479063511467,0.9943297291822788,0.2711818228311321,4,4,mastered,mastered,True,increase
+SIM-015,9013,Nilai maksimum/minimum dan masalah optimasi,0.00023005352064437335,0.00024464183517452587,1.4588314530152523e-05,4,4,not_mastered,not_mastered,True,increase
+SIM-016,9013,Nilai maksimum/minimum dan masalah optimasi,0.0002254441783230455,0.009504252855989017,0.009278808677665971,4,4,not_mastered,not_mastered,True,increase
+SIM-017,9013,Nilai maksimum/minimum dan masalah optimasi,0.007054347792501419,0.16020775240630686,0.15315340461380544,4,4,not_mastered,not_mastered,True,increase
+SIM-018,9013,Nilai maksimum/minimum dan masalah optimasi,0.2713308552324402,0.02271665403029546,-0.24861420120214475,4,4,not_mastered,not_mastered,True,decrease
+SIM-019,9013,Nilai maksimum/minimum dan masalah optimasi,0.032281358088664974,0.0038082582254422154,-0.02847309986322276,4,3,not_mastered,not_mastered,True,decrease
+SIM-020,9013,Nilai maksimum/minimum dan masalah optimasi,0.007569276641596515,0.9922567091212561,0.9846874324796595,4,4,not_mastered,mastered,True,increase
+SIM-021,9013,Nilai maksimum/minimum dan masalah optimasi,0.014998109924203484,0.9396216393823253,0.9246235294581219,3,4,not_mastered,mastered,True,increase
+SIM-022,9013,Nilai maksimum/minimum dan masalah optimasi,0.017765376725774492,0.004598649884388326,-0.013166726841386166,4,4,not_mastered,not_mastered,True,decrease
+SIM-023,9013,Nilai maksimum/minimum dan masalah optimasi,0.0042635906362624675,0.0002603342166139248,-0.004003256419648543,4,4,not_mastered,not_mastered,True,decrease
+SIM-024,9013,Nilai maksimum/minimum dan masalah optimasi,0.0026261060503177886,0.015579545921387989,0.0129534398710702,4,4,not_mastered,not_mastered,True,increase
+SIM-025,9013,Nilai maksimum/minimum dan masalah optimasi,0.005744808658415355,0.8403564260810057,0.8346116174225904,4,4,not_mastered,mastered,True,increase
+SIM-026,9013,Nilai maksimum/minimum dan masalah optimasi,0.00725726379741694,0.12673281687360843,0.1194755530761915,4,4,not_mastered,not_mastered,True,increase
+SIM-027,9013,Nilai maksimum/minimum dan masalah optimasi,0.056275231231139033,0.8654026157130499,0.8091273844819109,4,4,not_mastered,mastered,True,increase
+SIM-028,9013,Nilai maksimum/minimum dan masalah optimasi,0.013005005613192316,0.039755621865386684,0.026750616252194367,4,4,not_mastered,not_mastered,True,increase
+SIM-029,9013,Nilai maksimum/minimum dan masalah optimasi,0.10179534995115593,0.9997913711141662,0.8979960211630102,4,4,not_mastered,mastered,True,increase
+SIM-030,9013,Nilai maksimum/minimum dan masalah optimasi,0.26205792632651403,0.03421760773584724,-0.22784031859066678,3,4,not_mastered,not_mastered,True,decrease
+SIM-031,9013,Nilai maksimum/minimum dan masalah optimasi,0.0012935169358450718,0.13438423425343982,0.13309071731759475,4,4,not_mastered,not_mastered,True,increase
+SIM-032,9013,Nilai maksimum/minimum dan masalah optimasi,0.083460051064188,0.11045069736808726,0.02699064630389926,4,4,not_mastered,not_mastered,True,increase
+SIM-033,9013,Nilai maksimum/minimum dan masalah optimasi,0.9951356410926984,0.9966754691709963,0.001539828078297889,4,4,mastered,mastered,True,increase
+SIM-034,9013,Nilai maksimum/minimum dan masalah optimasi,0.999855900071967,0.9971305268724562,-0.0027253731995108277,4,4,mastered,mastered,True,decrease
+SIM-035,9013,Nilai maksimum/minimum dan masalah optimasi,0.0050084289430637335,0.03254650603409685,0.02753807709103312,4,4,not_mastered,not_mastered,True,increase
+SIM-036,9013,Nilai maksimum/minimum dan masalah optimasi,0.002474619556961876,0.03935316477751119,0.036878545220549314,4,3,not_mastered,not_mastered,True,increase
+SIM-037,9013,Nilai maksimum/minimum dan masalah optimasi,0.14329767269673582,0.9997740372999094,0.8564763646031737,4,4,not_mastered,mastered,True,increase
+SIM-038,9013,Nilai maksimum/minimum dan masalah optimasi,0.9091781380559392,0.9971886274121475,0.08801048935620837,4,4,mastered,mastered,True,increase
+SIM-039,9013,Nilai maksimum/minimum dan masalah optimasi,0.13943271234260507,0.03612141721776462,-0.10331129512484044,3,4,not_mastered,not_mastered,True,decrease
+SIM-040,9013,Nilai maksimum/minimum dan masalah optimasi,0.008485928192565589,0.18702101056609538,0.1785350823735298,4,4,not_mastered,not_mastered,True,increase

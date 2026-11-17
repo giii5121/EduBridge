@@ -1,0 +1,26 @@
+{
+  "class": "PDINA",
+  "hyperparams": {
+    "prior": "higher_order",
+    "gs_prior_strength": 40.0,
+    "class_weights": null,
+    "max_em_iter": 150,
+    "em_tol": 1e-06,
+    "e_step_iter": 30,
+    "guess_prior": [
+      9.0,
+      33.0
+    ],
+    "slip_prior": [
+      9.0,
+      33.0
+    ],
+    "max_guess_slip_sum": 0.98
+  },
+  "n_em_iter": 23,
+  "final_elbo": -39574.321012052875,
+  "selected_from": "pdina|higher_order|k=40.0|cw=False",
+  "data_dir": "D:\\finalIL\\dummy_data\\kalkulus_kelas11\\final",
+  "artifact_source": "dummy_synthetic_calculus_kelas11",
+  "package_version": "1.0.0"
+}

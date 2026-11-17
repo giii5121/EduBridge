@@ -1,0 +1,38 @@
+{
+  "tau": 0.5,
+  "delta": 0.0,
+  "n_min": 5,
+  "target_concept_ids": [
+    70,
+    251,
+    67,
+    52,
+    64,
+    166,
+    171,
+    406,
+    408,
+    258,
+    409
+  ],
+  "provenance": {
+    "tau": "validation held-out log-loss of hard-label DINA prediction; one-SE rule (student bootstrap) toward 0.5",
+    "n_min": 5,
+    "n_min_selected_from_data": true,
+    "delta": 0.0,
+    "delta_selected_from_data": true,
+    "target_consistency": 0.85,
+    "note": "n_min is the per-half evidence at which agreement between two independent half-test classifications reaches target_consistency; agreement between two noisy classifications understates the reliability of each, so the rule is conservative.",
+    "tau_grid": [
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7
+    ]
+  }
+}

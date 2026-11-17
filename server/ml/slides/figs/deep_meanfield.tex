@@ -1,0 +1,19 @@
+% Illustration: exact posterior over 2^K profiles vs. mean-field (K independent Bernoullis), drawn for K = 3.
+\begin{tikzpicture}[cell/.style={draw=midgray, minimum width=7mm, minimum height=5mm, font=\tiny\ttfamily, inner sep=0pt}]
+  \node[font=\scriptsize\bfseries, text=navy, anchor=west] at (0,1.0) {Posterior eksak: satu peluang per profil};
+  \foreach \p [count=\i from 0] in {000,001,010,011,100,101,110,111} {
+    \node[cell, fill=navy!\fpeval{8+\i*9}] at (\i*0.8+0.35,0.3) {\p};
+  }
+  \node[font=\tiny, text=black!70, anchor=west] at (0,-0.35) {$2^3=8$ angka; untuk 57 konsep: $2^{57}\approx1{,}4\times10^{17}$ angka per siswa};
+
+  \draw[arr] (6.9,0.3) -- node[lbl, above]{mean-field} (8.3,0.3);
+
+  \node[font=\scriptsize\bfseries, text=accent!80!black, anchor=west] at (8.5,1.0) {Mean-field: satu peluang per konsep};
+  \foreach \k/\v [count=\i from 0] in {A/0.85,B/0.10,C/0.60} {
+    \node[font=\tiny, anchor=east] at (9.0,0.45-\i*0.38) {\k};
+    \draw[midgray, fill=lightbg] (9.1,0.35-\i*0.38) rectangle (11.6,0.55-\i*0.38);
+    \fill[accent] (9.1,0.35-\i*0.38) rectangle ({9.1+2.5*\v},0.55-\i*0.38);
+    \node[font=\tiny, anchor=west] at (11.65,0.45-\i*0.38) {$\pi=\v$};
+  }
+  \node[font=\tiny, text=black!70, anchor=west] at (8.5,-0.75) {3 angka; untuk 57 konsep: 57 angka per siswa};
+\end{tikzpicture}

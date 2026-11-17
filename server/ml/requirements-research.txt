@@ -1,0 +1,6 @@
+-r requirements-runtime.lock
+streamlit==1.67.0
+plotly==7.1.0
+nbformat==5.11.1
+nbclient==0.11.0
+ipykernel==7.4.0

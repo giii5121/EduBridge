@@ -1,0 +1,21 @@
+% P(mastery) of a new student after n answers on 10 typical Writing Expressions items
+% (slides/data/pdina_deep/trajectory.csv; computed with the trained model's infer()).
+\begin{tikzpicture}
+\begin{axis}[
+  width=\linewidth, height=\figH, xmin=-0.3, xmax=10.3, ymin=-0.03, ymax=1.03,
+  xlabel={jumlah jawaban pada konsep ini}, ylabel={P(mastery)}, grid=major, xtick={0,...,10},
+  legend style={at={(0.98,0.82)}, anchor=north east, fill=white, fill opacity=0.9, text opacity=1}, legend cell align=left,
+  yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=1},
+]
+  \fill[accent!10] (axis cs:-0.3,-0.03) rectangle (axis cs:4.5,1.03);
+  \node[font=\tiny, text=accent!80!black] at (axis cs:2.1,0.2) {bukti $<n_{\min}=5$};
+  \addplot[okgreen, thick, mark=*, mark size=1.3pt] table[col sep=comma, x=n, y=semua_benar] {data/pdina_deep/trajectory.csv};
+  \addlegendentry{semua benar}
+  \addplot[accent, thick, mark=diamond*, mark size=1.6pt] table[col sep=comma, x=n, y=selang_seling] {data/pdina_deep/trajectory.csv};
+  \addlegendentry{benar--salah bergantian}
+  \addplot[gapred, thick, mark=square*, mark size=1.2pt] table[col sep=comma, x=n, y=semua_salah] {data/pdina_deep/trajectory.csv};
+  \addlegendentry{semua salah}
+  \draw[dashed, black!60] (axis cs:-0.3,0.5) -- (axis cs:10.3,0.5);
+  \node[font=\tiny, anchor=north east] at (axis cs:10.2,0.5) {$\tau=0{,}5$};
+\end{axis}
+\end{tikzpicture}

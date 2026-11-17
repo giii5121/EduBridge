@@ -1,0 +1,26 @@
+.math-text .katex { font-size: 1.07em; line-height: 1.25; }
+.math-inline { white-space: normal; }
+.math-display { display: block; max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: 4px 0; }
+.math-text .katex .mfrac .frac-line { border-bottom-width: 0.06em; }
+.math-text .katex-html { max-width: 100%; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.math-preview {
+  border: 1px dashed var(--line, #d9deea);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.math-preview small { display: block; font-size: 10px; font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.7; }
+.math-preview p { margin: 4px 0; }
+.math-preview ol { margin: 0; padding-left: 22px; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 2px 16px; }

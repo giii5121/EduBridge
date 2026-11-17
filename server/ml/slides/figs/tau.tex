@@ -1,0 +1,20 @@
+% Threshold tau selection on validation; artifacts/evaluation/threshold_selection_validation.csv
+\begin{tikzpicture}
+\begin{axis}[
+  width=\linewidth, height=\figH, xmin=0.28, xmax=0.72, ymin=0.5850, ymax=0.5910,
+  xlabel={threshold $\tau$}, ylabel={log-loss held-out (label keras)},
+  grid=major, xtick={0.3,0.4,...,0.7},
+  xticklabel style={/pgf/number format/fixed, /pgf/number format/precision=2},
+  yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=4},
+  scaled y ticks=false,
+]
+  \fill[accent!12] (axis cs:0.425,0.5850) rectangle (axis cs:0.72,0.5910);
+  \node[font=\tiny, text=accent!80!black, anchor=north] at (axis cs:0.575,0.5908) {dalam 1 SE dari yang terbaik};
+  \addplot[navy, thick, mark=*, mark size=1.4pt] coordinates {
+    (0.30,0.59024) (0.35,0.58909) (0.40,0.58826) (0.45,0.58661) (0.50,0.58607)
+    (0.55,0.58612) (0.60,0.58607) (0.65,0.58583) (0.70,0.58609)};
+  \addplot[only marks, mark=*, mark size=3pt, accent] coordinates {(0.50,0.58607)};
+  \node[font=\tiny, text=accent!80!black, anchor=north east] at (axis cs:0.49,0.58600) {$\tau{=}0{,}5$ dipilih};
+  \node[font=\tiny, anchor=north] at (axis cs:0.65,0.58575) {minimum mentah 0,65};
+\end{axis}
+\end{tikzpicture}
