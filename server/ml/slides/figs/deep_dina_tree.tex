@@ -1,0 +1,17 @@
+% Illustration: how DINA turns a mastery profile + Q-matrix row into P(correct).
+\begin{tikzpicture}[node distance=4mm and 7mm]
+  \node[boxsoft, text width=3.1cm, align=left] (prof) {\textbf{Profil siswa} $\boldsymbol\alpha_i$\\[2pt]
+     {\tiny Konsep A: menguasai (1)\\ Konsep B: belum (0)\\ Konsep C: menguasai (1)}};
+  \node[boxsoft, text width=3.1cm, align=left, below=of prof] (item) {\textbf{Baris Q-matrix soal} $j$\\[2pt]
+     {\tiny butuh A dan C (B tidak dipakai)}};
+  \node[boxnavy, text width=2.7cm, anchor=west] (eta) at ($(prof.east)!0.5!(item.east)+(10mm,0)$)
+     {$\eta_{ij}=\prod_k\alpha_{ik}^{q_{jk}}$\\[2pt]{\tiny $=1^1\cdot0^0\cdot1^1=1$ (``siap'')}};
+  \draw[arr] (prof.east) -- (eta.west);
+  \draw[arr] (item.east) -- (eta.west);
+  \node[box, draw=okgreen, text width=3.6cm, anchor=west] (siap) at ($(eta.east)+(12mm,9mm)$)
+     {\textbf{$\eta=1$ (siap)}\\[1pt]{\tiny P(benar) $=1-s_j$; salah hanya karena \emph{slip} (ceroboh)}};
+  \node[box, draw=gapred, text width=3.6cm, anchor=west] (belum) at ($(eta.east)+(12mm,-9mm)$)
+     {\textbf{$\eta=0$ (belum siap)}\\[1pt]{\tiny P(benar) $=g_j$; benar hanya karena \emph{guess} (menebak)}};
+  \draw[arr] (eta.east) -- (siap.west);
+  \draw[arr] (eta.east) -- (belum.west);
+\end{tikzpicture}

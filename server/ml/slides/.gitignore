@@ -1,0 +1,12 @@
+# LaTeX build files (the PDFs are kept)
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+build_*.out

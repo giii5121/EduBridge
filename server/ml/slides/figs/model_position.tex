@@ -1,0 +1,25 @@
+% Where the two models sit: P-DINA computes, Gemini only communicates.
+\begin{tikzpicture}[node distance=5mm and 6mm]
+  \node[boxsoft, minimum width=2.1cm, minimum height=1.1cm] (resp) {Respons siswa\\[1pt]{\tiny benar / salah per soal}};
+  \node[boxnavy, right=of resp, minimum width=2.4cm, minimum height=1.1cm] (pdina) {\textbf{P-DINA}\\[1pt]{\tiny menghitung P(mastery)}};
+  \node[boxsoft, right=of pdina, minimum width=2.5cm, minimum height=1.1cm] (diag) {Diagnosis\\[1pt]{\tiny label, learning gap,}\\[-1pt]{\tiny rekomendasi R1--R5}};
+  \node[boxsoft, right=of diag, minimum width=2.3cm, minimum height=1.1cm] (facts) {Fakta JSON\\[1pt]{\tiny agregat, ID pseudonim}};
+  \node[boxacc, right=of facts, minimum width=2.4cm, minimum height=1.1cm] (llm) {\textbf{Gemini LLM}\\[1pt]{\tiny menyusun kalimat}};
+  \node[boxsoft, below=8mm of llm, minimum width=2.4cm] (val) {Validator\\[1pt]{\tiny angka, heading, klaim}};
+  \node[boxsoft, below=8mm of diag, minimum width=2.5cm] (app) {Aplikasi Streamlit\\[1pt]{\tiny tabel, grafik, laporan}};
+
+  \draw[arr] (resp) -- (pdina);
+  \draw[arr] (pdina) -- (diag);
+  \draw[arr] (diag) -- (facts);
+  \draw[arr] (facts) -- (llm);
+  \draw[arr] (llm) -- (val);
+  \draw[arr] (val) -- node[lbl, above]{lolos / template} (app);
+  \draw[arr] (diag) -- node[lbl, right]{langsung} (app);
+
+  \begin{scope}[on background layer]
+    \node[fill=navy!7, rounded corners, fit=(resp)(pdina)(diag), inner sep=6pt,
+          label={[font=\tiny\bfseries, text=navy]above:Tahap komputasi (deterministik, dapat diaudit)}] {};
+    \node[fill=accent!10, rounded corners, fit=(facts)(llm)(val), inner sep=6pt,
+          label={[font=\tiny\bfseries, text=accent!80!black]above:Tahap komunikasi (opsional)}] {};
+  \end{scope}
+\end{tikzpicture}

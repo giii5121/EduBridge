@@ -1,0 +1,49 @@
+QuestionId,n_concepts,concept_ids,concept_names
+5017,2,9002;9003,Faktorisasi dan manipulasi bentuk aljabar; Limit fungsi aljabar
+5018,2,9002;9003,Faktorisasi dan manipulasi bentuk aljabar; Limit fungsi aljabar
+5019,2,9002;9003,Faktorisasi dan manipulasi bentuk aljabar; Limit fungsi aljabar
+5020,2,9002;9003,Faktorisasi dan manipulasi bentuk aljabar; Limit fungsi aljabar
+5021,2,9002;9003,Faktorisasi dan manipulasi bentuk aljabar; Limit fungsi aljabar
+5022,2,9002;9003,Faktorisasi dan manipulasi bentuk aljabar; Limit fungsi aljabar
+5023,2,9002;9003,Faktorisasi dan manipulasi bentuk aljabar; Limit fungsi aljabar
+5024,2,9002;9003,Faktorisasi dan manipulasi bentuk aljabar; Limit fungsi aljabar
+5034,2,9002;9004,Faktorisasi dan manipulasi bentuk aljabar; Limit fungsi di tak hingga
+5035,2,9002;9004,Faktorisasi dan manipulasi bentuk aljabar; Limit fungsi di tak hingga
+5041,2,9002;9005,Faktorisasi dan manipulasi bentuk aljabar; Limit fungsi trigonometri
+5042,2,9002;9005,Faktorisasi dan manipulasi bentuk aljabar; Limit fungsi trigonometri
+5043,2,9003;9006,Limit fungsi aljabar; Turunan sebagai limit (definisi turunan)
+5044,2,9003;9006,Limit fungsi aljabar; Turunan sebagai limit (definisi turunan)
+5045,2,9002;9006,Faktorisasi dan manipulasi bentuk aljabar; Turunan sebagai limit (definisi turunan)
+5046,2,9002;9006,Faktorisasi dan manipulasi bentuk aljabar; Turunan sebagai limit (definisi turunan)
+5047,2,9003;9006,Limit fungsi aljabar; Turunan sebagai limit (definisi turunan)
+5058,2,9007;9008,"Aturan dasar turunan (pangkat, konstanta, jumlah); Aturan perkalian dan pembagian"
+5059,2,9007;9008,"Aturan dasar turunan (pangkat, konstanta, jumlah); Aturan perkalian dan pembagian"
+5060,2,9007;9008,"Aturan dasar turunan (pangkat, konstanta, jumlah); Aturan perkalian dan pembagian"
+5061,2,9007;9008,"Aturan dasar turunan (pangkat, konstanta, jumlah); Aturan perkalian dan pembagian"
+5064,2,9007;9009,"Aturan dasar turunan (pangkat, konstanta, jumlah); Aturan rantai"
+5065,2,9007;9009,"Aturan dasar turunan (pangkat, konstanta, jumlah); Aturan rantai"
+5066,2,9007;9009,"Aturan dasar turunan (pangkat, konstanta, jumlah); Aturan rantai"
+5067,2,9007;9009,"Aturan dasar turunan (pangkat, konstanta, jumlah); Aturan rantai"
+5072,2,9009;9010,Aturan rantai; Turunan fungsi trigonometri
+5073,2,9009;9010,Aturan rantai; Turunan fungsi trigonometri
+5074,2,9008;9010,Aturan perkalian dan pembagian; Turunan fungsi trigonometri
+5075,2,9009;9010,Aturan rantai; Turunan fungsi trigonometri
+5076,2,9007;9011,"Aturan dasar turunan (pangkat, konstanta, jumlah); Persamaan garis singgung kurva"
+5077,2,9007;9011,"Aturan dasar turunan (pangkat, konstanta, jumlah); Persamaan garis singgung kurva"
+5078,2,9007;9011,"Aturan dasar turunan (pangkat, konstanta, jumlah); Persamaan garis singgung kurva"
+5079,2,9007;9011,"Aturan dasar turunan (pangkat, konstanta, jumlah); Persamaan garis singgung kurva"
+5080,2,9007;9011,"Aturan dasar turunan (pangkat, konstanta, jumlah); Persamaan garis singgung kurva"
+5081,2,9007;9011,"Aturan dasar turunan (pangkat, konstanta, jumlah); Persamaan garis singgung kurva"
+5082,2,9007;9011,"Aturan dasar turunan (pangkat, konstanta, jumlah); Persamaan garis singgung kurva"
+5083,2,9007;9012,"Aturan dasar turunan (pangkat, konstanta, jumlah); Fungsi naik/turun dan titik stasioner"
+5084,2,9007;9012,"Aturan dasar turunan (pangkat, konstanta, jumlah); Fungsi naik/turun dan titik stasioner"
+5085,2,9007;9012,"Aturan dasar turunan (pangkat, konstanta, jumlah); Fungsi naik/turun dan titik stasioner"
+5086,2,9007;9012,"Aturan dasar turunan (pangkat, konstanta, jumlah); Fungsi naik/turun dan titik stasioner"
+5089,3,9007;9012;9013,"Aturan dasar turunan (pangkat, konstanta, jumlah); Fungsi naik/turun dan titik stasioner; Nilai maksimum/minimum dan masalah optimasi"
+5090,3,9007;9012;9013,"Aturan dasar turunan (pangkat, konstanta, jumlah); Fungsi naik/turun dan titik stasioner; Nilai maksimum/minimum dan masalah optimasi"
+5091,2,9007;9013,"Aturan dasar turunan (pangkat, konstanta, jumlah); Nilai maksimum/minimum dan masalah optimasi"
+5092,2,9007;9013,"Aturan dasar turunan (pangkat, konstanta, jumlah); Nilai maksimum/minimum dan masalah optimasi"
+5093,2,9012;9013,Fungsi naik/turun dan titik stasioner; Nilai maksimum/minimum dan masalah optimasi
+5094,2,9012;9013,Fungsi naik/turun dan titik stasioner; Nilai maksimum/minimum dan masalah optimasi
+5095,3,9007;9012;9013,"Aturan dasar turunan (pangkat, konstanta, jumlah); Fungsi naik/turun dan titik stasioner; Nilai maksimum/minimum dan masalah optimasi"
+5096,3,9007;9012;9013,"Aturan dasar turunan (pangkat, konstanta, jumlah); Fungsi naik/turun dan titik stasioner; Nilai maksimum/minimum dan masalah optimasi"

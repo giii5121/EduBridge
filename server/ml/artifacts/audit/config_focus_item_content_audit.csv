@@ -1,0 +1,23 @@
+QuestionId,eedi_concept_id,eedi_concept_name,label_match,content_summary,estimated_level,reviewer,review_method
+934,52,Factorising into a Single Bracket,match,"Which expression replaces the star in 3n+12 = *, supported by algebra tiles; options 3(n+4), 3(5n), ...",lower secondary (SMP),Claude (automated visual check),viewed question image
+291,52,Factorising into a Single Bracket,match_with_untagged_skill,Perimeter of a dot-grid shape written in factorised form; also needs perimeter reasoning (not tagged in Q-matrix),lower secondary (SMP),Claude (automated visual check),viewed question image
+398,409,Gradient Between Two Co-ordinates,partial,Two line segments given by endpoints: are they parallel and/or the same length; length (distance) is not tagged,lower/upper secondary boundary,Claude (automated visual check),viewed question image
+565,409,Gradient Between Two Co-ordinates,partial,"Same format as 398 (parallel? same length?), different coordinates",lower/upper secondary boundary,Claude (automated visual check),viewed question image
+906,258,Horizontal and Vertical Lines,match,Equation of a horizontal line of symmetry of a rectangle given vertex coordinates (y = -2),lower secondary (SMP),Claude (automated visual check),viewed question image
+302,258,Horizontal and Vertical Lines,match,Equation of a vertical line of symmetry of a rectangle (x = 0),lower secondary (SMP),Claude (automated visual check),viewed question image
+859,64,Linear Equations,match,Which equations can be derived from 3c = d (equivalent transformations),lower secondary (SMP),Claude (automated visual check),viewed question image
+279,64,Linear Equations,match,Which equations can be derived from 2g = 6h (equivalent transformations),lower secondary (SMP),Claude (automated visual check),viewed question image
+124,171,Linear Sequences (nth term),match,Two ways of counting squares in Pattern 15 of a growing pattern (generalising a linear pattern),lower secondary (SMP),Claude (automated visual check),viewed question image
+152,171,Linear Sequences (nth term),match,Two ways of counting dots in Pattern 15 of a growing pattern,lower secondary (SMP),Claude (automated visual check),viewed question image
+871,408,Midpoint Between Two Co-ordinates,match,Equally spaced points on a line through the origin; find coordinates of X given Y,lower secondary (SMP),Claude (automated visual check),viewed question image
+235,408,Midpoint Between Two Co-ordinates,match,Q equally spaced between P(-3;6) and R(1;-2); find Q,lower secondary (SMP),Claude (automated visual check),viewed question image
+468,406,Naming Co-ordinates in 2D,match,Read coordinates of a marked point on the y-axis,primary/lower secondary,Claude (automated visual check),viewed question image
+776,406,Naming Co-ordinates in 2D,partial,Find the 4th vertex of a parallelogram from 3 plotted vertices; also needs shape properties (not tagged),lower secondary (SMP),Claude (automated visual check),viewed question image
+150,251,Simplifying Expressions by Collecting Like Terms,match,Addition pyramid with algebraic terms (collect like terms),lower secondary (SMP),Claude (automated visual check),viewed question image
+670,251,Simplifying Expressions by Collecting Like Terms,match,Addition pyramid: which term can replace the star,lower secondary (SMP),Claude (automated visual check),viewed question image
+564,166,Solving Linear Inequalities,partial_label_questionable,"Compare 3p with 2q+r using lengths on a dot grid and choose >, <, = or 'need more information'; no inequality is solved",lower secondary (SMP),Claude (automated visual check),viewed question image
+196,166,Solving Linear Inequalities,partial_label_questionable,"Compare 5p with q+r using lengths on a dot grid (>, <, =); no inequality is solved",lower secondary (SMP),Claude (automated visual check),viewed question image
+834,67,Substitution into Formula,match,"a=-4, b=3: compare ab with a+b",lower secondary (SMP),Claude (automated visual check),viewed question image
+686,67,Substitution into Formula,match,"a=1, b=4: compare ab with a+b",lower secondary (SMP),Claude (automated visual check),viewed question image
+579,70,Writing Expressions,match,Bar model: complete 2p = ... in terms of other bar lengths,lower secondary (SMP),Claude (automated visual check),viewed question image
+572,70,Writing Expressions,match_with_untagged_skill,Which drawn shapes have perimeter 4(p+2q); also needs perimeter reasoning,lower secondary (SMP),Claude (automated visual check),viewed question image

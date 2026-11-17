@@ -1,0 +1,16 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup:admin": "node --env-file-if-exists=.env src/setup-admin.js",
+    "backup": "node --env-file-if-exists=.env src/backup.js",
+    "reset:password": "node --env-file-if-exists=.env src/reset-password.js",
+    "dev": "node --watch --env-file-if-exists=.env src/index.js",
+    "start": "node --env-file-if-exists=.env src/index.js"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}

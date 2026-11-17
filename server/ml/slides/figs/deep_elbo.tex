@@ -1,0 +1,10 @@
+% ELBO per EM iteration, refit of the selected configuration on train (slides/data/pdina_deep/elbo_history.csv)
+\begin{tikzpicture}
+\begin{axis}[
+  width=\linewidth, height=\figH, xmin=0, xmax=45, xlabel={iterasi EM}, ylabel={ELBO (ribuan)},
+  grid=major, yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=0},
+]
+  \addplot[navy, thick, mark=*, mark size=0.9pt] table[col sep=comma, x=iter, y expr=\thisrow{elbo}/1000] {data/pdina_deep/elbo_history.csv};
+  \node[font=\tiny, anchor=south east, align=right] at (axis cs:44,-643.5) {iterasi 44: $-630.546$\\perubahan relatif $\le10^{-6}$ $\Rightarrow$ berhenti};
+\end{axis}
+\end{tikzpicture}

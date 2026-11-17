@@ -1,0 +1,12 @@
+concept_id,n_items_selected,n_items_requested,shortfall
+70,5,5,False
+251,5,5,False
+67,5,5,False
+52,5,5,False
+64,5,5,False
+166,5,5,False
+171,5,5,False
+406,5,5,False
+408,5,5,False
+258,5,5,False
+409,2,5,True

@@ -1,0 +1,58 @@
+concept_id,concept_name,n_items,n_items_single_concept,n_items_multi_concept,measurement_flag,in_target_scope,relevance_level
+33,BIDMAS,31,29,2,ok,False,out_of_scope
+52,Factorising into a Single Bracket,8,8,0,ok,True,prerequisite_strong
+64,Linear Equations,7,7,0,ok,True,prerequisite_strong
+67,Substitution into Formula,22,22,0,ok,True,prerequisite_strong
+70,Writing Expressions,25,25,0,ok,True,prerequisite_weak
+73,"Types, Naming and Estimating",9,9,0,ok,False,out_of_scope
+75,Area of Simple Shapes,32,30,2,ok,False,out_of_scope
+86,Perimeter,15,13,2,ok,False,out_of_scope
+88,Properties of Quadrilaterals,18,18,0,ok,False,out_of_scope
+90,Length Scale Factors in Similar Shapes,5,5,0,ok,False,out_of_scope
+92,Reflection,20,16,4,ok,False,out_of_scope
+93,Rotation,11,11,0,ok,False,out_of_scope
+94,Enlargement,2,2,0,few_items,False,out_of_scope
+95,Translation and Vectors,25,21,4,ok,False,out_of_scope
+166,Solving Linear Inequalities,8,8,0,ok,True,prerequisite_strong
+171,Linear Sequences (nth term),12,12,0,ok,True,direct_partial
+179,Compound Area,7,7,0,ok,False,out_of_scope
+180,Measuring Angles,11,11,0,ok,False,out_of_scope
+181,"Basic Angle Facts (straight line, opposite, around a point, etc)",24,24,0,ok,False,out_of_scope
+182,Angle Facts with Parallel Lines,22,22,0,ok,False,out_of_scope
+183,Angles in Polygons,16,16,0,ok,False,out_of_scope
+184,Parts of a Circle,8,8,0,ok,False,out_of_scope
+189,Volume of Prisms,2,2,0,few_items,False,out_of_scope
+190,Construct Angle,2,2,0,few_items,False,out_of_scope
+191,Construct Triangle,14,14,0,ok,False,out_of_scope
+192,Construct Angle and Line Bisectors,1,1,0,few_items,False,out_of_scope
+202,Place Value,17,17,0,ok,False,out_of_scope
+204,Mental Multiplication and Division,52,52,0,ok,False,out_of_scope
+207,Written Multiplication,1,1,0,few_items,False,out_of_scope
+209,Time,16,16,0,ok,False,out_of_scope
+210,Ordering Negative Numbers,15,15,0,ok,False,out_of_scope
+211,Adding and Subtracting Negative Numbers,59,58,1,ok,False,out_of_scope
+212,Multiplying and Dividing Negative Numbers,43,40,3,ok,False,out_of_scope
+219,Factors and Highest Common Factor,43,38,5,ok,False,out_of_scope
+220,Multiples and Lowest Common Multiple,39,34,5,ok,False,out_of_scope
+221,Prime Numbers and Prime Factors,29,29,0,ok,False,out_of_scope
+224,Multiplying and Dividing with Decimals,6,6,0,ok,False,out_of_scope
+225,Fractions of an Amount,22,22,0,ok,False,out_of_scope
+226,Equivalent Fractions,4,4,0,few_items,False,out_of_scope
+228,Ordering Fractions,18,18,0,ok,False,out_of_scope
+229,Converting Mixed Number and Improper Fractions,4,4,0,few_items,False,out_of_scope
+230,Adding and Subtracting Fractions,30,30,0,ok,False,out_of_scope
+231,Multiplying Fractions,29,29,0,ok,False,out_of_scope
+232,Dividing Fractions,34,34,0,ok,False,out_of_scope
+237,Converting between Fractions and Decimals,20,20,0,ok,False,out_of_scope
+238,Converting between Fractions and Percentages,4,4,0,few_items,False,out_of_scope
+245,"Squares, Cubes, etc",17,17,0,ok,False,out_of_scope
+251,Simplifying Expressions by Collecting Like Terms,19,19,0,ok,True,prerequisite_strong
+258,Horizontal and Vertical Lines,8,8,0,ok,True,prerequisite_strong
+273,"Length, Area and Volume Scale Factors",5,5,0,ok,False,out_of_scope
+275,Line Symmetry,16,16,0,ok,False,out_of_scope
+276,Rotational Symmetry,6,6,0,ok,False,out_of_scope
+406,Naming Co-ordinates in 2D,24,24,0,ok,True,prerequisite_weak
+408,Midpoint Between Two Co-ordinates,9,9,0,ok,True,prerequisite_weak
+409,Gradient Between Two Co-ordinates,2,2,0,few_items,True,prerequisite_strong
+439,Angles in Triangles,11,11,0,ok,False,out_of_scope
+655,Missing Lengths,3,3,0,few_items,False,out_of_scope

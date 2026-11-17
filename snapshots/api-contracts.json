@@ -1,0 +1,317 @@
+{
+  "base_url": "http://127.0.0.1:8000",
+  "headers": {
+    "Content-Type": "application/json",
+    "X-Service-Key": "[REDACTED]"
+  },
+  "diagnosis": {
+    "request": {
+      "model_id": "edubridge",
+      "topic_id": "fungsi",
+      "student_id": "SYN-DOCUMENTATION",
+      "responses": [
+        {
+          "question_id": "fun-pre-1",
+          "answer_option": 2
+        },
+        {
+          "question_id": "fun-pre-2",
+          "answer_option": 2
+        },
+        {
+          "question_id": "fun-pre-3",
+          "answer_option": 0
+        },
+        {
+          "question_id": "fun-pre-4",
+          "answer_option": 0
+        },
+        {
+          "question_id": "fun-pre-5",
+          "answer_option": 1
+        },
+        {
+          "question_id": "fun-pre-6",
+          "answer_option": 2
+        },
+        {
+          "question_id": "fungsi-pre-pdina-0-1",
+          "answer_option": 1
+        },
+        {
+          "question_id": "fungsi-pre-pdina-1-1",
+          "answer_option": 1
+        },
+        {
+          "question_id": "fungsi-pre-pdina-2-1",
+          "answer_option": 2
+        },
+        {
+          "question_id": "fungsi-pre-pdina-0-2",
+          "answer_option": 2
+        },
+        {
+          "question_id": "fungsi-pre-pdina-1-2",
+          "answer_option": 2
+        },
+        {
+          "question_id": "fungsi-pre-pdina-2-2",
+          "answer_option": 3
+        },
+        {
+          "question_id": "fungsi-pre-pdina-0-3",
+          "answer_option": 3
+        },
+        {
+          "question_id": "fungsi-pre-pdina-1-3",
+          "answer_option": 3
+        },
+        {
+          "question_id": "fungsi-pre-pdina-2-3",
+          "answer_option": 0
+        }
+      ]
+    },
+    "status": 200,
+    "response": {
+      "provider": "pdina",
+      "simulated": false,
+      "calibrationSynthetic": true,
+      "version": "edubridge-xi-v1+c9ce39f0b57b",
+      "instrumentVersion": "edubridge-xi-v1",
+      "score": 67,
+      "correctCount": 10,
+      "total": 15,
+      "observedCount": 15,
+      "attributes": [
+        {
+          "id": 0,
+          "conceptId": 11001,
+          "name": "Evaluasi fungsi",
+          "mastery": 0.7,
+          "probability": 0.0070487676533543325,
+          "evidence": 5,
+          "correct": 1,
+          "status": "gap",
+          "label": "not_mastered",
+          "posteriorSd": 0.08366051952936557
+        },
+        {
+          "id": 1,
+          "conceptId": 11002,
+          "name": "Komposisi fungsi",
+          "mastery": 99.7,
+          "probability": 0.9965524968952351,
+          "evidence": 5,
+          "correct": 4,
+          "status": "mastered",
+          "label": "mastered",
+          "posteriorSd": 0.05861414357565564
+        },
+        {
+          "id": 2,
+          "conceptId": 11003,
+          "name": "Invers fungsi",
+          "mastery": 100.0,
+          "probability": 0.999619676549743,
+          "evidence": 5,
+          "correct": 5,
+          "status": "mastered",
+          "label": "mastered",
+          "posteriorSd": 0.019498174384545423
+        }
+      ],
+      "gapCount": 1,
+      "uncertainCount": 0,
+      "insufficientCount": 0,
+      "recommendations": [
+        {
+          "attributeId": 0,
+          "title": "Mulai dari nilai fungsi",
+          "reason": "Penguatan evaluasi fungsi",
+          "blockIndex": 0,
+          "action": "remediate"
+        }
+      ],
+      "policy": {
+        "tau": 0.45,
+        "delta": 0.05,
+        "n_min": 5,
+        "target_concept_ids": [
+          11001,
+          11002,
+          11003
+        ],
+        "provenance": {
+          "source": "synthetic_validation_only",
+          "tau": "validation synthetic mastery accuracy; ties favor 0.5",
+          "n_min": "conservative five observed answers per attribute; not field-validated",
+          "delta": "conservative uncertainty band; not empirically field-validated"
+        }
+      },
+      "unsupportedItemIds": [],
+      "limitations": [
+        "Synthetic calibration only; validate Q-matrix/content with teachers and collect real pre/post responses.",
+        "Posterior estimates are not verified mastery. Pre/post changes do not establish causal treatment effects.",
+        "Editing item text, answer key, options, or attributes invalidates calibration for that item."
+      ]
+    }
+  },
+  "models": {
+    "status": 200,
+    "response": [
+      {
+        "id": "edubridge",
+        "provider": "pdina",
+        "version": "edubridge-xi-v1+c9ce39f0b57b",
+        "concepts": 18,
+        "items": 180,
+        "calibrationSynthetic": true,
+        "policy": {
+          "tau": 0.45,
+          "delta": 0.05,
+          "n_min": 5,
+          "target_concept_ids": [
+            11001,
+            11002,
+            11003,
+            11004,
+            11005,
+            11006,
+            11007,
+            11008,
+            11009,
+            11010,
+            11011,
+            11012,
+            11013,
+            11014,
+            11015,
+            11016,
+            11017,
+            11018
+          ],
+          "provenance": {
+            "source": "synthetic_validation_only",
+            "tau": "validation synthetic mastery accuracy; ties favor 0.5",
+            "n_min": "conservative five observed answers per attribute; not field-validated",
+            "delta": "conservative uncertainty band; not empirically field-validated"
+          }
+        },
+        "limitations": [
+          "Synthetic calibration only; validate Q-matrix/content with teachers and collect real pre/post responses.",
+          "Posterior estimates are not verified mastery. Pre/post changes do not establish causal treatment effects.",
+          "Editing item text, answer key, options, or attributes invalidates calibration for that item."
+        ]
+      },
+      {
+        "id": "eedi",
+        "provider": "pdina",
+        "version": "eedi-v1+430369e87426",
+        "concepts": 57,
+        "items": 948,
+        "calibrationSynthetic": false,
+        "policy": {
+          "tau": 0.5,
+          "delta": 0.0,
+          "n_min": 5,
+          "target_concept_ids": [
+            70,
+            251,
+            67,
+            52,
+            64,
+            166,
+            171,
+            406,
+            408,
+            258,
+            409
+          ],
+          "provenance": {
+            "tau": "validation held-out log-loss of hard-label DINA prediction; one-SE rule (student bootstrap) toward 0.5",
+            "n_min": 5,
+            "n_min_selected_from_data": true,
+            "delta": 0.0,
+            "delta_selected_from_data": true,
+            "target_consistency": 0.85,
+            "note": "n_min is the per-half evidence at which agreement between two independent half-test classifications reaches target_consistency; agreement between two noisy classifications understates the reliability of each, so the rule is conservative.",
+            "tau_grid": [
+              0.3,
+              0.35,
+              0.4,
+              0.45,
+              0.5,
+              0.55,
+              0.6,
+              0.65,
+              0.7
+            ]
+          }
+        },
+        "limitations": [
+          "Model estimates; field validity is not established by response prediction metrics."
+        ]
+      },
+      {
+        "id": "calculus",
+        "provider": "pdina",
+        "version": "calculus-v1+1daf34da6437",
+        "concepts": 13,
+        "items": 96,
+        "calibrationSynthetic": true,
+        "policy": {
+          "tau": 0.5,
+          "delta": 0.0,
+          "n_min": 1,
+          "target_concept_ids": [
+            9001,
+            9002,
+            9003,
+            9004,
+            9005,
+            9006,
+            9007,
+            9008,
+            9009,
+            9010,
+            9011,
+            9012,
+            9013
+          ],
+          "provenance": {
+            "tau": "validation held-out log-loss of hard-label DINA prediction; one-SE rule (student bootstrap) toward 0.5",
+            "n_min": 1,
+            "n_min_selected_from_data": true,
+            "delta": 0.0,
+            "delta_selected_from_data": true,
+            "target_consistency": 0.85,
+            "note": "n_min is the per-half evidence at which agreement between two independent half-test classifications reaches target_consistency; agreement between two noisy classifications understates the reliability of each, so the rule is conservative.",
+            "tau_grid": [
+              0.3,
+              0.35,
+              0.4,
+              0.45,
+              0.5,
+              0.55,
+              0.6,
+              0.65,
+              0.7
+            ]
+          }
+        },
+        "limitations": [
+          "Model estimates; field validity is not established by response prediction metrics."
+        ]
+      }
+    ]
+  },
+  "backend_ready": {
+    "status": 200,
+    "response": {
+      "status": "ready",
+      "database": true,
+      "diagnosis": "pdina"
+    }
+  }
+}

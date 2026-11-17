@@ -1,0 +1,14 @@
+concept_id,n_items_selected,n_items_requested,shortfall
+9001,3,3,False
+9002,3,3,False
+9003,3,3,False
+9004,3,3,False
+9005,3,3,False
+9006,3,3,False
+9007,3,3,False
+9008,2,3,True
+9009,3,3,False
+9010,2,3,True
+9011,3,3,False
+9012,3,3,False
+9013,2,3,True

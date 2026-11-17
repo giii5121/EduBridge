@@ -1,0 +1,249 @@
+{
+ "facts": {
+  "audience": "teacher",
+  "policy": {
+   "tau": 0.5,
+   "delta": 0.0,
+   "n_min": 5
+  },
+  "scope": {
+   "n_students": 30,
+   "n_target_concepts": 11,
+   "n_responses": 8653,
+   "n_students_with_gap": 18
+  },
+  "class_summary": [
+   {
+    "concept_name": "Linear Equations",
+    "n_students": 30,
+    "n_mastered": 4,
+    "n_not_mastered": 9,
+    "n_uncertain": 0,
+    "n_insufficient": 17,
+    "gap_share_among_diagnosable": 0.69,
+    "mean_mastery_prob": 0.3
+   },
+   {
+    "concept_name": "Linear Sequences (nth term)",
+    "n_students": 30,
+    "n_mastered": 3,
+    "n_not_mastered": 6,
+    "n_uncertain": 0,
+    "n_insufficient": 21,
+    "gap_share_among_diagnosable": 0.67,
+    "mean_mastery_prob": 0.44
+   },
+   {
+    "concept_name": "Midpoint Between Two Co-ordinates",
+    "n_students": 30,
+    "n_mastered": 2,
+    "n_not_mastered": 4,
+    "n_uncertain": 0,
+    "n_insufficient": 24,
+    "gap_share_among_diagnosable": 0.67,
+    "mean_mastery_prob": 0.23
+   },
+   {
+    "concept_name": "Solving Linear Inequalities",
+    "n_students": 30,
+    "n_mastered": 2,
+    "n_not_mastered": 4,
+    "n_uncertain": 0,
+    "n_insufficient": 24,
+    "gap_share_among_diagnosable": 0.67,
+    "mean_mastery_prob": 0.4
+   },
+   {
+    "concept_name": "Substitution into Formula",
+    "n_students": 30,
+    "n_mastered": 7,
+    "n_not_mastered": 12,
+    "n_uncertain": 0,
+    "n_insufficient": 11,
+    "gap_share_among_diagnosable": 0.63,
+    "mean_mastery_prob": 0.3
+   },
+   {
+    "concept_name": "Horizontal and Vertical Lines",
+    "n_students": 30,
+    "n_mastered": 3,
+    "n_not_mastered": 5,
+    "n_uncertain": 0,
+    "n_insufficient": 22,
+    "gap_share_among_diagnosable": 0.62,
+    "mean_mastery_prob": 0.22
+   },
+   {
+    "concept_name": "Simplifying Expressions by Collecting Like Terms",
+    "n_students": 30,
+    "n_mastered": 8,
+    "n_not_mastered": 13,
+    "n_uncertain": 0,
+    "n_insufficient": 9,
+    "gap_share_among_diagnosable": 0.62,
+    "mean_mastery_prob": 0.35
+   },
+   {
+    "concept_name": "Writing Expressions",
+    "n_students": 30,
+    "n_mastered": 8,
+    "n_not_mastered": 12,
+    "n_uncertain": 0,
+    "n_insufficient": 10,
+    "gap_share_among_diagnosable": 0.6,
+    "mean_mastery_prob": 0.42
+   },
+   {
+    "concept_name": "Factorising into a Single Bracket",
+    "n_students": 30,
+    "n_mastered": 7,
+    "n_not_mastered": 9,
+    "n_uncertain": 0,
+    "n_insufficient": 14,
+    "gap_share_among_diagnosable": 0.56,
+    "mean_mastery_prob": 0.36
+   },
+   {
+    "concept_name": "Naming Co-ordinates in 2D",
+    "n_students": 30,
+    "n_mastered": 8,
+    "n_not_mastered": 8,
+    "n_uncertain": 0,
+    "n_insufficient": 14,
+    "gap_share_among_diagnosable": 0.5,
+    "mean_mastery_prob": 0.55
+   },
+   {
+    "concept_name": "Gradient Between Two Co-ordinates",
+    "n_students": 30,
+    "n_mastered": 0,
+    "n_not_mastered": 0,
+    "n_uncertain": 0,
+    "n_insufficient": 30,
+    "gap_share_among_diagnosable": null,
+    "mean_mastery_prob": 0.42
+   }
+  ],
+  "gaps": [
+   {
+    "concept_name": "Linear Equations",
+    "gap_status": "learning_gap",
+    "n_students_with_gap": 9,
+    "gap_share_among_diagnosable": 0.69,
+    "mean_mastery_prob": 0.3
+   },
+   {
+    "concept_name": "Linear Sequences (nth term)",
+    "gap_status": "learning_gap",
+    "n_students_with_gap": 6,
+    "gap_share_among_diagnosable": 0.67,
+    "mean_mastery_prob": 0.44
+   },
+   {
+    "concept_name": "Midpoint Between Two Co-ordinates",
+    "gap_status": "learning_gap",
+    "n_students_with_gap": 4,
+    "gap_share_among_diagnosable": 0.67,
+    "mean_mastery_prob": 0.23
+   },
+   {
+    "concept_name": "Solving Linear Inequalities",
+    "gap_status": "learning_gap",
+    "n_students_with_gap": 4,
+    "gap_share_among_diagnosable": 0.67,
+    "mean_mastery_prob": 0.4
+   },
+   {
+    "concept_name": "Substitution into Formula",
+    "gap_status": "learning_gap",
+    "n_students_with_gap": 12,
+    "gap_share_among_diagnosable": 0.63,
+    "mean_mastery_prob": 0.3
+   }
+  ],
+  "recommendations": [
+   {
+    "concept_name": "Simplifying Expressions by Collecting Like Terms",
+    "recommended_action": "remediate",
+    "intervention_level": "whole_class",
+    "gap_description": "probabilitas penguasaan model rendah untuk 'Simplifying Expressions by Collecting Like Terms' berdasarkan respons diagnostik; deskripsi miskonsepsi spesifik pe…",
+    "remedial_activity": "penjelasan ulang konsep 'Simplifying Expressions by Collecting Like Terms' dengan contoh terbimbing, lalu latihan bertahap dengan umpan balik.",
+    "estimated_duration_min": null,
+    "is_placeholder": true,
+    "n_students": 13
+   },
+   {
+    "concept_name": "Substitution into Formula",
+    "recommended_action": "remediate",
+    "intervention_level": "whole_class",
+    "gap_description": "probabilitas penguasaan model rendah untuk 'Substitution into Formula' berdasarkan respons diagnostik; deskripsi miskonsepsi spesifik perlu diisi guru/dosen.",
+    "remedial_activity": "penjelasan ulang konsep 'Substitution into Formula' dengan contoh terbimbing, lalu latihan bertahap dengan umpan balik.",
+    "estimated_duration_min": null,
+    "is_placeholder": true,
+    "n_students": 12
+   },
+   {
+    "concept_name": "Writing Expressions",
+    "recommended_action": "remediate",
+    "intervention_level": "whole_class",
+    "gap_description": "probabilitas penguasaan model rendah untuk 'Writing Expressions' berdasarkan respons diagnostik; deskripsi miskonsepsi spesifik perlu diisi guru/dosen.",
+    "remedial_activity": "penjelasan ulang konsep 'Writing Expressions' dengan contoh terbimbing, lalu latihan bertahap dengan umpan balik.",
+    "estimated_duration_min": null,
+    "is_placeholder": true,
+    "n_students": 12
+   },
+   {
+    "concept_name": "Factorising into a Single Bracket",
+    "recommended_action": "remediate",
+    "intervention_level": "whole_class",
+    "gap_description": "probabilitas penguasaan model rendah untuk 'Factorising into a Single Bracket' berdasarkan respons diagnostik; deskripsi miskonsepsi spesifik perlu diisi guru/…",
+    "remedial_activity": "penjelasan ulang konsep 'Factorising into a Single Bracket' dengan contoh terbimbing, lalu latihan bertahap dengan umpan balik.",
+    "estimated_duration_min": null,
+    "is_placeholder": true,
+    "n_students": 9
+   },
+   {
+    "concept_name": "Linear Equations",
+    "recommended_action": "remediate",
+    "intervention_level": "whole_class",
+    "gap_description": "probabilitas penguasaan model rendah untuk 'Linear Equations' berdasarkan respons diagnostik; deskripsi miskonsepsi spesifik perlu diisi guru/dosen.",
+    "remedial_activity": "penjelasan ulang konsep 'Linear Equations' dengan contoh terbimbing, lalu latihan bertahap dengan umpan balik.",
+    "estimated_duration_min": null,
+    "is_placeholder": true,
+    "n_students": 9
+   }
+  ],
+  "limits": {
+   "no_ground_truth": true,
+   "placeholder_present": true,
+   "n_target_concepts_without_items": 0,
+   "insufficient_evidence_is_not_gap": true
+  }
+ },
+ "meta": {
+  "model": "gemini-3.1-flash-lite",
+  "llm_model": "gemini-3.1-flash-lite",
+  "prompt_version": "narrative-gemini-v1",
+  "audience": "teacher",
+  "latency_ms": 5972,
+  "attempts": 1,
+  "cache_hit": false,
+  "input_hash": "d4cd47c898192fb7ea482c80924753931e9668303207d0ba155bc0504b3b2b7f",
+  "reason": null,
+  "usage": {
+   "prompt_tokens": 3246,
+   "completion_tokens": 618,
+   "thinking_tokens": 119,
+   "total_tokens": 3983
+  },
+  "generated_at": "2026-10-27T09:47:55+00:00"
+ },
+ "validation": {
+  "ok": true,
+  "errors": [],
+  "invented_numbers": [],
+  "word_count": 332
+ },
+ "fallback": false,
+ "text": "## Ringkasan kelas\nData mencakup 30 siswa yang diuji pada 11 konsep target dengan total 8653 respons. Estimasi model mendeteksi 18 siswa memiliki learning gap berdasarkan ambang batas diagnostik yang ditetapkan.\n\n## Temuan utama\n- **Simplifying Expressions by Collecting Like Terms** memiliki 13 siswa yang belum menguasai, dengan estimasi probabilitas penguasaan 35%.\n- **Substitution into Formula** menunjukkan 12 siswa belum menguasai, dengan estimasi probabilitas penguasaan 30%.\n- **Writing Expressions** tercatat 12 siswa belum menguasai, dengan estimasi probabilitas penguasaan 42%.\n- **Linear Equations** memiliki 9 siswa dengan learning gap, dengan estimasi probabilitas penguasaan 30%.\n- **Gradient Between Two Co-ordinates** mencatat 30 siswa dengan bukti tidak cukup, yang berarti memerlukan soal tambahan untuk mendapatkan diagnosis akurat.\n\n## Konsep prioritas\n- **Substitution into Formula**: 12 siswa terdeteksi memiliki learning gap.\n- **Simplifying Expressions by Collecting Like Terms**: 13 siswa terdeteksi belum menguasai konsep.\n- **Writing Expressions**: 12 siswa terdeteksi belum menguasai konsep.\n- **Linear Equations**: 9 siswa terdeteksi memiliki learning gap.\n\n## Rekomendasi tindakan\n- **Simplifying Expressions by Collecting Like Terms** (seluruh kelas): Penjelasan ulang dengan contoh terbimbing, lalu latihan bertahap dengan umpan balik untuk 13 siswa. Rekomendasi ini adalah placeholder dan perlu validasi guru.\n- **Substitution into Formula** (seluruh kelas): Penjelasan ulang dengan contoh terbimbing, lalu latihan bertahap dengan umpan balik untuk 12 siswa. Rekomendasi ini adalah placeholder dan perlu validasi guru.\n- **Writing Expressions** (seluruh kelas): Penjelasan ulang dengan contoh terbimbing, lalu latihan bertahap dengan umpan balik untuk 12 siswa. Rekomendasi ini adalah placeholder dan perlu validasi guru.\n- **Factorising into a Single Bracket** (seluruh kelas): Penjelasan ulang dengan contoh terbimbing, lalu latihan bertahap dengan umpan balik untuk 9 siswa. Rekomendasi ini adalah placeholder dan perlu validasi guru.\n- **Linear Equations** (seluruh kelas): Penjelasan ulang dengan contoh terbimbing, lalu latihan bertahap dengan umpan balik untuk 9 siswa. Rekomendasi ini adalah placeholder dan perlu validasi guru.\n\n## Keterbatasan dan catatan\n- Seluruh data penguasaan adalah estimasi model dari respons siswa, bukan hasil terverifikasi.\n- Status bukti tidak cukup (insufficient evidence) menunjukkan perlunya tambahan data, bukan sebagai learning gap.\n- Rekomendasi aktivitas bersifat placeholder; belum ada bukti intervensi yang pasti efektif dan tetap perlu validasi guru."
+}

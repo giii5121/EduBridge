@@ -1,0 +1,181 @@
+QuestionId,app_id,question_text,correct_answer,content_hash,concept_ids
+110001,fun-pre-1,"Jika f(x) = 3x − 2, berapakah f(4)?",2,597ed42140d9bd6043ff00bc6b842f5a6abd7c6ef7882cbb044009bf8fce9c1b,11001
+110002,fun-pre-2,"Jika g(x) = x² + 2, berapakah g(−3)?",3,012f469052a49659dcbcfb6266c7a68cb5b0803f350ea193ad4d5d025b7ef03d,11001
+110003,fun-pre-3,f(x) = 2x + 1 dan g(x) = x − 3. Bentuk (f ∘ g)(x) adalah …,1,20060c84b3b89425f3fb0510c79ea44df3117bfa647f7b159e3ef318761e4065,11002
+110004,fun-pre-4,f(x) = x² dan g(x) = x + 2. Berapakah (g ∘ f)(3)?,4,5895af2fbf8d79177e61db3c7e3a4e67c807446209b1947f51ccf62edfea4c7f,11002
+110005,fun-pre-5,Invers dari f(x) = 2x + 6 adalah …,2,dc74da61ab55e98717ef3cd7deec62dd9700dcba49957cb420c7a7f141bb233f,11003
+110006,fun-pre-6,"Jika f(x) = 3x − 9, berapakah f⁻¹(6)?",3,c1ee581786e5a3aeb03af633ebf70a9af4b93d01551b290ffcffca5c89a88dbf,11003
+110007,fungsi-pre-pdina-0-1,Diketahui f(x) = 3x + 1. Berapa nilai f(2)?,1,cd44f6ecc25f65fff7050e64f13eb543b306974b42ad80dd5be2bfcead6650b4,11001
+110008,fungsi-pre-pdina-1-1,f(x) = 2x + 2 dan g(x) = x + 4. Berapa (f ∘ g)(2)?,2,9df88a997932d9543e4e37bc8d41db493cc5e5637c9bfcd80fe706b20d4ebf49,11002
+110009,fungsi-pre-pdina-2-1,f(x) = 3x + 2. Berapa f⁻¹(14)?,3,df82ca343fd774a680bb57642625e51412d1b43a9e3d4bbdc9ebb2e440ba084a,11003
+110010,fungsi-pre-pdina-0-2,Diketahui f(x) = 4x + 2. Berapa nilai f(3)?,2,a6c29f29e61ae6d755d6c04fabed5018b7c687a44f975dacf4d28e6295008484,11001
+110011,fungsi-pre-pdina-1-2,f(x) = 3x + 2 dan g(x) = x + 5. Berapa (f ∘ g)(2)?,3,82e6181d2f1c462e0c4ce4c4201a49e09081a8a1253abc407755c5a0c2892cea,11002
+110012,fungsi-pre-pdina-2-2,f(x) = 4x + 3. Berapa f⁻¹(23)?,4,8050c800b076df6703014d9da1253c3b1ee9627db258a80ae4893f77fb541818,11003
+110013,fungsi-pre-pdina-0-3,Diketahui f(x) = 5x + 3. Berapa nilai f(4)?,3,1862d5f48b050625469642d6fcc91f923b79f39ba84f8fce98114efd2b1890e3,11001
+110014,fungsi-pre-pdina-1-3,f(x) = 4x + 2 dan g(x) = x + 6. Berapa (f ∘ g)(2)?,4,888760b40961e9190a664f387b35f1ddfd2c962cda42b59dcc89f70484a116e4,11002
+110015,fungsi-pre-pdina-2-3,f(x) = 5x + 4. Berapa f⁻¹(34)?,1,4829c196394224d0dc752db11a8bbce2cea2df691ef1a8c977db6bda007012b0,11003
+110016,fun-post-1,"Jika f(x) = 4x − 5, berapakah f(3)?",1,c1580f837988ca4a79ce8f7ab2868d6c6c1c8ea283bab4a341cb2fe3f9c45dad,11001
+110017,fun-post-2,"Jika g(x) = x² − 4, berapakah g(−4)?",4,2613bdc91756f0082abb0be28a86c7c74204e4a4a9e558e176ff5ec39e3a1217,11001
+110018,fun-post-3,f(x) = 3x − 2 dan g(x) = x + 4. Bentuk (f ∘ g)(x) adalah …,2,382612b353bacffa46401f189420b2159c5cc754e6385f37a1a5224fb4fde784,11002
+110019,fun-post-4,f(x) = x + 1 dan g(x) = x². Berapakah (f ∘ g)(4)?,3,275fdbbc0888b6bdc3858981670a1c3e2d10bb0288acac39aa702e8230235ac3,11002
+110020,fun-post-5,Invers dari f(x) = 5x − 10 adalah …,3,baa1b875e7fc48e6b73fcb570097f47824d4a9b5ca9371dc04c5aaa6fa273faa,11003
+110021,fun-post-6,"Jika f(x) = 4x + 8, berapakah f⁻¹(20)?",1,e150e0cb5a4a4ee2a1c8a182064e7b90162603197a98426ce47c29d84eaed647,11003
+110022,fungsi-post-pdina-0-1,Diketahui f(x) = 7x + 5. Berapa nilai f(6)?,4,d5d692da611f071d666fd94bdef42ed2f8afb96233f3269d40239d9d2c6424d4,11001
+110023,fungsi-post-pdina-1-1,f(x) = 6x + 2 dan g(x) = x + 8. Berapa (f ∘ g)(2)?,1,a4c6b6b363e2be18cdca1088029891e3aef8bee1e7ae9d082d5e4f66dbee33c7,11002
+110024,fungsi-post-pdina-2-1,f(x) = 7x + 6. Berapa f⁻¹(62)?,2,d4fae68f1ef76c9f48c7a823092b87e663caec4fc895383b95836b487bfbd2fc,11003
+110025,fungsi-post-pdina-0-2,Diketahui f(x) = 8x + 6. Berapa nilai f(7)?,1,f7eaf151bc0c35469c4888731d5f9be6235c8599688f334fa2bc8e398a694ed7,11001
+110026,fungsi-post-pdina-1-2,f(x) = 7x + 2 dan g(x) = x + 9. Berapa (f ∘ g)(2)?,2,a13d39cce6403e4b283482d100cd43f06ce60b776f37dd72018bd78ab8cec450,11002
+110027,fungsi-post-pdina-2-2,f(x) = 8x + 7. Berapa f⁻¹(79)?,3,438a5988c056232a9043cfc329c94fe0f7c7f7ccee74c71974ad578eccacd27d,11003
+110028,fungsi-post-pdina-0-3,Diketahui f(x) = 9x + 7. Berapa nilai f(8)?,2,f559483df4dc768c88ea50950dbd1f19f8d07635d786a6e20df5d874d39337a5,11001
+110029,fungsi-post-pdina-1-3,f(x) = 8x + 2 dan g(x) = x + 10. Berapa (f ∘ g)(2)?,3,600fe58550721f271b67d6d22e30d2ac39358a54e2035d015f0af85f265b20dd,11002
+110030,fungsi-post-pdina-2-3,f(x) = 9x + 8. Berapa f⁻¹(98)?,4,465beb30c39b3dad30a374cd1dc6d731bc24c8ff080d76b23f0afc14b071d01d,11003
+110101,geo-pre-1,Sudut pusat yang menghadap suatu busur adalah 120°. Sudut keliling yang menghadap busur yang sama adalah …,2,44cfb166b913c96ecd800da4d2803f3c8b87f494a7a945da4a1a0da964b6de63,11004
+110102,geo-pre-2,Sudut keliling yang menghadap diameter besarnya …,3,55d8b5c6680a6e7f4aded07bbaf44e0385ee1eca3979cda199172a06579820b5,11004
+110103,geo-pre-3,"r = 14 cm dan sudut pusat 90°. Dengan π = 22/7, panjang busurnya …",2,92ce9795207c4465af84c5247ee5349eab3eac9d1d088aa7798839bedd6c522d,11005
+110104,geo-pre-4,"r = 7 cm dan sudut pusat 180°. Dengan π = 22/7, luas juringnya …",3,068fe78d906c0258525a23479d15631c467f7fd2997735a0af6cec5943400737,11005
+110105,geo-pre-5,Jarak titik P ke pusat lingkaran 13 cm dan jari-jarinya 5 cm. Panjang ruas garis singgung dari P adalah …,2,5c3f7faea48ed8187453e559b639577af4184c0438e4ac0475feae33f91e9194,11006
+110106,geo-pre-6,"PA dan PB adalah ruas garis singgung dari titik P ke lingkaran yang sama. Jika PA = 8 cm, PB = …",3,d362ffc4faaae3f5aaa6f6f41e5a1d52422be1a499cc51fdd066f98cbdcd0252,11006
+110107,geometri-pre-pdina-0-1,Sudut keliling yang menghadap busur AB adalah 25°. Berapa sudut pusat yang menghadap busur AB yang sama?,1,58340531c54c1bd87f255b9fba6dd3d646902436a7b976e64885940b1afa4a58,11004
+110108,geometri-pre-pdina-1-1,"Jari-jari lingkaran 7 cm. Dengan π = 22/7, berapa panjang busur setengah lingkaran?",2,1044759cfa276d13ec5c1dd676d269c36749aeddd4f2e359dedfd823d145a13a,11005
+110109,geometri-pre-pdina-2-1,Jarak pusat O ke titik luar P adalah 13 cm dan jari-jari OT 5 cm. Berapa panjang garis singgung PT?,3,ca406fa1ecea9f57ca787d2bda04bafe519caaa7cd62b98660cf3428c83c1ade,11006
+110110,geometri-pre-pdina-0-2,Sudut keliling yang menghadap busur AB adalah 30°. Berapa sudut pusat yang menghadap busur AB yang sama?,2,64bb0465459fe78a764e66f3655955bccacec57ae7fe2fe0c8b83fc9e00a8178,11004
+110111,geometri-pre-pdina-1-2,"Jari-jari lingkaran 14 cm. Dengan π = 22/7, berapa panjang busur setengah lingkaran?",3,29e433258f108b5bf50a16e311978f01dad7844cdd3c06956a2dfbf30111c462,11005
+110112,geometri-pre-pdina-2-2,Jarak pusat O ke titik luar P adalah 17 cm dan jari-jari OT 8 cm. Berapa panjang garis singgung PT?,4,876e345eb55d68f6a2a0d5b59e3f38f5a9b2671475e539f95da29bb9c400d528,11006
+110113,geometri-pre-pdina-0-3,Sudut keliling yang menghadap busur AB adalah 35°. Berapa sudut pusat yang menghadap busur AB yang sama?,3,52b1873b3ecc3f436d5e04bf4e0bcf2dd107497b9e6d3781573239203d85b5d0,11004
+110114,geometri-pre-pdina-1-3,"Jari-jari lingkaran 21 cm. Dengan π = 22/7, berapa panjang busur setengah lingkaran?",4,b41ba059b5bfa837a7a46fc99c840224ebccaec2acc88fd198e8338f4893d579,11005
+110115,geometri-pre-pdina-2-3,Jarak pusat O ke titik luar P adalah 25 cm dan jari-jari OT 7 cm. Berapa panjang garis singgung PT?,1,4e2da184436517f535d55d96c4e630561dd17898010801cb051f6510ebc07b5b,11006
+110116,geo-post-1,Sudut keliling 35° menghadap busur yang sama dengan sudut pusat. Besar sudut pusat adalah …,3,f5fabeede5d9ccfecc9117228d4ea8077a9510ded83f0bdc3b1c787d17a1e869,11004
+110117,geo-post-2,AB adalah diameter dan C berada pada lingkaran. Besar ∠ACB adalah …,1,7ca83312f8f871a659300be9ce49e03dd33aba2033b068a548b8f8c60b75d246,11004
+110118,geo-post-3,"r = 21 cm, sudut pusat 120°, π = 22/7. Panjang busurnya …",2,ff4607fc0e05cf67695be7dc72222cd265bd803ba74a38188f0baf728afb9f85,11005
+110119,geo-post-4,"r = 14 cm, sudut pusat 90°, π = 22/7. Luas juringnya …",3,3d4aeb2a7fe65792e741a1981d5f0b78cce3f3cf9b37ccdd9849a5cea36b3c8a,11005
+110120,geo-post-5,Jarak titik luar ke pusat 17 cm dan jari-jari 8 cm. Panjang ruas garis singgung adalah …,2,fe6b635cfef6210b7f486a6c6e54d4065121c8200ed5132a63707b68c1e7a518,11006
+110121,geo-post-6,Sudut antara jari-jari dan garis singgung di titik singgung adalah …,3,f31e95a597a9dde7da869a274709d1309c310ae7fe3fba6bff519693fa73a648,11006
+110122,geometri-post-pdina-0-1,Sudut keliling yang menghadap busur AB adalah 45°. Berapa sudut pusat yang menghadap busur AB yang sama?,4,add3befcc39ea4565e11710dcc3ad97ae4f5c7723a44f92d08e2506c4f104568,11004
+110123,geometri-post-pdina-1-1,"Jari-jari lingkaran 35 cm. Dengan π = 22/7, berapa panjang busur setengah lingkaran?",1,c16a6978a6c95517fab752e3e23100707cff2cc86058f36446f0044da3bb76a7,11005
+110124,geometri-post-pdina-2-1,Jarak pusat O ke titik luar P adalah 26 cm dan jari-jari OT 10 cm. Berapa panjang garis singgung PT?,2,843149c7d64c984a2b32ad2baa4df3e5e9ec5598f90a1363a1bce035fd51810b,11006
+110125,geometri-post-pdina-0-2,Sudut keliling yang menghadap busur AB adalah 50°. Berapa sudut pusat yang menghadap busur AB yang sama?,1,227cc7ceafe2885a0afecacda4ac2d5c365499b09f6729892d56920df3c60c0b,11004
+110126,geometri-post-pdina-1-2,"Jari-jari lingkaran 42 cm. Dengan π = 22/7, berapa panjang busur setengah lingkaran?",2,cea93aab5304f9540d02903e34c39bfb45fac58ab46d545eb5721c76b69d344a,11005
+110127,geometri-post-pdina-2-2,Jarak pusat O ke titik luar P adalah 34 cm dan jari-jari OT 16 cm. Berapa panjang garis singgung PT?,3,9adbd91c21e430326aaea403b0d15051d25b53a92f66d23f0e96ba9601f296cf,11006
+110128,geometri-post-pdina-0-3,Sudut keliling yang menghadap busur AB adalah 55°. Berapa sudut pusat yang menghadap busur AB yang sama?,2,912c48d007e0111d86deff3267530004248fb8fe611e091211b32d2ef8586e31,11004
+110129,geometri-post-pdina-1-3,"Jari-jari lingkaran 49 cm. Dengan π = 22/7, berapa panjang busur setengah lingkaran?",3,cd04780062217ea814878c2598bb06258014a265a8b6319d2abd91049b6afc9f,11005
+110130,geometri-post-pdina-2-3,Jarak pusat O ke titik luar P adalah 50 cm dan jari-jari OT 14 cm. Berapa panjang garis singgung PT?,4,9bbc319192ee6da44b4d42eb18405fb6dacc33d0cd5f7aff159b7338c274cb8d,11006
+110201,sta-pre-1,"Rata-rata data 4, 6, 8, 10, 12 adalah …",3,3b3c23bd0c32127303365bc301d5e79b08c5b48b7117bd66e22d6d7ea669ebc6,11007
+110202,sta-pre-2,"Median data 3, 5, 7, 9 adalah …",2,61de51e305d36176b007f25c38c7c1eee9145ed25e651cde1c99a528c536d12a,11007
+110203,sta-pre-3,"Jangkauan data 12, 15, 18, 22 adalah …",2,0c941806d0da63f8662ccbea8612b36e0d625f8c7f6fb97eb75640d7eaf6ab68,11008
+110204,sta-pre-4,"Varians populasi data 2, 4, 6 adalah …",3,e31c4749b68d4c86bd1187dfa40c4a3690b89084f009b488e22bad8f1c6df7ae,11008
+110205,sta-pre-5,Satu nilai sangat besar ditambahkan ke data. Ukuran yang umumnya paling terpengaruh adalah …,1,6710e7caab63f8d4a09cb179269032d6d292312e9cdb28aa139cfc73a8323823,11009
+110206,sta-pre-6,10 siswa memiliki rata-rata 70 dan 20 siswa rata-rata 85. Rata-rata gabungan adalah …,3,a9ebc6c11001d19f05e2822101faab3120fab2306113980dbcad9b981700f0ab,11009
+110207,statistik-pre-pdina-0-1,"Berapa rata-rata data 1, 3, 5, 7, 9?",1,049f1965d6eaafb581dee6dd17b4cc92d50af1a72408ad2d56a2b0292b3c0558,11007
+110208,statistik-pre-pdina-1-1,"Data pengamatan adalah 2, 5, 9, 13. Berapa jangkauannya?",2,00f19b2156f54e45c092fd8578a98da08dcb5d34acf6582d676ec4c4177a1966,11008
+110209,statistik-pre-pdina-2-1,Kelompok A berisi 10 siswa dengan rata-rata 61. Kelompok B berisi 10 siswa dengan rata-rata 81. Berapa rata-rata gabungan?,3,68b0f263dc1580aae991a5e1cd9ccf22402f64b8a1c6875ba07efadd34eb5d6b,11009
+110210,statistik-pre-pdina-0-2,"Berapa rata-rata data 2, 4, 6, 8, 10?",2,11ad539ca49f7fb59ed313d5b75fd95374043d3eb6babba12fd810c09a80fec0,11007
+110211,statistik-pre-pdina-1-2,"Data pengamatan adalah 3, 6, 10, 14. Berapa jangkauannya?",3,84ac4c84d16ef3bc0dd2255f5c1584d1ba8e1b049a385c60030dea91eec8e77f,11008
+110212,statistik-pre-pdina-2-2,Kelompok A berisi 10 siswa dengan rata-rata 62. Kelompok B berisi 10 siswa dengan rata-rata 82. Berapa rata-rata gabungan?,4,682f714179f957db5e9b0d4cbe9e94a08d350615e48bd159f42b016c03f7818b,11009
+110213,statistik-pre-pdina-0-3,"Berapa rata-rata data 3, 5, 7, 9, 11?",3,c396b03fd959a9520e52f9bbc6cf8b8f44101b4b2558cf0b4d9832ddedac1090,11007
+110214,statistik-pre-pdina-1-3,"Data pengamatan adalah 4, 7, 11, 15. Berapa jangkauannya?",4,bf6483bb39bc854c43c356e1877a2ba0ac2c71bf5415a16e917685e043d428e2,11008
+110215,statistik-pre-pdina-2-3,Kelompok A berisi 10 siswa dengan rata-rata 63. Kelompok B berisi 10 siswa dengan rata-rata 83. Berapa rata-rata gabungan?,1,c8b4db025f0d8c0961b6d4da4f3261fd24e0f0cfac7df6a2e49c91baf3f8ce8a,11009
+110216,sta-post-1,"Rata-rata data 5, 7, 9, 11 adalah …",2,b847f52e3bcfd5e8794aa2dc3753f25037db8b7dc97511525a8c97aa5bf2fd79,11007
+110217,sta-post-2,"Median data 2, 4, 6, 8, 20 adalah …",2,2255600e54599f2a4e8add9431637d3a74709d1c4a8ebd829b42a13ac2022d80,11007
+110218,sta-post-3,"Jangkauan data 8, 13, 15, 24 adalah …",3,0141055eed743ce6836c7de1378bc1d7381d1e9ace33d156601a16c513bebfdb,11008
+110219,sta-post-4,"Varians populasi data 3, 3, 7, 7 adalah …",2,ed8d07f6e6983830a5eb16f89fcabb5ee2cbea30138cdc6a29886de94881dfc2,11008
+110220,sta-post-5,Ada satu pendapatan ekstrem sangat tinggi. Ukuran pusat yang lebih tahan terhadap nilai ekstrem adalah …,3,64d9c9c0efb97cc052197e85b54d61457e7da428f641690de9c6638db7b0dfd5,11009
+110221,sta-post-6,15 siswa rata-ratanya 80 dan 5 siswa rata-ratanya 60. Rata-rata gabungan adalah …,3,432b8c7d38366bbfc76971cbd3026c309fa819c1bb7dd62c01aa42ec95dda762,11009
+110222,statistik-post-pdina-0-1,"Berapa rata-rata data 5, 7, 9, 11, 13?",4,2d05e098288943f2773b1657e60e2344f79e77b3b44343d9f58b55b8af991846,11007
+110223,statistik-post-pdina-1-1,"Data pengamatan adalah 6, 9, 13, 17. Berapa jangkauannya?",1,ea7d0531515be522e8c248e7e119e4c3ed4db513589a953228e2e57e85917a54,11008
+110224,statistik-post-pdina-2-1,Kelompok A berisi 10 siswa dengan rata-rata 65. Kelompok B berisi 10 siswa dengan rata-rata 85. Berapa rata-rata gabungan?,2,a40f8268acb09fdd4a87393f26dd343552687c44f29629acc3d79a4cbbc82337,11009
+110225,statistik-post-pdina-0-2,"Berapa rata-rata data 6, 8, 10, 12, 14?",1,b51b1bf2c15ee0761948ba297f538b5d1709ebe8a3e25bf577b59c2bf91de6c4,11007
+110226,statistik-post-pdina-1-2,"Data pengamatan adalah 7, 10, 14, 18. Berapa jangkauannya?",2,d18eaf1edae5e46504e5a585ae80262bf01b6f609cfbd97e3d138457d943b5c6,11008
+110227,statistik-post-pdina-2-2,Kelompok A berisi 10 siswa dengan rata-rata 66. Kelompok B berisi 10 siswa dengan rata-rata 86. Berapa rata-rata gabungan?,3,0684662a28a9eb13fa7df4257d43e711b90151d88dae4cb8d59f72092d114682,11009
+110228,statistik-post-pdina-0-3,"Berapa rata-rata data 7, 9, 11, 13, 15?",2,7a2ec94d6ee0799f714998de4fecb8bcdac5ee49e7ef6fd572f695e28ac97a2c,11007
+110229,statistik-post-pdina-1-3,"Data pengamatan adalah 8, 11, 15, 19. Berapa jangkauannya?",3,b0071d708862d3d3d1413eda392b425f64654fb3195ceaf3b9de328aaa416ffa,11008
+110230,statistik-post-pdina-2-3,Kelompok A berisi 10 siswa dengan rata-rata 67. Kelompok B berisi 10 siswa dengan rata-rata 87. Berapa rata-rata gabungan?,4,68ff859de0b70f2269a390e681da23a15337cd6e544950fdd4afb3a0f0242c46,11009
+110301,pel-pre-1,"Pada dadu adil, peluang muncul bilangan prima adalah …",3,5cc9c6bb9d1827bc152972161448310fcef8dd8024b2ce6d743b190b8fb534e0,11010
+110302,pel-pre-2,"P(A) = 0,3. Peluang komplemen A adalah …",3,a7c02d58b30af52732d084db0dd6ae176db23879d66c49303e7fba1c65ac4ba1,11010
+110303,pel-pre-3,Dua koin adil dilempar. Peluang keduanya gambar adalah …,2,db9ca6b4316dcc3cc468209deca0cf834b8de4c0025cc4d03d964073cac48e14,11011
+110304,pel-pre-4,"P(A) = 0,4; P(B) = 0,3; P(A ∩ B) = 0,1. P(A ∪ B) = …",2,3f52a506bddaec4c6fa39fe20053e4ce82a0c5b03bf0c70242032f6fe153aba3,11011
+110305,pel-pre-5,"P(A ∩ B) = 0,2 dan P(B) = 0,5. P(A | B) = …",3,65830642b9072120a70c4604fd3899d966e6ce4bbbe54d703ddbb2dd87ca1d6a,11012
+110306,pel-pre-6,Ada 3 bola merah dan 2 biru. Satu bola merah diambil tanpa pengembalian. Peluang bola berikutnya merah adalah …,3,eed51193cd9ee3651d3ffd44e4205e63b2cd15f8b59baf277bab9bc0fd659c15,11012
+110307,peluang-pre-pdina-0-1,"Kotak berisi 3 bola merah dan 7 bola biru. Jika satu bola dipilih acak, berapa peluang merah dalam persen?",1,21063aeb6112ce817a83669401a41927d1a9e69bf098626c63904588818bf461,11010
+110308,peluang-pre-pdina-1-1,Kejadian A dan B saling lepas. P(A) = 11% dan P(B) = 20%. Berapa P(A ∪ B) dalam persen?,2,dddea264ed3f2b706474bd28223ece0894179d6a22aa2485c8f09dad80f4fc03,11011
+110309,peluang-pre-pdina-2-1,"Dari 20 anggota klub sains, 4 juga mengikuti klub matematika. Jika dipilih seorang anggota klub sains, berapa peluang ia mengikuti matematika dalam persen?",3,cec3f953234fdfb292d6ebd123d4fa405ba3c35cea05d6ad1f3188e5bc01c581,11012
+110310,peluang-pre-pdina-0-2,"Kotak berisi 4 bola merah dan 6 bola biru. Jika satu bola dipilih acak, berapa peluang merah dalam persen?",2,cfb2b7b27484afe04bd1f246138ba7333bd0baa14caf58f672a78b8e8efa6825,11010
+110311,peluang-pre-pdina-1-2,Kejadian A dan B saling lepas. P(A) = 12% dan P(B) = 20%. Berapa P(A ∪ B) dalam persen?,3,c52762f06a6eb69034eb3bea27ab7df875f714110506e1cae93bccde50c5ea70,11011
+110312,peluang-pre-pdina-2-2,"Dari 20 anggota klub sains, 5 juga mengikuti klub matematika. Jika dipilih seorang anggota klub sains, berapa peluang ia mengikuti matematika dalam persen?",4,7989098058ad36835ca9865e503f3d8db20c15ae68aaa4b57319dcd2f4ff36c3,11012
+110313,peluang-pre-pdina-0-3,"Kotak berisi 5 bola merah dan 5 bola biru. Jika satu bola dipilih acak, berapa peluang merah dalam persen?",3,1fd0aada1674af01c2373cefc81653376ea095c2d0ff73404b782da7513d1fdf,11010
+110314,peluang-pre-pdina-1-3,Kejadian A dan B saling lepas. P(A) = 13% dan P(B) = 20%. Berapa P(A ∪ B) dalam persen?,4,e61e2f01bf95d6a33735c19eeacda9e6b32184ee96efc2c40dc009b1217a2349,11011
+110315,peluang-pre-pdina-2-3,"Dari 20 anggota klub sains, 6 juga mengikuti klub matematika. Jika dipilih seorang anggota klub sains, berapa peluang ia mengikuti matematika dalam persen?",1,f8853a41d7191cd3f600903e0fac10e7114860163da80dedff98ba988969708f,11012
+110316,pel-post-1,"Pada dadu adil, peluang muncul bilangan lebih dari 4 adalah …",2,4dd9d444c1a6972af4dd4574469c4e5134643af7e73a88c3c29464b65084b71f,11010
+110317,pel-post-2,"P(A) = 0,65. Peluang komplemennya adalah …",2,08081ee5cbbb71f3346e28f234ef4d30f4ac6e9e2bdab82ff9b4a9d134362efa,11010
+110318,pel-post-3,"A dan B independen, P(A) = 0,5 dan P(B) = 0,4. P(A ∩ B) = …",2,7a4aecdfe31ceae8a6e095800fd3d9fb73e24d37a4c63c155201ec3b0223f536,11011
+110319,pel-post-4,"A dan B saling lepas, P(A) = 0,2 dan P(B) = 0,3. P(A ∪ B) = …",3,cb91d7e86a7c88f1532fa0fda0b20cfcc00d75dce2205caf3b79b278ae9164e9,11011
+110320,pel-post-5,"P(A ∩ B) = 0,15 dan P(B) = 0,3. P(A | B) = …",4,c9556b33c47d2407710164442a54fd83621ffb6801810a8f8fe9a7f7bc78cf64,11012
+110321,pel-post-6,Ada 4 bola merah dan 2 biru. Satu bola biru diambil tanpa pengembalian. Peluang bola berikutnya merah adalah …,2,99cfa30e9423b5cb92e6fc0a26ce7ef90286c0d4e367848c0b0438a7ce3ea207,11012
+110322,peluang-post-pdina-0-1,"Kotak berisi 7 bola merah dan 3 bola biru. Jika satu bola dipilih acak, berapa peluang merah dalam persen?",4,817aae1d1d345c040a2f4a9d93ba5dddac6fee831c694244c4e03ffdace2faea,11010
+110323,peluang-post-pdina-1-1,Kejadian A dan B saling lepas. P(A) = 15% dan P(B) = 20%. Berapa P(A ∪ B) dalam persen?,1,afee9a813bec7b9202bc28d0f622be4ae73c3d9dd11f7f17ffbbb6a992d0a681,11011
+110324,peluang-post-pdina-2-1,"Dari 20 anggota klub sains, 8 juga mengikuti klub matematika. Jika dipilih seorang anggota klub sains, berapa peluang ia mengikuti matematika dalam persen?",2,53dc8755f8fa1d6fc04ac8d23f2e6acbff770f2b02a8e40f6fed69de07f5ca4a,11012
+110325,peluang-post-pdina-0-2,"Kotak berisi 8 bola merah dan 2 bola biru. Jika satu bola dipilih acak, berapa peluang merah dalam persen?",1,90df9051d844ab30307cc7d855cd40004803445839318a57fa05c4b49f211037,11010
+110326,peluang-post-pdina-1-2,Kejadian A dan B saling lepas. P(A) = 16% dan P(B) = 20%. Berapa P(A ∪ B) dalam persen?,2,dbb9185ad0903f6a98bfcfa9d8ef80c4db4e133b4580385452ee48e76c66f20f,11011
+110327,peluang-post-pdina-2-2,"Dari 20 anggota klub sains, 9 juga mengikuti klub matematika. Jika dipilih seorang anggota klub sains, berapa peluang ia mengikuti matematika dalam persen?",3,e9df1ea5192db722dcd4460317c773b65fd3a7c597be0b60ae1e5c55df3eef4b,11012
+110328,peluang-post-pdina-0-3,"Kotak berisi 9 bola merah dan 1 bola biru. Jika satu bola dipilih acak, berapa peluang merah dalam persen?",2,9c3442f5b5dd29a0b87a9a3b42cbb6b1569db9235a7c5b8bc500e9f48f140162,11010
+110329,peluang-post-pdina-1-3,Kejadian A dan B saling lepas. P(A) = 17% dan P(B) = 20%. Berapa P(A ∪ B) dalam persen?,3,a416871a7bddf06f90bfe9c315a84a4c363bb551b982236a32e13cbfd33e5697,11011
+110330,peluang-post-pdina-2-3,"Dari 20 anggota klub sains, 10 juga mengikuti klub matematika. Jika dipilih seorang anggota klub sains, berapa peluang ia mengikuti matematika dalam persen?",4,853466c5f0d4556763a0a1afcfeb9bbddeee7b9ecfd3f794e6c8442f989da54e,11012
+110401,mat-pre-1,"Matriks [[1, 2, 3], [4, 5, 6]] memiliki ordo …",2,2c5264c6c2c687f5e89f074d506dc4673041c926a47f0562d2b4c2b24ab83707,11013
+110402,mat-pre-2,"Pada A = [[2, 5], [7, 9]], nilai a₂₁ adalah …",3,9d71779dd3493dbd8553fea8c8a5ca5f2ec66119f0051881ee9e6b8eabb04912,11013
+110403,mat-pre-3,"[[1, 2], [3, 4]] + [[2, 1], [0, 3]] = …",1,bacbb5592fc31a0d66ee6a9072bab42e5252ea1ecafaad5b4c47b079eb15c266,11014
+110404,mat-pre-4,"Hasil [[1, 2]] × [[3], [4]] adalah …",3,9d329963f5002ff5b6ac555d8bb3c8300acc5e1c40f77de0fd595aeffc49c0c8,11014
+110405,mat-pre-5,"Determinan [[2, 1], [3, 4]] adalah …",1,c736c672e791e4d45db8ead380e3a1ab9c94a328b1720a68eb5745a178c0ab36,11015
+110406,mat-pre-6,Matriks 2 × 2 memiliki invers jika …,3,d2a26a4f488ce6490295de3fa54b9507d15f9c05f5b640d6b095727d304feba0,11015
+110407,aljabar-pre-pdina-0-1,"Pada matriks A = [[1, 3], [5, 7]], berapa nilai elemen a₂₁?",2,2303d3a4aa87b2e8b62018abc818bf44676e71ea6188d88886dc41654c5fdf64,11013
+110408,aljabar-pre-pdina-1-1,"A = [[1, 2], [3, 4]] dan B = [[2, 5], [6, 7]]. Berapa elemen baris pertama kolom pertama dari A + B?",3,333c6982e1987f12297f894f49706a5e9e2e58dee726a1572ca2aadb4cdde7e6,11014
+110409,aljabar-pre-pdina-2-1,"Berapa determinan matriks [[3, 1], [2, 3]]?",4,8aa0af2e9dda92860e5ffd55ce7b16ea50c71c40d7d258155bdfd0d9dd154030,11015
+110410,aljabar-pre-pdina-0-2,"Pada matriks A = [[2, 4], [6, 8]], berapa nilai elemen a₂₁?",3,f04dae77f890e2fdf019e201de644a86ac72dc81cdd058fe77e6f87b01b2684e,11013
+110411,aljabar-pre-pdina-1-2,"A = [[2, 2], [3, 4]] dan B = [[3, 5], [6, 7]]. Berapa elemen baris pertama kolom pertama dari A + B?",4,1e55b8e3c98965d5ec121d25d38eb34bc257f80ab9983bed2220f7b381e81189,11014
+110412,aljabar-pre-pdina-2-2,"Berapa determinan matriks [[4, 1], [2, 3]]?",1,21f186a82f04720974e0556ea97801bbda190ac94f23e29f4ae5766d3e4ecfd2,11015
+110413,aljabar-pre-pdina-0-3,"Pada matriks A = [[3, 5], [7, 9]], berapa nilai elemen a₂₁?",4,55441342958cc14dd7f34eb0de461903e2426276d0a50524ba696ea81afb8f73,11013
+110414,aljabar-pre-pdina-1-3,"A = [[3, 2], [3, 4]] dan B = [[4, 5], [6, 7]]. Berapa elemen baris pertama kolom pertama dari A + B?",1,2f1e75fd0deccc1a21a71c5894f2f2f031927dcd72e39e49dfa6d7352b478002,11014
+110415,aljabar-pre-pdina-2-3,"Berapa determinan matriks [[5, 1], [2, 3]]?",2,1d6a277986c0b2c14635de9234ca5648afd3e192c337d223621ad2914063997c,11015
+110416,mat-post-1,Transpose matriks berordo 3 × 2 memiliki ordo …,2,51ac9f255fb8490762056c96c600f785e291e776ee59bf9fb3384517397c7fc9,11013
+110417,mat-post-2,"A = [[3, 4], [5, 6]]. Nilai a₁₂ adalah …",2,a8a7ec1bc62613560fbf46f2750fb38bf14bf880cf9c9fb7b1f416859513c37b,11013
+110418,mat-post-3,"2 × [[1, 3], [2, 4]] = …",1,2caa98c2fb51e6a51a3c3092e01028520205d09539176315db436fa304a35a60,11014
+110419,mat-post-4,"Hasil [[2, 1]] × [[4], [3]] adalah …",3,cfd9a9b5e84cf88bc537647124956b52b853d7aae1c0261d6075c49d085603b6,11014
+110420,mat-post-5,"Determinan [[3, 2], [1, 4]] adalah …",1,c0763b41ef7c2dc678a7c9f85d3b087db81360c0a5bc2cdfea8a7128980230bb,11015
+110421,mat-post-6,"Invers dari [[2, 0], [0, 1]] adalah …",2,5c6f0c329bbec1b36dc1159c2da102b8373dee171a824d0f83ac8978b8e8441f,11015
+110422,aljabar-post-pdina-0-1,"Pada matriks A = [[5, 7], [9, 11]], berapa nilai elemen a₂₁?",1,3c155f608c8ada7322a605868ec33ac919b5390eb51683936c75605c2e72a09d,11013
+110423,aljabar-post-pdina-1-1,"A = [[5, 2], [3, 4]] dan B = [[6, 5], [6, 7]]. Berapa elemen baris pertama kolom pertama dari A + B?",2,11ddd831bf5006faa002ab9d2a79c932d2dec764c7474b1743d1988534cc3031,11014
+110424,aljabar-post-pdina-2-1,"Berapa determinan matriks [[7, 1], [2, 3]]?",3,0e2b7a33f62bf99eb59899c9587da3f529bc93c1bb3dc7f93d85f29dd0fd3498,11015
+110425,aljabar-post-pdina-0-2,"Pada matriks A = [[6, 8], [10, 12]], berapa nilai elemen a₂₁?",2,c125ef67e60c15fbaccf6a2b1e5e4c4d20a2c216f9f727d17514c10b8954476a,11013
+110426,aljabar-post-pdina-1-2,"A = [[6, 2], [3, 4]] dan B = [[7, 5], [6, 7]]. Berapa elemen baris pertama kolom pertama dari A + B?",3,4e5a6a5b57906b0fba3dc14e1d4d00e6f345f0b8c4f95662de787557a1967459,11014
+110427,aljabar-post-pdina-2-2,"Berapa determinan matriks [[8, 1], [2, 3]]?",4,cf98585400678ff7cf551fee0f5d28e7deaf57a0983754885f14538f2dbcd1c0,11015
+110428,aljabar-post-pdina-0-3,"Pada matriks A = [[7, 9], [11, 13]], berapa nilai elemen a₂₁?",3,43879eff9ac244eff6ad7a08de4ed26a0e23a166c5266b8a7ab7ef66aae2c4fa,11013
+110429,aljabar-post-pdina-1-3,"A = [[7, 2], [3, 4]] dan B = [[8, 5], [6, 7]]. Berapa elemen baris pertama kolom pertama dari A + B?",4,51b6ea75b394150e64ee275665eaa765607377e333b51bd6e4dc058281a404ee,11014
+110430,aljabar-post-pdina-2-3,"Berapa determinan matriks [[9, 1], [2, 3]]?",1,29c697767761b6a9f0ad056878b5d08cf8bde51f7b943131865f8289fc39f09a,11015
+110501,tra-pre-1,"Titik (2, 3) ditranslasi T(4, −1). Bayangannya adalah …",1,9fb7e318403e639e7ad20afc9af122eea9570b88d8317f991ffbce76b07a917d,11016
+110502,tra-pre-2,"Refleksi titik (3, −2) terhadap sumbu x adalah …",2,bacdbbf6573e9c4d80b28b7f851a7cdac7ecc3cc856517f50efaf02f54b7ba30,11016
+110503,tra-pre-3,"Rotasi (2, 1) sebesar 90° berlawanan jarum jam berpusat O menghasilkan …",2,747189e17a59fd7c24e3ba5e078185e185dd26414033a2fe8446ee91bd0c9074,11017
+110504,tra-pre-4,"Rotasi (3, −4) sebesar 180° berpusat O menghasilkan …",1,7de5b3d84879c29a502154c849b65df1598ba322b1e563c76b1dbc03cc259587,11017
+110505,tra-pre-5,"Dilatasi titik (2, −3) berpusat O dengan faktor 2 menghasilkan …",1,792e5e31d944762be1f97f4c7c1dec62a1e1648fd8c18223b06e5dceb5c65c5a,11018
+110506,tra-pre-6,Sebuah bangun berluas 6 didilatasi dengan faktor 3. Luas bayangannya …,3,85149dd4c7fdd099107eefaed0724bfb04fe3fa4deb290e03c91654caf6e29b0,11018
+110507,transformasi-pre-pdina-0-1,"Titik (1, 2) ditranslasi oleh T(3, −2). Berapa koordinat x bayangannya?",2,2b5c5937296b282a0ec55f17fd3a5f415e7c18e7a22380df07959db7396640bc,11016
+110508,transformasi-pre-pdina-1-1,"Titik (3, 5) dirotasi 90° berlawanan jarum jam berpusat O. Berapa koordinat x bayangannya?",3,a01ab6a56dcf31a2c15a12b4942f4b3bd83dc6475bd2a0c0e1b69a2f0fc290df,11017
+110509,transformasi-pre-pdina-2-1,"Titik (2, 3) didilatasi berpusat O dengan faktor 3. Berapa koordinat y bayangannya?",4,df89b7af964eea07909cef820145f6f3e109817208d9916b472190d59bf87e1b,11018
+110510,transformasi-pre-pdina-0-2,"Titik (2, 3) ditranslasi oleh T(3, −2). Berapa koordinat x bayangannya?",3,a00b86b0876e884e1e644e0506e17ddd78e1c9420b9e2b603b00df5ab52740c4,11016
+110511,transformasi-pre-pdina-1-2,"Titik (4, 6) dirotasi 90° berlawanan jarum jam berpusat O. Berapa koordinat x bayangannya?",4,0d1be9a316dc2aa4c1fd4cda1cf3bc46c91dc387b8fc7e63da922cc8514cdc91,11017
+110512,transformasi-pre-pdina-2-2,"Titik (3, 4) didilatasi berpusat O dengan faktor 3. Berapa koordinat y bayangannya?",1,a25b5c3b52e05d2f22bd3be4157c5bf43ace1aa28aec202482d81814a38eb2d2,11018
+110513,transformasi-pre-pdina-0-3,"Titik (3, 4) ditranslasi oleh T(3, −2). Berapa koordinat x bayangannya?",4,d44c11523ae3cb5e52278e52cbb0259dac4984f288b8f93b14fd58caa4bc3e13,11016
+110514,transformasi-pre-pdina-1-3,"Titik (5, 7) dirotasi 90° berlawanan jarum jam berpusat O. Berapa koordinat x bayangannya?",1,6fbeefd01ce1ef9adfe85640b037f00fcb053f9b0c6248a8c49832fdfe99b129,11017
+110515,transformasi-pre-pdina-2-3,"Titik (4, 5) didilatasi berpusat O dengan faktor 3. Berapa koordinat y bayangannya?",2,49005783fb7cc8a9f11f55f134f7851864e64aa4fa5bbe24acc134133ec323bf,11018
+110516,tra-post-1,"Titik (−1, 5) ditranslasi T(3, −2). Bayangannya …",1,4d8c136064debd6d6be56b9fbfa3bc65da17b275f69ef6b52b5334472909791c,11016
+110517,tra-post-2,"Refleksi titik (4, −3) terhadap sumbu y adalah …",2,1ba0af1215d1095edfe7da504ef56bdbdadaf47e4a8f17d254e179e62d4b7478,11016
+110518,tra-post-3,"Rotasi (1, 3) sebesar 90° berlawanan jarum jam berpusat O menghasilkan …",2,c6244e2c4ef7bed4ac041615de9a905f7f7ba2cbcfcdaf281e07397ace041c44,11017
+110519,tra-post-4,"Rotasi (−2, 5) sebesar 180° berpusat O menghasilkan …",1,07d4311d2f6bb146ae0a7ba9f1e44e2509fa6332611f87873a879a91904ca3c5,11017
+110520,tra-post-5,"Dilatasi titik (6, −4) berpusat O dengan faktor 1/2 menghasilkan …",2,1cbfa65350a3f6d0e2ab1add9cd4b2bffd2c822b4ff706fc85ba9f3ff9d122a5,11018
+110521,tra-post-6,"Luas bangun 20. Setelah dilatasi dengan faktor 1/2, luasnya …",3,91ec4385e368ff8806d38d019f014069a580ee81ac178f8c77f12130d06cc2b4,11018
+110522,transformasi-post-pdina-0-1,"Titik (5, 6) ditranslasi oleh T(3, −2). Berapa koordinat x bayangannya?",1,6c58d862f1c873b35c02c8622c06337b9aab2b9ffd4935811a9d79d27941dd46,11016
+110523,transformasi-post-pdina-1-1,"Titik (7, 9) dirotasi 90° berlawanan jarum jam berpusat O. Berapa koordinat x bayangannya?",2,db150c75f3dc68b8c487854922fb660f3e85cf3cb4257d2e468d4882498b0962,11017
+110524,transformasi-post-pdina-2-1,"Titik (6, 7) didilatasi berpusat O dengan faktor 3. Berapa koordinat y bayangannya?",3,4e60d46589fa0792c0f281949e395715ae10a721d45c163a6fe55f2967caed49,11018
+110525,transformasi-post-pdina-0-2,"Titik (6, 7) ditranslasi oleh T(3, −2). Berapa koordinat x bayangannya?",2,c07f21e408a7f63b78e7b6fdcff16a5baa1b27f9819f9eade38b3379f9ceff77,11016
+110526,transformasi-post-pdina-1-2,"Titik (8, 10) dirotasi 90° berlawanan jarum jam berpusat O. Berapa koordinat x bayangannya?",3,fe6d350e049136292ae0f7ed1fc7b645405a18a894ea0e36e122ebeb06b5a4fa,11017
+110527,transformasi-post-pdina-2-2,"Titik (7, 8) didilatasi berpusat O dengan faktor 3. Berapa koordinat y bayangannya?",4,917ae6a087006b55da8d5e5cd2c28233a2a7c78ec60815bbc2d7897520854c27,11018
+110528,transformasi-post-pdina-0-3,"Titik (7, 8) ditranslasi oleh T(3, −2). Berapa koordinat x bayangannya?",3,0ee2301df4d03fabd0e1fbe22bc63efb1ee3e996544d2112dadc7f12466a0e09,11016
+110529,transformasi-post-pdina-1-3,"Titik (9, 11) dirotasi 90° berlawanan jarum jam berpusat O. Berapa koordinat x bayangannya?",4,da5354ffb67a489abe237f06f9ff2a0c0994b21c1d73486a4ab910e14c7be1c4,11017
+110530,transformasi-post-pdina-2-3,"Titik (8, 9) didilatasi berpusat O dengan faktor 3. Berapa koordinat y bayangannya?",1,d46a964b66278ee5d7e7991877a3b8c7ee2c5be3dd34d687fedebda73ed65374,11018

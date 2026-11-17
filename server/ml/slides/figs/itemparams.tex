@@ -1,0 +1,19 @@
+% Learned guess/slip distribution for 948 items; artifacts/model/item_parameters.csv (bins of 0.05)
+\begin{tikzpicture}
+\begin{axis}[
+  ybar, width=\linewidth, height=\figH, bar width=3.2pt,
+  xmin=-0.02, xmax=0.72, ymin=0,
+  xlabel={nilai parameter}, ylabel={jumlah soal},
+  ymajorgrids, legend style={at={(0.5,1.03)}, anchor=south, legend columns=2}, legend cell align=left,
+  xticklabel style={/pgf/number format/fixed, /pgf/number format/precision=1},
+]
+  \addplot+[fill=navy, draw=none] coordinates {
+    (0.025,3) (0.075,9) (0.125,38) (0.175,67) (0.225,129) (0.275,165) (0.325,162)
+    (0.375,106) (0.425,81) (0.475,74) (0.525,46) (0.575,24) (0.625,21) (0.675,23)};
+  \addlegendentry{guess $g$ (rata-rata 0,338)}
+  \addplot+[fill=accent, draw=none] coordinates {
+    (0.025,101) (0.075,141) (0.125,125) (0.175,86) (0.225,74) (0.275,79) (0.325,71)
+    (0.375,57) (0.425,57) (0.475,46) (0.525,36) (0.575,25) (0.625,19) (0.675,31)};
+  \addlegendentry{slip $s$ (rata-rata 0,253)}
+\end{axis}
+\end{tikzpicture}

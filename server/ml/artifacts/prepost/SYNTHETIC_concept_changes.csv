@@ -1,0 +1,12 @@
+concept_id,concept_name,n_students_matched,n_both_diagnosable,n_pairs,mean_pre,mean_post,mean_change,mean_change_ci95,cohens_dz,wilcoxon_p,rank_biserial_r,paired_t_p,n_not_to_mastered,n_mastered_to_not,mcnemar_exact_p,n_increase,n_decrease,wilcoxon_p_holm,interpretation
+70,Writing Expressions,40,21,21,0.517157873313261,0.7511835175356616,0.23402564422240055,"[0.07797133756566323, 0.4237898771817665]",0.5794237838099668,0.0008516311645507812,0.7835497835497836,0.015191640479245188,5,0,0.0625,18,3,0.004258155822753906,observed increase (statistically detectable)
+251,Simplifying Expressions by Collecting Like Terms,40,25,25,0.5078240175129823,0.6001063779264211,0.09228236041343874,"[-0.07983115980082636, 0.26749724018279986]",0.20249330332016163,0.21998637914657593,0.28615384615384615,0.32141417293343527,5,3,0.7265625,16,9,0.43997275829315186,no statistically detectable change
+67,Substitution into Formula,40,29,29,0.3586404177074466,0.5240041263816465,0.1653637086741998,"[0.048682026609401824, 0.30248845602274455]",0.44706822316389916,0.05622555688023567,0.4068965517241379,0.022896925447709552,5,0,0.0625,19,10,0.16867667064070702,no statistically detectable change
+52,Factorising into a Single Bracket,40,0,0,,,,"[nan, nan]",,,,,0,0,,0,0,,insufficient paired data
+64,Linear Equations,40,0,0,,,,"[nan, nan]",,,,,0,0,,0,0,,insufficient paired data
+166,Solving Linear Inequalities,40,0,0,,,,"[nan, nan]",,,,,0,0,,0,0,,insufficient paired data
+171,Linear Sequences (nth term),40,29,29,0.5352077177952386,0.7480958564056933,0.21288813861045489,"[0.07529244491476778, 0.36897784489870833]",0.5120858663475019,0.01574459671974182,0.5080459770114942,0.01013493308780651,7,0,0.015625,19,10,0.06297838687896729,no statistically detectable change
+406,Naming Co-ordinates in 2D,40,22,22,0.6876251190826862,0.7546127634804279,0.06698764439774164,"[-0.12817014590208323, 0.27894743724438303]",0.13365095193762347,0.6788630485534668,-0.1067193675889328,0.5374950977059225,4,2,0.6875,8,14,0.6788630485534668,no statistically detectable change
+408,Midpoint Between Two Co-ordinates,40,0,0,,,,"[nan, nan]",,,,,0,0,,0,0,,insufficient paired data
+258,Horizontal and Vertical Lines,40,0,0,,,,"[nan, nan]",,,,,0,0,,0,0,,insufficient paired data
+409,Gradient Between Two Co-ordinates,40,0,0,,,,"[nan, nan]",,,,,0,0,,0,0,,insufficient paired data

@@ -1,0 +1,19 @@
+concept_id,concept_name,topic_id,concept_index,in_target_scope,curriculum_order,prerequisite_concept_ids,review_status
+11001,Evaluasi fungsi,fungsi,0,True,1,,draft_teacher_review
+11002,Komposisi fungsi,fungsi,1,True,2,,draft_teacher_review
+11003,Invers fungsi,fungsi,2,True,3,,draft_teacher_review
+11004,Sudut lingkaran,geometri,3,True,4,,draft_teacher_review
+11005,Busur dan juring,geometri,4,True,5,,draft_teacher_review
+11006,Garis singgung,geometri,5,True,6,,draft_teacher_review
+11007,Ukuran pemusatan,statistik,6,True,7,,draft_teacher_review
+11008,Ukuran penyebaran,statistik,7,True,8,,draft_teacher_review
+11009,Interpretasi data,statistik,8,True,9,,draft_teacher_review
+11010,Ruang sampel,peluang,9,True,10,,draft_teacher_review
+11011,Kejadian majemuk,peluang,10,True,11,,draft_teacher_review
+11012,Peluang bersyarat,peluang,11,True,12,,draft_teacher_review
+11013,Elemen dan ordo,aljabar,12,True,13,,draft_teacher_review
+11014,Operasi matriks,aljabar,13,True,14,,draft_teacher_review
+11015,Determinan dan invers,aljabar,14,True,15,,draft_teacher_review
+11016,Translasi dan refleksi,transformasi,15,True,16,,draft_teacher_review
+11017,Rotasi,transformasi,16,True,17,,draft_teacher_review
+11018,Dilatasi,transformasi,17,True,18,,draft_teacher_review

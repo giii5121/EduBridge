@@ -1,0 +1,13 @@
+topic_id,domain,level,topic_name,mapped_eedi_concept_ids,mapping_type,notes,status
+T01,algebra,SMA kelas X,Eksponen dan logaritma,,unmapped,No EEDI Task 3/4 concept. EEDI 245 'Squares; Cubes; etc' (Number domain) is only a distant prerequisite and is NOT mapped.,draft_needs_researcher_confirmation
+T02,algebra,SMA kelas X,Barisan dan deret (aritmetika dan geometri),171,partial,EEDI 171 covers nth term of linear (arithmetic) sequences / pattern generalisation only; no geometric sequences or series.,draft_needs_researcher_confirmation
+T03,algebra,SMA kelas X,Sistem persamaan linear (SPLDV/SPLTV),64,prerequisite_only,EEDI 64 covers single linear equations / equivalent transformations; no systems of equations.,draft_needs_researcher_confirmation
+T04,algebra,SMA kelas X,Persamaan dan pertidaksamaan linear (termasuk nilai mutlak),64;166,partial,EEDI 166 sampled items compare expressions with inequality symbols rather than solving inequalities (see focus_item_content_audit.csv). No absolute value.,draft_needs_researcher_confirmation
+T05,algebra,SMA kelas X,Persamaan dan fungsi kuadrat,52,prerequisite_only,EEDI 52 covers factorising into a single bracket only; no quadratic factorising or quadratic functions.,draft_needs_researcher_confirmation
+T06,algebra,SMA kelas X-XI,Fungsi (konsep; grafik; komposisi; invers),67;258;406;408,prerequisite_only,Substitution and coordinate-plane skills are prerequisites; no function notation / composition / inverse items.,draft_needs_researcher_confirmation
+T07,algebra,SMA (prasyarat),Bentuk aljabar dan manipulasi ekspresi,70;251,prerequisite_only,Foundational SMP-level expression writing and collecting like terms.,draft_needs_researcher_confirmation
+T08,algebra,SMA kelas XI,Polinomial,,unmapped,No EEDI Task 3/4 concept.,draft_needs_researcher_confirmation
+T09,algebra,SMA kelas XI,Matriks,,unmapped,No EEDI Task 3/4 concept.,draft_needs_researcher_confirmation
+T10,calculus,SMA kelas XI-XII,Limit fungsi,,unmapped,No EEDI Task 3/4 concept.,draft_needs_researcher_confirmation
+T11,calculus,SMA kelas XI-XII,Turunan (diferensial) dan aplikasinya,409,prerequisite_only,EEDI 409 (gradient between two points; 2 items) is only a conceptual prerequisite (slope); no derivative content.,draft_needs_researcher_confirmation
+T12,calculus,SMA kelas XII,Integral,,unmapped,No EEDI Task 3/4 concept.,draft_needs_researcher_confirmation

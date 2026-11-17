@@ -1,0 +1,5 @@
+.formatted-message { white-space: normal; overflow-wrap: anywhere; }
+.formatted-message p { margin: 0 0 12px; }
+.formatted-message :is(ul,ol) { padding-left: 22px; margin-block: 12px; }
+.formatted-message :is(h1,h2,h3,h4) { font-size: 1.08em; line-height: 1.5; margin: 20px 0 10px; }
+.formatted-message .katex-display { overflow-x: auto; overflow-y: hidden; padding: 5px 0; }

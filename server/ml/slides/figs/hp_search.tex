@@ -1,0 +1,23 @@
+% Validation held-out log-loss per configuration; artifacts/evaluation/hp_search_validation.csv
+\begin{tikzpicture}
+\begin{axis}[
+  xbar, scale only axis, width=\dimexpr\linewidth-3.6cm\relax, height=\figH, bar width=5.5pt, scaled x ticks=false,
+  xmin=0.570, xmax=0.5848, ymin=0.4, ymax=13.6, ytick={1,...,13},
+  yticklabels={
+    {indep., $\kappa{=}40$, cw}, {indep., $\kappa{=}2$, cw}, {indep., $\kappa{=}10$, cw},
+    {indep., $\kappa{=}40$}, {indep., $\kappa{=}10$}, {indep., $\kappa{=}2$},
+    {HO, $\kappa{=}40$, cw}, {HO, $\kappa{=}10$, cw}, {HO, $\kappa{=}2$, cw},
+    {Q-logistic $\sigma{=}1$}, {HO, $\kappa{=}40$}, {HO, $\kappa{=}10$}, {\textbf{HO, $\kappa{=}2$ (terpilih)}}},
+  xlabel={log-loss validation (respons held-out, makin kecil makin baik)}, xmajorgrids,
+  xticklabel style={/pgf/number format/fixed, /pgf/number format/precision=3},
+  nodes near coords, point meta=x,
+  every node near coord/.append style={font=\tiny, /pgf/number format/fixed, /pgf/number format/precision=4},
+]
+  \addplot+[fill=midgray, draw=none, bar shift=0pt] coordinates
+    {(0.5818,1) (0.5811,2) (0.5810,3) (0.5795,4) (0.5788,5) (0.5788,6)};
+  \addplot+[fill=navy!45, draw=none, bar shift=0pt] coordinates
+    {(0.5745,7) (0.5742,8) (0.5742,9) (0.5726,11) (0.5721,12)};
+  \addplot+[fill=tealc, draw=none, bar shift=0pt] coordinates {(0.5735,10)};
+  \addplot+[fill=accent, draw=none, bar shift=0pt] coordinates {(0.5721,13)};
+\end{axis}
+\end{tikzpicture}

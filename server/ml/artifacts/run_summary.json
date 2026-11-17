@@ -1,0 +1,566 @@
+{
+  "package_version": "1.0.0",
+  "experiment": "eedi_task34_pdina_vem_v1",
+  "data_dir": "D:\\finalIL\\ILCDA\\processed_task34_cda_cdm\\final_local_reconstruction",
+  "output_dir": "D:\\finalIL\\artifacts",
+  "timings_sec": {
+    "audit": 2.1,
+    "concepts": 0.2,
+    "model_selection": 297.0,
+    "policy": 2.4,
+    "test_evaluation": 61.0,
+    "diagnosis_quality": 30.5,
+    "assessment": 105.6,
+    "diagnose_test": 4.0,
+    "prepost_demo": 0.3
+  },
+  "data": {
+    "artifact_source": "local_reconstruction",
+    "splits": {
+      "train": 3934,
+      "val": 492,
+      "test": 492
+    },
+    "splits_match_expected": true,
+    "student_disjoint": true,
+    "n_items": 948,
+    "n_concepts": 57,
+    "missing_encoding": {
+      "train": "-1 = missing",
+      "val": "-1 = missing",
+      "test": "-1 = missing"
+    },
+    "npz_csv_alignment": {
+      "train": true,
+      "val": true,
+      "test": true
+    },
+    "train_class_weights": {
+      "0": 1.0810519278087234,
+      "1": 0.9302541443116897
+    },
+    "eda_class_weights": {
+      "0": 1.0810519278087234,
+      "1": 0.9302541443116897
+    },
+    "class_weights_match_eda": true,
+    "item_bank_stats_source": {
+      "checked": true,
+      "max_abs_diff_vs_train_pass_rate": 0.0,
+      "matches_train_only": true,
+      "n_attempts_matches_train_counts": true
+    },
+    "leakage_columns_excluded": [
+      "prior_accuracy",
+      "prior_accuracy_z",
+      "question_difficulty",
+      "question_difficulty_z",
+      "question_pass_rate",
+      "question_pass_rate_z",
+      "student_mean_confidence"
+    ],
+    "eedi_population_note": "EEDI Task 3/4 is a development dataset (UK learners, mostly lower secondary); students aged 16-17 by metadata proxy: 5. It does not represent the target SMA classes."
+  },
+  "q_matrix": {
+    "n_items": 948,
+    "n_concepts": 57,
+    "density": 0.017802946184025465,
+    "avg_concepts_per_item": 1.0147679324894514,
+    "items_without_concept": 0,
+    "multi_concept_items": 14,
+    "concepts_without_items": [],
+    "concepts_below_min_items": [
+      94,
+      189,
+      190,
+      192,
+      207,
+      226,
+      229,
+      238,
+      409,
+      655
+    ],
+    "min_items_threshold": 5,
+    "items_per_concept": {
+      "min": 1,
+      "median": 15.0,
+      "max": 59
+    }
+  },
+  "target_q_matrix": {
+    "n_target_concepts": 11,
+    "n_items_with_target_concept": 144,
+    "n_items_target_only": 144,
+    "n_items_mixed_target_and_non_target": 0,
+    "density": 0.09090909090909091
+  },
+  "focus_audit": {
+    "available": true,
+    "n_focus_items": 144,
+    "n_focus_items_all_concepts_in_scope": 144,
+    "n_focus_items_outside_scope": 0,
+    "n_content_reviewed": 22,
+    "content_review_label_match_counts": {
+      "match": 15,
+      "partial": 3,
+      "partial_label_questionable": 2,
+      "match_with_untagged_skill": 2
+    },
+    "note": "Content review is a SAMPLE (see configs/focus_item_content_audit.csv); unreviewed focus items keep label_match='not_reviewed' and must not be assumed relevant.",
+    "reviewed_estimated_levels": {
+      "lower secondary (SMP)": 19,
+      "lower/upper secondary boundary": 2,
+      "primary/lower secondary": 1
+    }
+  },
+  "target_concepts": [
+    {
+      "concept_id": 70,
+      "concept_name": "Writing Expressions",
+      "n_items": 25
+    },
+    {
+      "concept_id": 251,
+      "concept_name": "Simplifying Expressions by Collecting Like Terms",
+      "n_items": 19
+    },
+    {
+      "concept_id": 67,
+      "concept_name": "Substitution into Formula",
+      "n_items": 22
+    },
+    {
+      "concept_id": 52,
+      "concept_name": "Factorising into a Single Bracket",
+      "n_items": 8
+    },
+    {
+      "concept_id": 64,
+      "concept_name": "Linear Equations",
+      "n_items": 7
+    },
+    {
+      "concept_id": 166,
+      "concept_name": "Solving Linear Inequalities",
+      "n_items": 8
+    },
+    {
+      "concept_id": 171,
+      "concept_name": "Linear Sequences (nth term)",
+      "n_items": 12
+    },
+    {
+      "concept_id": 406,
+      "concept_name": "Naming Co-ordinates in 2D",
+      "n_items": 24
+    },
+    {
+      "concept_id": 408,
+      "concept_name": "Midpoint Between Two Co-ordinates",
+      "n_items": 9
+    },
+    {
+      "concept_id": 258,
+      "concept_name": "Horizontal and Vertical Lines",
+      "n_items": 8
+    },
+    {
+      "concept_id": 409,
+      "concept_name": "Gradient Between Two Co-ordinates",
+      "n_items": 2
+    }
+  ],
+  "model_selection": {
+    "criterion": "validation held-out log-loss (lower is better)",
+    "selected": {
+      "concept_score": "concept_score|k=5.0",
+      "item_mean": "item_mean",
+      "pdina": "pdina|higher_order|k=2.0|cw=False",
+      "q_logistic": "q_logistic|sigma=1.0",
+      "pdina_independent": "pdina|independent|k=2.0|cw=False"
+    },
+    "main_model": "pdina|higher_order|k=2.0|cw=False",
+    "main_model_hyperparams": {
+      "prior": "higher_order",
+      "gs_prior_strength": 2.0,
+      "class_weights": null,
+      "max_em_iter": 150,
+      "em_tol": 1e-06,
+      "e_step_iter": 30,
+      "guess_prior": [
+        1.4,
+        2.6
+      ],
+      "slip_prior": [
+        1.4,
+        2.6
+      ],
+      "max_guess_slip_sum": 0.98
+    }
+  },
+  "diagnosis_policy": {
+    "tau": 0.5,
+    "delta": 0.0,
+    "n_min": 5,
+    "target_concept_ids": [
+      70,
+      251,
+      67,
+      52,
+      64,
+      166,
+      171,
+      406,
+      408,
+      258,
+      409
+    ],
+    "provenance": {
+      "tau": "validation held-out log-loss of hard-label DINA prediction; one-SE rule (student bootstrap) toward 0.5",
+      "n_min": 5,
+      "n_min_selected_from_data": true,
+      "delta": 0.0,
+      "delta_selected_from_data": true,
+      "target_consistency": 0.85,
+      "note": "n_min is the per-half evidence at which agreement between two independent half-test classifications reaches target_consistency; agreement between two noisy classifications understates the reliability of each, so the rule is conservative.",
+      "tau_grid": [
+        0.3,
+        0.35,
+        0.4,
+        0.45,
+        0.5,
+        0.55,
+        0.6,
+        0.65,
+        0.7
+      ]
+    }
+  },
+  "test_evaluation": {
+    "protocol": "test students: 20% of each student's responses held out; mastery inferred from the rest with item parameters frozen from train; evaluated once",
+    "n_heldout_responses": 28003,
+    "n_students": 492,
+    "metrics": [
+      {
+        "model": "P-DINA (main)",
+        "n": 28003,
+        "base_rate": 0.536263971717316,
+        "log_loss": 0.5678724599293171,
+        "brier": 0.19408950037094302,
+        "accuracy": 0.6986394314894833,
+        "precision": 0.7433052226660749,
+        "recall": 0.6691083438769395,
+        "f1": 0.7042579288592956,
+        "threshold": 0.5,
+        "roc_auc": 0.7684163528369783,
+        "ece": 0.0077258301849678765,
+        "roc_auc_ci95": [
+          0.758671204919305,
+          0.7793553547205881
+        ],
+        "log_loss_ci95": [
+          0.556201881995113,
+          0.5769408986105733
+        ]
+      },
+      {
+        "model": "P-DINA independent prior (ablation)",
+        "n": 28003,
+        "base_rate": 0.536263971717316,
+        "log_loss": 0.5745031745171034,
+        "brier": 0.19690736461015984,
+        "accuracy": 0.6928543370353176,
+        "precision": 0.7329702251270879,
+        "recall": 0.6721049477259107,
+        "f1": 0.7012193003786431,
+        "threshold": 0.5,
+        "roc_auc": 0.7613048709588655,
+        "ece": 0.006263441684754953,
+        "roc_auc_ci95": [
+          0.7513778161327516,
+          0.7715079724087183
+        ],
+        "log_loss_ci95": [
+          0.5635187027472665,
+          0.5842263299672488
+        ]
+      },
+      {
+        "model": "Q-logistic baseline",
+        "n": 28003,
+        "base_rate": 0.536263971717316,
+        "log_loss": 0.5669639373128976,
+        "brier": 0.1930232077078067,
+        "accuracy": 0.7041031318073063,
+        "precision": 0.7211380511203102,
+        "recall": 0.7308383831657455,
+        "f1": 0.7259558142611456,
+        "threshold": 0.5,
+        "roc_auc": 0.7746048625767639,
+        "ece": 0.03630076207458124,
+        "roc_auc_ci95": [
+          0.7657333263533568,
+          0.78621292175483
+        ],
+        "log_loss_ci95": [
+          0.5546755574595712,
+          0.5761086453432073
+        ]
+      },
+      {
+        "model": "Concept-score baseline",
+        "n": 28003,
+        "base_rate": 0.536263971717316,
+        "log_loss": 0.6112791195114091,
+        "brier": 0.21252400357336237,
+        "accuracy": 0.6582509016891047,
+        "precision": 0.681506164611796,
+        "recall": 0.6809615768795365,
+        "f1": 0.6812337619079342,
+        "threshold": 0.5,
+        "roc_auc": 0.7181946707125835,
+        "ece": 0.0164747049267781,
+        "roc_auc_ci95": [
+          0.7068061503654423,
+          0.732998447138401
+        ],
+        "log_loss_ci95": [
+          0.5984803704812273,
+          0.620593038937633
+        ]
+      },
+      {
+        "model": "Item-mean baseline",
+        "n": 28003,
+        "base_rate": 0.536263971717316,
+        "log_loss": 0.6435679422147415,
+        "brier": 0.22629848897233856,
+        "accuracy": 0.6269328286255044,
+        "precision": 0.6416088249876054,
+        "recall": 0.6894186588532996,
+        "f1": 0.6646550893974899,
+        "threshold": 0.5,
+        "roc_auc": 0.6721872124165127,
+        "ece": 0.00518031501800777,
+        "roc_auc_ci95": [
+          0.6608430352006239,
+          0.681705028418729
+        ],
+        "log_loss_ci95": [
+          0.6372951084894422,
+          0.6510322534538924
+        ]
+      }
+    ],
+    "differences_vs_main": [
+      {
+        "comparison": "P-DINA (main) - P-DINA independent prior (ablation)",
+        "auc_diff_ci95": [
+          0.005048773910600488,
+          0.008965415331888894
+        ],
+        "logloss_diff_ci95": [
+          -0.008474204137261535,
+          -0.004742925268934785
+        ],
+        "auc_diff_mean": 0.007093275505605218,
+        "logloss_diff_mean": -0.006576350316793509
+      },
+      {
+        "comparison": "P-DINA (main) - Q-logistic baseline",
+        "auc_diff_ci95": [
+          -0.01058228337180014,
+          -0.002688515982716308
+        ],
+        "logloss_diff_ci95": [
+          -0.0034705075603398525,
+          0.006709777670510656
+        ],
+        "auc_diff_mean": -0.006532830199228135,
+        "logloss_diff_mean": 0.0013395806636185869
+      },
+      {
+        "comparison": "P-DINA (main) - Concept-score baseline",
+        "auc_diff_ci95": [
+          0.040794633251352824,
+          0.05819933022783213
+        ],
+        "logloss_diff_ci95": [
+          -0.049545818903603045,
+          -0.035460028875398904
+        ],
+        "auc_diff_mean": 0.049468509652344485,
+        "logloss_diff_mean": -0.04270899191673325
+      },
+      {
+        "comparison": "P-DINA (main) - Item-mean baseline",
+        "auc_diff_ci95": [
+          0.08438251556753092,
+          0.10989806584453185
+        ],
+        "logloss_diff_ci95": [
+          -0.08661012338187336,
+          -0.06698279156283915
+        ],
+        "auc_diff_mean": 0.09695530590167625,
+        "logloss_diff_mean": -0.07622615678346797
+      }
+    ],
+    "train_in_sample_main_optimistic": {
+      "n": 1112450,
+      "base_rate": 0.5374875275293272,
+      "log_loss": 0.5362009529556057,
+      "brier": 0.18084228484642623,
+      "accuracy": 0.7286017349094341,
+      "precision": 0.7736641341348189,
+      "recall": 0.6997832514951633,
+      "f1": 0.7348714431612715,
+      "threshold": 0.5,
+      "roc_auc": 0.7996190276494342,
+      "ece": 0.021189129835911532
+    },
+    "caveat": "Response-prediction quality is not proof of correct mastery diagnosis (no ground-truth mastery in EEDI)."
+  },
+  "diagnosis_quality": {
+    "split_half_consistency_test": {
+      "n_cells_with_n_min": 880,
+      "consistency": 0.8761363636363636,
+      "n_cells_outside_band": 880,
+      "consistency_outside_band": 0.8761363636363636
+    },
+    "simulation_recovery": {
+      "n_simulated_students": 1000,
+      "tau": 0.5,
+      "attribute_accuracy_with_evidence": 0.956549217885922,
+      "attribute_accuracy_without_evidence": 0.8505673303361164,
+      "label": "SIMULATION under the fitted model (not real ground truth)"
+    },
+    "item_parameter_recovery": {
+      "n_items_with_30plus_responses": 900,
+      "guess_corr": 0.9654269548286251,
+      "slip_corr": 0.9823135701248491,
+      "guess_mae": 0.022718750197318005,
+      "slip_mae": 0.02033917214155539,
+      "label": "SIMULATION: item-parameter recovery on train-sized data generated from the fitted model"
+    },
+    "caveat": "No ground-truth mastery exists in EEDI; these are reliability / simulation proxies, not diagnostic accuracy."
+  },
+  "assessment": {
+    "eligibility": {
+      "min_train_attempts": 30,
+      "min_discrimination": 0.1
+    },
+    "n_eligible_target_items": 139,
+    "items_per_concept": 5,
+    "max_length": 55,
+    "fixed_form_length": 52,
+    "parallel_form_lengths": [
+      45,
+      45
+    ],
+    "concepts_below_n_min_in_fixed_form": [
+      409
+    ],
+    "concepts_inadequate_for_parallel_forms": [
+      "Factorising into a Single Bracket",
+      "Linear Equations",
+      "Solving Linear Inequalities",
+      "Midpoint Between Two Co-ordinates",
+      "Horizontal and Vertical Lines",
+      "Gradient Between Two Co-ordinates"
+    ],
+    "adaptive_replay": {
+      "n_students": 300,
+      "summary": [
+        {
+          "strategy": "adaptive_MI",
+          "length": 5,
+          "label_agreement": 0.7888941798941799,
+          "mean_abs_pi_diff": 0.22012556523218949,
+          "n_target_concepts_covered": 4.31
+        },
+        {
+          "strategy": "adaptive_MI",
+          "length": 10,
+          "label_agreement": 0.8619497354497355,
+          "mean_abs_pi_diff": 0.14443104375798282,
+          "n_target_concepts_covered": 6.53
+        },
+        {
+          "strategy": "adaptive_MI",
+          "length": 15,
+          "label_agreement": 0.8918544973544973,
+          "mean_abs_pi_diff": 0.11281489497851752,
+          "n_target_concepts_covered": 7.503333333333333
+        },
+        {
+          "strategy": "adaptive_MI",
+          "length": 20,
+          "label_agreement": 0.9106759259259259,
+          "mean_abs_pi_diff": 0.09435615540572119,
+          "n_target_concepts_covered": 8.08
+        },
+        {
+          "strategy": "random",
+          "length": 5,
+          "label_agreement": 0.770978835978836,
+          "mean_abs_pi_diff": 0.251744515922812,
+          "n_target_concepts_covered": 3.6533333333333333
+        },
+        {
+          "strategy": "random",
+          "length": 10,
+          "label_agreement": 0.8237645502645502,
+          "mean_abs_pi_diff": 0.18759204839127913,
+          "n_target_concepts_covered": 5.36
+        },
+        {
+          "strategy": "random",
+          "length": 15,
+          "label_agreement": 0.8509298941798942,
+          "mean_abs_pi_diff": 0.15797560111791195,
+          "n_target_concepts_covered": 6.273333333333333
+        },
+        {
+          "strategy": "random",
+          "length": 20,
+          "label_agreement": 0.8706640211640212,
+          "mean_abs_pi_diff": 0.12967028484416465,
+          "n_target_concepts_covered": 6.933333333333334
+        }
+      ]
+    },
+    "coverage": {
+      "n_curriculum_topics": 12,
+      "n_unmapped": 5,
+      "unmapped_topics": [
+        "Eksponen dan logaritma",
+        "Polinomial",
+        "Matriks",
+        "Limit fungsi",
+        "Integral"
+      ]
+    }
+  },
+  "test_diagnosis": {
+    "n_students": 492,
+    "target_label_counts": {
+      "insufficient_evidence": 3291,
+      "not_mastered": 1394,
+      "mastered": 727
+    },
+    "n_students_with_gap": 322,
+    "intervention_map_warnings": [],
+    "intervention_entries_placeholder": 11,
+    "caveat": "Mastery labels are model-based posterior classifications, not verified mastery."
+  },
+  "prepost_demo": {
+    "label": "SIMULATION - synthetic students generated from the fitted model; not EEDI students, not an experiment",
+    "n_matched": 40,
+    "simulation_check": {
+      "corr_estimated_change_vs_true_change": 0.7437636015602151,
+      "true_gain_rate_target": 0.2431818181818182
+    }
+  }
+}

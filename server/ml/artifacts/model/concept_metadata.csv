@@ -1,0 +1,58 @@
+concept_id,concept_index,concept_name,level1,level2,path,n_questions,n_focus_questions,is_focus_concept,in_target_scope,relevance_level,curriculum_order
+33,0,BIDMAS,Number,Basic Arithmetic,Maths > Number > Basic Arithmetic > BIDMAS,31,0,False,False,out_of_scope,
+52,1,Factorising into a Single Bracket,Algebra,Factorising,Maths > Algebra > Factorising > Factorising into a Single Bracket,8,8,True,True,prerequisite_strong,4.0
+64,2,Linear Equations,Algebra,Solving Equations,Maths > Algebra > Solving Equations > Linear Equations,7,7,True,True,prerequisite_strong,5.0
+67,3,Substitution into Formula,Algebra,Formula,Maths > Algebra > Formula > Substitution into Formula,22,22,True,True,prerequisite_strong,3.0
+70,4,Writing Expressions,Algebra,Writing and Simplifying Expressions,Maths > Algebra > Writing and Simplifying Expressions > Writing Expressions,25,25,True,True,prerequisite_weak,1.0
+73,5,"Types, Naming and Estimating",Geometry and Measure,Angles,"Maths > Geometry and Measure > Angles > Types, Naming and Estimating",9,0,False,False,out_of_scope,
+75,6,Area of Simple Shapes,Geometry and Measure,Perimeter and Area,Maths > Geometry and Measure > Perimeter and Area > Area of Simple Shapes,32,0,False,False,out_of_scope,
+86,7,Perimeter,Geometry and Measure,Perimeter and Area,Maths > Geometry and Measure > Perimeter and Area > Perimeter,15,0,False,False,out_of_scope,
+88,8,Properties of Quadrilaterals,Geometry and Measure,2D Names and Properties of Shapes,Maths > Geometry and Measure > 2D Names and Properties of Shapes > Properties of Quadrilaterals,18,0,False,False,out_of_scope,
+90,9,Length Scale Factors in Similar Shapes,Geometry and Measure,Similarity and Congruency,Maths > Geometry and Measure > Similarity and Congruency > Length Scale Factors in Similar Shapes,5,0,False,False,out_of_scope,
+92,10,Reflection,Geometry and Measure,Transformations,Maths > Geometry and Measure > Transformations > Reflection,20,0,False,False,out_of_scope,
+93,11,Rotation,Geometry and Measure,Transformations,Maths > Geometry and Measure > Transformations > Rotation,11,0,False,False,out_of_scope,
+94,12,Enlargement,Geometry and Measure,Transformations,Maths > Geometry and Measure > Transformations > Enlargement,2,0,False,False,out_of_scope,
+95,13,Translation and Vectors,Geometry and Measure,Transformations,Maths > Geometry and Measure > Transformations > Translation and Vectors,25,0,False,False,out_of_scope,
+166,14,Solving Linear Inequalities,Algebra,Inequalities,Maths > Algebra > Inequalities > Solving Linear Inequalities,8,8,True,True,prerequisite_strong,6.0
+171,15,Linear Sequences (nth term),Algebra,Sequences,Maths > Algebra > Sequences > Linear Sequences (nth term),12,12,True,True,direct_partial,7.0
+179,16,Compound Area,Geometry and Measure,Perimeter and Area,Maths > Geometry and Measure > Perimeter and Area > Compound Area,7,0,False,False,out_of_scope,
+180,17,Measuring Angles,Geometry and Measure,Angles,Maths > Geometry and Measure > Angles > Measuring Angles,11,0,False,False,out_of_scope,
+181,18,"Basic Angle Facts (straight line, opposite, around a point, etc)",Geometry and Measure,Angles,"Maths > Geometry and Measure > Angles > Basic Angle Facts (straight line, opposite, around a point, etc)",24,0,False,False,out_of_scope,
+182,19,Angle Facts with Parallel Lines,Geometry and Measure,Angles,Maths > Geometry and Measure > Angles > Angle Facts with Parallel Lines,22,0,False,False,out_of_scope,
+183,20,Angles in Polygons,Geometry and Measure,Angles,Maths > Geometry and Measure > Angles > Angles in Polygons,16,0,False,False,out_of_scope,
+184,21,Parts of a Circle,Geometry and Measure,Circles,Maths > Geometry and Measure > Circles > Parts of a Circle,8,0,False,False,out_of_scope,
+189,22,Volume of Prisms,Geometry and Measure,Volume and Surface Area,Maths > Geometry and Measure > Volume and Surface Area > Volume of Prisms,2,0,False,False,out_of_scope,
+190,23,Construct Angle,Geometry and Measure,"Construction, Loci and Scale Drawing","Maths > Geometry and Measure > Construction, Loci and Scale Drawing > Construct Angle",2,0,False,False,out_of_scope,
+191,24,Construct Triangle,Geometry and Measure,"Construction, Loci and Scale Drawing","Maths > Geometry and Measure > Construction, Loci and Scale Drawing > Construct Triangle",14,0,False,False,out_of_scope,
+192,25,Construct Angle and Line Bisectors,Geometry and Measure,"Construction, Loci and Scale Drawing","Maths > Geometry and Measure > Construction, Loci and Scale Drawing > Construct Angle and Line Bisectors",1,0,False,False,out_of_scope,
+202,26,Place Value,Number,Basic Arithmetic,Maths > Number > Basic Arithmetic > Place Value,17,0,False,False,out_of_scope,
+204,27,Mental Multiplication and Division,Number,Basic Arithmetic,Maths > Number > Basic Arithmetic > Mental Multiplication and Division,52,0,False,False,out_of_scope,
+207,28,Written Multiplication,Number,Basic Arithmetic,Maths > Number > Basic Arithmetic > Written Multiplication,1,0,False,False,out_of_scope,
+209,29,Time,Geometry and Measure,Units of Measurement,Maths > Geometry and Measure > Units of Measurement > Time,16,0,False,False,out_of_scope,
+210,30,Ordering Negative Numbers,Number,Negative Numbers,Maths > Number > Negative Numbers > Ordering Negative Numbers,15,0,False,False,out_of_scope,
+211,31,Adding and Subtracting Negative Numbers,Number,Negative Numbers,Maths > Number > Negative Numbers > Adding and Subtracting Negative Numbers,59,0,False,False,out_of_scope,
+212,32,Multiplying and Dividing Negative Numbers,Number,Negative Numbers,Maths > Number > Negative Numbers > Multiplying and Dividing Negative Numbers,43,0,False,False,out_of_scope,
+219,33,Factors and Highest Common Factor,Number,"Factors, Multiples and Primes","Maths > Number > Factors, Multiples and Primes > Factors and Highest Common Factor",43,0,False,False,out_of_scope,
+220,34,Multiples and Lowest Common Multiple,Number,"Factors, Multiples and Primes","Maths > Number > Factors, Multiples and Primes > Multiples and Lowest Common Multiple",39,0,False,False,out_of_scope,
+221,35,Prime Numbers and Prime Factors,Number,"Factors, Multiples and Primes","Maths > Number > Factors, Multiples and Primes > Prime Numbers and Prime Factors",29,0,False,False,out_of_scope,
+224,36,Multiplying and Dividing with Decimals,Number,Decimals,Maths > Number > Decimals > Multiplying and Dividing with Decimals,6,0,False,False,out_of_scope,
+225,37,Fractions of an Amount,Number,Fractions,Maths > Number > Fractions > Fractions of an Amount,22,0,False,False,out_of_scope,
+226,38,Equivalent Fractions,Number,Fractions,Maths > Number > Fractions > Equivalent Fractions,4,0,False,False,out_of_scope,
+228,39,Ordering Fractions,Number,Fractions,Maths > Number > Fractions > Ordering Fractions,18,0,False,False,out_of_scope,
+229,40,Converting Mixed Number and Improper Fractions,Number,Fractions,Maths > Number > Fractions > Converting Mixed Number and Improper Fractions,4,0,False,False,out_of_scope,
+230,41,Adding and Subtracting Fractions,Number,Fractions,Maths > Number > Fractions > Adding and Subtracting Fractions,30,0,False,False,out_of_scope,
+231,42,Multiplying Fractions,Number,Fractions,Maths > Number > Fractions > Multiplying Fractions,29,0,False,False,out_of_scope,
+232,43,Dividing Fractions,Number,Fractions,Maths > Number > Fractions > Dividing Fractions,34,0,False,False,out_of_scope,
+237,44,Converting between Fractions and Decimals,Number,"Fractions, Decimals and Percentage Equivalence","Maths > Number > Fractions, Decimals and Percentage Equivalence > Converting between Fractions and Decimals",20,0,False,False,out_of_scope,
+238,45,Converting between Fractions and Percentages,Number,"Fractions, Decimals and Percentage Equivalence","Maths > Number > Fractions, Decimals and Percentage Equivalence > Converting between Fractions and Percentages",4,0,False,False,out_of_scope,
+245,46,"Squares, Cubes, etc",Number,"Indices, Powers and Roots","Maths > Number > Indices, Powers and Roots > Squares, Cubes, etc",17,0,False,False,out_of_scope,
+251,47,Simplifying Expressions by Collecting Like Terms,Algebra,Writing and Simplifying Expressions,Maths > Algebra > Writing and Simplifying Expressions > Simplifying Expressions by Collecting Like Terms,19,19,True,True,prerequisite_strong,2.0
+258,48,Horizontal and Vertical Lines,Algebra,Straight Line Graphs,Maths > Algebra > Straight Line Graphs > Horizontal and Vertical Lines,8,8,True,True,prerequisite_strong,10.0
+273,49,"Length, Area and Volume Scale Factors",Geometry and Measure,Similarity and Congruency,"Maths > Geometry and Measure > Similarity and Congruency > Length, Area and Volume Scale Factors",5,0,False,False,out_of_scope,
+275,50,Line Symmetry,Geometry and Measure,Symmetry,Maths > Geometry and Measure > Symmetry > Line Symmetry,16,0,False,False,out_of_scope,
+276,51,Rotational Symmetry,Geometry and Measure,Symmetry,Maths > Geometry and Measure > Symmetry > Rotational Symmetry,6,0,False,False,out_of_scope,
+406,52,Naming Co-ordinates in 2D,Algebra,Co-ordinates,Maths > Algebra > Co-ordinates > Naming Co-ordinates in 2D,24,24,True,True,prerequisite_weak,8.0
+408,53,Midpoint Between Two Co-ordinates,Algebra,Co-ordinates,Maths > Algebra > Co-ordinates > Midpoint Between Two Co-ordinates,9,9,True,True,prerequisite_weak,9.0
+409,54,Gradient Between Two Co-ordinates,Algebra,Co-ordinates,Maths > Algebra > Co-ordinates > Gradient Between Two Co-ordinates,2,2,True,True,prerequisite_strong,11.0
+439,55,Angles in Triangles,Geometry and Measure,Angles,Maths > Geometry and Measure > Angles > Angles in Triangles,11,0,False,False,out_of_scope,
+655,56,Missing Lengths,Geometry and Measure,Perimeter and Area,Maths > Geometry and Measure > Perimeter and Area > Missing Lengths,3,0,False,False,out_of_scope,

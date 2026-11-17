@@ -1,0 +1,8 @@
+{
+  "log_loss": 0.5220199512249353,
+  "roc_auc": 0.8086070703329543,
+  "brier": 0.1710910269420432,
+  "synthetic_mastery_accuracy": 0.9659806803863923,
+  "heldout_responses": 3561,
+  "students": 200
+}

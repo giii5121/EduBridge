@@ -1,0 +1,27 @@
+% Higher-order prior sigma(a_k*theta - b_k) for four target concepts (artifacts/model/pdina_params.npz)
+% and the distribution of theta for the 3,934 train students (refit, slides/data/pdina_deep/theta_hist.csv).
+\begin{tikzpicture}
+\begin{axis}[
+  name=curves, width=0.52\linewidth, height=\figH, xmin=-2.5, xmax=2.5, ymin=0, ymax=1,
+  xlabel={kemampuan umum $\theta$}, ylabel={peluang awal menguasai},
+  grid=major, legend style={at={(0.5,-0.28)}, anchor=north, font=\tiny, legend columns=2, /tikz/every even column/.append style={column sep=6pt}}, legend cell align=left,
+  yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=1},
+]
+  \addplot[navy, thick, domain=-2.5:2.5, samples=101] {1/(1+exp(-(5.000*x+0.665)))};
+  \addlegendentry{Writing Expressions ($a{=}5{,}00$; $b{=}{-}0{,}67$)}
+  \addplot[tealc, thick, domain=-2.5:2.5, samples=101] {1/(1+exp(-(4.666*x-0.978)))};
+  \addlegendentry{Linear Equations ($4{,}67$; $0{,}98$)}
+  \addplot[accent, thick, domain=-2.5:2.5, samples=101] {1/(1+exp(-(3.878*x-2.073)))};
+  \addlegendentry{Horizontal \& Vertical Lines ($3{,}88$; $2{,}07$)}
+  \addplot[gapred, thick, dashed, domain=-2.5:2.5, samples=101] {1/(1+exp(-(2.455*x-0.135)))};
+  \addlegendentry{Gradient (2 soal; $2{,}46$; $0{,}14$)}
+\end{axis}
+\begin{axis}[
+  at={(curves.east)}, anchor=west, xshift=1.0cm, ybar interval, width=0.34\linewidth, height=\figH,
+  xmin=-2.5, xmax=2.5, ymin=0, xlabel={$\theta$ siswa train}, ylabel={jumlah siswa},
+  ymajorgrids, xtick={-2,-1,...,2}, xticklabel={\pgfmathprintnumber{\tick}},
+]
+  \addplot[fill=navy!45, draw=white] coordinates {
+    (-2.5,0) (-2.0,3) (-1.5,505) (-1.0,822) (-0.5,1078) (0.0,884) (0.5,465) (1.0,173) (1.5,4) (2.0,0) (2.5,0)};
+\end{axis}
+\end{tikzpicture}

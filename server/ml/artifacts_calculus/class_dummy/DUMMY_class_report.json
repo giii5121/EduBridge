@@ -1,0 +1,305 @@
+{
+  "LABEL": "DUMMY kelas XI kalkulus - data sintetis, bukan hasil penelitian",
+  "policy": {
+    "tau": 0.5,
+    "delta": 0.0,
+    "n_min": 1,
+    "target_concept_ids": [
+      9001,
+      9002,
+      9003,
+      9004,
+      9005,
+      9006,
+      9007,
+      9008,
+      9009,
+      9010,
+      9011,
+      9012,
+      9013
+    ],
+    "provenance": {
+      "tau": "validation held-out log-loss of hard-label DINA prediction; one-SE rule (student bootstrap) toward 0.5",
+      "n_min": 1,
+      "n_min_selected_from_data": true,
+      "delta": 0.0,
+      "delta_selected_from_data": true,
+      "target_consistency": 0.85,
+      "note": "n_min is the per-half evidence at which agreement between two independent half-test classifications reaches target_consistency; agreement between two noisy classifications understates the reliability of each, so the rule is conservative.",
+      "tau_grid": [
+        0.3,
+        0.35,
+        0.4,
+        0.45,
+        0.5,
+        0.55,
+        0.6,
+        0.65,
+        0.7
+      ]
+    }
+  },
+  "pretest": {
+    "n_students": 70,
+    "label_counts": {
+      "not_mastered": 651,
+      "mastered": 259
+    },
+    "n_students_with_gap": 68
+  },
+  "prepost_all": {
+    "n_students_pre": 70,
+    "n_students_post": 69,
+    "n_matched": 68,
+    "unmatched_pre_only": [
+      "XI-A-12",
+      "XI-B-30"
+    ],
+    "unmatched_post_only": [
+      "XI-B-07"
+    ],
+    "overall_score": {
+      "n_pairs": 68,
+      "mean_pre": 0.3461215376280938,
+      "mean_post": 0.4620791509427459,
+      "mean_change": 0.11595761331465212,
+      "mean_change_ci95": [
+        0.08415409819941097,
+        0.15029603699284766
+      ],
+      "cohens_dz": 0.8219429393083324,
+      "wilcoxon_p": 2.066041874220543e-08,
+      "rank_biserial_r": 0.7879719051799824,
+      "paired_t_p": 3.77526048279916e-09
+    },
+    "comparability": {
+      "same_item_set": false,
+      "n_items_pre": 39,
+      "n_items_post": 39,
+      "n_shared_items": 0,
+      "same_model_scale": true,
+      "scale_note": "Both tests are scored with the same frozen item parameters, so mastery probabilities are on one scale.",
+      "blueprint": [
+        {
+          "concept_id": 9001,
+          "n_items_pre": 3,
+          "n_items_post": 3,
+          "mean_difficulty_pre": 0.24231879168866532,
+          "mean_difficulty_post": 0.24874164533503226
+        },
+        {
+          "concept_id": 9002,
+          "n_items_pre": 6,
+          "n_items_post": 7,
+          "mean_difficulty_pre": 0.4597854500998064,
+          "mean_difficulty_post": 0.5026828854624804
+        },
+        {
+          "concept_id": 9003,
+          "n_items_pre": 6,
+          "n_items_post": 3,
+          "mean_difficulty_pre": 0.5898685992619145,
+          "mean_difficulty_post": 0.520555760281984
+        },
+        {
+          "concept_id": 9004,
+          "n_items_pre": 3,
+          "n_items_post": 3,
+          "mean_difficulty_pre": 0.6310245568823823,
+          "mean_difficulty_post": 0.6265636905258769
+        },
+        {
+          "concept_id": 9005,
+          "n_items_pre": 3,
+          "n_items_post": 3,
+          "mean_difficulty_pre": 0.6576622342372421,
+          "mean_difficulty_post": 0.6559528858924165
+        },
+        {
+          "concept_id": 9006,
+          "n_items_pre": 3,
+          "n_items_post": 3,
+          "mean_difficulty_pre": 0.6616035166190475,
+          "mean_difficulty_post": 0.6329682288503243
+        },
+        {
+          "concept_id": 9007,
+          "n_items_pre": 16,
+          "n_items_post": 13,
+          "mean_difficulty_pre": 0.6287249290860863,
+          "mean_difficulty_post": 0.5996073301754911
+        },
+        {
+          "concept_id": 9008,
+          "n_items_pre": 3,
+          "n_items_post": 4,
+          "mean_difficulty_pre": 0.635878805657852,
+          "mean_difficulty_post": 0.6669337375456351
+        },
+        {
+          "concept_id": 9009,
+          "n_items_pre": 5,
+          "n_items_post": 4,
+          "mean_difficulty_pre": 0.6762061697264874,
+          "mean_difficulty_post": 0.6758840702429503
+        },
+        {
+          "concept_id": 9010,
+          "n_items_pre": 3,
+          "n_items_post": 3,
+          "mean_difficulty_pre": 0.7094561755777106,
+          "mean_difficulty_post": 0.7187301587461862
+        },
+        {
+          "concept_id": 9011,
+          "n_items_pre": 3,
+          "n_items_post": 3,
+          "mean_difficulty_pre": 0.6174530381934468,
+          "mean_difficulty_post": 0.6261419772339273
+        },
+        {
+          "concept_id": 9012,
+          "n_items_pre": 5,
+          "n_items_post": 5,
+          "mean_difficulty_pre": 0.7320846466170113,
+          "mean_difficulty_post": 0.7108227261399113
+        },
+        {
+          "concept_id": 9013,
+          "n_items_pre": 4,
+          "n_items_post": 4,
+          "mean_difficulty_pre": 0.7568620216917832,
+          "mean_difficulty_post": 0.743149378887343
+        }
+      ],
+      "form_design": "parallel/different forms",
+      "warnings": [
+        "concept 9002: different number of items pre (6) vs post (7)",
+        "concept 9003: different number of items pre (6) vs post (3)",
+        "concept 9007: different number of items pre (16) vs post (13)",
+        "concept 9008: different number of items pre (3) vs post (4)",
+        "concept 9009: different number of items pre (5) vs post (4)"
+      ]
+    },
+    "design": {
+      "has_control_group": true,
+      "groups": [
+        "control",
+        "treatment"
+      ],
+      "randomized_design_declared": false,
+      "gain_comparison": {
+        "group_a": "control",
+        "group_b": "treatment",
+        "mean_gain_a": 0.07607019758722545,
+        "mean_gain_b": 0.15356574814336865,
+        "mannwhitney_p": 0.027191670657463664
+      }
+    },
+    "interpretation_guard": "Non-randomised comparison group: differences are associations (quasi-experimental), not proof of causation.",
+    "policy": {
+      "tau": 0.5,
+      "delta": 0.0,
+      "n_min": 1,
+      "target_concept_ids": [
+        9001,
+        9002,
+        9003,
+        9004,
+        9005,
+        9006,
+        9007,
+        9008,
+        9009,
+        9010,
+        9011,
+        9012,
+        9013
+      ],
+      "provenance": {
+        "tau": "validation held-out log-loss of hard-label DINA prediction; one-SE rule (student bootstrap) toward 0.5",
+        "n_min": 1,
+        "n_min_selected_from_data": true,
+        "delta": 0.0,
+        "delta_selected_from_data": true,
+        "target_consistency": 0.85,
+        "note": "n_min is the per-half evidence at which agreement between two independent half-test classifications reaches target_consistency; agreement between two noisy classifications understates the reliability of each, so the rule is conservative.",
+        "tau_grid": [
+          0.3,
+          0.35,
+          0.4,
+          0.45,
+          0.5,
+          0.55,
+          0.6,
+          0.65,
+          0.7
+        ]
+      }
+    },
+    "input_info": {
+      "pre": {
+        "n_students": 70,
+        "n_rows": 2730,
+        "n_observed": 2660,
+        "n_blank": 70,
+        "students_with_no_observed_response": [],
+        "warnings": []
+      },
+      "post": {
+        "n_students": 69,
+        "n_rows": 2691,
+        "n_observed": 2613,
+        "n_blank": 78,
+        "students_with_no_observed_response": [],
+        "warnings": []
+      }
+    }
+  },
+  "prepost_by_class": {
+    "XI-A": {
+      "n_matched": 35,
+      "overall_score": {
+        "n_pairs": 35,
+        "mean_pre": 0.3496780511818106,
+        "mean_post": 0.5032437993251792,
+        "mean_change": 0.15356574814336865,
+        "mean_change_ci95": [
+          0.10648731019197627,
+          0.20219747891132234
+        ],
+        "cohens_dz": 1.0185142472316733,
+        "wilcoxon_p": 8.442575224111161e-06,
+        "rank_biserial_r": 0.8756302521008403,
+        "paired_t_p": 7.977993503193223e-07
+      },
+      "n_concepts_detectable_increase": 13
+    },
+    "XI-B": {
+      "n_matched": 33,
+      "overall_score": {
+        "n_pairs": 33,
+        "mean_pre": 0.3423494777983942,
+        "mean_post": 0.4184196753856197,
+        "mean_change": 0.07607019758722545,
+        "mean_change_ci95": [
+          0.03645991978035321,
+          0.11563012627254105
+        ],
+        "cohens_dz": 0.6354602083817358,
+        "wilcoxon_p": 0.0006863981113090388,
+        "rank_biserial_r": 0.6773618538324421,
+        "paired_t_p": 0.0009245945183884834
+      },
+      "n_concepts_detectable_increase": 5
+    }
+  },
+  "simulation_truth_check": {
+    "pretest_label_accuracy_on_diagnosable_cells": 0.9615384615384616,
+    "n_diagnosable_cells": 910,
+    "corr_estimated_vs_true_mastery_change": 0.7056823976253659,
+    "note": "Hanya dapat dihitung karena data disimulasikan; tidak tersedia pada data kelas nyata."
+  },
+  "design_note": "XI-A vs XI-B adalah kelas utuh (tidak diacak): perbandingan bersifat kuasi-eksperimen. Selisih antar kelas pada data ini dipasang oleh parameter simulasi (gain treatment 0.55 vs control 0.25)."
+}

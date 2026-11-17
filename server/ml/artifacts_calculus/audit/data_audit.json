@@ -1,0 +1,238 @@
+{
+  "data_dir": "D:\\finalIL\\dummy_data\\kalkulus_kelas11\\final",
+  "presence": {
+    "responses_train.npz": {
+      "exists": true,
+      "size_bytes": 31884
+    },
+    "responses_val.npz": {
+      "exists": true,
+      "size_bytes": 5124
+    },
+    "responses_test.npz": {
+      "exists": true,
+      "size_bytes": 5142
+    },
+    "q_matrix.csv": {
+      "exists": true,
+      "size_bytes": 3149
+    },
+    "concept_metadata.csv": {
+      "exists": true,
+      "size_bytes": 1881
+    },
+    "cda_item_bank.csv": {
+      "exists": true,
+      "size_bytes": 18852
+    },
+    "interactions_train.csv": {
+      "exists": true,
+      "size_bytes": 3527111
+    },
+    "interactions_val.csv": {
+      "exists": true,
+      "size_bytes": 412682
+    },
+    "interactions_test.csv": {
+      "exists": true,
+      "size_bytes": 422085
+    },
+    "dataset_manifest.json": {
+      "exists": true,
+      "size_bytes": 471
+    },
+    "eda_summary.json": {
+      "exists": true,
+      "size_bytes": 52
+    }
+  },
+  "missing_files": [],
+  "q_matrix": {
+    "n_items": 96,
+    "n_concepts": 13,
+    "binary": true,
+    "items_without_concept": [],
+    "concepts_without_items": []
+  },
+  "artifact_source": "dummy_synthetic_calculus_kelas11",
+  "splits": {
+    "train": {
+      "interactions": {
+        "rows": 75280,
+        "students": 1600,
+        "questions": 96,
+        "duplicate_user_question_pairs": 0,
+        "correct_rate": 0.4251461211477152,
+        "dtypes": {
+          "UserId": "int64",
+          "QuestionId": "int64",
+          "AnswerId": "int64",
+          "IsCorrect": "int64",
+          "DateAnswered": "str"
+        }
+      },
+      "npz_encoding": {
+        "keys": [
+          "matrix",
+          "user_ids",
+          "question_ids"
+        ],
+        "matrix_key": "matrix",
+        "user_key": "user_ids",
+        "question_key": "question_ids",
+        "mask_key": null,
+        "dtype": "int8",
+        "shape": [
+          1600,
+          96
+        ],
+        "unique_values": [
+          -1,
+          0,
+          1
+        ],
+        "missing_scheme": "-1 = missing"
+      },
+      "alignment_npz_vs_csv": {
+        "same_users": true,
+        "mask_equal": true,
+        "value_mismatches": 0,
+        "cells_only_in_npz": 0,
+        "cells_only_in_csv": 0,
+        "aligned": true
+      },
+      "source_used": "interactions_csv",
+      "n_students": 1600,
+      "observed_cells": 75280,
+      "matrix_density": 0.4901041666666667,
+      "responses_per_student": {
+        "min": 42,
+        "median": 47.0,
+        "max": 48
+      },
+      "expected_students": 1600,
+      "count_matches_expected": true
+    },
+    "val": {
+      "interactions": {
+        "rows": 9403,
+        "students": 200,
+        "questions": 96,
+        "duplicate_user_question_pairs": 0,
+        "correct_rate": 0.4303945549292779,
+        "dtypes": {
+          "UserId": "int64",
+          "QuestionId": "int64",
+          "AnswerId": "int64",
+          "IsCorrect": "int64",
+          "DateAnswered": "str"
+        }
+      },
+      "npz_encoding": {
+        "keys": [
+          "matrix",
+          "user_ids",
+          "question_ids"
+        ],
+        "matrix_key": "matrix",
+        "user_key": "user_ids",
+        "question_key": "question_ids",
+        "mask_key": null,
+        "dtype": "int8",
+        "shape": [
+          200,
+          96
+        ],
+        "unique_values": [
+          -1,
+          0,
+          1
+        ],
+        "missing_scheme": "-1 = missing"
+      },
+      "alignment_npz_vs_csv": {
+        "same_users": true,
+        "mask_equal": true,
+        "value_mismatches": 0,
+        "cells_only_in_npz": 0,
+        "cells_only_in_csv": 0,
+        "aligned": true
+      },
+      "source_used": "interactions_csv",
+      "n_students": 200,
+      "observed_cells": 9403,
+      "matrix_density": 0.48973958333333334,
+      "responses_per_student": {
+        "min": 43,
+        "median": 47.0,
+        "max": 48
+      },
+      "expected_students": 200,
+      "count_matches_expected": true
+    },
+    "test": {
+      "interactions": {
+        "rows": 9403,
+        "students": 200,
+        "questions": 96,
+        "duplicate_user_question_pairs": 0,
+        "correct_rate": 0.42369456556418167,
+        "dtypes": {
+          "UserId": "int64",
+          "QuestionId": "int64",
+          "AnswerId": "int64",
+          "IsCorrect": "int64",
+          "DateAnswered": "str"
+        }
+      },
+      "npz_encoding": {
+        "keys": [
+          "matrix",
+          "user_ids",
+          "question_ids"
+        ],
+        "matrix_key": "matrix",
+        "user_key": "user_ids",
+        "question_key": "question_ids",
+        "mask_key": null,
+        "dtype": "int8",
+        "shape": [
+          200,
+          96
+        ],
+        "unique_values": [
+          -1,
+          0,
+          1
+        ],
+        "missing_scheme": "-1 = missing"
+      },
+      "alignment_npz_vs_csv": {
+        "same_users": true,
+        "mask_equal": true,
+        "value_mismatches": 0,
+        "cells_only_in_npz": 0,
+        "cells_only_in_csv": 0,
+        "aligned": true
+      },
+      "source_used": "interactions_csv",
+      "n_students": 200,
+      "observed_cells": 9403,
+      "matrix_density": 0.48973958333333334,
+      "responses_per_student": {
+        "min": 44,
+        "median": 47.0,
+        "max": 48
+      },
+      "expected_students": 200,
+      "count_matches_expected": true
+    }
+  },
+  "student_disjoint": true,
+  "item_bank_stats_source": {
+    "checked": true,
+    "max_abs_diff_vs_train_pass_rate": 0.0,
+    "matches_train_only": true,
+    "n_attempts_matches_train_counts": true
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "class": "PDINA",
+  "hyperparams": {
+    "prior": "higher_order",
+    "gs_prior_strength": 10.0,
+    "class_weights": null,
+    "max_em_iter": 150,
+    "em_tol": 1e-06,
+    "e_step_iter": 30,
+    "guess_prior": [
+      3.0,
+      9.0
+    ],
+    "slip_prior": [
+      3.0,
+      9.0
+    ],
+    "max_guess_slip_sum": 0.98
+  },
+  "n_em_iter": 39,
+  "final_elbo": -82856.16625312771,
+  "instrument_version": "edubridge-xi-v1",
+  "instrument_sha256": "fba8b266be4b3a10a1d8923952bd70fc98cae6f92ea61e15da6a0cde7679eed7"
+}

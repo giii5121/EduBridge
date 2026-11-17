@@ -1,0 +1,18 @@
+% Guess vs slip for all 948 items (slides/data/pdina_deep/item_gs.csv, from artifacts/model/item_parameters.csv)
+\begin{tikzpicture}
+\begin{axis}[
+  width=\linewidth, height=\figH, xmin=0, xmax=0.72, ymin=0, ymax=0.72,
+  xlabel={guess $g$ (peluang benar walau belum menguasai)}, ylabel={slip $s$ (peluang salah walau menguasai)},
+  grid=major,
+  xticklabel style={/pgf/number format/fixed, /pgf/number format/precision=1},
+  yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=1},
+]
+  \fill[gapred!10] (axis cs:0.9,0) -- (axis cs:0.72,0) -- (axis cs:0.72,0.72) -- (axis cs:0.18,0.72) -- cycle;
+  \addplot[only marks, mark=*, mark size=0.7pt, navy, fill opacity=0.35, draw opacity=0.35]
+    table[col sep=comma, x=guess, y=slip] {data/pdina_deep/item_gs.csv};
+  \addplot[gapred, dashed, domain=0.18:0.72] {0.9-x};
+  \addplot[okgreen, dashed, domain=0:0.4] {0.4-x};
+  \node[font=\tiny, text=gapred, anchor=south west, align=left] at (axis cs:0.30,0.63) {daya beda $<0{,}1$\\(30 soal, nyaris tak berguna)};
+  \node[font=\tiny, text=okgreen!70!black, anchor=south west, align=left, fill=white, inner sep=1pt] at (axis cs:0.005,0.005) {daya beda $>0{,}6$\\(81 soal, sangat tajam)};
+\end{axis}
+\end{tikzpicture}

@@ -1,0 +1,17 @@
+% LLM guardrail: validator, repair, deterministic fallback.
+\begin{tikzpicture}[node distance=5mm and 8mm]
+  \node[boxsoft, text width=1.9cm] (f) {Fakta JSON\\{\tiny dari P-DINA}};
+  \node[boxsoft, right=of f, text width=2.2cm] (p) {Prompt\\{\tiny aturan + heading + 1 contoh}};
+  \node[boxacc, right=of p, text width=1.9cm] (g) {\textbf{Gemini}\\{\tiny 1 request}};
+  \node[boxnavy, right=of g, text width=1.9cm] (v) {\textbf{Validator}\\{\tiny hard fail}};
+  \node[box, draw=okgreen, right=of v, text width=2.0cm] (ok) {\textbf{Tampilkan}\\{\tiny + cache disk}};
+  \node[boxsoft, below=6mm of g, text width=2.4cm] (r) {Repair\\{\tiny catat pelanggaran, maks.\ 2$\times$}};
+  \node[box, draw=gapred, below=6mm of ok, text width=2.0cm] (t) {\textbf{Template}\\{\tiny deterministik}};
+  \draw[arr] (f) -- (p);
+  \draw[arr] (p) -- (g);
+  \draw[arr] (g) -- (v);
+  \draw[arr] (v) -- node[lbl, above]{lolos} (ok);
+  \draw[arr] (v) |- node[lbl, pos=0.25, right]{gagal} (r);
+  \draw[arr] (r) -- (g);
+  \draw[arr] (r.east) ++(0,-0.15) -- node[lbl, below, pos=0.6]{masih gagal / API mati} ($(t.west)+(0,-0.15)$);
+\end{tikzpicture}

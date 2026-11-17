@@ -1,0 +1,129 @@
+{
+  "generatedAt": "2026-11-17T00:59:09.251Z",
+  "syntheticDemoData": true,
+  "captures": [
+    {
+      "file": "01-login.png",
+      "title": "Masuk dan pilihan peran",
+      "url": "http://127.0.0.1:61672/login",
+      "viewport": "1600×1000",
+      "pixels": "2400×1500"
+    },
+    {
+      "file": "02-student-light.png",
+      "title": "Jalur belajar siswa",
+      "url": "http://127.0.0.1:61672/dashboard",
+      "viewport": "1600×1000",
+      "pixels": "2400×1500"
+    },
+    {
+      "file": "03-student-dark.png",
+      "title": "Jalur belajar dalam mode gelap",
+      "url": "http://127.0.0.1:61672/dashboard",
+      "viewport": "1600×1000",
+      "pixels": "2400×1500"
+    },
+    {
+      "file": "04-catalog.png",
+      "title": "Katalog matematika XI",
+      "url": "http://127.0.0.1:61672/katalog",
+      "viewport": "1600×1000",
+      "pixels": "2400×1500"
+    },
+    {
+      "file": "05-lesson.png",
+      "title": "Materi penguatan dengan notasi matematika terformat",
+      "url": "http://127.0.0.1:61672/materi/geometri",
+      "viewport": "1600×1000",
+      "pixels": "2400×1500"
+    },
+    {
+      "file": "06-live-tutor.png",
+      "title": "Pendamping konsep melalui backend dan Gemini, rumus dirender KaTeX",
+      "url": "http://127.0.0.1:61672/materi/geometri",
+      "viewport": "1600×1000",
+      "pixels": "2400×1500"
+    },
+    {
+      "file": "07-assessment.png",
+      "title": "Asesmen CDA",
+      "url": "http://127.0.0.1:61672/kuis",
+      "viewport": "1600×1000",
+      "pixels": "2400×1500"
+    },
+    {
+      "file": "08-quiz-fraction.png",
+      "title": "Kuis: fungsi invers dengan pilihan pecahan terformat",
+      "url": "http://127.0.0.1:61672/kuis/kerjakan/bfb16b36-37db-4fc1-84a8-b34449b480a3",
+      "viewport": "1600×1000",
+      "pixels": "2400×1500"
+    },
+    {
+      "file": "09-quiz-matrix.png",
+      "title": "Kuis: operasi matriks dengan notasi matriks",
+      "url": "http://127.0.0.1:61672/kuis/kerjakan/ba6603bd-bfa9-4af2-96c4-cae27edc40ce",
+      "viewport": "1600×1000",
+      "pixels": "2400×1500"
+    },
+    {
+      "file": "10-quiz-review.png",
+      "title": "Pembahasan: komposisi, pangkat, invers, dan pecahan",
+      "url": "http://127.0.0.1:61672/kuis/hasil/bfb16b36-37db-4fc1-84a8-b34449b480a3",
+      "viewport": "1600×1000",
+      "pixels": "2400×1500"
+    },
+    {
+      "file": "11-result.png",
+      "title": "Hasil asesmen dan diagnosis tersimpan",
+      "url": "http://127.0.0.1:61672/kuis/hasil/ab0030a3-4148-456b-be0b-37947913e218",
+      "viewport": "1600×1000",
+      "pixels": "2400×1500"
+    },
+    {
+      "file": "12-progress.png",
+      "title": "Perbandingan pre/post dan progres",
+      "url": "http://127.0.0.1:61672/progres",
+      "viewport": "1600×1000",
+      "pixels": "2400×1500"
+    },
+    {
+      "file": "13-profile.png",
+      "title": "Profil dan preferensi",
+      "url": "http://127.0.0.1:61672/profil",
+      "viewport": "1600×1000",
+      "pixels": "2400×1500"
+    },
+    {
+      "file": "14-teacher.png",
+      "title": "Pengelolaan kelas dan peta penguasaan",
+      "url": "http://127.0.0.1:61672/guru",
+      "viewport": "1600×1000",
+      "pixels": "2400×1500"
+    },
+    {
+      "file": "15-admin.png",
+      "title": "Administrasi pengguna dan kelas",
+      "url": "http://127.0.0.1:61672/admin",
+      "viewport": "1600×1000",
+      "pixels": "2400×1500"
+    },
+    {
+      "file": "16-system.png",
+      "title": "Status integrasi PDINA dan Gemini",
+      "url": "http://127.0.0.1:61672/admin",
+      "viewport": "1600×1000",
+      "pixels": "2400×1500"
+    },
+    {
+      "file": "17-swagger.png",
+      "title": "Dokumentasi FastAPI dan kontrak AI",
+      "url": "http://127.0.0.1:8000/docs",
+      "viewport": "1600×1000",
+      "pixels": "2400×1500"
+    }
+  ],
+  "diagrams": [
+    "18-architecture.png",
+    "19-ai-live.png"
+  ]
+}

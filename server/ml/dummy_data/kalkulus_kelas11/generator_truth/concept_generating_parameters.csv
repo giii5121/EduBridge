@@ -1,0 +1,14 @@
+concept_id,code,concept_name,prerequisites,generating_difficulty
+9001,KAL-P1,Fungsi dan notasi fungsi,,-1.2
+9002,KAL-P2,Faktorisasi dan manipulasi bentuk aljabar,,-0.8
+9003,KAL-L1,Limit fungsi aljabar,9001;9002,-0.3
+9004,KAL-L2,Limit fungsi di tak hingga,9003,0.2
+9005,KAL-L3,Limit fungsi trigonometri,9003,0.4
+9006,KAL-D1,Turunan sebagai limit (definisi turunan),9003,0.3
+9007,KAL-D2,"Aturan dasar turunan (pangkat, konstanta, jumlah)",9001,-0.4
+9008,KAL-D3,Aturan perkalian dan pembagian,9007,0.3
+9009,KAL-D4,Aturan rantai,9007,0.5
+9010,KAL-D5,Turunan fungsi trigonometri,9007,0.6
+9011,KAL-A1,Persamaan garis singgung kurva,9007,0.4
+9012,KAL-A2,Fungsi naik/turun dan titik stasioner,9007,0.6
+9013,KAL-A3,Nilai maksimum/minimum dan masalah optimasi,9012,1.0

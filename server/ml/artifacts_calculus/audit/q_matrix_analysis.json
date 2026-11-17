@@ -1,0 +1,34 @@
+{
+  "q_matrix": {
+    "n_items": 96,
+    "n_concepts": 13,
+    "density": 0.11858974358974358,
+    "avg_concepts_per_item": 1.5416666666666667,
+    "items_without_concept": 0,
+    "multi_concept_items": 48,
+    "concepts_without_items": [],
+    "concepts_below_min_items": [],
+    "min_items_threshold": 5,
+    "items_per_concept": {
+      "min": 6,
+      "median": 8.0,
+      "max": 34
+    }
+  },
+  "target_q_matrix": {
+    "n_target_concepts": 13,
+    "n_items_with_target_concept": 96,
+    "n_items_target_only": 96,
+    "n_items_mixed_target_and_non_target": 0,
+    "density": 0.11858974358974358
+  },
+  "focus_audit": {
+    "available": true,
+    "n_focus_items": 96,
+    "n_focus_items_all_concepts_in_scope": 96,
+    "n_focus_items_outside_scope": 0,
+    "n_content_reviewed": 0,
+    "content_review_label_match_counts": {},
+    "note": "Content review is a SAMPLE (see configs/focus_item_content_audit.csv); unreviewed focus items keep label_match='not_reviewed' and must not be assumed relevant."
+  }
+}

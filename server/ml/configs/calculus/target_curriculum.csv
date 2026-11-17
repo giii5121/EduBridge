@@ -1,0 +1,6 @@
+topic_id,domain,level,topic_name,mapped_eedi_concept_ids,mapping_type,notes,status
+K0,algebra,prasyarat,Fungsi dan aljabar prasyarat kalkulus,9001;9002,direct,DUMMY,draft
+K1,calculus,kelas XI,"Limit fungsi (aljabar, tak hingga, trigonometri)",9003;9004;9005,direct,DUMMY,draft
+K2,calculus,kelas XI,"Turunan fungsi (definisi, aturan, trigonometri)",9006;9007;9008;9009;9010,direct,DUMMY,draft
+K3,calculus,kelas XI,"Aplikasi turunan (garis singgung, monotonitas, optimasi)",9011;9012;9013,direct,DUMMY,draft
+K4,calculus,kelas XII (di luar skenario),Integral,,unmapped,Tidak ada soal dalam bank dummy,draft

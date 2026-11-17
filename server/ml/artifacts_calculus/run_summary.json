@@ -1,0 +1,533 @@
+{
+  "package_version": "1.0.0",
+  "experiment": "dummy_calculus_kelas11_pdina_vem",
+  "data_dir": "D:\\finalIL\\dummy_data\\kalkulus_kelas11\\final",
+  "output_dir": "D:\\finalIL\\artifacts_calculus",
+  "timings_sec": {
+    "audit": 0.4,
+    "concepts": 0.4,
+    "model_selection": 73.1,
+    "policy": 1.5,
+    "test_evaluation": 39.5,
+    "diagnosis_quality": 27.1,
+    "assessment": 159.3,
+    "diagnose_test": 4.3,
+    "prepost_demo": 0.4
+  },
+  "data": {
+    "artifact_source": "dummy_synthetic_calculus_kelas11",
+    "splits": {
+      "train": 1600,
+      "val": 200,
+      "test": 200
+    },
+    "splits_match_expected": true,
+    "student_disjoint": true,
+    "n_items": 96,
+    "n_concepts": 13,
+    "missing_encoding": {
+      "train": "-1 = missing",
+      "val": "-1 = missing",
+      "test": "-1 = missing"
+    },
+    "npz_csv_alignment": {
+      "train": true,
+      "val": true,
+      "test": true
+    },
+    "train_class_weights": {
+      "0": 0.8697862507221259,
+      "1": 1.1760662396500547
+    },
+    "eda_class_weights": null,
+    "class_weights_match_eda": null,
+    "item_bank_stats_source": {
+      "checked": true,
+      "max_abs_diff_vs_train_pass_rate": 0.0,
+      "matches_train_only": true,
+      "n_attempts_matches_train_counts": true
+    },
+    "leakage_columns_excluded": [],
+    "population_note": "DUMMY: 2.000 siswa SINTETIS untuk kalibrasi bank soal kalkulus kelas XI; dibangkitkan oleh cdacdm/dummy_calculus.py dari parameter yang ditetapkan, bukan data siswa nyata."
+  },
+  "q_matrix": {
+    "n_items": 96,
+    "n_concepts": 13,
+    "density": 0.11858974358974358,
+    "avg_concepts_per_item": 1.5416666666666667,
+    "items_without_concept": 0,
+    "multi_concept_items": 48,
+    "concepts_without_items": [],
+    "concepts_below_min_items": [],
+    "min_items_threshold": 5,
+    "items_per_concept": {
+      "min": 6,
+      "median": 8.0,
+      "max": 34
+    }
+  },
+  "target_q_matrix": {
+    "n_target_concepts": 13,
+    "n_items_with_target_concept": 96,
+    "n_items_target_only": 96,
+    "n_items_mixed_target_and_non_target": 0,
+    "density": 0.11858974358974358
+  },
+  "focus_audit": {
+    "available": true,
+    "n_focus_items": 96,
+    "n_focus_items_all_concepts_in_scope": 96,
+    "n_focus_items_outside_scope": 0,
+    "n_content_reviewed": 0,
+    "content_review_label_match_counts": {},
+    "note": "Content review is a SAMPLE (see configs/focus_item_content_audit.csv); unreviewed focus items keep label_match='not_reviewed' and must not be assumed relevant."
+  },
+  "target_concepts": [
+    {
+      "concept_id": 9001,
+      "concept_name": "Fungsi dan notasi fungsi",
+      "n_items": 7
+    },
+    {
+      "concept_id": 9002,
+      "concept_name": "Faktorisasi dan manipulasi bentuk aljabar",
+      "n_items": 21
+    },
+    {
+      "concept_id": 9003,
+      "concept_name": "Limit fungsi aljabar",
+      "n_items": 15
+    },
+    {
+      "concept_id": 9004,
+      "concept_name": "Limit fungsi di tak hingga",
+      "n_items": 9
+    },
+    {
+      "concept_id": 9005,
+      "concept_name": "Limit fungsi trigonometri",
+      "n_items": 7
+    },
+    {
+      "concept_id": 9006,
+      "concept_name": "Turunan sebagai limit (definisi turunan)",
+      "n_items": 6
+    },
+    {
+      "concept_id": 9007,
+      "concept_name": "Aturan dasar turunan (pangkat, konstanta, jumlah)",
+      "n_items": 34
+    },
+    {
+      "concept_id": 9008,
+      "concept_name": "Aturan perkalian dan pembagian",
+      "n_items": 7
+    },
+    {
+      "concept_id": 9009,
+      "concept_name": "Aturan rantai",
+      "n_items": 9
+    },
+    {
+      "concept_id": 9010,
+      "concept_name": "Turunan fungsi trigonometri",
+      "n_items": 6
+    },
+    {
+      "concept_id": 9011,
+      "concept_name": "Persamaan garis singgung kurva",
+      "n_items": 7
+    },
+    {
+      "concept_id": 9012,
+      "concept_name": "Fungsi naik/turun dan titik stasioner",
+      "n_items": 12
+    },
+    {
+      "concept_id": 9013,
+      "concept_name": "Nilai maksimum/minimum dan masalah optimasi",
+      "n_items": 8
+    }
+  ],
+  "model_selection": {
+    "criterion": "validation held-out log-loss (lower is better)",
+    "selected": {
+      "concept_score": "concept_score|k=1.0",
+      "item_mean": "item_mean",
+      "pdina": "pdina|higher_order|k=40.0|cw=False",
+      "q_logistic": "q_logistic|sigma=2.0",
+      "pdina_independent": "pdina|independent|k=40.0|cw=False"
+    },
+    "main_model": "pdina|higher_order|k=40.0|cw=False",
+    "main_model_hyperparams": {
+      "prior": "higher_order",
+      "gs_prior_strength": 40.0,
+      "class_weights": null,
+      "max_em_iter": 150,
+      "em_tol": 1e-06,
+      "e_step_iter": 30,
+      "guess_prior": [
+        9.0,
+        33.0
+      ],
+      "slip_prior": [
+        9.0,
+        33.0
+      ],
+      "max_guess_slip_sum": 0.98
+    }
+  },
+  "diagnosis_policy": {
+    "tau": 0.5,
+    "delta": 0.0,
+    "n_min": 1,
+    "target_concept_ids": [
+      9001,
+      9002,
+      9003,
+      9004,
+      9005,
+      9006,
+      9007,
+      9008,
+      9009,
+      9010,
+      9011,
+      9012,
+      9013
+    ],
+    "provenance": {
+      "tau": "validation held-out log-loss of hard-label DINA prediction; one-SE rule (student bootstrap) toward 0.5",
+      "n_min": 1,
+      "n_min_selected_from_data": true,
+      "delta": 0.0,
+      "delta_selected_from_data": true,
+      "target_consistency": 0.85,
+      "note": "n_min is the per-half evidence at which agreement between two independent half-test classifications reaches target_consistency; agreement between two noisy classifications understates the reliability of each, so the rule is conservative.",
+      "tau_grid": [
+        0.3,
+        0.35,
+        0.4,
+        0.45,
+        0.5,
+        0.55,
+        0.6,
+        0.65,
+        0.7
+      ]
+    }
+  },
+  "test_evaluation": {
+    "protocol": "test students: 20% of each student's responses held out; mastery inferred from the rest with item parameters frozen from train; evaluated once",
+    "n_heldout_responses": 1797,
+    "n_students": 200,
+    "metrics": [
+      {
+        "model": "P-DINA (main)",
+        "n": 1797,
+        "base_rate": 0.42070116861435725,
+        "log_loss": 0.4855256562291013,
+        "brier": 0.1549756851507966,
+        "accuracy": 0.7996661101836394,
+        "precision": 0.7836676217765043,
+        "recall": 0.7235449735449735,
+        "f1": 0.7524071526822559,
+        "threshold": 0.5,
+        "roc_auc": 0.8294222588170715,
+        "ece": 0.030504277870838085,
+        "roc_auc_ci95": [
+          0.8066685055766267,
+          0.8474498037117423
+        ],
+        "log_loss_ci95": [
+          0.45629428343913586,
+          0.5177747875186043
+        ]
+      },
+      {
+        "model": "P-DINA independent prior (ablation)",
+        "n": 1797,
+        "base_rate": 0.42070116861435725,
+        "log_loss": 0.49154106021359356,
+        "brier": 0.15760005102491192,
+        "accuracy": 0.796883695047301,
+        "precision": 0.7829232995658466,
+        "recall": 0.7156084656084656,
+        "f1": 0.7477539737387698,
+        "threshold": 0.5,
+        "roc_auc": 0.8252919964015064,
+        "ece": 0.028316864174797226,
+        "roc_auc_ci95": [
+          0.80142603977946,
+          0.8459283607617493
+        ],
+        "log_loss_ci95": [
+          0.4637794045767361,
+          0.5203330294476146
+        ]
+      },
+      {
+        "model": "Q-logistic baseline",
+        "n": 1797,
+        "base_rate": 0.42070116861435725,
+        "log_loss": 0.512819423458604,
+        "brier": 0.16602596276379603,
+        "accuracy": 0.7857540345019477,
+        "precision": 0.7748148148148148,
+        "recall": 0.6917989417989417,
+        "f1": 0.7309573724668065,
+        "threshold": 0.5,
+        "roc_auc": 0.8153478543728303,
+        "ece": 0.0571776405481035,
+        "roc_auc_ci95": [
+          0.7900183178049123,
+          0.836590584907733
+        ],
+        "log_loss_ci95": [
+          0.4825719208940247,
+          0.5410873580672704
+        ]
+      },
+      {
+        "model": "Concept-score baseline",
+        "n": 1797,
+        "base_rate": 0.42070116861435725,
+        "log_loss": 0.5440557075771858,
+        "brier": 0.17854424372293182,
+        "accuracy": 0.7557039510294936,
+        "precision": 0.770940170940171,
+        "recall": 0.5965608465608465,
+        "f1": 0.6726323639075317,
+        "threshold": 0.5,
+        "roc_auc": 0.7929150847018283,
+        "ece": 0.04054014411531751,
+        "roc_auc_ci95": [
+          0.7712295636111381,
+          0.815178393652901
+        ],
+        "log_loss_ci95": [
+          0.5141849926167562,
+          0.571551860054453
+        ]
+      },
+      {
+        "model": "Item-mean baseline",
+        "n": 1797,
+        "base_rate": 0.42070116861435725,
+        "log_loss": 0.638301829508664,
+        "brier": 0.2232903442788932,
+        "accuracy": 0.6549805230940456,
+        "precision": 0.6511111111111111,
+        "recall": 0.38756613756613756,
+        "f1": 0.4859038142620232,
+        "threshold": 0.5,
+        "roc_auc": 0.6630897742809365,
+        "ece": 0.013781181016494956,
+        "roc_auc_ci95": [
+          0.6394985160200549,
+          0.6917571201512335
+        ],
+        "log_loss_ci95": [
+          0.6212273116491522,
+          0.653112575692371
+        ]
+      }
+    ],
+    "differences_vs_main": [
+      {
+        "comparison": "P-DINA (main) - P-DINA independent prior (ablation)",
+        "auc_diff_ci95": [
+          -0.004790002602988855,
+          0.012648710552235997
+        ],
+        "logloss_diff_ci95": [
+          -0.01753191111599774,
+          0.005689686026627949
+        ],
+        "auc_diff_mean": 0.003721383250257124,
+        "logloss_diff_mean": -0.00587491726181913
+      },
+      {
+        "comparison": "P-DINA (main) - Q-logistic baseline",
+        "auc_diff_ci95": [
+          0.0014531528535454673,
+          0.0242578006809687
+        ],
+        "logloss_diff_ci95": [
+          -0.038710063772829845,
+          -0.012589946489343867
+        ],
+        "auc_diff_mean": 0.012767293890971452,
+        "logloss_diff_mean": -0.026184412047004883
+      },
+      {
+        "comparison": "P-DINA (main) - Concept-score baseline",
+        "auc_diff_ci95": [
+          0.020988007445316457,
+          0.0504318199742596
+        ],
+        "logloss_diff_ci95": [
+          -0.07439654551830066,
+          -0.04030261896069023
+        ],
+        "auc_diff_mean": 0.035639506843740267,
+        "logloss_diff_mean": -0.05778783274449266
+      },
+      {
+        "comparison": "P-DINA (main) - Item-mean baseline",
+        "auc_diff_ci95": [
+          0.14010011271119077,
+          0.19478144157159843
+        ],
+        "logloss_diff_ci95": [
+          -0.1797780856380604,
+          -0.12705220387534213
+        ],
+        "auc_diff_mean": 0.1654358460061433,
+        "logloss_diff_mean": -0.15299152046082298
+      }
+    ],
+    "train_in_sample_main_optimistic": {
+      "n": 75280,
+      "base_rate": 0.4251461211477152,
+      "log_loss": 0.3885478685763005,
+      "brier": 0.11574485060274485,
+      "accuracy": 0.8587274176408076,
+      "precision": 0.8699536043210304,
+      "recall": 0.7850648336197469,
+      "f1": 0.8253321727133871,
+      "threshold": 0.5,
+      "roc_auc": 0.8926130988884518,
+      "ece": 0.033201523576039414
+    },
+    "caveat": "Response-prediction quality is not proof of correct mastery diagnosis (no ground-truth mastery in EEDI)."
+  },
+  "diagnosis_quality": {
+    "split_half_consistency_test": {
+      "n_cells_with_n_min": 2093,
+      "consistency": 0.8767319636884854,
+      "n_cells_outside_band": 2093,
+      "consistency_outside_band": 0.8767319636884854
+    },
+    "simulation_recovery": {
+      "n_simulated_students": 1000,
+      "tau": 0.5,
+      "attribute_accuracy_with_evidence": 0.9588756257219869,
+      "attribute_accuracy_without_evidence": 0.9333333333333333,
+      "label": "SIMULATION under the fitted model (not real ground truth)"
+    },
+    "item_parameter_recovery": {
+      "n_items_with_30plus_responses": 96,
+      "guess_corr": 0.8662159391772205,
+      "slip_corr": 0.9057922875157137,
+      "guess_mae": 0.016494141477670036,
+      "slip_mae": 0.013806020419197216,
+      "label": "SIMULATION: item-parameter recovery on train-sized data generated from the fitted model"
+    },
+    "caveat": "No ground-truth mastery exists in EEDI; these are reliability / simulation proxies, not diagnostic accuracy."
+  },
+  "assessment": {
+    "eligibility": {
+      "min_train_attempts": 30,
+      "min_discrimination": 0.1
+    },
+    "n_eligible_target_items": 96,
+    "items_per_concept": 3,
+    "max_length": 39,
+    "fixed_form_length": 36,
+    "parallel_form_lengths": [
+      39,
+      39
+    ],
+    "concepts_below_n_min_in_fixed_form": [],
+    "concepts_inadequate_for_parallel_forms": [],
+    "adaptive_replay": {
+      "n_students": 200,
+      "summary": [
+        {
+          "strategy": "adaptive_MI",
+          "length": 5,
+          "label_agreement": 0.8495833333333332,
+          "mean_abs_pi_diff": 0.16722775782280042,
+          "n_target_concepts_covered": 5.57
+        },
+        {
+          "strategy": "adaptive_MI",
+          "length": 10,
+          "label_agreement": 0.9215064102564102,
+          "mean_abs_pi_diff": 0.09312268636815522,
+          "n_target_concepts_covered": 8.81
+        },
+        {
+          "strategy": "adaptive_MI",
+          "length": 15,
+          "label_agreement": 0.9623076923076923,
+          "mean_abs_pi_diff": 0.051912764470711775,
+          "n_target_concepts_covered": 10.52
+        },
+        {
+          "strategy": "adaptive_MI",
+          "length": 20,
+          "label_agreement": 0.9692307692307692,
+          "mean_abs_pi_diff": 0.03946898351988057,
+          "n_target_concepts_covered": 11.07
+        },
+        {
+          "strategy": "random",
+          "length": 5,
+          "label_agreement": 0.8122435897435898,
+          "mean_abs_pi_diff": 0.20639909000555062,
+          "n_target_concepts_covered": 5.685
+        },
+        {
+          "strategy": "random",
+          "length": 10,
+          "label_agreement": 0.8507051282051282,
+          "mean_abs_pi_diff": 0.1678068633547764,
+          "n_target_concepts_covered": 8.505
+        },
+        {
+          "strategy": "random",
+          "length": 15,
+          "label_agreement": 0.8879807692307692,
+          "mean_abs_pi_diff": 0.13276152210307984,
+          "n_target_concepts_covered": 10.115
+        },
+        {
+          "strategy": "random",
+          "length": 20,
+          "label_agreement": 0.9110897435897436,
+          "mean_abs_pi_diff": 0.10450315056274509,
+          "n_target_concepts_covered": 11.2
+        }
+      ]
+    },
+    "coverage": {
+      "n_curriculum_topics": 5,
+      "n_unmapped": 1,
+      "unmapped_topics": [
+        "Integral"
+      ]
+    }
+  },
+  "test_diagnosis": {
+    "n_students": 200,
+    "target_label_counts": {
+      "not_mastered": 1611,
+      "mastered": 988,
+      "insufficient_evidence": 1
+    },
+    "n_students_with_gap": 188,
+    "intervention_map_warnings": [],
+    "intervention_entries_placeholder": 13,
+    "caveat": "Mastery labels are model-based posterior classifications, not verified mastery."
+  },
+  "prepost_demo": {
+    "label": "SIMULATION - synthetic students generated from the fitted model; not EEDI students, not an experiment",
+    "n_matched": 40,
+    "simulation_check": {
+      "corr_estimated_change_vs_true_change": 0.7368992049234081,
+      "true_gain_rate_target": 0.20192307692307693
+    }
+  }
+}

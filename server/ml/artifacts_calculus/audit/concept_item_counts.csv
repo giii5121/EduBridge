@@ -1,0 +1,14 @@
+concept_id,concept_name,n_items,n_items_single_concept,n_items_multi_concept,measurement_flag,in_target_scope,relevance_level
+9001,Fungsi dan notasi fungsi,7,7,0,ok,True,prerequisite
+9002,Faktorisasi dan manipulasi bentuk aljabar,21,7,14,ok,True,prerequisite
+9003,Limit fungsi aljabar,15,4,11,ok,True,core_limit
+9004,Limit fungsi di tak hingga,9,7,2,ok,True,core_limit
+9005,Limit fungsi trigonometri,7,5,2,ok,True,core_limit
+9006,Turunan sebagai limit (definisi turunan),6,1,5,ok,True,core_derivative
+9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",34,9,25,ok,True,core_derivative
+9008,Aturan perkalian dan pembagian,7,2,5,ok,True,core_derivative
+9009,Aturan rantai,9,2,7,ok,True,core_derivative
+9010,Turunan fungsi trigonometri,6,2,4,ok,True,core_derivative
+9011,Persamaan garis singgung kurva,7,0,7,ok,True,application
+9012,Fungsi naik/turun dan titik stasioner,12,2,10,ok,True,application
+9013,Nilai maksimum/minimum dan masalah optimasi,8,0,8,ok,True,application

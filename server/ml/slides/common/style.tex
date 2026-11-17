@@ -1,0 +1,44 @@
+% Shared colours, TikZ styles and pgfplots defaults (used by slides.tex and naskah.tex).
+\definecolor{navy}{HTML}{1F3A5F}
+\definecolor{accent}{HTML}{D9822B}
+\definecolor{tealc}{HTML}{2A9D8F}
+\definecolor{gapred}{HTML}{C8553D}
+\definecolor{okgreen}{HTML}{3A8D5C}
+\definecolor{midgray}{HTML}{8A94A6}
+\definecolor{lightbg}{HTML}{EEF2F7}
+\definecolor{insuf}{HTML}{C9CED8}
+
+\pgfplotsset{
+  compat=1.18,
+  every axis/.append style={
+    font=\scriptsize,
+    axis line style={midgray},
+    tick style={midgray},
+    label style={font=\scriptsize},
+    tick label style={font=\scriptsize},
+    legend style={font=\scriptsize, draw=none, fill=none},
+    grid style={midgray!25},
+    every node near coord/.append style={text=black!80},
+  },
+}
+% Indonesian number format everywhere (0,5 and 1.000)
+\pgfkeys{/pgf/number format/.cd, use comma, 1000 sep={.}}
+
+% ragged-right columns (avoid stretched inter-word spacing in narrow cells)
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+\tikzset{
+  box/.style={draw=navy, rounded corners=3pt, fill=white, align=center, font=\scriptsize,
+              inner sep=4pt, line width=0.6pt},
+  boxnavy/.style={box, fill=navy, text=white},
+  boxacc/.style={box, draw=accent, fill=accent, text=white},
+  boxteal/.style={box, draw=tealc, fill=tealc, text=white},
+  boxsoft/.style={box, draw=midgray, fill=lightbg},
+  arr/.style={-{Stealth[length=2.2mm]}, line width=0.8pt, draw=navy!80},
+  lbl/.style={font=\tiny, text=black!70, align=center},
+}
+
+% height used by every pgfplots figure; set before \input{figs/...}
+\newlength\figH
+\setlength\figH{5cm}

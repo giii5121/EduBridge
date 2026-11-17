@@ -1,0 +1,885 @@
+student_id,concept_id,concept_name,mastery_prob_pre,mastery_prob_post,mastery_change,n_evidence_pre,n_evidence_post,label_pre,label_post,both_diagnosable,direction
+XI-A-01,9001,Fungsi dan notasi fungsi,0.9985226951023827,0.999997591514909,0.0014748964125262942,3,3,mastered,mastered,True,increase
+XI-A-02,9001,Fungsi dan notasi fungsi,0.9997558048378764,0.9999974983223171,0.00024169348444069705,3,3,mastered,mastered,True,increase
+XI-A-03,9001,Fungsi dan notasi fungsi,0.0009151256448417523,0.9999925000929546,0.9990773744481128,3,3,not_mastered,mastered,True,increase
+XI-A-04,9001,Fungsi dan notasi fungsi,0.92236423248775,0.9994084153051378,0.07704418281738779,3,3,mastered,mastered,True,increase
+XI-A-05,9001,Fungsi dan notasi fungsi,0.9999989901784577,0.9999899731138301,-9.017064627636628e-06,3,3,mastered,mastered,True,decrease
+XI-A-06,9001,Fungsi dan notasi fungsi,0.9994833595985677,0.9999988485618152,0.0005154889632474902,3,3,mastered,mastered,True,increase
+XI-A-07,9001,Fungsi dan notasi fungsi,0.9999533994510186,0.9992687077620886,-0.0006846916889299282,3,3,mastered,mastered,True,decrease
+XI-A-08,9001,Fungsi dan notasi fungsi,0.0009672445699906323,0.9998761863970271,0.9989089418270365,3,3,not_mastered,mastered,True,increase
+XI-A-09,9001,Fungsi dan notasi fungsi,0.999934967720511,0.9999878320732325,5.286435272144896e-05,3,3,mastered,mastered,True,increase
+XI-A-10,9001,Fungsi dan notasi fungsi,0.9991858146860135,0.9987429205738059,-0.00044289411220765906,3,3,mastered,mastered,True,decrease
+XI-A-11,9001,Fungsi dan notasi fungsi,0.9999756510112452,0.999563876128765,-0.0004117748824802314,3,3,mastered,mastered,True,decrease
+XI-A-13,9001,Fungsi dan notasi fungsi,0.0017944514448444933,0.007927534886305381,0.006133083441460888,3,3,not_mastered,not_mastered,True,increase
+XI-A-14,9001,Fungsi dan notasi fungsi,0.9995668505199391,0.9993980203630268,-0.00016883015691226966,3,3,mastered,mastered,True,decrease
+XI-A-15,9001,Fungsi dan notasi fungsi,0.0067725596843862534,0.9999415730597373,0.993169013375351,3,3,not_mastered,mastered,True,increase
+XI-A-16,9001,Fungsi dan notasi fungsi,0.9999166389387751,0.999980340395849,6.370145707390584e-05,2,3,mastered,mastered,True,increase
+XI-A-17,9001,Fungsi dan notasi fungsi,0.2543309449438621,0.14678389060948926,-0.10754705433437284,2,3,not_mastered,not_mastered,True,decrease
+XI-A-18,9001,Fungsi dan notasi fungsi,0.02479192813298497,0.003078514120690267,-0.021713414012294704,3,3,not_mastered,not_mastered,True,decrease
+XI-A-19,9001,Fungsi dan notasi fungsi,0.00091652666035497,0.9998199022133868,0.9989033755530318,3,1,not_mastered,mastered,True,increase
+XI-A-20,9001,Fungsi dan notasi fungsi,0.9994665702343254,0.9988007640647104,-0.0006658061696149797,3,3,mastered,mastered,True,decrease
+XI-A-21,9001,Fungsi dan notasi fungsi,0.976432777548945,0.9999932400950117,0.023560462546066696,3,3,mastered,mastered,True,increase
+XI-A-22,9001,Fungsi dan notasi fungsi,0.9994297922295196,0.9999955554769772,0.0005657632474576069,3,3,mastered,mastered,True,increase
+XI-A-23,9001,Fungsi dan notasi fungsi,0.999999,0.999999,0.0,3,3,mastered,mastered,True,stable
+XI-A-24,9001,Fungsi dan notasi fungsi,0.0009515792209574302,0.09243537517032771,0.09148379594937028,3,3,not_mastered,not_mastered,True,increase
+XI-A-25,9001,Fungsi dan notasi fungsi,0.9998074079527378,0.9997332339122457,-7.41740404921476e-05,3,3,mastered,mastered,True,decrease
+XI-A-26,9001,Fungsi dan notasi fungsi,0.0009545406763662162,0.9992212191021167,0.9982666784257505,3,3,not_mastered,mastered,True,increase
+XI-A-27,9001,Fungsi dan notasi fungsi,0.9999721136124303,0.9998451350027527,-0.000126978609677586,3,3,mastered,mastered,True,decrease
+XI-A-28,9001,Fungsi dan notasi fungsi,0.9985547266552107,0.9999677368322275,0.0014130101770167824,3,3,mastered,mastered,True,increase
+XI-A-29,9001,Fungsi dan notasi fungsi,0.9994195053393422,0.9999975328833028,0.0005780275439606353,3,3,mastered,mastered,True,increase
+XI-A-30,9001,Fungsi dan notasi fungsi,0.9999982054593864,0.999999,7.945406135245747e-07,3,3,mastered,mastered,True,increase
+XI-A-31,9001,Fungsi dan notasi fungsi,0.9999942726280281,0.9999972615894328,2.9889614047151625e-06,3,3,mastered,mastered,True,increase
+XI-A-32,9001,Fungsi dan notasi fungsi,0.9999814205199443,0.9998464387559174,-0.0001349817640269313,3,3,mastered,mastered,True,decrease
+XI-A-33,9001,Fungsi dan notasi fungsi,0.9999687993137704,0.9999881152691207,1.9315955350318603e-05,3,2,mastered,mastered,True,increase
+XI-A-34,9001,Fungsi dan notasi fungsi,0.9999393349919733,0.9999856989975783,4.6364005604981884e-05,3,3,mastered,mastered,True,increase
+XI-A-35,9001,Fungsi dan notasi fungsi,0.9999988246712158,0.999999,1.7532878415771336e-07,3,3,mastered,mastered,True,increase
+XI-A-36,9001,Fungsi dan notasi fungsi,0.000918805214632427,0.011487417955568449,0.010568612740936022,3,2,not_mastered,not_mastered,True,increase
+XI-B-01,9001,Fungsi dan notasi fungsi,0.9804549302364088,0.9996964731156002,0.01924154287919133,3,3,mastered,mastered,True,increase
+XI-B-02,9001,Fungsi dan notasi fungsi,0.9997657963786719,0.9995272095401155,-0.00023858683855637608,3,3,mastered,mastered,True,decrease
+XI-B-03,9001,Fungsi dan notasi fungsi,0.999999,0.999999,0.0,3,3,mastered,mastered,True,stable
+XI-B-04,9001,Fungsi dan notasi fungsi,0.9999581063237281,0.9999863931470168,2.8286823288703467e-05,3,3,mastered,mastered,True,increase
+XI-B-05,9001,Fungsi dan notasi fungsi,0.999998619684597,0.9999988372317352,2.1754713819266414e-07,3,3,mastered,mastered,True,increase
+XI-B-06,9001,Fungsi dan notasi fungsi,0.9999962160931651,0.991300267999158,-0.008695948094007089,3,3,mastered,mastered,True,decrease
+XI-B-08,9001,Fungsi dan notasi fungsi,0.0009188590748177878,0.001165574928253687,0.0002467158534358992,3,3,not_mastered,not_mastered,True,increase
+XI-B-09,9001,Fungsi dan notasi fungsi,0.9999986933933452,0.9999986603006525,-3.309269269724524e-08,3,3,mastered,mastered,True,decrease
+XI-B-10,9001,Fungsi dan notasi fungsi,0.9997971351948092,0.9997790781230359,-1.805707177326976e-05,3,3,mastered,mastered,True,decrease
+XI-B-11,9001,Fungsi dan notasi fungsi,0.999567607223477,0.05180417823169478,-0.9477634289917822,3,3,mastered,not_mastered,True,decrease
+XI-B-12,9001,Fungsi dan notasi fungsi,0.0009270803463677002,0.026535678997214637,0.02560859865084694,3,3,not_mastered,not_mastered,True,increase
+XI-B-13,9001,Fungsi dan notasi fungsi,0.999372938127854,0.9999845945934873,0.0006116564656333257,3,3,mastered,mastered,True,increase
+XI-B-14,9001,Fungsi dan notasi fungsi,0.0017947451737860749,0.9992720393945024,0.9974772942207163,3,2,not_mastered,mastered,True,increase
+XI-B-15,9001,Fungsi dan notasi fungsi,0.9999626214721256,0.9940295813798241,-0.005933040092301445,3,3,mastered,mastered,True,decrease
+XI-B-16,9001,Fungsi dan notasi fungsi,0.0009592545827198115,0.9992824850020615,0.9983232304193417,3,3,not_mastered,mastered,True,increase
+XI-B-17,9001,Fungsi dan notasi fungsi,0.9998057896771272,0.9999672627660916,0.00016147308896441448,3,3,mastered,mastered,True,increase
+XI-B-18,9001,Fungsi dan notasi fungsi,0.9998258600860715,0.9998417449114985,1.588482542691505e-05,3,3,mastered,mastered,True,increase
+XI-B-19,9001,Fungsi dan notasi fungsi,0.9922226004896806,0.9999371693380851,0.0077145688484044905,3,3,mastered,mastered,True,increase
+XI-B-20,9001,Fungsi dan notasi fungsi,0.99968637038841,0.9997608890116558,7.451862324581171e-05,3,3,mastered,mastered,True,increase
+XI-B-21,9001,Fungsi dan notasi fungsi,0.998961500074974,0.9996125166416988,0.000651016566724838,3,3,mastered,mastered,True,increase
+XI-B-22,9001,Fungsi dan notasi fungsi,0.006023752902121935,0.9899687678623225,0.9839450149602005,3,3,not_mastered,mastered,True,increase
+XI-B-23,9001,Fungsi dan notasi fungsi,0.07707136881886459,0.9999875652848185,0.9229161964659539,3,3,not_mastered,mastered,True,increase
+XI-B-24,9001,Fungsi dan notasi fungsi,0.9999696056722938,0.9999878682398771,1.82625675833048e-05,3,3,mastered,mastered,True,increase
+XI-B-25,9001,Fungsi dan notasi fungsi,0.9993335430994948,0.9963242066258744,-0.0030093364736204498,3,2,mastered,mastered,True,decrease
+XI-B-26,9001,Fungsi dan notasi fungsi,0.9999825541488321,0.9999781965195966,-4.35762923545191e-06,3,3,mastered,mastered,True,decrease
+XI-B-27,9001,Fungsi dan notasi fungsi,0.13286630871363003,0.9978362197904963,0.8649699110768663,3,3,not_mastered,mastered,True,increase
+XI-B-28,9001,Fungsi dan notasi fungsi,0.955764126857157,0.9999886420781233,0.044224515220966376,3,3,mastered,mastered,True,increase
+XI-B-29,9001,Fungsi dan notasi fungsi,0.999999,0.9986926403585201,-0.0013063596414798484,3,3,mastered,mastered,True,decrease
+XI-B-31,9001,Fungsi dan notasi fungsi,0.999919568678534,0.9996121687109915,-0.0003073999675425876,3,3,mastered,mastered,True,decrease
+XI-B-32,9001,Fungsi dan notasi fungsi,0.006717386782106645,0.9994970611720109,0.9927796743899042,3,3,not_mastered,mastered,True,increase
+XI-B-33,9001,Fungsi dan notasi fungsi,0.9992571558217644,0.9947857579333338,-0.0044713978884306504,3,2,mastered,mastered,True,decrease
+XI-B-34,9001,Fungsi dan notasi fungsi,0.9911187008267418,0.9987606194275797,0.007641918600837849,3,3,mastered,mastered,True,increase
+XI-B-35,9001,Fungsi dan notasi fungsi,0.9999784707283789,0.9995041854967042,-0.00047428523167469816,3,3,mastered,mastered,True,decrease
+XI-A-01,9002,Faktorisasi dan manipulasi bentuk aljabar,0.8907847775899129,0.9999982446482387,0.1092134670583258,6,7,mastered,mastered,True,increase
+XI-A-02,9002,Faktorisasi dan manipulasi bentuk aljabar,0.996307716301204,0.9884595195186083,-0.007848196782595629,6,6,mastered,mastered,True,decrease
+XI-A-03,9002,Faktorisasi dan manipulasi bentuk aljabar,0.00012570208610988815,0.9836875456951446,0.9835618436090348,6,7,not_mastered,mastered,True,increase
+XI-A-04,9002,Faktorisasi dan manipulasi bentuk aljabar,0.021383456715763034,0.06278329914854895,0.04139984243278592,6,7,not_mastered,not_mastered,True,increase
+XI-A-05,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9999890800263931,0.9999984664507482,9.386424355106726e-06,6,7,mastered,mastered,True,increase
+XI-A-06,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9997592259841279,0.995929684898961,-0.0038295410851668654,5,7,mastered,mastered,True,decrease
+XI-A-07,9002,Faktorisasi dan manipulasi bentuk aljabar,0.23127768209296345,0.9987562169363589,0.7674785348433955,6,7,not_mastered,mastered,True,increase
+XI-A-08,9002,Faktorisasi dan manipulasi bentuk aljabar,0.007910028901139277,0.8894397076969447,0.8815296787958055,6,7,not_mastered,mastered,True,increase
+XI-A-09,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9983013364210054,0.9993921795106431,0.0010908430896376942,6,6,mastered,mastered,True,increase
+XI-A-10,9002,Faktorisasi dan manipulasi bentuk aljabar,0.0007857610171291941,0.03011458646844823,0.029328825451319037,6,7,not_mastered,not_mastered,True,increase
+XI-A-11,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9999938272736855,0.9993525006029889,-0.000641326670696607,6,7,mastered,mastered,True,decrease
+XI-A-13,9002,Faktorisasi dan manipulasi bentuk aljabar,0.32847944141467483,0.984123347225197,0.6556439058105221,6,7,not_mastered,mastered,True,increase
+XI-A-14,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9999237608824134,0.9996582180510152,-0.00026554283139823553,6,7,mastered,mastered,True,decrease
+XI-A-15,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9854618340625909,0.9991913019733707,0.01372946791077978,6,7,mastered,mastered,True,increase
+XI-A-16,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9991737165505685,0.9999613558276296,0.0007876392770610474,6,7,mastered,mastered,True,increase
+XI-A-17,9002,Faktorisasi dan manipulasi bentuk aljabar,0.0002081650865890453,0.9980520276694935,0.9978438625829045,6,7,not_mastered,mastered,True,increase
+XI-A-18,9002,Faktorisasi dan manipulasi bentuk aljabar,0.0001458497317507324,0.5354185005534715,0.5352726508217208,6,7,not_mastered,mastered,True,increase
+XI-A-19,9002,Faktorisasi dan manipulasi bentuk aljabar,0.00012582556501026593,0.058984187420783485,0.05885836185577322,5,6,not_mastered,not_mastered,True,increase
+XI-A-20,9002,Faktorisasi dan manipulasi bentuk aljabar,0.06953425308113181,0.001075990330854885,-0.06845826275027693,6,7,not_mastered,not_mastered,True,decrease
+XI-A-21,9002,Faktorisasi dan manipulasi bentuk aljabar,0.8506671911599599,0.9531324378580812,0.10246524669812129,6,7,mastered,mastered,True,increase
+XI-A-22,9002,Faktorisasi dan manipulasi bentuk aljabar,0.38929340518640343,0.9969313065925192,0.6076379014061157,6,7,not_mastered,mastered,True,increase
+XI-A-23,9002,Faktorisasi dan manipulasi bentuk aljabar,0.999999,0.9999553161725824,-4.368382741759547e-05,6,7,mastered,mastered,True,decrease
+XI-A-24,9002,Faktorisasi dan manipulasi bentuk aljabar,0.0014896438240375605,0.08540004647580995,0.0839104026517724,5,7,not_mastered,not_mastered,True,increase
+XI-A-25,9002,Faktorisasi dan manipulasi bentuk aljabar,0.0017801861496740306,0.21140734460551067,0.20962715845583663,6,6,not_mastered,not_mastered,True,increase
+XI-A-26,9002,Faktorisasi dan manipulasi bentuk aljabar,0.009090914090946756,0.9993329263862896,0.9902420122953428,6,7,not_mastered,mastered,True,increase
+XI-A-27,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9990043657173788,0.9999974594853349,0.000993093767956088,6,7,mastered,mastered,True,increase
+XI-A-28,9002,Faktorisasi dan manipulasi bentuk aljabar,0.002942262483274516,0.01222365373874261,0.009281391255468095,6,7,not_mastered,not_mastered,True,increase
+XI-A-29,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9999043781205248,0.999999,9.462187947517631e-05,6,7,mastered,mastered,True,increase
+XI-A-30,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9991118757756665,0.999999,0.0008871242243334576,6,7,mastered,mastered,True,increase
+XI-A-31,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9999979323994612,0.9999039289962867,-9.400340317455846e-05,6,6,mastered,mastered,True,decrease
+XI-A-32,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9997993247570633,0.9999861116378728,0.00018678688080941974,6,7,mastered,mastered,True,increase
+XI-A-33,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9999560424096718,0.9999737421078829,1.7699698211082193e-05,6,5,mastered,mastered,True,increase
+XI-A-34,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9999721920851201,0.9999946690501893,2.247696506918473e-05,6,7,mastered,mastered,True,increase
+XI-A-35,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9999753406240169,0.9999987888495774,2.3448225560440683e-05,6,7,mastered,mastered,True,increase
+XI-A-36,9002,Faktorisasi dan manipulasi bentuk aljabar,0.00012602933696510994,0.00023371668925824507,0.00010768735229313512,6,5,not_mastered,not_mastered,True,increase
+XI-B-01,9002,Faktorisasi dan manipulasi bentuk aljabar,0.0007434078823450739,0.9144863454471381,0.9137429375647931,6,7,not_mastered,mastered,True,increase
+XI-B-02,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9960992326668436,0.7526837075583537,-0.24341552510848996,6,7,mastered,mastered,True,decrease
+XI-B-03,9002,Faktorisasi dan manipulasi bentuk aljabar,0.999999,0.999999,0.0,6,7,mastered,mastered,True,stable
+XI-B-04,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9987278711746561,0.998904246150959,0.00017637497630285104,6,7,mastered,mastered,True,increase
+XI-B-05,9002,Faktorisasi dan manipulasi bentuk aljabar,0.999999,0.9999845266153065,-1.4473384693514113e-05,6,7,mastered,mastered,True,decrease
+XI-B-06,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9984264216884493,0.9996654449852309,0.001239023296781605,6,7,mastered,mastered,True,increase
+XI-B-08,9002,Faktorisasi dan manipulasi bentuk aljabar,0.00012588037318707692,0.00020210464101694454,7.622426782986761e-05,6,7,not_mastered,not_mastered,True,increase
+XI-B-09,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9999740559140309,0.9999578040860018,-1.6251828029112403e-05,4,6,mastered,mastered,True,decrease
+XI-B-10,9002,Faktorisasi dan manipulasi bentuk aljabar,0.001735958478862203,0.13637140365584766,0.13463544517698545,6,7,not_mastered,not_mastered,True,increase
+XI-B-11,9002,Faktorisasi dan manipulasi bentuk aljabar,0.0011526644358266134,0.00022841345126254828,-0.0009242509845640651,6,6,not_mastered,not_mastered,True,decrease
+XI-B-12,9002,Faktorisasi dan manipulasi bentuk aljabar,0.00012670513984311307,0.07660850723748694,0.07648180209764383,6,7,not_mastered,not_mastered,True,increase
+XI-B-13,9002,Faktorisasi dan manipulasi bentuk aljabar,0.0009518801131505794,0.9999130232913667,0.998961143178216,6,7,not_mastered,mastered,True,increase
+XI-B-14,9002,Faktorisasi dan manipulasi bentuk aljabar,0.32734817266100436,0.9996230819996823,0.672274909338678,6,7,not_mastered,mastered,True,increase
+XI-B-15,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9998232787407351,0.9998219213217688,-1.357418966230206e-06,6,7,mastered,mastered,True,decrease
+XI-B-16,9002,Faktorisasi dan manipulasi bentuk aljabar,0.0012818471645750043,0.0014660348542411008,0.00018418768966609652,5,7,not_mastered,not_mastered,True,increase
+XI-B-17,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9967492078122207,0.9870252330354736,-0.009723974776747024,6,7,mastered,mastered,True,decrease
+XI-B-18,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9980209222207235,0.9988884833351945,0.0008675611144710604,6,7,mastered,mastered,True,increase
+XI-B-19,9002,Faktorisasi dan manipulasi bentuk aljabar,0.08485226362996143,0.023884500658073272,-0.060967762971888155,6,7,not_mastered,not_mastered,True,decrease
+XI-B-20,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9956982451319731,0.9963544665342101,0.0006562214022369783,6,7,mastered,mastered,True,increase
+XI-B-21,9002,Faktorisasi dan manipulasi bentuk aljabar,0.04781618969996933,0.9951050823838246,0.9472888926838552,6,7,not_mastered,mastered,True,increase
+XI-B-22,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9844095951227481,0.9965969847138243,0.012187389591076236,6,6,mastered,mastered,True,increase
+XI-B-23,9002,Faktorisasi dan manipulasi bentuk aljabar,0.009444686079684041,0.9971039749794219,0.9876592888997379,6,5,not_mastered,mastered,True,increase
+XI-B-24,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9633469222257549,0.0003005675277981295,-0.9630463546979567,6,7,mastered,not_mastered,True,decrease
+XI-B-25,9002,Faktorisasi dan manipulasi bentuk aljabar,0.0009257165168579743,0.3060929747620408,0.3051672582451828,6,6,not_mastered,not_mastered,True,increase
+XI-B-26,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9999682123308651,0.9998532667143036,-0.00011494561656144597,6,7,mastered,mastered,True,decrease
+XI-B-27,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9978067735799214,0.9997082971984579,0.0019015236185364603,6,7,mastered,mastered,True,increase
+XI-B-28,9002,Faktorisasi dan manipulasi bentuk aljabar,0.0008417901833745558,0.10058751366592272,0.09974572348254816,6,7,not_mastered,not_mastered,True,increase
+XI-B-29,9002,Faktorisasi dan manipulasi bentuk aljabar,0.999999,0.9994355579989824,-0.0005634420010175445,6,6,mastered,mastered,True,decrease
+XI-B-31,9002,Faktorisasi dan manipulasi bentuk aljabar,0.03081881868695545,0.9999297713582407,0.9691109526712852,5,6,not_mastered,mastered,True,increase
+XI-B-32,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9854108794754282,0.7453340559919872,-0.24007682348344095,6,7,mastered,mastered,True,decrease
+XI-B-33,9002,Faktorisasi dan manipulasi bentuk aljabar,0.8330545891972928,0.9998391501514434,0.16678456095415062,6,7,mastered,mastered,True,increase
+XI-B-34,9002,Faktorisasi dan manipulasi bentuk aljabar,0.0017247658151891242,0.9985136585439949,0.9967888927288058,6,6,not_mastered,mastered,True,increase
+XI-B-35,9002,Faktorisasi dan manipulasi bentuk aljabar,0.9977982388623049,0.999986666548677,0.002188427686372063,5,7,mastered,mastered,True,increase
+XI-A-01,9003,Limit fungsi aljabar,0.005143004889910394,0.9998223425078037,0.9946793376178933,6,3,not_mastered,mastered,True,increase
+XI-A-02,9003,Limit fungsi aljabar,0.0006628231151397425,0.7931236360850011,0.7924608129698614,6,3,not_mastered,mastered,True,increase
+XI-A-03,9003,Limit fungsi aljabar,0.0003709649292925345,0.016872353052623953,0.01650138812333142,6,3,not_mastered,not_mastered,True,increase
+XI-A-04,9003,Limit fungsi aljabar,0.004355187188256565,0.0010297821013398748,-0.00332540508691669,6,3,not_mastered,not_mastered,True,decrease
+XI-A-05,9003,Limit fungsi aljabar,0.9999813934793573,0.9990940876206691,-0.0008873058586882365,6,3,mastered,mastered,True,decrease
+XI-A-06,9003,Limit fungsi aljabar,0.013662112848015731,0.9999144473497319,0.9862523345017161,5,3,not_mastered,mastered,True,increase
+XI-A-07,9003,Limit fungsi aljabar,0.030482215658172867,0.3241883984794053,0.2937061828212324,6,3,not_mastered,not_mastered,True,increase
+XI-A-08,9003,Limit fungsi aljabar,0.0003802616145068806,0.025596593927423878,0.025216332312917,6,3,not_mastered,not_mastered,True,increase
+XI-A-09,9003,Limit fungsi aljabar,0.0016678291429297206,0.010195928540730568,0.008528099397800847,6,3,not_mastered,not_mastered,True,increase
+XI-A-10,9003,Limit fungsi aljabar,0.007664051234342002,0.005109929132902206,-0.0025541221014397965,6,2,not_mastered,not_mastered,True,decrease
+XI-A-11,9003,Limit fungsi aljabar,0.9957315677728402,0.9991355121096817,0.0034039443368414357,6,3,mastered,mastered,True,increase
+XI-A-13,9003,Limit fungsi aljabar,0.0006756065406393784,0.0004783510532284294,-0.00019725548741094897,5,2,not_mastered,not_mastered,True,decrease
+XI-A-14,9003,Limit fungsi aljabar,0.9997921246937909,0.9988075878703648,-0.0009845368234260299,6,3,mastered,mastered,True,decrease
+XI-A-15,9003,Limit fungsi aljabar,8.791229155017462e-05,0.1388172188700775,0.13872930657852733,5,3,not_mastered,not_mastered,True,increase
+XI-A-16,9003,Limit fungsi aljabar,0.0037078633979924325,0.006329085709334062,0.0026212223113416294,5,3,not_mastered,not_mastered,True,increase
+XI-A-17,9003,Limit fungsi aljabar,0.0008478750695374185,0.001002800214031966,0.0001549251444945476,6,3,not_mastered,not_mastered,True,increase
+XI-A-18,9003,Limit fungsi aljabar,0.01616469645334775,3.9374560152307953e-05,-0.016125321893195443,6,3,not_mastered,not_mastered,True,decrease
+XI-A-19,9003,Limit fungsi aljabar,0.0003703384653456203,0.07565940022383943,0.07528906175849381,6,3,not_mastered,not_mastered,True,increase
+XI-A-20,9003,Limit fungsi aljabar,0.28965135585700574,0.0005637445804102066,-0.28908761127659555,6,3,not_mastered,not_mastered,True,decrease
+XI-A-21,9003,Limit fungsi aljabar,0.0007640823781035572,0.019655501950832363,0.018891419572728805,6,3,not_mastered,not_mastered,True,increase
+XI-A-22,9003,Limit fungsi aljabar,0.9650041018235525,0.9758339532043747,0.010829851380822264,6,3,mastered,mastered,True,increase
+XI-A-23,9003,Limit fungsi aljabar,0.9999737706645198,0.9999871212138816,1.3350549361801356e-05,6,3,mastered,mastered,True,increase
+XI-A-24,9003,Limit fungsi aljabar,0.00038592071993362833,0.0027705889922818748,0.0023846682723482463,6,3,not_mastered,not_mastered,True,increase
+XI-A-25,9003,Limit fungsi aljabar,0.029978811335107047,0.7547926330739325,0.7248138217388255,6,3,not_mastered,mastered,True,increase
+XI-A-26,9003,Limit fungsi aljabar,0.00037483842714201745,0.008631567627351813,0.008256729200209796,6,3,not_mastered,not_mastered,True,increase
+XI-A-27,9003,Limit fungsi aljabar,0.07662396453938006,0.9774728366855909,0.9008488721462109,6,3,not_mastered,mastered,True,increase
+XI-A-28,9003,Limit fungsi aljabar,0.07499083062974213,0.02018346117797696,-0.05480736945176517,6,3,not_mastered,not_mastered,True,decrease
+XI-A-29,9003,Limit fungsi aljabar,0.0023735039727109213,0.9998180187997732,0.9974445148270622,6,3,not_mastered,mastered,True,increase
+XI-A-30,9003,Limit fungsi aljabar,0.9999985787048342,0.9999336032078104,-6.497549702377814e-05,6,3,mastered,mastered,True,decrease
+XI-A-31,9003,Limit fungsi aljabar,0.9999726000327585,0.9997979774400609,-0.00017462259269751534,5,3,mastered,mastered,True,decrease
+XI-A-32,9003,Limit fungsi aljabar,0.0024457422372581514,0.9995083547280634,0.9970626124908053,6,3,not_mastered,mastered,True,increase
+XI-A-33,9003,Limit fungsi aljabar,0.9982817569712727,0.9998292444403745,0.001547487469101716,6,3,mastered,mastered,True,increase
+XI-A-34,9003,Limit fungsi aljabar,0.9894834928156775,0.9989460181570875,0.00946252534141001,6,3,mastered,mastered,True,increase
+XI-A-35,9003,Limit fungsi aljabar,0.9896419329992753,0.9999904754653011,0.01034854246602579,5,3,mastered,mastered,True,increase
+XI-A-36,9003,Limit fungsi aljabar,0.00037246473587309486,4.6582485704919795e-05,-0.00032588225016817507,6,2,not_mastered,not_mastered,True,decrease
+XI-B-01,9003,Limit fungsi aljabar,0.0067850581782914355,0.0004762938807515838,-0.006308764297539852,6,3,not_mastered,not_mastered,True,decrease
+XI-B-02,9003,Limit fungsi aljabar,0.023743463839144364,0.0004018902628963593,-0.023341573576248005,6,3,not_mastered,not_mastered,True,decrease
+XI-B-03,9003,Limit fungsi aljabar,0.9999981287161785,0.9999943165173097,-3.8121988688022412e-06,6,3,mastered,mastered,True,decrease
+XI-B-04,9003,Limit fungsi aljabar,0.06181417683736175,0.4091657350873771,0.34735155825001535,6,3,not_mastered,not_mastered,True,increase
+XI-B-05,9003,Limit fungsi aljabar,0.9999989116589854,0.9972994790312173,-0.0026994326277680614,6,3,mastered,mastered,True,decrease
+XI-B-06,9003,Limit fungsi aljabar,0.9783542192663485,0.9899705519638125,0.011616332697463982,6,3,mastered,mastered,True,increase
+XI-B-08,9003,Limit fungsi aljabar,0.00037127741479885004,3.675978565779833e-05,-0.0003345176291410517,6,3,not_mastered,not_mastered,True,decrease
+XI-B-09,9003,Limit fungsi aljabar,0.9998917712532829,0.9999011648025596,9.393549276759394e-06,5,3,mastered,mastered,True,increase
+XI-B-10,9003,Limit fungsi aljabar,0.02811320339072626,0.002432589099714921,-0.025680614291011337,6,3,not_mastered,not_mastered,True,decrease
+XI-B-11,9003,Limit fungsi aljabar,0.01307333942693985,4.624208038070957e-05,-0.01302709734655914,6,3,not_mastered,not_mastered,True,decrease
+XI-B-12,9003,Limit fungsi aljabar,0.0003745860552158162,0.06877449320728529,0.06839990715206948,6,3,not_mastered,not_mastered,True,increase
+XI-B-13,9003,Limit fungsi aljabar,0.2588994182824471,0.008063455884956272,-0.25083596239749084,6,3,not_mastered,not_mastered,True,decrease
+XI-B-14,9003,Limit fungsi aljabar,0.0015376688772207753,0.9922505503543466,0.9907128814771259,5,3,not_mastered,mastered,True,increase
+XI-B-15,9003,Limit fungsi aljabar,0.08088292737831301,0.7595191579454268,0.6786362305671138,6,3,not_mastered,mastered,True,increase
+XI-B-16,9003,Limit fungsi aljabar,0.0003893242396599538,0.0009464785189709883,0.0005571542793110345,6,3,not_mastered,not_mastered,True,increase
+XI-B-17,9003,Limit fungsi aljabar,0.02108555966839578,0.8986217371462968,0.877536177477901,6,3,not_mastered,mastered,True,increase
+XI-B-18,9003,Limit fungsi aljabar,0.0008647738067047261,0.5322310879318919,0.5313663141251872,6,3,not_mastered,mastered,True,increase
+XI-B-19,9003,Limit fungsi aljabar,0.01535588616552953,0.01113678084010921,-0.00421910532542032,6,3,not_mastered,not_mastered,True,decrease
+XI-B-20,9003,Limit fungsi aljabar,0.0006781046618933788,0.0005264979168127474,-0.0001516067450806314,6,3,not_mastered,not_mastered,True,decrease
+XI-B-21,9003,Limit fungsi aljabar,0.006020777023996287,0.00032559885982673094,-0.005695178164169557,6,3,not_mastered,not_mastered,True,decrease
+XI-B-22,9003,Limit fungsi aljabar,7.726394167484714e-05,0.04810730173472818,0.04803003779305333,5,3,not_mastered,not_mastered,True,increase
+XI-B-23,9003,Limit fungsi aljabar,0.0005060487727877566,0.9931385692562338,0.9926325204834461,6,2,not_mastered,mastered,True,increase
+XI-B-24,9003,Limit fungsi aljabar,0.005209163381555018,0.9948103241450628,0.9896011607635078,6,3,not_mastered,mastered,True,increase
+XI-B-25,9003,Limit fungsi aljabar,0.008848536696984622,0.0007544033414687986,-0.008094133355515823,6,3,not_mastered,not_mastered,True,decrease
+XI-B-26,9003,Limit fungsi aljabar,0.9966326073430838,0.9983935629801621,0.001760955637078343,6,3,mastered,mastered,True,increase
+XI-B-27,9003,Limit fungsi aljabar,0.0012601084973434661,0.003117617240470769,0.001857508743127303,6,3,not_mastered,not_mastered,True,increase
+XI-B-28,9003,Limit fungsi aljabar,0.008227612648991267,0.7910488230744807,0.7828212104254894,6,3,not_mastered,mastered,True,increase
+XI-B-29,9003,Limit fungsi aljabar,0.9999986696752134,0.8449758301286022,-0.15502283954661122,6,3,mastered,mastered,True,decrease
+XI-B-31,9003,Limit fungsi aljabar,0.0585518721228105,0.9617936416526558,0.9032417695298453,6,3,not_mastered,mastered,True,increase
+XI-B-32,9003,Limit fungsi aljabar,0.0025671731447501804,0.0003825164987876599,-0.0021846566459625206,6,3,not_mastered,not_mastered,True,decrease
+XI-B-33,9003,Limit fungsi aljabar,0.00527365689756321,0.006091277434561736,0.0008176205369985262,5,3,not_mastered,not_mastered,True,increase
+XI-B-34,9003,Limit fungsi aljabar,0.033449889495722224,0.0023248657362074125,-0.03112502375951481,6,3,not_mastered,not_mastered,True,decrease
+XI-B-35,9003,Limit fungsi aljabar,0.6606078380403148,0.957066724474769,0.2964588864344543,4,3,mastered,mastered,True,increase
+XI-A-01,9004,Limit fungsi di tak hingga,0.9503172852339534,0.9322487943949316,-0.018068490839021845,3,3,mastered,mastered,True,decrease
+XI-A-02,9004,Limit fungsi di tak hingga,0.00014248229864972895,0.9298112622880976,0.9296687799894479,3,3,not_mastered,mastered,True,increase
+XI-A-03,9004,Limit fungsi di tak hingga,2.0060432637510674e-06,0.21054078373288904,0.21053877768962528,3,3,not_mastered,not_mastered,True,increase
+XI-A-04,9004,Limit fungsi di tak hingga,0.0007472906757064676,9.781299789336418e-05,-0.0006494776778131035,3,3,not_mastered,not_mastered,True,decrease
+XI-A-05,9004,Limit fungsi di tak hingga,0.9992263098329608,0.8626316152413318,-0.13659469459162898,3,3,mastered,mastered,True,decrease
+XI-A-06,9004,Limit fungsi di tak hingga,0.0014589912291302766,0.9989951713838736,0.9975361801547433,3,3,not_mastered,mastered,True,increase
+XI-A-07,9004,Limit fungsi di tak hingga,0.49899833669161076,0.002938332818024755,-0.496060003873586,3,3,not_mastered,not_mastered,True,decrease
+XI-A-08,9004,Limit fungsi di tak hingga,2.120403322882288e-06,0.3204646100035297,0.32046248960020685,3,3,not_mastered,not_mastered,True,increase
+XI-A-09,9004,Limit fungsi di tak hingga,0.000534904594806274,0.08532605582762995,0.08479115123282367,3,3,not_mastered,not_mastered,True,increase
+XI-A-10,9004,Limit fungsi di tak hingga,0.0003348808231487729,0.000901024797903971,0.0005661439747551981,2,3,not_mastered,not_mastered,True,increase
+XI-A-11,9004,Limit fungsi di tak hingga,0.6075074677388743,0.9898704428169621,0.3823629750780878,3,3,mastered,mastered,True,increase
+XI-A-13,9004,Limit fungsi di tak hingga,0.00011061070655483932,0.012150474252895452,0.012039863546340613,3,3,not_mastered,not_mastered,True,increase
+XI-A-14,9004,Limit fungsi di tak hingga,0.7786913396008035,0.986069596939573,0.20737825733876947,3,3,mastered,mastered,True,increase
+XI-A-15,9004,Limit fungsi di tak hingga,1.4933460941843328e-05,0.401571951175876,0.4015570177149342,3,3,not_mastered,not_mastered,True,increase
+XI-A-16,9004,Limit fungsi di tak hingga,0.001682568743882562,0.0029366514758994012,0.0012540827320168392,3,3,not_mastered,not_mastered,True,increase
+XI-A-17,9004,Limit fungsi di tak hingga,0.00012911961256690328,0.01573065612054756,0.015601536507980657,3,3,not_mastered,not_mastered,True,increase
+XI-A-18,9004,Limit fungsi di tak hingga,7.209107921568665e-05,0.0002424143345211116,0.00017032325530542494,3,3,not_mastered,not_mastered,True,increase
+XI-A-19,9004,Limit fungsi di tak hingga,2.009117235457468e-06,0.2104777047242155,0.21047569560698004,3,3,not_mastered,not_mastered,True,increase
+XI-A-20,9004,Limit fungsi di tak hingga,0.014248481750010256,4.8224335310024813e-05,-0.014200257414700232,2,3,not_mastered,not_mastered,True,decrease
+XI-A-21,9004,Limit fungsi di tak hingga,9.281039380455841e-05,0.22832626171910675,0.22823345132530218,3,3,not_mastered,not_mastered,True,increase
+XI-A-22,9004,Limit fungsi di tak hingga,0.9903835185813991,0.9292734657067225,-0.061110052874676524,3,3,mastered,mastered,True,decrease
+XI-A-23,9004,Limit fungsi di tak hingga,0.5039206983114521,0.9947604896304942,0.4908397913190421,3,3,mastered,mastered,True,increase
+XI-A-24,9004,Limit fungsi di tak hingga,2.086028948089244e-06,0.000273843554195079,0.00027175752524698975,3,3,not_mastered,not_mastered,True,increase
+XI-A-25,9004,Limit fungsi di tak hingga,0.000180661433121911,0.08924804355370447,0.08906738212058256,3,3,not_mastered,not_mastered,True,increase
+XI-A-26,9004,Limit fungsi di tak hingga,0.002260658282579939,0.07307885154606716,0.07081819326348722,3,3,not_mastered,not_mastered,True,increase
+XI-A-27,9004,Limit fungsi di tak hingga,0.001246579060919143,0.21442640407034058,0.21317982500942143,3,3,not_mastered,not_mastered,True,increase
+XI-A-28,9004,Limit fungsi di tak hingga,0.0005215487233497357,0.0017914851555713585,0.0012699364322216228,3,3,not_mastered,not_mastered,True,increase
+XI-A-29,9004,Limit fungsi di tak hingga,0.003842206518932174,0.022932260803124646,0.01909005428419247,3,3,not_mastered,not_mastered,True,increase
+XI-A-30,9004,Limit fungsi di tak hingga,0.9496443324380521,0.9735598421296257,0.023915509691573522,3,3,mastered,mastered,True,increase
+XI-A-31,9004,Limit fungsi di tak hingga,0.0060405530953367825,0.020707405177069232,0.01466685208173245,3,3,not_mastered,not_mastered,True,increase
+XI-A-32,9004,Limit fungsi di tak hingga,0.0018698701905709753,0.0086102726877112,0.006740402497140224,3,3,not_mastered,not_mastered,True,increase
+XI-A-33,9004,Limit fungsi di tak hingga,0.0011143048353017058,0.32902504733392957,0.32791074249862784,3,3,not_mastered,not_mastered,True,increase
+XI-A-34,9004,Limit fungsi di tak hingga,0.004479179687636982,0.8032789521134321,0.7987997724257951,2,3,not_mastered,mastered,True,increase
+XI-A-35,9004,Limit fungsi di tak hingga,0.9946069972840523,0.999887235826296,0.005280238542243687,2,3,mastered,mastered,True,increase
+XI-A-36,9004,Limit fungsi di tak hingga,5.6588940748067934e-05,0.07287071116197628,0.07281412222122821,3,3,not_mastered,not_mastered,True,increase
+XI-B-01,9004,Limit fungsi di tak hingga,3.788554409702687e-05,0.00019067824225278967,0.0001527926981557628,3,3,not_mastered,not_mastered,True,increase
+XI-B-02,9004,Limit fungsi di tak hingga,0.0051153276013701215,0.011957416525899359,0.0068420889245292375,3,2,not_mastered,not_mastered,True,increase
+XI-B-03,9004,Limit fungsi di tak hingga,0.999947126110363,0.9980390797002922,-0.0019080464100708072,3,3,mastered,mastered,True,decrease
+XI-B-04,9004,Limit fungsi di tak hingga,0.0008301156211058321,0.00423745546353187,0.0034073398424260383,3,3,not_mastered,not_mastered,True,increase
+XI-B-05,9004,Limit fungsi di tak hingga,0.8029553184963039,0.9989852939543113,0.1960299754580075,2,3,mastered,mastered,True,increase
+XI-B-06,9004,Limit fungsi di tak hingga,0.24145462557590247,0.013128434973311686,-0.2283261906025908,3,3,not_mastered,not_mastered,True,decrease
+XI-B-08,9004,Limit fungsi di tak hingga,5.659226084388545e-05,6.151840530827226e-05,4.92614446438681e-06,3,3,not_mastered,not_mastered,True,increase
+XI-B-09,9004,Limit fungsi di tak hingga,0.9726209821035021,0.9988310728390182,0.026210090735516056,3,3,mastered,mastered,True,increase
+XI-B-10,9004,Limit fungsi di tak hingga,0.0001715128265115978,0.00026197780057751643,9.046497406591864e-05,3,3,not_mastered,not_mastered,True,increase
+XI-B-11,9004,Limit fungsi di tak hingga,0.0006306269463087328,3.945037880325577e-06,-0.0006266819084284072,2,3,not_mastered,not_mastered,True,decrease
+XI-B-12,9004,Limit fungsi di tak hingga,9.543662784346838e-06,7.330604789033051e-05,6.376238510598367e-05,2,3,not_mastered,not_mastered,True,increase
+XI-B-13,9004,Limit fungsi di tak hingga,0.0021331963981553953,0.9867211106793243,0.984587914281169,3,3,not_mastered,mastered,True,increase
+XI-B-14,9004,Limit fungsi di tak hingga,3.937712975090315e-06,0.0005470520003424593,0.000543114287367369,3,3,not_mastered,not_mastered,True,increase
+XI-B-15,9004,Limit fungsi di tak hingga,0.0009303005523527922,0.9974044807336621,0.9964741801813093,3,3,not_mastered,mastered,True,increase
+XI-B-16,9004,Limit fungsi di tak hingga,1.2094203750638384e-05,0.0023489377068575904,0.002336843503106952,2,3,not_mastered,not_mastered,True,increase
+XI-B-17,9004,Limit fungsi di tak hingga,0.006162469373798447,0.03351029640606541,0.027347827032266965,3,3,not_mastered,not_mastered,True,increase
+XI-B-18,9004,Limit fungsi di tak hingga,0.0001998044585966848,0.007120449052541753,0.006920644593945069,3,3,not_mastered,not_mastered,True,increase
+XI-B-19,9004,Limit fungsi di tak hingga,9.634572213839727e-05,0.3842399582074505,0.3841436124853121,3,3,not_mastered,not_mastered,True,increase
+XI-B-20,9004,Limit fungsi di tak hingga,0.0031076460200658088,0.00024204963781219833,-0.0028655963822536105,3,3,not_mastered,not_mastered,True,decrease
+XI-B-21,9004,Limit fungsi di tak hingga,3.3480632855134153e-05,0.00014935739239124192,0.00011587675953610777,3,3,not_mastered,not_mastered,True,increase
+XI-B-22,9004,Limit fungsi di tak hingga,0.0003727886548682022,0.00030925104710630044,-6.353760776190174e-05,3,3,not_mastered,not_mastered,True,decrease
+XI-B-23,9004,Limit fungsi di tak hingga,2.841511943337805e-06,0.7592206203036649,0.7592177787917216,3,3,not_mastered,mastered,True,increase
+XI-B-24,9004,Limit fungsi di tak hingga,0.0011438343397921066,0.14153369470054067,0.14038986036074858,3,3,not_mastered,not_mastered,True,increase
+XI-B-25,9004,Limit fungsi di tak hingga,5.21893211304215e-05,0.003719412831528792,0.0036672235103983705,3,3,not_mastered,not_mastered,True,increase
+XI-B-26,9004,Limit fungsi di tak hingga,0.6598459733081574,0.0026486577603174275,-0.65719731554784,3,3,mastered,not_mastered,True,decrease
+XI-B-27,9004,Limit fungsi di tak hingga,0.01276693027632685,0.02755582167529521,0.01478889139896836,3,3,not_mastered,not_mastered,True,increase
+XI-B-28,9004,Limit fungsi di tak hingga,0.008683658667529705,0.9901756566376712,0.9814919979701414,2,3,not_mastered,mastered,True,increase
+XI-B-29,9004,Limit fungsi di tak hingga,0.9999424457103299,0.9823410814465838,-0.017601364263746033,3,3,mastered,mastered,True,decrease
+XI-B-31,9004,Limit fungsi di tak hingga,0.0004325316527351074,0.008014424467559421,0.007581892814824314,3,3,not_mastered,not_mastered,True,increase
+XI-B-32,9004,Limit fungsi di tak hingga,1.4810984039594564e-05,0.003959215592672505,0.003944404608632911,3,3,not_mastered,not_mastered,True,increase
+XI-B-33,9004,Limit fungsi di tak hingga,0.007904590614250698,0.07640269562413993,0.06849810500988923,2,3,not_mastered,not_mastered,True,increase
+XI-B-34,9004,Limit fungsi di tak hingga,0.0008211466686345321,0.00515925988314395,0.004338113214509417,2,2,not_mastered,not_mastered,True,increase
+XI-B-35,9004,Limit fungsi di tak hingga,0.6831357026081257,0.9884993131287957,0.30536361052066996,3,3,mastered,mastered,True,increase
+XI-A-01,9005,Limit fungsi trigonometri,0.0009076962344797532,0.016691252012517442,0.015783555778037688,3,3,not_mastered,not_mastered,True,increase
+XI-A-02,9005,Limit fungsi trigonometri,0.00023100982736308062,0.016428373831861125,0.016197364004498043,3,3,not_mastered,not_mastered,True,increase
+XI-A-03,9005,Limit fungsi trigonometri,2.408003237496887e-05,0.12042775309634993,0.12040367306397495,3,3,not_mastered,not_mastered,True,increase
+XI-A-04,9005,Limit fungsi trigonometri,0.0002577643551306347,0.022441294245045384,0.02218352988991475,3,3,not_mastered,not_mastered,True,increase
+XI-A-05,9005,Limit fungsi trigonometri,0.45771817975157025,0.7469750698398325,0.2892568900882623,3,3,not_mastered,mastered,True,increase
+XI-A-06,9005,Limit fungsi trigonometri,0.6800582290341455,0.9734880473098103,0.29342981827566483,3,3,mastered,mastered,True,increase
+XI-A-07,9005,Limit fungsi trigonometri,0.003996501747220351,0.06198926644116791,0.057992764693947554,3,3,not_mastered,not_mastered,True,increase
+XI-A-08,9005,Limit fungsi trigonometri,2.5756249766835356e-05,0.0005202700149170042,0.0004945137651501688,3,3,not_mastered,not_mastered,True,increase
+XI-A-09,9005,Limit fungsi trigonometri,0.017207567501388105,0.019461001568023703,0.0022534340666355984,3,2,not_mastered,not_mastered,True,increase
+XI-A-10,9005,Limit fungsi trigonometri,0.00911780707297136,0.00025109596969934904,-0.008866711103272012,3,3,not_mastered,not_mastered,True,decrease
+XI-A-11,9005,Limit fungsi trigonometri,0.8956474847297655,0.9303904964975015,0.034743011767735976,2,2,mastered,mastered,True,increase
+XI-A-13,9005,Limit fungsi trigonometri,2.569057071249217e-05,2.526094762201011e-05,-4.296230904820615e-07,3,3,not_mastered,not_mastered,True,decrease
+XI-A-14,9005,Limit fungsi trigonometri,0.9909678435730909,0.0028754736661794696,-0.9880923699069114,3,3,mastered,not_mastered,True,decrease
+XI-A-15,9005,Limit fungsi trigonometri,0.0007786389541237518,0.5340244508135205,0.5332458118593967,3,3,not_mastered,mastered,True,increase
+XI-A-16,9005,Limit fungsi trigonometri,0.0022888474511787178,0.002397303908601168,0.00010845645742245044,3,3,not_mastered,not_mastered,True,increase
+XI-A-17,9005,Limit fungsi trigonometri,0.0011541042444527519,0.9271275409925277,0.925973436748075,3,3,not_mastered,mastered,True,increase
+XI-A-18,9005,Limit fungsi trigonometri,3.0281716066064445e-05,2.19965410009017e-05,-8.285175065162744e-06,3,3,not_mastered,not_mastered,True,decrease
+XI-A-19,9005,Limit fungsi trigonometri,2.4119587377029445e-05,0.38949502305882255,0.38947090347144553,2,3,not_mastered,not_mastered,True,increase
+XI-A-20,9005,Limit fungsi trigonometri,0.0005465777500378994,0.0002753566483597842,-0.00027122110167811524,3,3,not_mastered,not_mastered,True,decrease
+XI-A-21,9005,Limit fungsi trigonometri,0.004393540553545388,0.006971100669266213,0.002577560115720825,3,3,not_mastered,not_mastered,True,increase
+XI-A-22,9005,Limit fungsi trigonometri,0.21778560170706446,0.00955179749898224,-0.2082338042080822,3,3,not_mastered,not_mastered,True,decrease
+XI-A-23,9005,Limit fungsi trigonometri,0.9989323026724979,0.9998281780062791,0.0008958753337812153,3,3,mastered,mastered,True,increase
+XI-A-24,9005,Limit fungsi trigonometri,0.0001251435353372605,0.001204841166072127,0.0010796976307348666,2,3,not_mastered,not_mastered,True,increase
+XI-A-25,9005,Limit fungsi trigonometri,0.001584088151424687,0.020355412101701505,0.01877132395027682,3,2,not_mastered,not_mastered,True,increase
+XI-A-26,9005,Limit fungsi trigonometri,2.4663142288236197e-05,0.0032048370202481533,0.003180173877959917,3,3,not_mastered,not_mastered,True,increase
+XI-A-27,9005,Limit fungsi trigonometri,0.0017319024329866635,0.010104592694591113,0.008372690261604449,3,3,not_mastered,not_mastered,True,increase
+XI-A-28,9005,Limit fungsi trigonometri,0.004278544456845276,0.15586550670159816,0.15158696224475288,3,3,not_mastered,not_mastered,True,increase
+XI-A-29,9005,Limit fungsi trigonometri,0.8399940954743277,0.9979801940859994,0.15798609861167168,3,3,mastered,mastered,True,increase
+XI-A-30,9005,Limit fungsi trigonometri,0.331054814063067,0.9992092029863555,0.6681543889232885,3,3,not_mastered,mastered,True,increase
+XI-A-31,9005,Limit fungsi trigonometri,0.9944076792890222,0.9977742415883148,0.0033665622992926636,3,3,mastered,mastered,True,increase
+XI-A-32,9005,Limit fungsi trigonometri,0.687208103382083,0.9949182963891265,0.3077101930070435,3,3,mastered,mastered,True,increase
+XI-A-33,9005,Limit fungsi trigonometri,0.040483570741270736,0.3266561591938939,0.28617258845262317,3,3,not_mastered,not_mastered,True,increase
+XI-A-34,9005,Limit fungsi trigonometri,0.4220305315896552,0.0032213302073595806,-0.4188092013822956,3,3,not_mastered,not_mastered,True,decrease
+XI-A-35,9005,Limit fungsi trigonometri,0.9987145843750689,0.9938347327032538,-0.004879851671815039,3,3,mastered,mastered,True,decrease
+XI-A-36,9005,Limit fungsi trigonometri,0.0006532539886479974,2.699980964734616e-05,-0.0006262541790006512,3,3,not_mastered,not_mastered,True,decrease
+XI-B-01,9005,Limit fungsi trigonometri,0.0003709668048293334,0.00021655198317102706,-0.00015441482165830635,3,3,not_mastered,not_mastered,True,decrease
+XI-B-02,9005,Limit fungsi trigonometri,0.00024025922304548078,0.00018761200842654416,-5.264721461893662e-05,3,3,not_mastered,not_mastered,True,decrease
+XI-B-03,9005,Limit fungsi trigonometri,0.9975236322995251,0.9999197742189243,0.002396141919399186,3,3,mastered,mastered,True,increase
+XI-B-04,9005,Limit fungsi trigonometri,0.0011867899063088866,0.08514361391428733,0.08395682400797845,3,3,not_mastered,not_mastered,True,increase
+XI-B-05,9005,Limit fungsi trigonometri,0.9985073930402596,0.4794584964216761,-0.5190488966185836,3,3,mastered,not_mastered,True,decrease
+XI-B-06,9005,Limit fungsi trigonometri,0.8699573413624273,0.9965760162795911,0.12661867491716383,3,3,mastered,mastered,True,increase
+XI-B-08,9005,Limit fungsi trigonometri,0.000653289822027787,2.166463126355759e-05,-0.0006316251907642294,3,3,not_mastered,not_mastered,True,decrease
+XI-B-09,9005,Limit fungsi trigonometri,0.990077193291865,0.9693970154142917,-0.02068017787757337,2,3,mastered,mastered,True,decrease
+XI-B-10,9005,Limit fungsi trigonometri,0.001509475294347997,0.001062243043428314,-0.00044723225091968313,3,3,not_mastered,not_mastered,True,decrease
+XI-B-11,9005,Limit fungsi trigonometri,0.0007472322734630044,0.028165373617866897,0.027418141344403894,3,2,not_mastered,not_mastered,True,increase
+XI-B-12,9005,Limit fungsi trigonometri,2.4373034791304276e-05,0.00035860414936958267,0.0003342311145782784,3,3,not_mastered,not_mastered,True,increase
+XI-B-13,9005,Limit fungsi trigonometri,0.0005288147915253558,0.00300680210867076,0.002477987317145404,3,3,not_mastered,not_mastered,True,increase
+XI-B-14,9005,Limit fungsi trigonometri,2.574438940572425e-05,0.013614441562444018,0.013588697173038294,3,3,not_mastered,not_mastered,True,increase
+XI-B-15,9005,Limit fungsi trigonometri,0.9687410029569122,0.9975928336438029,0.028851830686890678,3,3,mastered,mastered,True,increase
+XI-B-16,9005,Limit fungsi trigonometri,0.000678654635047733,0.0004462322836239459,-0.00023242235142378713,3,3,not_mastered,not_mastered,True,decrease
+XI-B-17,9005,Limit fungsi trigonometri,0.006297772486844889,0.0015248597512825999,-0.004772912735562289,3,3,not_mastered,not_mastered,True,decrease
+XI-B-18,9005,Limit fungsi trigonometri,0.21412224673536548,0.0003450749632964616,-0.213777171772069,3,3,not_mastered,not_mastered,True,decrease
+XI-B-19,9005,Limit fungsi trigonometri,0.020299932241593825,0.8287026427576271,0.8084027105160332,3,3,not_mastered,mastered,True,increase
+XI-B-20,9005,Limit fungsi trigonometri,0.0001831805898496976,0.00023597101739075184,5.279042754105425e-05,3,3,not_mastered,not_mastered,True,increase
+XI-B-21,9005,Limit fungsi trigonometri,0.0003050130270965288,0.00015084104538783463,-0.0001541719817086942,3,3,not_mastered,not_mastered,True,decrease
+XI-B-22,9005,Limit fungsi trigonometri,2.586338966874382e-05,0.0015549070898107083,0.0015290437001419645,3,2,not_mastered,not_mastered,True,increase
+XI-B-23,9005,Limit fungsi trigonometri,3.277266010975247e-05,0.003685302003836285,0.0036525293437265328,3,3,not_mastered,not_mastered,True,increase
+XI-B-24,9005,Limit fungsi trigonometri,0.0016992942939897825,0.01950439378860761,0.01780509949461783,3,3,not_mastered,not_mastered,True,increase
+XI-B-25,9005,Limit fungsi trigonometri,0.0004996661851732178,0.00035129864263238144,-0.0001483675425408363,3,3,not_mastered,not_mastered,True,decrease
+XI-B-26,9005,Limit fungsi trigonometri,0.05611136425938053,0.0021779083409625153,-0.05393345591841801,3,3,not_mastered,not_mastered,True,decrease
+XI-B-27,9005,Limit fungsi trigonometri,0.0005113894257694835,0.0012376179207478953,0.0007262284949784119,3,3,not_mastered,not_mastered,True,increase
+XI-B-28,9005,Limit fungsi trigonometri,0.012448626129719597,0.01758467373822027,0.005136047608500675,3,3,not_mastered,not_mastered,True,increase
+XI-B-29,9005,Limit fungsi trigonometri,0.9999006708616183,0.8145822967132509,-0.18531837414836738,3,2,mastered,mastered,True,decrease
+XI-B-31,9005,Limit fungsi trigonometri,0.0033924604835991494,0.8692137791777608,0.8658213186941616,3,3,not_mastered,mastered,True,increase
+XI-B-32,9005,Limit fungsi trigonometri,2.8595337472314687e-05,0.0001792946427696194,0.00015069930529730473,3,3,not_mastered,not_mastered,True,increase
+XI-B-33,9005,Limit fungsi trigonometri,0.5331153629882852,0.9857093211273307,0.45259395813904546,3,3,mastered,mastered,True,increase
+XI-B-34,9005,Limit fungsi trigonometri,0.0015377838435039239,0.0009414325366044942,-0.0005963513068994297,3,3,not_mastered,not_mastered,True,decrease
+XI-B-35,9005,Limit fungsi trigonometri,0.07921565821673499,0.003441356301818537,-0.07577430191491645,3,3,not_mastered,not_mastered,True,decrease
+XI-A-01,9006,Turunan sebagai limit (definisi turunan),0.1118375231343757,0.9966076260312648,0.8847701028968892,3,3,not_mastered,mastered,True,increase
+XI-A-02,9006,Turunan sebagai limit (definisi turunan),0.03848803331782061,0.980990951186831,0.9425029178690104,3,2,not_mastered,mastered,True,increase
+XI-A-03,9006,Turunan sebagai limit (definisi turunan),0.0009103442424398729,0.8280532282467149,0.827142884004275,3,3,not_mastered,mastered,True,increase
+XI-A-04,9006,Turunan sebagai limit (definisi turunan),0.008774277687070776,0.0758277974131062,0.06705351972603543,3,3,not_mastered,not_mastered,True,increase
+XI-A-05,9006,Turunan sebagai limit (definisi turunan),0.981103440596647,0.9995138552380286,0.0184104146413816,3,3,mastered,mastered,True,increase
+XI-A-06,9006,Turunan sebagai limit (definisi turunan),0.22815137220259796,0.03872906730143129,-0.18942230490116668,3,3,not_mastered,not_mastered,True,decrease
+XI-A-07,9006,Turunan sebagai limit (definisi turunan),0.1299037789946714,0.0032057361606463632,-0.12669804283402503,3,3,not_mastered,not_mastered,True,decrease
+XI-A-08,9006,Turunan sebagai limit (definisi turunan),0.0009549379883339927,0.0008829304285024467,-7.200755983154594e-05,3,3,not_mastered,not_mastered,True,decrease
+XI-A-09,9006,Turunan sebagai limit (definisi turunan),0.11421455057486041,0.004887855425789038,-0.10932669514907137,3,3,not_mastered,not_mastered,True,decrease
+XI-A-10,9006,Turunan sebagai limit (definisi turunan),0.013425193396121058,0.0016660956678282305,-0.011759097728292828,3,3,not_mastered,not_mastered,True,decrease
+XI-A-11,9006,Turunan sebagai limit (definisi turunan),0.0017813640184366447,0.3930356175117764,0.39125425349333975,3,2,not_mastered,not_mastered,True,increase
+XI-A-13,9006,Turunan sebagai limit (definisi turunan),0.0016524141710657545,0.025265061677059178,0.023612647505993425,2,3,not_mastered,not_mastered,True,increase
+XI-A-14,9006,Turunan sebagai limit (definisi turunan),0.9937037522217234,0.9818520690654129,-0.011851683156310466,3,3,mastered,mastered,True,decrease
+XI-A-15,9006,Turunan sebagai limit (definisi turunan),0.005390473468326225,0.001218809946613422,-0.004171663521712803,2,3,not_mastered,not_mastered,True,decrease
+XI-A-16,9006,Turunan sebagai limit (definisi turunan),0.26223412681649894,0.9785094221327146,0.7162752953162157,2,3,not_mastered,mastered,True,increase
+XI-A-17,9006,Turunan sebagai limit (definisi turunan),0.0018972522585345105,0.8974300689325088,0.8955328166739742,3,3,not_mastered,mastered,True,increase
+XI-A-18,9006,Turunan sebagai limit (definisi turunan),0.0011034723698144274,7.482631312606404e-05,-0.0010286460566883635,3,3,not_mastered,not_mastered,True,decrease
+XI-A-19,9006,Turunan sebagai limit (definisi turunan),0.0009103898630595025,0.12590472925818763,0.12499433939512813,3,3,not_mastered,not_mastered,True,increase
+XI-A-20,9006,Turunan sebagai limit (definisi turunan),0.00445115962397705,0.05061638028532377,0.04616522066134672,3,3,not_mastered,not_mastered,True,increase
+XI-A-21,9006,Turunan sebagai limit (definisi turunan),0.02661381595195337,0.21059371791638898,0.18397990196443562,3,3,not_mastered,not_mastered,True,increase
+XI-A-22,9006,Turunan sebagai limit (definisi turunan),0.990331968131501,0.8845694581844343,-0.10576250994706671,3,3,mastered,mastered,True,decrease
+XI-A-23,9006,Turunan sebagai limit (definisi turunan),0.9991806213781645,0.9924665158009971,-0.006714105577167451,3,3,mastered,mastered,True,decrease
+XI-A-24,9006,Turunan sebagai limit (definisi turunan),0.000942594156163868,0.008859908296094657,0.007917314139930789,3,3,not_mastered,not_mastered,True,increase
+XI-A-25,9006,Turunan sebagai limit (definisi turunan),0.045079725077813104,0.765367055436682,0.7202873303588689,3,3,not_mastered,mastered,True,increase
+XI-A-26,9006,Turunan sebagai limit (definisi turunan),0.0009449207463556963,0.7296329453874,0.7286880246410443,3,3,not_mastered,mastered,True,increase
+XI-A-27,9006,Turunan sebagai limit (definisi turunan),0.15643079260529935,0.9945019920597136,0.8380711994544142,3,3,not_mastered,mastered,True,increase
+XI-A-28,9006,Turunan sebagai limit (definisi turunan),0.10105513386646825,0.04530605633988112,-0.05574907752658713,3,3,not_mastered,not_mastered,True,decrease
+XI-A-29,9006,Turunan sebagai limit (definisi turunan),0.42595957089493164,0.996534662493868,0.5705750915989364,3,3,not_mastered,mastered,True,increase
+XI-A-30,9006,Turunan sebagai limit (definisi turunan),0.9985767307188647,0.9985816506040035,4.919885138843227e-06,3,3,mastered,mastered,True,increase
+XI-A-31,9006,Turunan sebagai limit (definisi turunan),0.9780038647135962,0.996198465376501,0.018194600662904792,2,3,mastered,mastered,True,increase
+XI-A-32,9006,Turunan sebagai limit (definisi turunan),0.28090885817788724,0.008295088392667356,-0.2726137697852199,3,3,not_mastered,not_mastered,True,decrease
+XI-A-33,9006,Turunan sebagai limit (definisi turunan),0.6167820619380042,0.9386550001017948,0.3218729381637906,3,1,mastered,mastered,True,increase
+XI-A-34,9006,Turunan sebagai limit (definisi turunan),0.0008188294994405453,0.9837150878779479,0.9828962583785074,3,3,not_mastered,mastered,True,increase
+XI-A-35,9006,Turunan sebagai limit (definisi turunan),0.1401450137036534,0.864235285315046,0.7240902716113926,2,3,not_mastered,mastered,True,increase
+XI-A-36,9006,Turunan sebagai limit (definisi turunan),0.0009134471612553933,0.00020859129464426585,-0.0007048558666111275,3,2,not_mastered,not_mastered,True,decrease
+XI-B-01,9006,Turunan sebagai limit (definisi turunan),0.012067975391687028,0.09933299660377087,0.08726502121208385,3,3,not_mastered,not_mastered,True,increase
+XI-B-02,9006,Turunan sebagai limit (definisi turunan),0.03554753910682436,0.004342965194929297,-0.03120457391189506,3,3,not_mastered,not_mastered,True,decrease
+XI-B-03,9006,Turunan sebagai limit (definisi turunan),0.9999210896108495,0.9998398945168111,-8.119509403836656e-05,3,3,mastered,mastered,True,decrease
+XI-B-04,9006,Turunan sebagai limit (definisi turunan),0.12242502547348952,0.08990273940350013,-0.03252228606998939,3,3,not_mastered,not_mastered,True,decrease
+XI-B-05,9006,Turunan sebagai limit (definisi turunan),0.9988722516767241,0.9982200272309594,-0.0006522244457647375,3,3,mastered,mastered,True,decrease
+XI-B-06,9006,Turunan sebagai limit (definisi turunan),0.010096657696036715,0.01207884414038669,0.0019821864443499756,3,3,not_mastered,not_mastered,True,increase
+XI-B-08,9006,Turunan sebagai limit (definisi turunan),0.0009124423136276298,0.00016902188833110084,-0.000743420425296529,3,3,not_mastered,not_mastered,True,decrease
+XI-B-09,9006,Turunan sebagai limit (definisi turunan),0.9763557497774815,0.9979817899238299,0.02162604014634839,3,3,mastered,mastered,True,increase
+XI-B-10,9006,Turunan sebagai limit (definisi turunan),0.04276991713720549,0.0055742110366220395,-0.037195706100583446,3,3,not_mastered,not_mastered,True,decrease
+XI-B-11,9006,Turunan sebagai limit (definisi turunan),0.022096512068501092,0.005736501428115254,-0.01636001064038584,3,3,not_mastered,not_mastered,True,decrease
+XI-B-12,9006,Turunan sebagai limit (definisi turunan),0.0009196719672401692,0.0021769336336401957,0.0012572616664000265,3,3,not_mastered,not_mastered,True,increase
+XI-B-13,9006,Turunan sebagai limit (definisi turunan),0.0112255003113933,0.66974612216832,0.6585206218569266,3,3,not_mastered,mastered,True,increase
+XI-B-14,9006,Turunan sebagai limit (definisi turunan),0.001643504495438118,0.016208217242000368,0.01456471274656225,3,3,not_mastered,not_mastered,True,increase
+XI-B-15,9006,Turunan sebagai limit (definisi turunan),0.12268566049556415,0.913858483227387,0.7911728227318229,3,3,not_mastered,mastered,True,increase
+XI-B-16,9006,Turunan sebagai limit (definisi turunan),0.0009478858394148747,0.002996312530556566,0.002048426691141691,3,3,not_mastered,not_mastered,True,increase
+XI-B-17,9006,Turunan sebagai limit (definisi turunan),0.04226498857387682,0.04460078858802804,0.002335800014151221,3,3,not_mastered,not_mastered,True,increase
+XI-B-18,9006,Turunan sebagai limit (definisi turunan),0.05122590408823007,0.0005039312006355576,-0.050721972887594516,3,3,not_mastered,not_mastered,True,decrease
+XI-B-19,9006,Turunan sebagai limit (definisi turunan),0.025536303915318526,0.02378427547918848,-0.0017520284361300445,3,3,not_mastered,not_mastered,True,decrease
+XI-B-20,9006,Turunan sebagai limit (definisi turunan),0.03120624311586949,0.007690292453422303,-0.023515950662447188,3,3,not_mastered,not_mastered,True,decrease
+XI-B-21,9006,Turunan sebagai limit (definisi turunan),0.010844085008898326,0.0002302715648429592,-0.010613813444055367,3,3,not_mastered,not_mastered,True,decrease
+XI-B-22,9006,Turunan sebagai limit (definisi turunan),0.004856058877764913,0.0004373638341776173,-0.0044186950435872955,2,3,not_mastered,not_mastered,True,decrease
+XI-B-23,9006,Turunan sebagai limit (definisi turunan),0.0012372393860322951,0.004829436165666869,0.0035921967796345745,3,3,not_mastered,not_mastered,True,increase
+XI-B-24,9006,Turunan sebagai limit (definisi turunan),0.20215179312099008,0.759037899208733,0.5568861060877429,3,3,not_mastered,mastered,True,increase
+XI-B-25,9006,Turunan sebagai limit (definisi turunan),0.015482241820770544,0.0014971897442766467,-0.013985052076493898,3,3,not_mastered,not_mastered,True,decrease
+XI-B-26,9006,Turunan sebagai limit (definisi turunan),0.050520592503499454,0.0029135675580020887,-0.047607024945497366,3,3,not_mastered,not_mastered,True,decrease
+XI-B-27,9006,Turunan sebagai limit (definisi turunan),0.07865615207632676,0.4645340298233389,0.38587787774701215,3,3,not_mastered,not_mastered,True,increase
+XI-B-28,9006,Turunan sebagai limit (definisi turunan),0.014540816491188862,0.08044528230470602,0.06590446581351715,3,3,not_mastered,not_mastered,True,increase
+XI-B-29,9006,Turunan sebagai limit (definisi turunan),0.9980878715271041,0.9640088407707239,-0.03407903075638019,3,3,mastered,mastered,True,decrease
+XI-B-31,9006,Turunan sebagai limit (definisi turunan),0.08909207411978365,0.9911136703996598,0.9020215962798761,3,3,not_mastered,mastered,True,increase
+XI-B-32,9006,Turunan sebagai limit (definisi turunan),0.005281254971980785,0.0003996906405139341,-0.004881564331466851,3,3,not_mastered,not_mastered,True,decrease
+XI-B-33,9006,Turunan sebagai limit (definisi turunan),0.1840095191886832,0.06440355095030958,-0.1196059682383736,2,3,not_mastered,not_mastered,True,decrease
+XI-B-34,9006,Turunan sebagai limit (definisi turunan),0.04819248206544351,0.007288528733130642,-0.040903953332312865,3,2,not_mastered,not_mastered,True,decrease
+XI-B-35,9006,Turunan sebagai limit (definisi turunan),0.2719189545112829,0.6977320775284385,0.42581312301715557,2,3,not_mastered,mastered,True,increase
+XI-A-01,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.002326911737643365,7.445186075893767e-06,-0.002319466551567471,16,13,not_mastered,not_mastered,True,decrease
+XI-A-02,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.022770199070254106,0.999984430566877,0.9772142314966229,15,12,not_mastered,mastered,True,increase
+XI-A-03,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",1.022107049962454e-05,0.999999,0.9999887789295003,16,13,not_mastered,mastered,True,increase
+XI-A-04,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.00012868157292553406,0.0010978961640122284,0.0009692145910866943,16,12,not_mastered,not_mastered,True,increase
+XI-A-05,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.999999,0.0,16,12,mastered,mastered,True,stable
+XI-A-06,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9999804582961191,0.999999,1.8541703880825544e-05,16,13,mastered,mastered,True,increase
+XI-A-07,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9998407172393804,0.9999968467530347,0.00015612951365429062,16,11,mastered,mastered,True,increase
+XI-A-08,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.0004193238589178394,0.005274728844099725,0.0048554049851818855,15,13,not_mastered,not_mastered,True,increase
+XI-A-09,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.998824378622168,0.9999975094224121,0.00117313080024406,15,13,mastered,mastered,True,increase
+XI-A-10,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.008895539615691433,0.00020269552565542557,-0.008692844090036008,15,13,not_mastered,not_mastered,True,decrease
+XI-A-11,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.07179870252872379,0.004448887857059283,-0.06734981467166451,14,13,not_mastered,not_mastered,True,decrease
+XI-A-13,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",1.9727118169776003e-05,6.411326891731246e-05,4.438615074753646e-05,15,13,not_mastered,not_mastered,True,increase
+XI-A-14,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.0005398233574927542,0.013418224905599414,0.01287840154810666,16,13,not_mastered,not_mastered,True,increase
+XI-A-15,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.004680857381414483,0.8700996901243461,0.8654188327429316,15,13,not_mastered,mastered,True,increase
+XI-A-16,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9999844245069229,0.999999,1.4575493077040313e-05,14,13,mastered,mastered,True,increase
+XI-A-17,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.0008306658705616535,0.04521907604040325,0.044388410169841595,16,13,not_mastered,not_mastered,True,increase
+XI-A-18,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.0287590736490351,3.2766230368721865e-05,-0.02872630741866638,16,13,not_mastered,not_mastered,True,decrease
+XI-A-19,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.00041404378944369917,0.999999,0.9995849562105563,15,13,not_mastered,mastered,True,increase
+XI-A-20,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.00023505464985995416,0.00016631340845519254,-6.874124140476162e-05,16,13,not_mastered,not_mastered,True,decrease
+XI-A-21,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.013925777207214902,0.999999,0.9860732227927851,16,12,not_mastered,mastered,True,increase
+XI-A-22,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.6256113696157544,0.9999972498195149,0.3743858802037605,16,12,mastered,mastered,True,increase
+XI-A-23,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.999999,0.0,16,13,mastered,mastered,True,stable
+XI-A-24,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",1.0535575468468874e-05,0.9998738923119423,0.9998633567364739,15,13,not_mastered,mastered,True,increase
+XI-A-25,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9889660183946543,0.9810975995911146,-0.007868418803539612,16,12,mastered,mastered,True,decrease
+XI-A-26,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",1.0790312953019968e-05,0.9999317182530794,0.9999209279401263,15,13,not_mastered,mastered,True,increase
+XI-A-27,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9977447761317471,0.999999,0.0022542238682529137,15,13,mastered,mastered,True,increase
+XI-A-28,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9969726463191524,0.9999978342414149,0.0030251879222624734,16,13,mastered,mastered,True,increase
+XI-A-29,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9999958076462574,0.999999,3.192353742575982e-06,15,13,mastered,mastered,True,increase
+XI-A-30,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.9999866363562318,-1.2363643768220633e-05,16,13,mastered,mastered,True,decrease
+XI-A-31,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.999999,0.0,16,12,mastered,mastered,True,stable
+XI-A-32,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9998289184296667,0.9999979210807521,0.000169002651085437,15,12,mastered,mastered,True,increase
+XI-A-33,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9978137252336627,0.999999,0.0021852747663372307,16,13,mastered,mastered,True,increase
+XI-A-34,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.0005603978126729797,0.0002721254642730279,-0.0002882723483999518,16,13,not_mastered,not_mastered,True,decrease
+XI-A-35,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.999999,0.0,16,12,mastered,mastered,True,stable
+XI-A-36,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.00041608238287057066,0.0038922086649176724,0.0034761262820471018,16,12,not_mastered,not_mastered,True,increase
+XI-B-01,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.00015873477029707764,0.0006129511807527633,0.0004542164104556856,16,13,not_mastered,not_mastered,True,increase
+XI-B-02,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.00026656501317094537,0.021035159066375254,0.020768594053204307,16,13,not_mastered,not_mastered,True,increase
+XI-B-03,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.999999,0.0,15,13,mastered,mastered,True,stable
+XI-B-04,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9999235156762745,0.9999776379262857,5.412225001122373e-05,14,12,mastered,mastered,True,increase
+XI-B-05,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999880965020816,0.9999860990690365,0.00010513404822043437,16,13,mastered,mastered,True,increase
+XI-B-06,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.999998785906886,-2.140931140148794e-07,16,12,mastered,mastered,True,decrease
+XI-B-08,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",1.020806431538443e-05,0.0005279598564621969,0.0005177517921468124,16,13,not_mastered,not_mastered,True,increase
+XI-B-09,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.999999,0.0,16,12,mastered,mastered,True,stable
+XI-B-10,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9877363182157488,0.9870904546189241,-0.000645863596824725,15,13,mastered,mastered,True,decrease
+XI-B-11,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.4783791546379797,1.6126298008158506e-05,-0.4783630283399715,16,12,not_mastered,not_mastered,True,decrease
+XI-B-12,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.003374805340696365,0.9549554344236126,0.9515806290829163,15,13,not_mastered,mastered,True,increase
+XI-B-13,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.00021568191749177538,0.9999596300651488,0.999743948147657,16,12,not_mastered,mastered,True,increase
+XI-B-14,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",2.0389932249751304e-05,0.0009447674111253154,0.0009243774788755641,15,13,not_mastered,not_mastered,True,increase
+XI-B-15,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.02105706896646111,0.999888080882358,0.9788310119158969,15,12,not_mastered,mastered,True,increase
+XI-B-16,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",1.0348262978181064e-05,0.00451832107719654,0.004507972814218358,16,12,not_mastered,not_mastered,True,increase
+XI-B-17,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.007612357828976242,0.9951903534325962,0.9875779956036199,16,13,not_mastered,mastered,True,increase
+XI-B-18,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.00020109569653345072,0.047638977240697496,0.04743788154416405,16,13,not_mastered,not_mastered,True,increase
+XI-B-19,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.5146763523286628,0.9962050052841445,0.48152865295548164,16,12,mastered,mastered,True,increase
+XI-B-20,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.0003618577921246529,0.008503349831859328,0.008141492039734676,15,13,not_mastered,not_mastered,True,increase
+XI-B-21,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.0010790035300513008,0.0005049280286520345,-0.0005740755013992664,15,13,not_mastered,not_mastered,True,decrease
+XI-B-22,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.0020586753237507548,0.00016921419221247006,-0.0018894611315382847,16,13,not_mastered,not_mastered,True,decrease
+XI-B-23,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.0008445097610045129,0.9810003222275663,0.9801558124665618,16,13,not_mastered,mastered,True,increase
+XI-B-24,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9999539393494239,0.999999,4.5060650576078665e-05,16,12,mastered,mastered,True,increase
+XI-B-25,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.00013284123429153845,0.00632944949567181,0.006196608261380272,15,13,not_mastered,not_mastered,True,increase
+XI-B-26,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9999874956167261,0.9999954196557692,7.924039043150088e-06,15,12,mastered,mastered,True,increase
+XI-B-27,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9874798382997623,0.9973730818974091,0.009893243597646872,15,10,mastered,mastered,True,increase
+XI-B-28,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.003266726382315449,0.999999,0.9967322736176846,16,13,not_mastered,mastered,True,increase
+XI-B-29,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.999999,0.999999,0.0,16,13,mastered,mastered,True,stable
+XI-B-31,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9998389861377799,0.999994548964301,0.00015556282652107178,16,13,mastered,mastered,True,increase
+XI-B-32,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",6.861376356624647e-05,0.00040811546557672465,0.00033950170201047815,16,13,not_mastered,not_mastered,True,increase
+XI-B-33,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9996878116806442,0.996382930683988,-0.0033048809966562676,13,13,mastered,mastered,True,decrease
+XI-B-34,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",0.9875891687019795,0.9999090636969226,0.012319894994943015,16,11,mastered,mastered,True,increase
+XI-B-35,9007,"Aturan dasar turunan (pangkat, konstanta, jumlah)",6.544436558767029e-05,0.001040704979172469,0.0009752606135847987,16,13,not_mastered,not_mastered,True,increase
+XI-A-01,9008,Aturan perkalian dan pembagian,0.02963414309566681,0.9943041313010421,0.9646699882053753,3,4,not_mastered,mastered,True,increase
+XI-A-02,9008,Aturan perkalian dan pembagian,0.010128041427048814,0.9643633541149629,0.9542353126879141,3,3,not_mastered,mastered,True,increase
+XI-A-03,9008,Aturan perkalian dan pembagian,0.00035458603641678435,0.9996524735482709,0.9992978875118541,3,4,not_mastered,mastered,True,increase
+XI-A-04,9008,Aturan perkalian dan pembagian,0.0028385485374909643,0.0058334032977702685,0.0029948547602793043,3,4,not_mastered,not_mastered,True,increase
+XI-A-05,9008,Aturan perkalian dan pembagian,0.9992889307762209,0.9951251694327048,-0.004163761343516148,3,3,mastered,mastered,True,decrease
+XI-A-06,9008,Aturan perkalian dan pembagian,0.002914190226675624,0.9983363879873084,0.9954221977606328,3,4,not_mastered,mastered,True,increase
+XI-A-07,9008,Aturan perkalian dan pembagian,0.06704910585410001,0.0037124949383644445,-0.06333661091573557,3,3,not_mastered,not_mastered,True,decrease
+XI-A-08,9008,Aturan perkalian dan pembagian,0.0003707173365665857,0.38328963535927896,0.3829189180227124,3,4,not_mastered,not_mastered,True,increase
+XI-A-09,9008,Aturan perkalian dan pembagian,0.0013043641074835688,0.9995120557136858,0.9982076916062023,3,4,not_mastered,mastered,True,increase
+XI-A-10,9008,Aturan perkalian dan pembagian,0.14809351259739378,0.003459716445777145,-0.14463379615161664,2,4,not_mastered,not_mastered,True,decrease
+XI-A-11,9008,Aturan perkalian dan pembagian,0.05307419299107253,0.11788630681018719,0.06481211381911467,3,4,not_mastered,not_mastered,True,increase
+XI-A-13,9008,Aturan perkalian dan pembagian,0.0006102933482824886,0.001879849915751556,0.0012695565674690674,3,4,not_mastered,not_mastered,True,increase
+XI-A-14,9008,Aturan perkalian dan pembagian,0.12953853525111642,0.7924283948910975,0.662889859639981,3,4,not_mastered,mastered,True,increase
+XI-A-15,9008,Aturan perkalian dan pembagian,0.07039072451283357,0.0021252665684311778,-0.06826545794440239,3,4,not_mastered,not_mastered,True,decrease
+XI-A-16,9008,Aturan perkalian dan pembagian,0.7453234092254327,0.990431284338791,0.2451078751133583,3,4,mastered,mastered,True,increase
+XI-A-17,9008,Aturan perkalian dan pembagian,0.0006917159912100423,0.018530433131450648,0.017838717140240604,3,4,not_mastered,not_mastered,True,increase
+XI-A-18,9008,Aturan perkalian dan pembagian,0.00039431846533587655,0.0008731434863304417,0.00047882502099456513,3,4,not_mastered,not_mastered,True,increase
+XI-A-19,9008,Aturan perkalian dan pembagian,0.0003548210945805146,0.9905048552886406,0.9901500341940601,2,4,not_mastered,mastered,True,increase
+XI-A-20,9008,Aturan perkalian dan pembagian,0.0058241672902496905,0.0035933429008837186,-0.002230824389365972,3,4,not_mastered,not_mastered,True,decrease
+XI-A-21,9008,Aturan perkalian dan pembagian,0.007396214554618886,0.0730736845249515,0.06567746997033261,3,4,not_mastered,not_mastered,True,increase
+XI-A-22,9008,Aturan perkalian dan pembagian,0.015864498220763537,0.008102852547221994,-0.007761645673541543,3,4,not_mastered,not_mastered,True,decrease
+XI-A-23,9008,Aturan perkalian dan pembagian,0.9885578680888258,0.9992416331523677,0.01068376506354185,3,4,mastered,mastered,True,increase
+XI-A-24,9008,Aturan perkalian dan pembagian,0.0003659143477664987,0.0005235944652355504,0.00015768011746905173,3,4,not_mastered,not_mastered,True,increase
+XI-A-25,9008,Aturan perkalian dan pembagian,0.003742854435584449,0.8815855380630421,0.8778426836274577,2,3,not_mastered,mastered,True,increase
+XI-A-26,9008,Aturan perkalian dan pembagian,0.0003668318212490103,0.9994185457561926,0.9990517139349436,3,4,not_mastered,mastered,True,increase
+XI-A-27,9008,Aturan perkalian dan pembagian,0.647632436550075,0.9940188267319519,0.3463863901818769,3,4,mastered,mastered,True,increase
+XI-A-28,9008,Aturan perkalian dan pembagian,0.0012856686164860187,0.002158116384976194,0.0008724477684901753,3,4,not_mastered,not_mastered,True,increase
+XI-A-29,9008,Aturan perkalian dan pembagian,0.9958621123856297,0.9986129559693756,0.0027508435837458878,3,4,mastered,mastered,True,increase
+XI-A-30,9008,Aturan perkalian dan pembagian,0.9988704132488919,0.9983640059342536,-0.0005064073146383574,3,4,mastered,mastered,True,decrease
+XI-A-31,9008,Aturan perkalian dan pembagian,0.05802796849577412,0.9984942801084821,0.940466311612708,2,4,not_mastered,mastered,True,increase
+XI-A-32,9008,Aturan perkalian dan pembagian,0.0035596899198751595,0.0011979304398038082,-0.0023617594800713513,3,4,not_mastered,not_mastered,True,decrease
+XI-A-33,9008,Aturan perkalian dan pembagian,0.0023623496355795566,0.9478448825164324,0.9454825328808528,3,4,not_mastered,mastered,True,increase
+XI-A-34,9008,Aturan perkalian dan pembagian,0.03264078780358725,0.9093315882045838,0.8766908004009966,3,4,not_mastered,mastered,True,increase
+XI-A-35,9008,Aturan perkalian dan pembagian,0.9991965126892823,0.9996575715692253,0.000461058879942966,3,4,mastered,mastered,True,increase
+XI-A-36,9008,Aturan perkalian dan pembagian,0.0003556768643028965,0.00047750990919936606,0.00012183304489646958,3,4,not_mastered,not_mastered,True,increase
+XI-B-01,9008,Aturan perkalian dan pembagian,0.0037687715075202764,0.010288079628094028,0.006519308120573752,3,4,not_mastered,not_mastered,True,increase
+XI-B-02,9008,Aturan perkalian dan pembagian,0.011252972568535184,0.007048301541983201,-0.004204671026551983,3,4,not_mastered,not_mastered,True,decrease
+XI-B-03,9008,Aturan perkalian dan pembagian,0.9999181470199829,0.9999166437205416,-1.503299441374395e-06,3,3,mastered,mastered,True,decrease
+XI-B-04,9008,Aturan perkalian dan pembagian,0.9858837763036694,0.9994166151573647,0.013532838853695273,3,4,mastered,mastered,True,increase
+XI-B-05,9008,Aturan perkalian dan pembagian,0.953895965310195,0.999927025626886,0.04603106031669091,3,4,mastered,mastered,True,increase
+XI-B-06,9008,Aturan perkalian dan pembagian,0.9979414970021232,0.99978142469544,0.0018399276933167563,3,4,mastered,mastered,True,increase
+XI-B-08,9008,Aturan perkalian dan pembagian,0.0003557373495874049,0.0003980011323522299,4.226378276482503e-05,3,4,not_mastered,not_mastered,True,increase
+XI-B-09,9008,Aturan perkalian dan pembagian,0.9854127137490032,0.994483160875298,0.00907044712629479,3,4,mastered,mastered,True,increase
+XI-B-10,9008,Aturan perkalian dan pembagian,0.0005407813598761202,0.02001947071495272,0.0194786893550766,3,4,not_mastered,not_mastered,True,increase
+XI-B-11,9008,Aturan perkalian dan pembagian,0.005773613794058762,0.00047783904698477987,-0.005295774747073982,3,3,not_mastered,not_mastered,True,decrease
+XI-B-12,9008,Aturan perkalian dan pembagian,0.00035786121688575296,0.00018940782724858474,-0.00016845338963716823,3,4,not_mastered,not_mastered,True,decrease
+XI-B-13,9008,Aturan perkalian dan pembagian,0.005116235868591924,0.9909279092458116,0.9858116733772198,3,4,not_mastered,mastered,True,increase
+XI-B-14,9008,Aturan perkalian dan pembagian,0.000610338610828629,0.02449413898846195,0.02388380037763332,3,4,not_mastered,not_mastered,True,increase
+XI-B-15,9008,Aturan perkalian dan pembagian,0.6633148249417,0.9836429339999151,0.32032810905821507,3,4,mastered,mastered,True,increase
+XI-B-16,9008,Aturan perkalian dan pembagian,0.0024568672916402993,0.15892845798469485,0.15647159069305455,2,4,not_mastered,not_mastered,True,increase
+XI-B-17,9008,Aturan perkalian dan pembagian,0.3528243845403737,0.2608988962396021,-0.09192548830077157,3,4,not_mastered,not_mastered,True,decrease
+XI-B-18,9008,Aturan perkalian dan pembagian,0.014237325951646729,0.10447413842980635,0.09023681247815962,3,3,not_mastered,not_mastered,True,increase
+XI-B-19,9008,Aturan perkalian dan pembagian,0.0015433140589042852,0.0011074776675897595,-0.0004358363913145257,3,4,not_mastered,not_mastered,True,decrease
+XI-B-20,9008,Aturan perkalian dan pembagian,0.008904891299127287,0.013089259394613844,0.004184368095486557,3,3,not_mastered,not_mastered,True,increase
+XI-B-21,9008,Aturan perkalian dan pembagian,0.0034131012824608585,0.008842197734267223,0.0054290964518063645,3,4,not_mastered,not_mastered,True,increase
+XI-B-22,9008,Aturan perkalian dan pembagian,0.06381139452515022,0.32198731028993055,0.25817591576478033,3,4,not_mastered,not_mastered,True,increase
+XI-B-23,9008,Aturan perkalian dan pembagian,0.019381502696139974,0.9851588309550807,0.9657773282589408,3,4,not_mastered,mastered,True,increase
+XI-B-24,9008,Aturan perkalian dan pembagian,0.9890657760554833,0.995002771761909,0.005936995706425696,3,4,mastered,mastered,True,increase
+XI-B-25,9008,Aturan perkalian dan pembagian,0.17128685627212958,0.19365061802057953,0.02236376174844995,3,4,not_mastered,not_mastered,True,increase
+XI-B-26,9008,Aturan perkalian dan pembagian,0.0037423236309050215,0.07891512068839215,0.07517279705748714,3,4,not_mastered,not_mastered,True,increase
+XI-B-27,9008,Aturan perkalian dan pembagian,0.969854351661348,0.9520477211220435,-0.017806630539304535,3,3,mastered,mastered,True,decrease
+XI-B-28,9008,Aturan perkalian dan pembagian,0.16147716209306395,0.9744368286992544,0.8129596666061905,3,3,not_mastered,mastered,True,increase
+XI-B-29,9008,Aturan perkalian dan pembagian,0.9999123579368985,0.8587331886896485,-0.14117916924724994,3,4,mastered,mastered,True,decrease
+XI-B-31,9008,Aturan perkalian dan pembagian,0.9763474727798636,0.9936387333666693,0.017291260586805746,3,4,mastered,mastered,True,increase
+XI-B-32,9008,Aturan perkalian dan pembagian,0.0697233846147442,0.007190033562915756,-0.06253335105182845,3,4,not_mastered,not_mastered,True,decrease
+XI-B-33,9008,Aturan perkalian dan pembagian,0.002178212256827402,0.07806156146056506,0.07588334920373765,3,4,not_mastered,not_mastered,True,increase
+XI-B-34,9008,Aturan perkalian dan pembagian,0.0005498040161660635,0.009907636409968314,0.00935783239380225,3,3,not_mastered,not_mastered,True,increase
+XI-B-35,9008,Aturan perkalian dan pembagian,0.7667061925875469,0.8228023970144038,0.05609620442685692,3,4,mastered,mastered,True,increase
+XI-A-01,9009,Aturan rantai,0.43086923212073003,0.7838909585382356,0.3530217264175056,5,4,not_mastered,mastered,True,increase
+XI-A-02,9009,Aturan rantai,0.010046601095224579,0.005791292884663573,-0.0042553082105610054,5,4,not_mastered,not_mastered,True,decrease
+XI-A-03,9009,Aturan rantai,0.000747388065034879,0.032405242146751057,0.031657854081716175,5,4,not_mastered,not_mastered,True,increase
+XI-A-04,9009,Aturan rantai,0.004947723209367653,0.21927748579338213,0.21432976258401448,5,4,not_mastered,not_mastered,True,increase
+XI-A-05,9009,Aturan rantai,0.9524483030310595,0.9959113161037887,0.04346301307272915,5,4,mastered,mastered,True,increase
+XI-A-06,9009,Aturan rantai,0.9759177183158483,0.9305207291290039,-0.04539698918684443,5,4,mastered,mastered,True,decrease
+XI-A-07,9009,Aturan rantai,0.9613327593001824,0.9330363345158972,-0.02829642478428518,5,2,mastered,mastered,True,decrease
+XI-A-08,9009,Aturan rantai,0.01360659939123739,0.018493970734192195,0.004887371342954805,5,4,not_mastered,not_mastered,True,increase
+XI-A-09,9009,Aturan rantai,0.40268828517057853,0.9825673880947798,0.5798791029242013,5,4,not_mastered,mastered,True,increase
+XI-A-10,9009,Aturan rantai,0.006754915712519938,0.004168533732264999,-0.0025863819802549393,5,4,not_mastered,not_mastered,True,decrease
+XI-A-11,9009,Aturan rantai,0.06191126384423752,0.10596135228489965,0.04405008844066213,5,4,not_mastered,not_mastered,True,increase
+XI-A-13,9009,Aturan rantai,0.0012239953108206711,0.09042454204643427,0.0892005467356136,4,4,not_mastered,not_mastered,True,increase
+XI-A-14,9009,Aturan rantai,0.15603111639745665,0.08808326317546983,-0.06794785322198682,5,4,not_mastered,not_mastered,True,decrease
+XI-A-15,9009,Aturan rantai,0.05452257390369579,0.0038500382237169166,-0.05067253567997887,5,4,not_mastered,not_mastered,True,decrease
+XI-A-16,9009,Aturan rantai,0.31181750761469695,0.17051014198323036,-0.1413073656314666,5,4,not_mastered,not_mastered,True,decrease
+XI-A-17,9009,Aturan rantai,0.0013707025568095062,0.01953016325077664,0.018159460693967133,5,4,not_mastered,not_mastered,True,increase
+XI-A-18,9009,Aturan rantai,0.00081530924478103,0.0011927573201780052,0.0003774480753969752,5,4,not_mastered,not_mastered,True,increase
+XI-A-19,9009,Aturan rantai,0.0007472225075478127,0.0026633339484659806,0.001916111440918168,5,4,not_mastered,not_mastered,True,increase
+XI-A-20,9009,Aturan rantai,0.009426179611693583,0.004314543478116958,-0.005111636133576625,5,4,not_mastered,not_mastered,True,decrease
+XI-A-21,9009,Aturan rantai,0.011622178311193403,0.9990465754049798,0.9874243970937864,5,4,not_mastered,mastered,True,increase
+XI-A-22,9009,Aturan rantai,0.015732098462714058,0.014047792571732724,-0.0016843058909813344,5,4,not_mastered,not_mastered,True,decrease
+XI-A-23,9009,Aturan rantai,0.943018075226217,0.997857992354137,0.054839917127920024,5,4,mastered,mastered,True,increase
+XI-A-24,9009,Aturan rantai,0.013464628939464103,0.42762454503273917,0.41415991609327507,4,4,not_mastered,not_mastered,True,increase
+XI-A-25,9009,Aturan rantai,0.0008051571122186694,0.02471760874220231,0.02391245162998364,5,4,not_mastered,not_mastered,True,increase
+XI-A-26,9009,Aturan rantai,0.0007630841208174828,0.998336633297694,0.9975735491768765,5,4,not_mastered,mastered,True,increase
+XI-A-27,9009,Aturan rantai,0.0029515419743223444,0.45126797796189166,0.4483164359875693,5,4,not_mastered,not_mastered,True,increase
+XI-A-28,9009,Aturan rantai,0.0018715381945222575,0.004129739776883067,0.0022582015823608094,5,4,not_mastered,not_mastered,True,increase
+XI-A-29,9009,Aturan rantai,0.09590424649914689,0.9957080472896912,0.8998038007905443,5,4,not_mastered,mastered,True,increase
+XI-A-30,9009,Aturan rantai,0.9974400665418068,0.9967077341745447,-0.0007323323672621118,5,4,mastered,mastered,True,decrease
+XI-A-31,9009,Aturan rantai,0.11976556962249404,0.995375623676942,0.8756100540544479,5,4,not_mastered,mastered,True,increase
+XI-A-32,9009,Aturan rantai,0.9357833209894479,0.9961867138084484,0.06040339281900042,4,3,mastered,mastered,True,increase
+XI-A-33,9009,Aturan rantai,0.0027455829237903,0.9508037182566533,0.948058135332863,5,4,not_mastered,mastered,True,increase
+XI-A-34,9009,Aturan rantai,0.04302681239368118,0.060320428145256844,0.01729361575157566,5,4,not_mastered,not_mastered,True,increase
+XI-A-35,9009,Aturan rantai,0.9999145483283883,0.9979247190901498,-0.0019898292382385385,5,4,mastered,mastered,True,decrease
+XI-A-36,9009,Aturan rantai,0.0007485777942800515,0.0006968632662816782,-5.1714527998373335e-05,5,4,not_mastered,not_mastered,True,decrease
+XI-B-01,9009,Aturan rantai,0.0923498347099733,0.011289622284189765,-0.08106021242578353,5,4,not_mastered,not_mastered,True,decrease
+XI-B-02,9009,Aturan rantai,0.23551622810332065,0.00811105628098368,-0.22740517182233697,5,4,not_mastered,not_mastered,True,decrease
+XI-B-03,9009,Aturan rantai,0.9999893354846747,0.9999655836140389,-2.3751870635857486e-05,5,4,mastered,mastered,True,decrease
+XI-B-04,9009,Aturan rantai,0.04134044879735563,0.0017714233233050334,-0.03956902547405059,5,4,not_mastered,not_mastered,True,decrease
+XI-B-05,9009,Aturan rantai,0.9999037710804914,0.9960300608826848,-0.00387371019780669,5,4,mastered,mastered,True,decrease
+XI-B-06,9009,Aturan rantai,0.8952971470649014,0.9254948694609606,0.030197722396059223,5,3,mastered,mastered,True,increase
+XI-B-08,9009,Aturan rantai,0.0007486388893898686,0.02363465044291698,0.02288601155352711,5,4,not_mastered,not_mastered,True,increase
+XI-B-09,9009,Aturan rantai,0.9999076188201697,0.9996975814059654,-0.00021003741420422273,5,4,mastered,mastered,True,decrease
+XI-B-10,9009,Aturan rantai,0.0007788395688523612,0.001091009004680814,0.0003121694358284529,5,4,not_mastered,not_mastered,True,increase
+XI-B-11,9009,Aturan rantai,0.011577845355153276,0.0006897582629322254,-0.010888087092221051,5,4,not_mastered,not_mastered,True,decrease
+XI-B-12,9009,Aturan rantai,0.0007463245899657692,0.17085202280229517,0.1701056982123294,5,4,not_mastered,not_mastered,True,increase
+XI-B-13,9009,Aturan rantai,0.008440985212950263,0.005257004060511864,-0.0031839811524383994,5,4,not_mastered,not_mastered,True,decrease
+XI-B-14,9009,Aturan rantai,0.001224024308813786,0.02465471565636653,0.023430691347552747,5,4,not_mastered,not_mastered,True,increase
+XI-B-15,9009,Aturan rantai,0.5222326339380823,0.8938494129026664,0.3716167789645841,4,4,mastered,mastered,True,increase
+XI-B-16,9009,Aturan rantai,0.013539071904706813,0.20550297042472002,0.1919638985200132,5,4,not_mastered,not_mastered,True,increase
+XI-B-17,9009,Aturan rantai,0.0189234510820104,0.024221702865067463,0.005298251783057064,5,4,not_mastered,not_mastered,True,increase
+XI-B-18,9009,Aturan rantai,0.27659984194775045,0.016460686343642107,-0.26013915560410833,5,4,not_mastered,not_mastered,True,decrease
+XI-B-19,9009,Aturan rantai,0.0023776598981945134,0.002281434223418891,-9.622567477562223e-05,5,4,not_mastered,not_mastered,True,decrease
+XI-B-20,9009,Aturan rantai,0.013959005662953761,0.3346754867957229,0.3207164811327691,5,4,not_mastered,not_mastered,True,increase
+XI-B-21,9009,Aturan rantai,0.005818901597406093,0.009831175326689322,0.0040122737292832295,4,3,not_mastered,not_mastered,True,increase
+XI-B-22,9009,Aturan rantai,0.002992667099810148,0.014444337424620611,0.011451670324810464,5,4,not_mastered,not_mastered,True,increase
+XI-B-23,9009,Aturan rantai,0.0009643277636205256,0.02321632988508661,0.022252002121466084,5,4,not_mastered,not_mastered,True,increase
+XI-B-24,9009,Aturan rantai,0.0006055749207448822,0.008692512962757803,0.008086938042012921,5,4,not_mastered,not_mastered,True,increase
+XI-B-25,9009,Aturan rantai,0.12569767006394944,0.0406319825972608,-0.08506568746668863,4,3,not_mastered,not_mastered,True,decrease
+XI-B-26,9009,Aturan rantai,0.10457862557135644,0.9792308202549393,0.8746521946835829,5,4,not_mastered,mastered,True,increase
+XI-B-27,9009,Aturan rantai,0.0012554315549155653,0.0027328887804909515,0.0014774572255753862,5,4,not_mastered,not_mastered,True,increase
+XI-B-28,9009,Aturan rantai,0.11868720189691832,0.987134995897003,0.8684477940000848,5,4,not_mastered,mastered,True,increase
+XI-B-29,9009,Aturan rantai,0.9932588409717771,0.9997548600738785,0.006496019102101402,5,4,mastered,mastered,True,increase
+XI-B-31,9009,Aturan rantai,0.025003164770700477,0.03915697057254701,0.014153805801846532,5,3,not_mastered,not_mastered,True,increase
+XI-B-32,9009,Aturan rantai,0.05425597818833155,0.008105186947525628,-0.04615079124080592,5,4,not_mastered,not_mastered,True,decrease
+XI-B-33,9009,Aturan rantai,0.0025681219912744926,0.005728367602721551,0.0031602456114470587,5,4,not_mastered,not_mastered,True,increase
+XI-B-34,9009,Aturan rantai,0.0007904327452410648,0.2014087743174472,0.20061834157220612,5,3,not_mastered,not_mastered,True,increase
+XI-B-35,9009,Aturan rantai,0.6357450028488778,0.10328414576200229,-0.5324608570868755,5,4,mastered,not_mastered,True,decrease
+XI-A-01,9010,Turunan fungsi trigonometri,0.004860322159401539,0.9569128998725149,0.9520525777131134,3,3,not_mastered,mastered,True,increase
+XI-A-02,9010,Turunan fungsi trigonometri,0.15563353435494987,0.9901692755030269,0.834535741148077,3,3,not_mastered,mastered,True,increase
+XI-A-03,9010,Turunan fungsi trigonometri,9.338848575524204e-05,0.974050846073252,0.9739574575874967,3,3,not_mastered,mastered,True,increase
+XI-A-04,9010,Turunan fungsi trigonometri,0.0010503449576779711,0.04356128410986718,0.0425109391521892,3,3,not_mastered,not_mastered,True,increase
+XI-A-05,9010,Turunan fungsi trigonometri,0.05391601390587189,0.9944256630627741,0.9405096491569023,3,3,not_mastered,mastered,True,increase
+XI-A-06,9010,Turunan fungsi trigonometri,0.0027693358733100505,0.41475644672972484,0.41198711085641476,3,3,not_mastered,not_mastered,True,increase
+XI-A-07,9010,Turunan fungsi trigonometri,0.0015433229477509365,0.929042475983586,0.9274991530358351,3,3,not_mastered,mastered,True,increase
+XI-A-08,9010,Turunan fungsi trigonometri,9.882619332542904e-05,0.11423643057812014,0.1141376043847947,3,3,not_mastered,not_mastered,True,increase
+XI-A-09,9010,Turunan fungsi trigonometri,0.17236518159969466,0.9957641024401824,0.8233989208404877,3,3,not_mastered,mastered,True,increase
+XI-A-10,9010,Turunan fungsi trigonometri,0.001599226406592197,0.0010529365449958592,-0.0005462898615963378,3,3,not_mastered,not_mastered,True,decrease
+XI-A-11,9010,Turunan fungsi trigonometri,0.03517683407382284,0.053607523142628136,0.018430689068805295,3,3,not_mastered,not_mastered,True,increase
+XI-A-13,9010,Turunan fungsi trigonometri,0.00017515321244580465,0.00045195031631536,0.00027679710386955533,3,3,not_mastered,not_mastered,True,increase
+XI-A-14,9010,Turunan fungsi trigonometri,0.09647002807621217,0.011303421833012297,-0.08516660624319988,3,3,not_mastered,not_mastered,True,decrease
+XI-A-15,9010,Turunan fungsi trigonometri,0.0005233563778535468,0.018305129882578736,0.01778177350472519,3,3,not_mastered,not_mastered,True,increase
+XI-A-16,9010,Turunan fungsi trigonometri,0.44064151222799125,0.14606811285624777,-0.2945733993717435,3,3,not_mastered,not_mastered,True,decrease
+XI-A-17,9010,Turunan fungsi trigonometri,0.0002023245238411858,0.00856470907708658,0.008362384553245394,3,3,not_mastered,not_mastered,True,increase
+XI-A-18,9010,Turunan fungsi trigonometri,0.00011752570260531189,0.0014319139756529765,0.0013143882730476647,3,2,not_mastered,not_mastered,True,increase
+XI-A-19,9010,Turunan fungsi trigonometri,9.352228836674455e-05,0.9746996235201473,0.9746061012317805,3,3,not_mastered,mastered,True,increase
+XI-A-20,9010,Turunan fungsi trigonometri,0.0023554709029738633,0.0010998018274147076,-0.0012556690755591558,3,3,not_mastered,not_mastered,True,decrease
+XI-A-21,9010,Turunan fungsi trigonometri,0.003252886076657225,0.9800938652592095,0.9768409791825523,3,3,not_mastered,mastered,True,increase
+XI-A-22,9010,Turunan fungsi trigonometri,0.0711435474371977,0.16771396399040833,0.09657041655321064,3,3,not_mastered,not_mastered,True,increase
+XI-A-23,9010,Turunan fungsi trigonometri,0.05767492364966492,0.7874714625323669,0.7297965388827019,3,3,not_mastered,mastered,True,increase
+XI-A-24,9010,Turunan fungsi trigonometri,9.73251711223946e-05,0.01477806990709795,0.014680744735975556,3,3,not_mastered,not_mastered,True,increase
+XI-A-25,9010,Turunan fungsi trigonometri,0.006233883636202734,0.9506043279943903,0.9443704443581876,3,3,not_mastered,mastered,True,increase
+XI-A-26,9010,Turunan fungsi trigonometri,0.003645513454528471,0.9786892473169899,0.9750437338624615,3,2,not_mastered,mastered,True,increase
+XI-A-27,9010,Turunan fungsi trigonometri,0.03658120596823211,0.9705041483155479,0.9339229423473158,3,3,not_mastered,mastered,True,increase
+XI-A-28,9010,Turunan fungsi trigonometri,0.38964098361999355,0.0314488137398279,-0.35819216988016567,3,3,not_mastered,not_mastered,True,decrease
+XI-A-29,9010,Turunan fungsi trigonometri,0.07725957307314166,0.010240706489642959,-0.0670188665834987,3,3,not_mastered,not_mastered,True,decrease
+XI-A-30,9010,Turunan fungsi trigonometri,0.9983059686898896,0.9996381181317784,0.0013321494418887525,3,3,mastered,mastered,True,increase
+XI-A-31,9010,Turunan fungsi trigonometri,0.10689042631060353,0.009305006160520532,-0.097585420150083,3,3,not_mastered,not_mastered,True,decrease
+XI-A-32,9010,Turunan fungsi trigonometri,0.757951769796382,0.9765938687577222,0.21864209896134024,3,3,mastered,mastered,True,increase
+XI-A-33,9010,Turunan fungsi trigonometri,0.033074653105910984,0.012871502190096418,-0.020203150915814566,3,3,not_mastered,not_mastered,True,decrease
+XI-A-34,9010,Turunan fungsi trigonometri,0.01612148803019564,0.3448148450474221,0.32869335701722646,3,3,not_mastered,not_mastered,True,increase
+XI-A-35,9010,Turunan fungsi trigonometri,0.998868549767475,0.9999414094721015,0.0010728597046265609,3,3,mastered,mastered,True,increase
+XI-A-36,9010,Turunan fungsi trigonometri,9.373943960909556e-05,0.00010806590621048604,1.4326466601390471e-05,3,3,not_mastered,not_mastered,True,increase
+XI-B-01,9010,Turunan fungsi trigonometri,0.040574604187595925,0.02527539244914152,-0.015299211738454405,3,2,not_mastered,not_mastered,True,decrease
+XI-B-02,9010,Turunan fungsi trigonometri,0.0026757039047346364,0.0026722306243606568,-3.4732803739796064e-06,3,3,not_mastered,not_mastered,True,decrease
+XI-B-03,9010,Turunan fungsi trigonometri,0.9999200731642874,0.9996337986231303,-0.0002862745411571499,3,2,mastered,mastered,True,decrease
+XI-B-04,9010,Turunan fungsi trigonometri,0.025705530956166588,0.95758493061441,0.9318793996582434,3,3,not_mastered,mastered,True,increase
+XI-B-05,9010,Turunan fungsi trigonometri,0.9986852579807168,0.9995412229325854,0.0008559649518685708,3,3,mastered,mastered,True,increase
+XI-B-06,9010,Turunan fungsi trigonometri,0.9174044545807574,0.9850221528605374,0.06761769827978004,3,2,mastered,mastered,True,increase
+XI-B-08,9010,Turunan fungsi trigonometri,0.0005433786800807157,0.0025206875945634312,0.001977308914482716,2,3,not_mastered,not_mastered,True,increase
+XI-B-09,9010,Turunan fungsi trigonometri,0.998750940369005,0.9638927021640535,-0.034858238204951486,3,3,mastered,mastered,True,decrease
+XI-B-10,9010,Turunan fungsi trigonometri,0.005940427924131724,0.005649416391273589,-0.0002910115328581351,3,3,not_mastered,not_mastered,True,decrease
+XI-B-11,9010,Turunan fungsi trigonometri,0.0028477771665750247,0.003235554625194638,0.0003877774586196134,3,3,not_mastered,not_mastered,True,increase
+XI-B-12,9010,Turunan fungsi trigonometri,9.452970186760122e-05,0.036610416878571375,0.036515887176703773,3,3,not_mastered,not_mastered,True,increase
+XI-B-13,9010,Turunan fungsi trigonometri,0.0020837232520445484,0.21849220103527978,0.21640847778323521,3,3,not_mastered,not_mastered,True,increase
+XI-B-14,9010,Turunan fungsi trigonometri,0.0001751800431395652,0.00981157080995889,0.009636390766819325,3,3,not_mastered,not_mastered,True,increase
+XI-B-15,9010,Turunan fungsi trigonometri,0.01538576128442213,0.4167480844756444,0.4013623231912222,2,3,not_mastered,not_mastered,True,increase
+XI-B-16,9010,Turunan fungsi trigonometri,9.411455884749526e-05,0.0009497166076543159,0.0008556020488068207,3,3,not_mastered,not_mastered,True,increase
+XI-B-17,9010,Turunan fungsi trigonometri,0.005877246241846246,0.6332425963187238,0.6273653500768775,3,3,not_mastered,mastered,True,increase
+XI-B-18,9010,Turunan fungsi trigonometri,0.0031398216151210436,0.005851030143806113,0.0027112085286850694,3,3,not_mastered,not_mastered,True,increase
+XI-B-19,9010,Turunan fungsi trigonometri,0.0034574731483783,0.10458864488836353,0.10113117173998523,3,2,not_mastered,not_mastered,True,increase
+XI-B-20,9010,Turunan fungsi trigonometri,0.003992719740715363,0.08203744802149338,0.07804472828077802,3,2,not_mastered,not_mastered,True,increase
+XI-B-21,9010,Turunan fungsi trigonometri,0.0012896634678155492,0.0031472966523880984,0.0018576331845725491,2,2,not_mastered,not_mastered,True,increase
+XI-B-22,9010,Turunan fungsi trigonometri,0.0005425738930788146,0.09051847927188843,0.08997590537880962,3,3,not_mastered,not_mastered,True,increase
+XI-B-23,9010,Turunan fungsi trigonometri,0.0001292304153178074,0.9582627712607961,0.9581335408454783,3,3,not_mastered,mastered,True,increase
+XI-B-24,9010,Turunan fungsi trigonometri,0.5704852151533181,0.011270486071917774,-0.5592147290814002,3,3,mastered,not_mastered,True,decrease
+XI-B-25,9010,Turunan fungsi trigonometri,0.0013761793147552752,0.0034748527550898783,0.002098673440334603,3,3,not_mastered,not_mastered,True,increase
+XI-B-26,9010,Turunan fungsi trigonometri,0.04224753406076125,0.008393744768820693,-0.033853789291940564,3,3,not_mastered,not_mastered,True,decrease
+XI-B-27,9010,Turunan fungsi trigonometri,0.011051432123777368,0.19568131313257253,0.18462988100879515,3,3,not_mastered,not_mastered,True,increase
+XI-B-28,9010,Turunan fungsi trigonometri,0.0013084501845797417,0.0026325621132335005,0.0013241119286537587,3,3,not_mastered,not_mastered,True,increase
+XI-B-29,9010,Turunan fungsi trigonometri,0.9884230801674612,0.9776811932595539,-0.010741886907907228,2,3,mastered,mastered,True,decrease
+XI-B-31,9010,Turunan fungsi trigonometri,0.013075604427740285,0.35008194466937703,0.3370063402416367,3,3,not_mastered,not_mastered,True,increase
+XI-B-32,9010,Turunan fungsi trigonometri,0.0006126863161152224,0.002443985198769231,0.0018312988826540088,3,3,not_mastered,not_mastered,True,increase
+XI-B-33,9010,Turunan fungsi trigonometri,0.030405280834756007,0.04099277966132016,0.010587498826564151,3,3,not_mastered,not_mastered,True,increase
+XI-B-34,9010,Turunan fungsi trigonometri,0.006051458103837597,0.014239144005230742,0.008187685901393144,3,3,not_mastered,not_mastered,True,increase
+XI-B-35,9010,Turunan fungsi trigonometri,0.007955651845656588,0.012445230489484729,0.004489578643828141,3,3,not_mastered,not_mastered,True,increase
+XI-A-01,9011,Persamaan garis singgung kurva,0.1946559559520094,0.7313775648216887,0.5367216088696793,3,3,not_mastered,mastered,True,increase
+XI-A-02,9011,Persamaan garis singgung kurva,0.08692625529341108,0.33758487681664806,0.250658621523237,3,3,not_mastered,not_mastered,True,increase
+XI-A-03,9011,Persamaan garis singgung kurva,0.005024958987633891,0.007608588157284751,0.00258362916965086,3,3,not_mastered,not_mastered,True,increase
+XI-A-04,9011,Persamaan garis singgung kurva,0.029759356677640035,0.05514407101573682,0.025384714338096782,3,3,not_mastered,not_mastered,True,increase
+XI-A-05,9011,Persamaan garis singgung kurva,0.9414914864767041,0.9810559060981663,0.03956441962146218,3,3,mastered,mastered,True,increase
+XI-A-06,9011,Persamaan garis singgung kurva,0.729285295355258,0.9982798860109494,0.2689945906556914,3,3,mastered,mastered,True,increase
+XI-A-07,9011,Persamaan garis singgung kurva,0.001955309988876508,0.9876779018253927,0.9857225918365162,3,3,not_mastered,mastered,True,increase
+XI-A-08,9011,Persamaan garis singgung kurva,0.005217766516662385,0.14499238635006334,0.13977461983340095,3,3,not_mastered,not_mastered,True,increase
+XI-A-09,9011,Persamaan garis singgung kurva,0.04421223359973485,0.005440065068883415,-0.038772168530851435,3,3,not_mastered,not_mastered,True,decrease
+XI-A-10,9011,Persamaan garis singgung kurva,0.03919353738215485,0.033394431026678106,-0.005799106355476744,3,3,not_mastered,not_mastered,True,decrease
+XI-A-11,9011,Persamaan garis singgung kurva,0.30418700625544487,0.47605192668050594,0.17186492042506107,3,3,not_mastered,not_mastered,True,increase
+XI-A-13,9011,Persamaan garis singgung kurva,0.008019415012683894,0.01989460970172373,0.011875194689039834,3,3,not_mastered,not_mastered,True,increase
+XI-A-14,9011,Persamaan garis singgung kurva,0.48570067035930076,0.4135489859023058,-0.07215168445699494,3,3,not_mastered,not_mastered,True,decrease
+XI-A-15,9011,Persamaan garis singgung kurva,0.01962341785634416,0.0035279095578867083,-0.01609550829845745,3,3,not_mastered,not_mastered,True,decrease
+XI-A-16,9011,Persamaan garis singgung kurva,0.9292958681287551,0.9876731731492188,0.05837730502046368,2,3,mastered,mastered,True,increase
+XI-A-17,9011,Persamaan garis singgung kurva,0.008889300817387771,0.13865456607263582,0.12976526525524806,3,3,not_mastered,not_mastered,True,increase
+XI-A-18,9011,Persamaan garis singgung kurva,0.005155400546022972,0.01034858191887362,0.005193181372850649,3,3,not_mastered,not_mastered,True,increase
+XI-A-19,9011,Persamaan garis singgung kurva,0.005026148693621054,0.9936679223736156,0.9886417736799945,3,3,not_mastered,mastered,True,increase
+XI-A-20,9011,Persamaan garis singgung kurva,0.054166285306178286,0.03443267814300517,-0.019733607163173114,3,3,not_mastered,not_mastered,True,decrease
+XI-A-21,9011,Persamaan garis singgung kurva,0.06685692818622166,0.9633106478844402,0.8964537196982185,3,2,not_mastered,mastered,True,increase
+XI-A-22,9011,Persamaan garis singgung kurva,0.6905978868984582,0.9818793478465118,0.2912814609480535,3,2,mastered,mastered,True,increase
+XI-A-23,9011,Persamaan garis singgung kurva,0.9979282788380757,0.9995382705370165,0.001609991698940827,3,3,mastered,mastered,True,increase
+XI-A-24,9011,Persamaan garis singgung kurva,0.0051633988464478715,0.9385197657722364,0.9333563669257885,3,3,not_mastered,mastered,True,increase
+XI-A-25,9011,Persamaan garis singgung kurva,0.0007685169530184965,0.006192878548081015,0.005424361595062519,3,3,not_mastered,not_mastered,True,increase
+XI-A-26,9011,Persamaan garis singgung kurva,0.005174555687016524,0.004841994662585362,-0.00033256102443116227,3,3,not_mastered,not_mastered,True,decrease
+XI-A-27,9011,Persamaan garis singgung kurva,0.2178750368991526,0.9957961825485957,0.777921145649443,2,3,not_mastered,mastered,True,increase
+XI-A-28,9011,Persamaan garis singgung kurva,0.9610547965312681,0.9826710120293831,0.021616215498114988,3,3,mastered,mastered,True,increase
+XI-A-29,9011,Persamaan garis singgung kurva,0.0061177384579861,0.33975347824765206,0.333635739789666,3,3,not_mastered,not_mastered,True,increase
+XI-A-30,9011,Persamaan garis singgung kurva,0.018644657238236204,0.527005014916285,0.5083603576780489,3,3,not_mastered,mastered,True,increase
+XI-A-31,9011,Persamaan garis singgung kurva,0.992846544453301,0.9968559324951363,0.00400938804183526,3,3,mastered,mastered,True,increase
+XI-A-32,9011,Persamaan garis singgung kurva,0.003708170875750235,0.9941657979635843,0.990457627087834,3,3,not_mastered,mastered,True,increase
+XI-A-33,9011,Persamaan garis singgung kurva,0.04724044441217948,0.9972028609997428,0.9499624165875633,3,3,not_mastered,mastered,True,increase
+XI-A-34,9011,Persamaan garis singgung kurva,0.20679833795505503,0.4398043837819481,0.23300604582689305,3,3,not_mastered,not_mastered,True,increase
+XI-A-35,9011,Persamaan garis singgung kurva,0.9976195956743569,0.9996258774794536,0.0020062818050967657,3,3,mastered,mastered,True,increase
+XI-A-36,9011,Persamaan garis singgung kurva,0.0050356791953581285,0.006095118286156267,0.0010594390907981387,3,3,not_mastered,not_mastered,True,increase
+XI-B-01,9011,Persamaan garis singgung kurva,0.03773869132290025,0.08497515399345582,0.04723646267055556,3,3,not_mastered,not_mastered,True,increase
+XI-B-02,9011,Persamaan garis singgung kurva,0.0923908306435457,0.061417996154549875,-0.03097283448899582,3,3,not_mastered,not_mastered,True,decrease
+XI-B-03,9011,Persamaan garis singgung kurva,0.9996702687997365,0.9997390277482997,6.875894856317455e-05,3,3,mastered,mastered,True,increase
+XI-B-04,9011,Persamaan garis singgung kurva,0.014337386992334902,0.14343747145086289,0.129100084458528,2,3,not_mastered,not_mastered,True,increase
+XI-B-05,9011,Persamaan garis singgung kurva,0.40445583512662153,0.027384777692666354,-0.3770710574339552,3,3,not_mastered,not_mastered,True,decrease
+XI-B-06,9011,Persamaan garis singgung kurva,0.17702895701783672,0.1832719208389944,0.006242963821157688,3,3,not_mastered,not_mastered,True,increase
+XI-B-08,9011,Persamaan garis singgung kurva,0.005039196714595162,0.005261383820616134,0.00022218710602097194,3,3,not_mastered,not_mastered,True,increase
+XI-B-09,9011,Persamaan garis singgung kurva,0.9533308272148537,0.02487002692301964,-0.9284608002918341,3,3,mastered,not_mastered,True,decrease
+XI-B-10,9011,Persamaan garis singgung kurva,0.0007458031003307298,0.0007717905570418374,2.598745671110762e-05,3,3,not_mastered,not_mastered,True,increase
+XI-B-11,9011,Persamaan garis singgung kurva,0.005813624126410708,0.006182305469796765,0.0003686813433860566,3,3,not_mastered,not_mastered,True,increase
+XI-B-12,9011,Persamaan garis singgung kurva,0.005099434978971511,0.010458479226755777,0.005359044247784266,3,3,not_mastered,not_mastered,True,increase
+XI-B-13,9011,Persamaan garis singgung kurva,0.048668881472520326,0.39304505128933176,0.3443761698168114,3,2,not_mastered,not_mastered,True,increase
+XI-B-14,9011,Persamaan garis singgung kurva,0.00802111682972927,0.16211503078948653,0.15409391395975724,2,3,not_mastered,not_mastered,True,increase
+XI-B-15,9011,Persamaan garis singgung kurva,0.26122443041741983,0.9372210875398033,0.6759966571223834,3,3,not_mastered,mastered,True,increase
+XI-B-16,9011,Persamaan garis singgung kurva,0.0051923039713643645,0.047559012439520654,0.04236670846815629,3,3,not_mastered,not_mastered,True,increase
+XI-B-17,9011,Persamaan garis singgung kurva,0.10279328741780637,0.002801690135381099,-0.09999159728242527,3,3,not_mastered,not_mastered,True,decrease
+XI-B-18,9011,Persamaan garis singgung kurva,0.11121244125055413,0.11946640504407663,0.0082539637935225,3,3,not_mastered,not_mastered,True,increase
+XI-B-19,9011,Persamaan garis singgung kurva,0.03023548416050162,0.21644764398534017,0.18621215982483855,3,2,not_mastered,not_mastered,True,increase
+XI-B-20,9011,Persamaan garis singgung kurva,0.0765703293607114,0.09533448341154263,0.018764154050831233,3,3,not_mastered,not_mastered,True,increase
+XI-B-21,9011,Persamaan garis singgung kurva,0.034572007747800976,0.07276348076214145,0.03819147301434048,3,3,not_mastered,not_mastered,True,increase
+XI-B-22,9011,Persamaan garis singgung kurva,0.018339603095895184,0.11539079130449954,0.09705118820860437,3,3,not_mastered,not_mastered,True,increase
+XI-B-23,9011,Persamaan garis singgung kurva,0.006371166335672546,0.005898500706114661,-0.0004726656295578856,3,3,not_mastered,not_mastered,True,decrease
+XI-B-24,9011,Persamaan garis singgung kurva,0.07095976393404808,0.7841198863282074,0.7131601223941593,3,3,not_mastered,mastered,True,increase
+XI-B-25,9011,Persamaan garis singgung kurva,0.04679522342988854,0.057220140258656474,0.010424916828767936,3,3,not_mastered,not_mastered,True,increase
+XI-B-26,9011,Persamaan garis singgung kurva,0.9845666563334208,0.9401197757611637,-0.0444468805722571,3,2,mastered,mastered,True,decrease
+XI-B-27,9011,Persamaan garis singgung kurva,0.03207179741066159,0.07334833643761228,0.04127653902695069,3,3,not_mastered,not_mastered,True,increase
+XI-B-28,9011,Persamaan garis singgung kurva,0.04420035608189528,0.7802251331945955,0.7360247771127002,3,3,not_mastered,mastered,True,increase
+XI-B-29,9011,Persamaan garis singgung kurva,0.9933757848244948,0.9983871783668901,0.005011393542395215,3,3,mastered,mastered,True,increase
+XI-B-31,9011,Persamaan garis singgung kurva,0.0013368262638914514,0.2075582752999941,0.20622144903610265,3,3,not_mastered,not_mastered,True,increase
+XI-B-32,9011,Persamaan garis singgung kurva,0.01997943633034613,0.061407033642839864,0.041427597312493736,3,3,not_mastered,not_mastered,True,increase
+XI-B-33,9011,Persamaan garis singgung kurva,0.01647492071738233,0.7152089260221528,0.6987340053047705,2,3,not_mastered,mastered,True,increase
+XI-B-34,9011,Persamaan garis singgung kurva,0.021152394052417478,0.9753922269391915,0.954239832886774,3,3,not_mastered,mastered,True,increase
+XI-B-35,9011,Persamaan garis singgung kurva,0.35012600257983834,0.45090701962116686,0.10078101704132852,3,3,not_mastered,not_mastered,True,increase
+XI-A-01,9012,Fungsi naik/turun dan titik stasioner,0.07987231122240554,0.9967071854428566,0.9168348742204511,5,5,not_mastered,mastered,True,increase
+XI-A-02,9012,Fungsi naik/turun dan titik stasioner,0.022754701543159665,0.9984311144631199,0.9756764129199603,4,5,not_mastered,mastered,True,increase
+XI-A-03,9012,Fungsi naik/turun dan titik stasioner,0.0003439972363295576,0.9876738742417441,0.9873298770054145,5,5,not_mastered,mastered,True,increase
+XI-A-04,9012,Fungsi naik/turun dan titik stasioner,0.004544962232761044,0.055809281368414454,0.05126431913565341,5,5,not_mastered,not_mastered,True,increase
+XI-A-05,9012,Fungsi naik/turun dan titik stasioner,0.9999792693325114,0.9997056195815766,-0.00027364975093480126,5,5,mastered,mastered,True,decrease
+XI-A-06,9012,Fungsi naik/turun dan titik stasioner,0.005821490143895924,0.9999518471074869,0.994130356963591,5,5,not_mastered,mastered,True,increase
+XI-A-07,9012,Fungsi naik/turun dan titik stasioner,0.13148273742173025,0.008054424679826134,-0.12342831274190412,5,5,not_mastered,not_mastered,True,decrease
+XI-A-08,9012,Fungsi naik/turun dan titik stasioner,0.00036328078791953984,0.2142655002121386,0.21390221942421908,4,5,not_mastered,not_mastered,True,increase
+XI-A-09,9012,Fungsi naik/turun dan titik stasioner,0.0021353968863108033,0.9546493980129211,0.9525140011266103,5,5,not_mastered,mastered,True,increase
+XI-A-10,9012,Fungsi naik/turun dan titik stasioner,0.007037753876531638,0.0010620397155400754,-0.005975714160991562,5,4,not_mastered,not_mastered,True,decrease
+XI-A-11,9012,Fungsi naik/turun dan titik stasioner,0.17248523323188625,0.7444139064885781,0.5719286732566918,3,5,not_mastered,mastered,True,increase
+XI-A-13,9012,Fungsi naik/turun dan titik stasioner,0.0006748570480783342,0.0004925584007776133,-0.00018229864730072095,5,5,not_mastered,not_mastered,True,decrease
+XI-A-14,9012,Fungsi naik/turun dan titik stasioner,0.38245774193438076,0.06001805098290501,-0.32243969095147573,5,5,not_mastered,not_mastered,True,decrease
+XI-A-15,9012,Fungsi naik/turun dan titik stasioner,0.00255582397740179,0.0035459164707662438,0.0009900924933644536,5,5,not_mastered,not_mastered,True,increase
+XI-A-16,9012,Fungsi naik/turun dan titik stasioner,0.00234936142426245,0.0083020508866419,0.00595268946237945,5,4,not_mastered,not_mastered,True,increase
+XI-A-17,9012,Fungsi naik/turun dan titik stasioner,0.0007853339612835137,0.011003877223891817,0.010218543262608303,5,5,not_mastered,not_mastered,True,increase
+XI-A-18,9012,Fungsi naik/turun dan titik stasioner,0.0004424096064817183,0.005017041413213991,0.004574631806732272,5,5,not_mastered,not_mastered,True,increase
+XI-A-19,9012,Fungsi naik/turun dan titik stasioner,0.00034399245626564175,0.9996736946410977,0.9993297021848321,5,5,not_mastered,mastered,True,increase
+XI-A-20,9012,Fungsi naik/turun dan titik stasioner,0.011053781128070508,0.0011040212576955296,-0.009949759870374978,5,4,not_mastered,not_mastered,True,decrease
+XI-A-21,9012,Fungsi naik/turun dan titik stasioner,0.014886074267737278,0.9923349002516166,0.9774488259838794,5,5,not_mastered,mastered,True,increase
+XI-A-22,9012,Fungsi naik/turun dan titik stasioner,0.3343289105686813,0.9950193685382442,0.6606904579695629,5,5,not_mastered,mastered,True,increase
+XI-A-23,9012,Fungsi naik/turun dan titik stasioner,0.9991318060661949,0.9888335920522136,-0.010298214013981344,5,5,mastered,mastered,True,decrease
+XI-A-24,9012,Fungsi naik/turun dan titik stasioner,0.00035769359692803984,0.0007756122499472263,0.00041791865301918645,5,5,not_mastered,not_mastered,True,increase
+XI-A-25,9012,Fungsi naik/turun dan titik stasioner,0.0006417146010382054,0.9530235564298066,0.9523818418287684,5,5,not_mastered,mastered,True,increase
+XI-A-26,9012,Fungsi naik/turun dan titik stasioner,0.0003588152198605024,0.010163593796173018,0.009804778576312515,4,5,not_mastered,not_mastered,True,increase
+XI-A-27,9012,Fungsi naik/turun dan titik stasioner,0.918765840039077,0.12726748195893883,-0.7914983580801382,5,5,mastered,not_mastered,True,decrease
+XI-A-28,9012,Fungsi naik/turun dan titik stasioner,0.002148538134922864,0.9615293392049575,0.9593808010700347,5,5,not_mastered,mastered,True,increase
+XI-A-29,9012,Fungsi naik/turun dan titik stasioner,0.9819041577708636,0.9965058537548541,0.014601695983990526,5,5,mastered,mastered,True,increase
+XI-A-30,9012,Fungsi naik/turun dan titik stasioner,0.9940444388512377,0.9964361167057938,0.0023916778545560735,5,5,mastered,mastered,True,increase
+XI-A-31,9012,Fungsi naik/turun dan titik stasioner,0.9822797592943777,0.987799801254144,0.0055200419597662975,5,5,mastered,mastered,True,increase
+XI-A-32,9012,Fungsi naik/turun dan titik stasioner,0.005436219023225211,0.38342864787089737,0.37799242884767215,5,5,not_mastered,not_mastered,True,increase
+XI-A-33,9012,Fungsi naik/turun dan titik stasioner,0.004330254628054097,0.9993200273459474,0.9949897727178932,5,4,not_mastered,mastered,True,increase
+XI-A-34,9012,Fungsi naik/turun dan titik stasioner,0.08942150571745398,0.06761493867555474,-0.021806567041899247,5,5,not_mastered,not_mastered,True,decrease
+XI-A-35,9012,Fungsi naik/turun dan titik stasioner,0.996275206274472,0.9998589904032349,0.0035837841287629235,5,5,mastered,mastered,True,increase
+XI-A-36,9012,Fungsi naik/turun dan titik stasioner,0.00034484572208828205,9.067266454613796e-05,-0.0002541730575421441,5,5,not_mastered,not_mastered,True,decrease
+XI-B-01,9012,Fungsi naik/turun dan titik stasioner,0.006453323438971563,0.10211736661902625,0.09566404318005468,5,5,not_mastered,not_mastered,True,increase
+XI-B-02,9012,Fungsi naik/turun dan titik stasioner,0.024830232221234275,0.002648788134452091,-0.022181444086782184,5,5,not_mastered,not_mastered,True,decrease
+XI-B-03,9012,Fungsi naik/turun dan titik stasioner,0.9997018027587425,0.9999968062743547,0.00029500351561217997,4,5,mastered,mastered,True,increase
+XI-B-04,9012,Fungsi naik/turun dan titik stasioner,0.09610306220248888,0.9495637619168564,0.8534606997143676,4,5,not_mastered,mastered,True,increase
+XI-B-05,9012,Fungsi naik/turun dan titik stasioner,0.003269794071804089,0.9986609785960753,0.9953911845242712,5,5,not_mastered,mastered,True,increase
+XI-B-06,9012,Fungsi naik/turun dan titik stasioner,0.9882052010206782,0.9829468395771552,-0.005258361443522985,5,5,mastered,mastered,True,decrease
+XI-B-08,9012,Fungsi naik/turun dan titik stasioner,0.00034538762877346825,7.213783904822153e-05,-0.0002732497897252467,5,5,not_mastered,not_mastered,True,decrease
+XI-B-09,9012,Fungsi naik/turun dan titik stasioner,0.050535679154274885,0.9626428382771213,0.9121071591228463,5,4,not_mastered,mastered,True,increase
+XI-B-10,9012,Fungsi naik/turun dan titik stasioner,0.0007424995385728998,0.000757021703313014,1.4522164740114231e-05,4,5,not_mastered,not_mastered,True,increase
+XI-B-11,9012,Fungsi naik/turun dan titik stasioner,0.002301914073461488,9.070607501025622e-05,-0.002211207998451232,5,5,not_mastered,not_mastered,True,decrease
+XI-B-12,9012,Fungsi naik/turun dan titik stasioner,0.000344138643623205,0.00022662091848841195,-0.00011751772513479304,5,5,not_mastered,not_mastered,True,decrease
+XI-B-13,9012,Fungsi naik/turun dan titik stasioner,0.00942618675825566,0.21218124058022175,0.2027550538219661,5,5,not_mastered,not_mastered,True,increase
+XI-B-14,9012,Fungsi naik/turun dan titik stasioner,0.0006749659881612865,0.01180012226259108,0.011125156274429794,5,5,not_mastered,not_mastered,True,increase
+XI-B-15,9012,Fungsi naik/turun dan titik stasioner,0.12822310456861435,0.03722166529549241,-0.09100143927312195,5,5,not_mastered,not_mastered,True,decrease
+XI-B-16,9012,Fungsi naik/turun dan titik stasioner,0.0003605948238484751,0.0018152234788587278,0.0014546286550102525,5,5,not_mastered,not_mastered,True,increase
+XI-B-17,9012,Fungsi naik/turun dan titik stasioner,0.029008216376549746,0.004786551642359102,-0.024221664734190643,5,5,not_mastered,not_mastered,True,decrease
+XI-B-18,9012,Fungsi naik/turun dan titik stasioner,0.033120475424537,0.007283861605646645,-0.025836613818890353,5,5,not_mastered,not_mastered,True,decrease
+XI-B-19,9012,Fungsi naik/turun dan titik stasioner,0.0024293063142720814,0.002604426310325525,0.00017511999605344334,5,5,not_mastered,not_mastered,True,increase
+XI-B-20,9012,Fungsi naik/turun dan titik stasioner,0.018676385192205477,0.005435446803766182,-0.013240938388439295,4,5,not_mastered,not_mastered,True,decrease
+XI-B-21,9012,Fungsi naik/turun dan titik stasioner,0.0057349687801700015,0.003359733931248613,-0.0023752348489213884,5,5,not_mastered,not_mastered,True,decrease
+XI-B-22,9012,Fungsi naik/turun dan titik stasioner,0.002254241087703273,0.15482052997636903,0.15256628888866575,5,5,not_mastered,not_mastered,True,increase
+XI-B-23,9012,Fungsi naik/turun dan titik stasioner,0.0004856633942486889,0.014080474814534255,0.013594811420285567,5,5,not_mastered,not_mastered,True,increase
+XI-B-24,9012,Fungsi naik/turun dan titik stasioner,0.0020539264672919558,0.9544209161999917,0.9523669897326997,5,5,not_mastered,mastered,True,increase
+XI-B-25,9012,Fungsi naik/turun dan titik stasioner,0.008869144523955487,0.060043806160857166,0.05117466163690168,5,5,not_mastered,not_mastered,True,increase
+XI-B-26,9012,Fungsi naik/turun dan titik stasioner,0.05784721827502899,0.0073916827453452665,-0.05045553552968372,4,5,not_mastered,not_mastered,True,decrease
+XI-B-27,9012,Fungsi naik/turun dan titik stasioner,0.06436456454576395,0.0034012301956411516,-0.06096333435012279,4,5,not_mastered,not_mastered,True,decrease
+XI-B-28,9012,Fungsi naik/turun dan titik stasioner,0.00813578476694927,0.26980418842170745,0.2616684036547582,5,5,not_mastered,not_mastered,True,increase
+XI-B-29,9012,Fungsi naik/turun dan titik stasioner,0.9999640938860446,0.9958560820005311,-0.004108011885513463,5,5,mastered,mastered,True,decrease
+XI-B-31,9012,Fungsi naik/turun dan titik stasioner,0.0017339162633906212,0.5715678209965868,0.5698339047331962,5,5,not_mastered,mastered,True,increase
+XI-B-32,9012,Fungsi naik/turun dan titik stasioner,0.0025336100600673503,0.002604629084213824,7.101902414647374e-05,5,5,not_mastered,not_mastered,True,increase
+XI-B-33,9012,Fungsi naik/turun dan titik stasioner,0.8992621311462778,0.92525890021675,0.025996769070472103,4,5,mastered,mastered,True,increase
+XI-B-34,9012,Fungsi naik/turun dan titik stasioner,0.0007537384430115063,0.10611707265187237,0.10536333420886086,5,5,not_mastered,not_mastered,True,increase
+XI-B-35,9012,Fungsi naik/turun dan titik stasioner,0.2170696347960469,0.7148324894834028,0.4977628546873559,5,5,not_mastered,mastered,True,increase
+XI-A-01,9013,Nilai maksimum/minimum dan masalah optimasi,0.02665509893667537,0.9349276961816737,0.9082725972449983,4,4,not_mastered,mastered,True,increase
+XI-A-02,9013,Nilai maksimum/minimum dan masalah optimasi,0.009233758146465508,0.9456478292267324,0.9364140710802669,4,4,not_mastered,mastered,True,increase
+XI-A-03,9013,Nilai maksimum/minimum dan masalah optimasi,0.00022088678738265446,0.7492873369431134,0.7490664501557308,4,4,not_mastered,mastered,True,increase
+XI-A-04,9013,Nilai maksimum/minimum dan masalah optimasi,0.00209377417185354,0.004619972307934352,0.0025261981360808114,4,4,not_mastered,not_mastered,True,increase
+XI-A-05,9013,Nilai maksimum/minimum dan masalah optimasi,0.9985421616226491,0.9993971279494891,0.0008549663268400121,4,4,mastered,mastered,True,increase
+XI-A-06,9013,Nilai maksimum/minimum dan masalah optimasi,0.018777784522456285,0.9978688145060901,0.9790910299836338,4,4,not_mastered,mastered,True,increase
+XI-A-07,9013,Nilai maksimum/minimum dan masalah optimasi,0.005930619210488793,0.02052189679978104,0.014591277589292248,4,4,not_mastered,not_mastered,True,increase
+XI-A-08,9013,Nilai maksimum/minimum dan masalah optimasi,0.00023168867042500877,0.009940788653012112,0.009709099982587104,4,4,not_mastered,not_mastered,True,increase
+XI-A-09,9013,Nilai maksimum/minimum dan masalah optimasi,0.027752451549225635,0.0005994603789069677,-0.027152991170318667,3,4,not_mastered,not_mastered,True,decrease
+XI-A-10,9013,Nilai maksimum/minimum dan masalah optimasi,0.003197174950171855,0.002432362624046504,-0.0007648123261253508,4,3,not_mastered,not_mastered,True,decrease
+XI-A-11,9013,Nilai maksimum/minimum dan masalah optimasi,0.05591265342890459,0.11109681084983339,0.055184157420928796,3,4,not_mastered,not_mastered,True,increase
+XI-A-13,9013,Nilai maksimum/minimum dan masalah optimasi,0.00039724849716331117,0.0012505081385734344,0.0008532596414101232,4,4,not_mastered,not_mastered,True,increase
+XI-A-14,9013,Nilai maksimum/minimum dan masalah optimasi,0.13114767494281887,0.08222726853894971,-0.04892040640386916,4,4,not_mastered,not_mastered,True,decrease
+XI-A-15,9013,Nilai maksimum/minimum dan masalah optimasi,0.0012671377954300614,0.009690236117638053,0.008423098322207992,3,4,not_mastered,not_mastered,True,increase
+XI-A-16,9013,Nilai maksimum/minimum dan masalah optimasi,0.24123509863537396,0.02075840068924555,-0.2204766979461284,4,3,not_mastered,not_mastered,True,decrease
+XI-A-17,9013,Nilai maksimum/minimum dan masalah optimasi,0.0004540518076227678,0.01620610827948127,0.0157520564718585,4,4,not_mastered,not_mastered,True,increase
+XI-A-18,9013,Nilai maksimum/minimum dan masalah optimasi,0.00026387276772997157,0.0005565976146895434,0.0002927248469595719,4,4,not_mastered,not_mastered,True,increase
+XI-A-19,9013,Nilai maksimum/minimum dan masalah optimasi,0.00022106809859588904,0.9891826681109466,0.9889616000123507,4,4,not_mastered,mastered,True,increase
+XI-A-20,9013,Nilai maksimum/minimum dan masalah optimasi,0.004557126214283113,0.0025233853256919295,-0.0020337408885911833,4,3,not_mastered,not_mastered,True,decrease
+XI-A-21,9013,Nilai maksimum/minimum dan masalah optimasi,0.006305229124040845,0.9897803208067437,0.9834750916827029,4,4,not_mastered,mastered,True,increase
+XI-A-22,9013,Nilai maksimum/minimum dan masalah optimasi,0.020591518087544003,0.992969782503186,0.972378264415642,4,4,not_mastered,mastered,True,increase
+XI-A-23,9013,Nilai maksimum/minimum dan masalah optimasi,0.9985954230873322,0.9995655764902154,0.0009701534028832004,4,4,mastered,mastered,True,increase
+XI-A-24,9013,Nilai maksimum/minimum dan masalah optimasi,0.00022853411702183685,0.002671150366081115,0.002442616249059278,4,4,not_mastered,not_mastered,True,increase
+XI-A-25,9013,Nilai maksimum/minimum dan masalah optimasi,0.04318498268155847,0.012313303403558587,-0.030871679277999886,4,4,not_mastered,not_mastered,True,decrease
+XI-A-26,9013,Nilai maksimum/minimum dan masalah optimasi,0.00022915364822829088,0.02596913382935751,0.025739980181129222,4,4,not_mastered,not_mastered,True,increase
+XI-A-27,9013,Nilai maksimum/minimum dan masalah optimasi,0.0002740752635208881,0.6754730671277795,0.6751989918642587,4,4,not_mastered,mastered,True,increase
+XI-A-28,9013,Nilai maksimum/minimum dan masalah optimasi,0.00782320315881337,0.6184177888748956,0.6105945857160823,4,4,not_mastered,mastered,True,increase
+XI-A-29,9013,Nilai maksimum/minimum dan masalah optimasi,0.863462216063783,0.8882449663670935,0.024782750303310452,4,4,mastered,mastered,True,increase
+XI-A-30,9013,Nilai maksimum/minimum dan masalah optimasi,0.045944676596973266,0.00484118868458909,-0.041103487912384176,4,4,not_mastered,not_mastered,True,decrease
+XI-A-31,9013,Nilai maksimum/minimum dan masalah optimasi,0.0008070913629844802,0.19228366894390547,0.191476577580921,4,3,not_mastered,not_mastered,True,increase
+XI-A-32,9013,Nilai maksimum/minimum dan masalah optimasi,0.259065421594722,0.010860554265847696,-0.2482048673288743,4,4,not_mastered,not_mastered,True,decrease
+XI-A-33,9013,Nilai maksimum/minimum dan masalah optimasi,0.014799652069156042,0.9745934370377649,0.9597937849686089,4,3,not_mastered,mastered,True,increase
+XI-A-34,9013,Nilai maksimum/minimum dan masalah optimasi,0.029488652353432804,0.0904262156824493,0.060937563329016495,4,4,not_mastered,not_mastered,True,increase
+XI-A-35,9013,Nilai maksimum/minimum dan masalah optimasi,0.0030027519134222472,0.9996822063356283,0.9966794544222061,4,4,not_mastered,mastered,True,increase
+XI-A-36,9013,Nilai maksimum/minimum dan masalah optimasi,0.00022154652288853633,0.0002867294452034536,6.518292231491726e-05,4,4,not_mastered,not_mastered,True,increase
+XI-B-01,9013,Nilai maksimum/minimum dan masalah optimasi,0.0028451657386356303,0.006272701982266775,0.003427536243631145,4,4,not_mastered,not_mastered,True,increase
+XI-B-02,9013,Nilai maksimum/minimum dan masalah optimasi,0.009289295939588103,0.005461559915234182,-0.0038277360243539208,4,4,not_mastered,not_mastered,True,decrease
+XI-B-03,9013,Nilai maksimum/minimum dan masalah optimasi,0.9952317515370253,0.9997973798351906,0.004565628298165314,4,4,mastered,mastered,True,increase
+XI-B-04,9013,Nilai maksimum/minimum dan masalah optimasi,0.11448622558296995,0.0005555880401546041,-0.11393063754281535,3,4,not_mastered,not_mastered,True,decrease
+XI-B-05,9013,Nilai maksimum/minimum dan masalah optimasi,0.7695043079971942,0.6307860733578128,-0.13871823463938138,4,4,mastered,mastered,True,decrease
+XI-B-06,9013,Nilai maksimum/minimum dan masalah optimasi,0.0011270877803062998,0.005565159746076567,0.004438071965770268,4,3,not_mastered,not_mastered,True,increase
+XI-B-08,9013,Nilai maksimum/minimum dan masalah optimasi,0.00022167177623852674,0.00023458470032050637,1.2912924081979625e-05,4,4,not_mastered,not_mastered,True,increase
+XI-B-09,9013,Nilai maksimum/minimum dan masalah optimasi,0.16165632784739975,0.003945918982703588,-0.15771040886469617,4,4,not_mastered,not_mastered,True,decrease
+XI-B-10,9013,Nilai maksimum/minimum dan masalah optimasi,0.0030307236680828936,0.0026134345576113724,-0.0004172891104715212,3,4,not_mastered,not_mastered,True,decrease
+XI-B-11,9013,Nilai maksimum/minimum dan masalah optimasi,0.0029746485802511647,0.00028641653400799164,-0.002688232046243173,4,4,not_mastered,not_mastered,True,decrease
+XI-B-12,9013,Nilai maksimum/minimum dan masalah optimasi,0.00022244715587085476,0.015519258265330904,0.015296811109460049,4,4,not_mastered,not_mastered,True,increase
+XI-B-13,9013,Nilai maksimum/minimum dan masalah optimasi,0.003960693682617511,0.010703924293977214,0.0067432306113597035,4,4,not_mastered,not_mastered,True,increase
+XI-B-14,9013,Nilai maksimum/minimum dan masalah optimasi,0.0003973048763688979,0.01990340494578164,0.01950610006941274,4,4,not_mastered,not_mastered,True,increase
+XI-B-15,9013,Nilai maksimum/minimum dan masalah optimasi,0.04269535937049227,0.08583634009738941,0.04314098072689714,4,4,not_mastered,not_mastered,True,increase
+XI-B-16,9013,Nilai maksimum/minimum dan masalah optimasi,0.00023014593191582463,0.0039303698881930785,0.003700223956277254,4,3,not_mastered,not_mastered,True,increase
+XI-B-17,9013,Nilai maksimum/minimum dan masalah optimasi,0.010813501628167129,0.013249648913149665,0.0024361472849825355,4,4,not_mastered,not_mastered,True,increase
+XI-B-18,9013,Nilai maksimum/minimum dan masalah optimasi,0.01199227909881256,0.01334084319785114,0.0013485640990385794,4,4,not_mastered,not_mastered,True,increase
+XI-B-19,9013,Nilai maksimum/minimum dan masalah optimasi,0.0033451566223456197,0.007662685753519878,0.004317529131174259,4,4,not_mastered,not_mastered,True,increase
+XI-B-20,9013,Nilai maksimum/minimum dan masalah optimasi,0.007217293541198292,0.010090198337521575,0.0028729047963232824,3,4,not_mastered,not_mastered,True,increase
+XI-B-21,9013,Nilai maksimum/minimum dan masalah optimasi,0.0025599492296186086,0.006670488487230217,0.004110539257611608,4,4,not_mastered,not_mastered,True,increase
+XI-B-22,9013,Nilai maksimum/minimum dan masalah optimasi,0.0011406514781232618,0.008245431226926305,0.007104779748803043,4,4,not_mastered,not_mastered,True,increase
+XI-B-23,9013,Nilai maksimum/minimum dan masalah optimasi,0.0002987698100819444,0.03194341628879156,0.03164464647870962,4,4,not_mastered,not_mastered,True,increase
+XI-B-24,9013,Nilai maksimum/minimum dan masalah optimasi,0.18525460936286914,0.0025754695528198996,-0.18267913981004924,4,3,not_mastered,not_mastered,True,decrease
+XI-B-25,9013,Nilai maksimum/minimum dan masalah optimasi,0.003757091896071857,0.004270954716268137,0.0005138628201962802,4,4,not_mastered,not_mastered,True,increase
+XI-B-26,9013,Nilai maksimum/minimum dan masalah optimasi,0.019163023665420435,0.018905005907479133,-0.00025801775794130274,4,4,not_mastered,not_mastered,True,decrease
+XI-B-27,9013,Nilai maksimum/minimum dan masalah optimasi,0.004512424687940476,0.04603670465163596,0.04152427996369548,3,3,not_mastered,not_mastered,True,increase
+XI-B-28,9013,Nilai maksimum/minimum dan masalah optimasi,0.003505300635882471,0.022425634896869526,0.018920334260987055,4,4,not_mastered,not_mastered,True,increase
+XI-B-29,9013,Nilai maksimum/minimum dan masalah optimasi,0.9964715256078382,0.004246758038490639,-0.9922247675693476,4,4,mastered,not_mastered,True,decrease
+XI-B-31,9013,Nilai maksimum/minimum dan masalah optimasi,0.006602013535949722,0.004680584403111884,-0.0019214291328378385,4,4,not_mastered,not_mastered,True,decrease
+XI-B-32,9013,Nilai maksimum/minimum dan masalah optimasi,0.0012580097249846732,0.005333981634054805,0.004075971909070132,4,4,not_mastered,not_mastered,True,increase
+XI-B-33,9013,Nilai maksimum/minimum dan masalah optimasi,0.012993710300723205,0.010112317146566806,-0.002881393154156399,3,4,not_mastered,not_mastered,True,decrease
+XI-B-34,9013,Nilai maksimum/minimum dan masalah optimasi,0.003080156373768389,0.10104907824510906,0.09796892187134067,4,4,not_mastered,not_mastered,True,increase
+XI-B-35,9013,Nilai maksimum/minimum dan masalah optimasi,0.06973311168198629,0.017181985903032528,-0.05255112577895376,4,4,not_mastered,not_mastered,True,decrease

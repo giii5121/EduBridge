@@ -1,0 +1,41 @@
+# ---------------------------------------------------------------- Python / environments
+.venv/
+.venv*/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.env
+.env.*
+
+# ---------------------------------------------------------------- raw EEDI data (large, licensed; rebuild with cdacdm.reconstruct)
+# data.zip is the official NeurIPS 2020 archive (~650 MB, above GitHub's 100 MB file limit)
+data.zip
+ILCDA/
+processed_task34_cda_cdm/
+
+# ---------------------------------------------------------------- narrative layer outputs (generated at runtime)
+# cache of validated reports (pseudonymised ids) + audit log + model eval results
+artifacts/reports/
+artifacts_calculus/reports/
+# model weights never belong in the repo
+*.gguf
+*.safetensors
+*.bin
+
+# ---------------------------------------------------------------- local secrets / tooling
+.streamlit/secrets.toml
+.claude/
+# exported Claude Code session transcripts
+*-local-command-caveat*.txt
+
+# ---------------------------------------------------------------- editors / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini

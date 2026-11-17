@@ -1,0 +1,160 @@
+{
+ "q": {
+  "items": 948,
+  "concepts": 57,
+  "density": 0.017802946184025465,
+  "single": 934,
+  "multi": 14,
+  "items_per_target": {
+   "Writing Expressions": 25,
+   "Simplifying Expressions by Collecting Like Terms": 19,
+   "Substitution into Formula": 22,
+   "Factorising into a Single Bracket": 8,
+   "Linear Equations": 7,
+   "Solving Linear Inequalities": 8,
+   "Linear Sequences (nth term)": 12,
+   "Naming Co-ordinates in 2D": 24,
+   "Midpoint Between Two Co-ordinates": 9,
+   "Horizontal and Vertical Lines": 8,
+   "Gradient Between Two Co-ordinates": 2
+  }
+ },
+ "ho_mean_a_all": 3.6663065442762726,
+ "evidence": {
+  "A1_median": 0.771098420368321,
+  "A0_median": -1.1436897013130365,
+  "A1_q10": 0.4379403647586813,
+  "A1_q90": 1.2732671926625143,
+  "A0_q10": -2.35600989166854,
+  "A0_q90": -0.33994723831482604
+ },
+ "evidence_examples": [
+  {
+   "QuestionId": 842,
+   "g": 0.16025952475572736,
+   "s": 0.09464383418251997,
+   "A1": 1.7315338887798915,
+   "A0": -2.1829721538677336,
+   "lr1": 5.649312683270791,
+   "lr0": 0.1127060526110629
+  },
+  {
+   "QuestionId": 145,
+   "g": 0.33783240490116995,
+   "s": 0.2439543169624554,
+   "A1": 0.8055518726278942,
+   "A0": -0.9985377064974649,
+   "lr1": 2.237931211065201,
+   "lr0": 0.36841778239849476
+  },
+  {
+   "QuestionId": 239,
+   "g": 0.5558552289673405,
+   "s": 0.42414477103265946,
+   "A1": 0.035348409715887597,
+   "A0": -0.04607573210132665,
+   "lr1": 1.0359805916320257,
+   "lr0": 0.9549696375947442
+  },
+  {
+   "QuestionId": 820,
+   "g": 0.2609604453787318,
+   "s": 0.552881326794416,
+   "A1": 0.5384552019687613,
+   "A0": -0.2902080644695689,
+   "lr1": 1.7133580246488342,
+   "lr0": 0.748107896711629
+  }
+ ],
+ "worked": {
+  "student": "Siswa-e7f6c011",
+  "theta": -0.5706712228665091,
+  "concept": "Writing Expressions",
+  "n_items": 25,
+  "n_single": 25,
+  "n_correct": 13,
+  "prior_p": 0.10083635041505801,
+  "prior_logit": -2.187966143211855,
+  "sum_correct": 10.817127796857498,
+  "sum_wrong": -9.311547990188886,
+  "n_correct_single": 13,
+  "logit_total": -0.6823863365432432,
+  "pi_formula": 0.33572890528334665,
+  "pi_model": 0.3357329232421348,
+  "a_k": 5.0,
+  "b_k": -0.6653899711206905
+ },
+ "trajectory_concept": "Writing Expressions",
+ "trajectory_items": [
+  {
+   "QuestionId": 97,
+   "g": 0.37390660465260755,
+   "s": 0.17101597831439042
+  },
+  {
+   "QuestionId": 389,
+   "g": 0.3449884594769979,
+   "s": 0.1913574558541401
+  },
+  {
+   "QuestionId": 137,
+   "g": 0.4216641263170285,
+   "s": 0.11208286343493203
+  },
+  {
+   "QuestionId": 579,
+   "g": 0.5196831172349331,
+   "s": 0.045695377949216756
+  },
+  {
+   "QuestionId": 836,
+   "g": 0.305583251876599,
+   "s": 0.2159929133233699
+  },
+  {
+   "QuestionId": 898,
+   "g": 0.3293837955315458,
+   "s": 0.190488375419313
+  },
+  {
+   "QuestionId": 610,
+   "g": 0.4388682701698113,
+   "s": 0.13758800595986478
+  },
+  {
+   "QuestionId": 533,
+   "g": 0.5190025020214519,
+   "s": 0.06324358435568746
+  },
+  {
+   "QuestionId": 170,
+   "g": 0.40122227988106984,
+   "s": 0.10142920107246754
+  },
+  {
+   "QuestionId": 392,
+   "g": 0.33493057268303755,
+   "s": 0.16337432468077467
+  }
+ ],
+ "refit": {
+  "seconds": 32.07569900000817,
+  "n_iter": 44,
+  "final_elbo": -630546.025486628,
+  "max_abs_diff_g_vs_checkpoint": 0.0,
+  "max_abs_diff_s_vs_checkpoint": 0.0,
+  "train_students": 3934,
+  "train_observed": 1112450,
+  "density_train": 0.2982893909850079
+ },
+ "pi_target_train": {
+  "cells_with_5plus": 16410,
+  "share_lt_0.1": 0.5661182205971969,
+  "share_gt_0.9": 0.31346739792809264,
+  "share_0.4_0.6": 0.02169408897014016
+ },
+ "responses_per_student_train": {
+  "median": 241.0,
+  "mean": 282.7783426537875
+ }
+}
